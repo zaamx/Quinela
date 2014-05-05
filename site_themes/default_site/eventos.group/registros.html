@@ -1,0 +1,77 @@
+{embed="eventos/head" my_body_class="registros" my_active_nav="registros" my_page_title="Registros"}
+			{if logged_in}
+
+			<table id="RegistrosTable" class="table table-bordered table-striped table-hover">
+				<thead>
+					<tr>
+						
+						<th>Nombre</th>
+						<th>Apellido</th>
+						<th>Reporte PDF</th>
+						<th>Detalles</th>
+					</tr>
+				</thead>
+				<tbody>
+					{exp:channel:entries channel="empleados_human_international" paginate="top"}
+					<tr>
+						
+						<td>{nombre}</td>
+						<td>{apellido}</td>
+						<td>
+							{if '{reporte}' != ''}
+							        <a class="btn btn-primary" href="{reporte}"><i class="icon-download icon-white"></i> Descargar</a>        
+							{if:else}
+								<span class="label label-important">No disponible</span>
+							{/if}
+						</td>
+						<td><a class="btn btn-primary" href="{url_title_path='eventos/entradas'}">Ver más</a></td>
+					</tr>
+					{paginate}
+					<!-- page-navigation -->
+					<div class="pagination">
+						{pagination_links}
+							<ul>
+								{first_page}
+								<li><a href="{pagination_url}">&laquo;</a></li>
+								{/first_page}
+
+								{previous_page}
+								<li><a href="{pagination_url}">&lsaquo;</a></li>
+								{/previous_page}
+
+								{page}
+								<li class="page-{pagination_page_number} {if current_page}active{/if}"><a href="{pagination_url}">{pagination_page_number}</a></li>
+								{/page}
+
+								{next_page}
+								<li><a href="{pagination_url}">&rsaquo;</a></li>
+								{/next_page}
+
+								{last_page}
+								<li><a href="{pagination_url}">&raquo;</a></li>
+								{/last_page}
+							</ul>
+							{/pagination_links}
+					</div>
+					<!--ENDS page-navigation -->                
+					{/paginate}              
+							
+					{/exp:channel:entries}
+				</tbody>
+			</table>
+
+			{/if}
+			{if logged_out}
+
+				<h2 class="form-signin-heading">Acceso Restringido</h2>
+			
+			{/if}
+						
+{footer}
+
+
+{if '{reporte}' != ''}<a class="btn btn-primary" href="{reporte}"><i class="icon-download icon-white"></i> Descargar</a>{/if}
+
+
+
+

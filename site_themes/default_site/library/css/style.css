@@ -1,0 +1,62 @@
+/******************************************************************
+Stylesheet: Main Stylesheet
+******************************************************************/
+/*********************
+01. GENERAL STYLES
+*********************/
+html,
+body {
+  /* height: 100%; */
+}
+/*********************
+02. LAYOUT & GRID STYLES
+*********************/
+/*********************
+03. POSTS & CONTENT STYLES
+*********************/
+/*********************
+04. SIDEBARS & ASIDES
+*********************/
+.widget ul li {
+  /* deep nesting */
+}
+/*********************
+05. FOOTER STYLES
+*********************/
+.footer {
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  /*********************
+GENERAL STYLES
+*********************/
+  /*********************
+HEADER STYLES
+*********************/
+  /*********************
+SIDEBARS & ASIDES
+*********************/
+  .sidebar {
+    margin-top: 2.2em;
+  }
+  .widgettitle {
+    border-bottom: 2px solid #444;
+    margin-bottom: 0.75em;
+  }
+  .widget {
+    padding: 0 10px;
+    margin: 2.2em 0;
+  }
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */
+  }
+  .widget ul li ul {
+    margin-top: 0.75em;
+    padding-left: 1em;
+  }
+}
+/*
+iPHONE 5 MEDIA QUERY
+Want to get fancy for no good reason? Knock yourself out.
+*/

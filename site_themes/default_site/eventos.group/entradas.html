@@ -1,0 +1,90 @@
+{if logged_in}
+	{exp:channel:entries channel="empleados_human_international" limit="1" disable="pagination"}
+		{embed="eventos/head" my_body_class="entrada" my_active_nav="registros" my_page_title="Entrada | {title}"}			
+
+		<div class="row">
+			<h1></h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="well">
+					{if '{imagen_de_empleado:AjusteImagenEmpleados}' != ''}
+					        <img src="{imagen_de_empleado:AjusteImagenEmpleados}" class="img-polaroid">
+					{if:else}
+					        <strong>Sin imagen<br> de empleado</strong>
+					{/if}
+				</div>
+				
+			</div>
+			<div class="col-sm-5">
+				<div class="well">
+					<h4>Detalles personales</h4>
+					<dl class="dl-horizontal">
+						<dt>Titulo</dt>
+						<dd>{title}</dd>
+						<dt>Nombre</dt>
+						<dd>{nombre}</dd>
+						<dt>Apellido</dt>
+						<dd>{apellido}</dd>
+						<dt>Reporte PDF</dt>
+						<dd>
+							{if '{reporte}' != ''}
+							        <a class="btn btn-primary" href="{reporte}"><i class="icon-download icon-white"></i> Descargar</a>        
+							{if:else}
+								<span class="label label-important">No disponible</span>
+							{/if}
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="col-sm-5">
+				<div class="well">
+					<h4>Detalles laborales</h4>
+					<dl class="dl-horizontal">
+						<dt>Puesto</dt>
+						<dd>{puestos}</dd>
+						<dt>NSS</dt>
+						<dd>{nss}</dd>
+						<dt>Fecha ingreso</dt>
+						<dd>{fecha_de_ingreso}</dd>
+						<dt>Fecha de Vencimiento</dt>
+						<dd>{fecha_de_vencimiento}</dd>
+						<dt>Tipo contrato</dt>
+						<dd>{tipo_contrato}</dd>
+						<dt>Fecha Nacimiento</dt>
+						<dd>{fecha_nacimiento}</dd>
+						<dt>Edad</dt>
+						<dd>{edad}</dd>
+						<dt>Ubicacion</dt>
+						<dd>{ubicacion}</dd>
+						<dt>Salario Diario</dt>
+						<dd>{salario_diario}</dd>
+					</dl>
+				</div>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="ñoño">
+				{ubicacion}
+		                <h3>{ubicacion:title}</h3>
+		                <div class="map">
+		                	{ubicacion:mapa}
+		                </div>
+		        {/ubicacion}
+			</div>
+		</div>
+
+
+		{embed="eventos/footer"}
+	{/exp:channel:entries}
+{/if}
+{if logged_out}
+	{embed="incrustados/header" my_body_class="entrada" my_active_nav="registros" my_page_title="Entrada | {title}"}
+	<div class="row">
+        <div class="col-sm-12">
+          <h1>Esta es una seccion restringida.</h1>
+        </div>
+      </div>
+      {embed="eventos/footer"}
+{/if}

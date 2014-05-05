@@ -1,0 +1,49 @@
+{embed="sitio/head" my_body_class="partido" my_active_nav="partidos" my_page_title="Partido | {title}"}
+
+
+	{exp:channel:entries channel="partidos" limit="1" disable="pagination"}
+		<div class="row">
+			<div class="col-md-3">
+				<article>
+					<header>
+						{equipo_local} <br> {equipo_visitante}
+
+						{descripcion}
+						{marcador_local}
+					</header>
+					<section>
+						<span>
+							{fecha}
+							{fecha_de_partido format="%Y %m %d"}
+						</span>
+					</sectino>
+					<footer>
+						
+					</footer>
+				</article>
+			</div>
+		</div>
+	{/exp:channel:entries}
+	
+{if logged_in}
+{exp:channel:form channel="predicciones" return="site/ENTRY_ID" class="form-horizontal"}
+	<div class="form-group">
+		<label for="title">Titulo de entrada</label>
+		<input name="title" type="text" class="form-control">
+	</div>
+	<input type="submit" value="Enviar" class="btn btn-default">
+{/exp:channel:form}
+{/if}
+
+
+{if logged_out}
+
+
+	<div class="row">
+        <div class="col-sm-12">
+          <h1>Invitiación a jugar</h1>
+        </div>
+     </div>
+{/if}
+
+{embed="sitio/foot"}

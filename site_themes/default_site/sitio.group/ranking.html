@@ -1,0 +1,59 @@
+{embed="sitio/head" my_body_class="ranking" my_active_nav="ranking" my_page_title="Ranking"}
+
+	<div id="content" class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Ranking</h1>
+			</div>
+		</div>
+		<div id="inner-content" class="row">
+			<div class="col-sm-12">
+				{exp:channel:entries channel="paises" orderby="nombre_de_pais" sort="asc" limit="10" paginate="bottom"}
+						<div class="row">
+							<div class="col-md-12">
+								{nombre_de_pais}		
+							</div>
+						</div>
+					
+					{paginate}
+					<!-- page-navigation -->
+					<div class="row">
+						<div class="col-md-12">
+						{pagination_links}
+							<ul class="pagination">
+								{first_page}
+								<li><a href="{pagination_url}">&laquo;</a></li>
+								{/first_page}
+
+								{previous_page}
+								<li><a href="{pagination_url}">&lsaquo;</a></li>
+								{/previous_page}
+
+								{page}
+								<li class="page-{pagination_page_number} {if current_page}active{/if}"><a href="{pagination_url}">{pagination_page_number}</a></li>
+								{/page}
+
+								{next_page}
+								<li><a href="{pagination_url}">&rsaquo;</a></li>
+								{/next_page}
+
+								{last_page}
+								<li><a href="{pagination_url}">&raquo;</a></li>
+								{/last_page}
+							</ul>
+							{/pagination_links}
+						</div>
+					</div>
+
+					<!--ENDS page-navigation -->                
+					{/paginate}              
+							
+					{/exp:channel:entries}
+			</div>
+		</div>
+	</div>
+
+
+
+<!-- Vinculos para registros y perfiles en footer -->
+{embed="sitio/foot"}

@@ -1,0 +1,70 @@
+{embed="sitio/head" my_body_class="partidos" my_active_nav="partidos" my_page_title="Partidos"}
+
+	<div id="content" class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Es hora de comenzar</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<p>Estos son los partidos en los que podrás hacer tus predicciones. No olvides visitar constantemente la plataforma ya que el resto de partidos se liberará paulatinamente. ¡Que el juego comience!</p>
+			</div>
+		</div>
+		<div id="inner-content" class="row">
+			<div class="col-sm-12">
+				{exp:channel:entries channel="partidos" search:fecha="jue 12 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
+					<div class="row">
+						<div class="col-md-3">
+							<article>
+								<header>
+									{equipo_local} <br> {equipo_visitante}
+
+									{descripcion}
+									{marcador_local}
+								</header>
+								<section>
+									<span>
+										{fecha}
+										{fecha_de_partido format="%Y %m %d"}
+									</span>
+								</sectino>
+								<footer>
+									<a class="btn btn-primary" href="{url_title_path='sitio/partido'}">Ver más</a>
+								</footer>
+							</article>
+						</div>
+					</div>
+				{/exp:channel:entries}
+
+				{exp:channel:entries channel="partidos" search:fecha="vie 13 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
+					<div class="row">
+						<div class="col-md-3">
+							<article>
+								<header>
+									{equipo_local} <br> {equipo_visitante}
+
+									{descripcion}
+									{marcador_local}
+								</header>
+								<section>
+									<span>
+										{fecha}
+										{fecha_de_partido format="%Y %m %d"}
+									</span>
+								</sectino>
+								<footer>
+									<a class="btn btn-primary" href="{url_title_path='sitio/partido'}">Ver más</a>
+								</footer>
+							</article>
+						</div>
+					</div>
+				{/exp:channel:entries}
+			</div>
+		</div>
+	</div>
+
+
+
+<!-- Vinculos para registros y perfiles en footer -->
+{embed="sitio/foot"}

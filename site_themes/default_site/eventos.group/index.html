@@ -1,0 +1,143 @@
+{embed="eventos/head" my_body_class="home" my_active_nav="home" my_page_title="Home"}
+<!-- Estilo para formularios externos -->
+<link href="{path=css/_ee_channel_form_css}" type="text/css" rel="stylesheet" media="screen">
+
+<div id="busqueda">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				{exp:search:simple_form channel="empleados_human_international" result_page="busqueda/index"}
+					<div class="input-group input-group-lg">
+						<input type="text" class="form-control" name="keywords" id="keywords" value="">
+						<span class="input-group-btn">
+							<input type="submit" value="Buscar" class="btn btn-default" >
+		  				</span>
+					</div><!-- /input-group -->
+					<a href="{path='busqueda/avanzada'}">Advanced Search</a>
+				{/exp:search:simple_form}
+				
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="contenido">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9">
+				<div class="row">
+					<div class="col-sm-4">
+						<article class="book">
+							<header class="article-header">
+								<img class="img-responsive" src="library/images/Curso_basico_de_derecho.jpg">
+								<h3 class="entry-title" itemprop="headline">
+									Curso básico de derecho*
+								</h3>
+							</header>
+							<section class="entry-content clearfix" itemprop="articleBody">
+								<p>A más de cinco años de la promulgación de la reforma educativa para el nivel medio superior, el autor de este libro escribe una segunda edición en la que adapta los principios de dicha reforma a la enseñanza y el aprendizaje del derecho. </p>
+								
+							</section> <?php // end article section ?>
+							<footer class="article-footer">
+								<a href="#book1" class="btn btn-primary col-sm-12 colaps" data-toggle="collapse" data-target="#book1">Conoce más <i class="fa fa-chevron-down"></i></a>
+								<div id="book1" class="collapse cont-sec">
+									<p>Retomando su objetivo inicial de contar con un material que permitiera enseñar Nociones de Derecho Positivo de una forma analítica, amena y comprensible y que el alumno pudiera concebir al derecho como una disciplina que se aplica todos los días en los ámbitos individual y colectivo, en esta nueva edición incluye las exigencias del modelo por competencias y actualiza la información sobre los juicios orales, el derecho familiar, el internacional y el del trabajo. * Disponible en medio impreso y en e-book</p>
+								</div>
+							</footer> <?php // end article footer ?>
+						</article>
+					</div>
+					<div class="col-sm-4">
+						<article class="book">
+							<header class="article-header">
+								<img class="img-responsive" src="library/images/Curso_basico_de_derecho.jpg">
+								<h3 class="entry-title" itemprop="headline">
+									Curso básico de derecho*
+								</h3>
+							</header>
+							<section class="entry-content clearfix" itemprop="articleBody">
+								<p>A más de cinco años de la promulgación de la reforma educativa para el nivel medio superior, el autor de este libro escribe una segunda edición en la que adapta los principios de dicha reforma a la enseñanza y el aprendizaje del derecho. </p>
+								
+							</section> <?php // end article section ?>
+							<footer class="article-footer">
+								<a href="#book1" class="btn btn-primary col-sm-12 colaps" data-toggle="collapse" data-target="#book1">Conoce más <i class="fa fa-chevron-down"></i></a>
+								<div id="book1" class="collapse cont-sec">
+									<p>Retomando su objetivo inicial de contar con un material que permitiera enseñar Nociones de Derecho Positivo de una forma analítica, amena y comprensible y que el alumno pudiera concebir al derecho como una disciplina que se aplica todos los días en los ámbitos individual y colectivo, en esta nueva edición incluye las exigencias del modelo por competencias y actualiza la información sobre los juicios orales, el derecho familiar, el internacional y el del trabajo. * Disponible en medio impreso y en e-book</p>
+								</div>
+							</footer> <?php // end article footer ?>
+						</article>
+					</div>
+					<div class="col-sm-4">
+						<article class="book">
+							<header class="article-header">
+								<img class="img-responsive" src="library/images/Curso_basico_de_derecho.jpg">
+								<h3 class="entry-title" itemprop="headline">
+									Curso básico de derecho*
+								</h3>
+							</header>
+							<section class="entry-content clearfix" itemprop="articleBody">
+								<p>A más de cinco años de la promulgación de la reforma educativa para el nivel medio superior, el autor de este libro escribe una segunda edición en la que adapta los principios de dicha reforma a la enseñanza y el aprendizaje del derecho. </p>
+								
+							</section> <?php // end article section ?>
+							<footer class="article-footer">
+								<a href="#book1" class="btn btn-primary col-sm-12 colaps" data-toggle="collapse" data-target="#book1">Conoce más <i class="fa fa-chevron-down"></i></a>
+								<div id="book1" class="collapse cont-sec">
+									<p>Retomando su objetivo inicial de contar con un material que permitiera enseñar Nociones de Derecho Positivo de una forma analítica, amena y comprensible y que el alumno pudiera concebir al derecho como una disciplina que se aplica todos los días en los ámbitos individual y colectivo, en esta nueva edición incluye las exigencias del modelo por competencias y actualiza la información sobre los juicios orales, el derecho familiar, el internacional y el del trabajo. * Disponible en medio impreso y en e-book</p>
+								</div>
+							</footer> <?php // end article footer ?>
+						</article>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="chanelform">
+				{exp:channel:form channel="puestos_human_international" return="HumanIntRecs/index" class="form-horizontal"}
+					<div class="form-group">
+						<label for="title">Titulo de entrada</label>
+						<input name="title" type="text" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="tipo_de_puesto">Tipo de puesto</label>
+						<input name="tipo_de_puesto" class="form-control"type="text">
+					</div>
+					 <input type="submit" value="Enviar" class="btn btn-default">
+				{/exp:channel:form}
+				</div>
+
+
+				<div class="chanelform">
+				{exp:channel:form channel="ubicacin_human_international" return="HumanIntRecs/index" class="form-horizontal" }
+					<div class="form-group">
+						<label for="title">Titulo de entrada</label>
+						<input name="title" type="text" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="title">Titulo de entrada</label>
+						<input name="lugar_de_ubicacion" type="text" class="form-control">
+					</div>
+					 
+					 {field:mapa}
+
+					 <input type="submit" value="Submit" class="btn btn-default">
+				{/exp:channel:form}
+				
+				</div>
+
+
+				<div class="toctoc">
+				<ul>
+				{exp:twitter:user screen_name="Quante" limit="5"}
+					<li>{text} </li>
+				{/exp:twitter:user}
+				</ul>
+				</div>
+				<hr>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Vinculos para registros y perfiles en footer -->
+
+{embed="eventos/footer"}
