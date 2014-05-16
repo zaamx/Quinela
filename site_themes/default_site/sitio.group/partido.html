@@ -1,49 +1,89 @@
 {embed="sitio/head" my_body_class="partido" my_active_nav="partidos" my_page_title="Partido | {title}"}
-
-
-	{exp:channel:entries channel="partidos" limit="1" disable="pagination"}
+<link href="{path=css/_ee_channel_form_css}" type="text/css" rel="stylesheet" media="screen">
+	<div id="content">
+		<div class="container">
+		{exp:channel:entries channel="partidos" limit="1" disable="pagination"}
 		<div class="row">
-			<div class="col-md-3">
-				<article>
-					<header>
-						{equipo_local} <br> {equipo_visitante}
-
-						{descripcion}
-						{marcador_local}
+			<div class="col-md-12">
+				<article class="text-center item-partido">
+					<header >
+						<div class="row">
+							<div class="col-sm-4 col-md-offset-1 text-center">
+								<h2>{equipo_local}</h2>
+								<img src="http://placehold.it/300x300" class="img-circle img-responsive" alt="">
+							</div>
+							<div class="col-sm-2 text-center">
+								<h3>8, 000 <br>puntos <br>disputados</h3>
+								<b>Grupo A</b>
+								<p>
+									Arena Sao Paoulo
+								</p>
+								<p>
+									{fecha_de_partido format="%Y %m %d"}
+								</p>
+								<p><br><br>
+									<b>Selecciona tu mejor predicción <br>
+									¿Quíen crees que gane el encuentro ó predices el empate?</b>
+								</p>
+							</div>
+							<div class="col-sm-4 text-center">
+								<h2>{equipo_visitante}</h2>
+								<img src="http://placehold.it/300x300" class="img-circle img-responsive" alt="">
+							</div>
+						</div>
 					</header>
-					<section>
-						<span>
-							{fecha}
-							{fecha_de_partido format="%Y %m %d"}
-						</span>
-					</sectino>
-					<footer>
-						
-					</footer>
 				</article>
 			</div>
 		</div>
 	{/exp:channel:entries}
-	
-{if logged_in}
-{exp:channel:form channel="predicciones" return="site/ENTRY_ID" class="form-horizontal"}
-	<div class="form-group">
-		<label for="title">Titulo de entrada</label>
-		<input name="title" type="text" class="form-control">
-	</div>
-	<input type="submit" value="Enviar" class="btn btn-default">
-{/exp:channel:form}
-{/if}
-
-
-{if logged_out}
-
 
 	<div class="row">
-        <div class="col-sm-12">
-          <h1>Invitiación a jugar</h1>
-        </div>
-     </div>
-{/if}
+		<div class="col-sm-10 col-sm-offset-1 text-center">
+			{if logged_in}
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$('#publishForm').ajaxForm({
+					dataType: 'json',
+					success: function(data) {
+						if (data.success) {
+							alert('You successfully added a new entry with entry_id '+data.entry_id)
+						} else {
+							alert('Failed with the following errors: '+data.errors.join(', '));
+						}
+					}
+				});
+			});
+			</script>
+			{exp:channel:form channel="predicciones" return="site/ENTRY_ID" class="form-horizontal"  json="yes"}
+				<div class="form-group">
+					<label for="title">Titulo de entrada</label>
+					<input name="title" type="text" class="form-control">
+				</div>
+				<div class="form-group" id="pre_resultado_de_partido">
+					{field:pre_resultado_de_partido}	
+				</div>
+				
+				<input type="submit" value="PREDECIR" class="btn btn-success">
+
+			{/exp:channel:form}
+			{/if}
+		</div>
+	</div>
+	
+	
+	{if logged_out}
+
+
+		<div class="row">
+	        <div class="col-sm-12">
+	          <h1>Invitiación a jugar</h1>
+	        </div>
+	     </div>
+	{/if}
+
+
+
+		</div>
+	</div>
 
 {embed="sitio/foot"}

@@ -7,9 +7,12 @@ html, body {
 	/* height: 100%; */
 }
 body {
-//	padding-top: 60px;
 
+	background: url('../images/bg.png') no-repeat center top;
+	background-color: @gray-lighter;
+	background-size: 100% !important;
 }
+
 
 /*********************
 02. LAYOUT & GRID STYLES
@@ -18,13 +21,63 @@ body {
 #container {}
 
 
+#home-ingreso {
+	margin-top: 150px;
+	color: @gray-lighter;
+}
+.modal {
+	color: @gray-lighter !important; 	
+}
+.close  {
+	color: @gray-lighter;	
+}
+
+header.head-interiores {
+	padding: 20px 0 0;
+	color: @gray-lighter;
+	.top {
+
+	}
+	.bottom {
+		background: rgba(0, 0, 0, 0.7);
+		padding: 10px 0;
+
+	}
+}
 /*********************
 03. POSTS & CONTENT STYLES
 *********************/
-
+.greentxt {
+	color: @brand-success;
+	text-transform: uppercase;
+}
+.partidos-dia {
+	padding: 10px 0;
+}
 #content {
-
+	padding: 20px 0 20px;
+	background: @gray-lighter;
+	article.item-partido{
+		.img-responsive {
+			margin: 0 auto;
+		}
+	}
 	#inner-content {}
+}
+
+body.partido {
+	#pre_resultado_de_partido {
+		fieldset {
+			label {
+				display: block;
+				width: 33.33%;
+				float: left;
+				input {
+
+				}
+			}
+		}
+	}
 }
 
 /*********************
@@ -59,9 +112,30 @@ body {
 /*********************
 05. FOOTER STYLES
 *********************/
-
-.footer {
+body.home {
+	.footer-gral {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: @gray-darker;
+		clear: both;
+		padding: 20px 0;
+		a {
+			color: @gray-lighter;
+		}
+		#inner-footer {
+		}
+	}
+}
+.footer-gral {
+	background: @gray-darker;
 	clear: both;
+	padding: 20px 0;
+	
+	a {
+		color: @gray-lighter;
+	}
 	#inner-footer {
 	}
 }
