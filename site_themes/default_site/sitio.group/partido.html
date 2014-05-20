@@ -35,51 +35,93 @@
 				</article>
 			</div>
 		</div>
+		{if logged_in}
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1 text-center">
+					<hr>
+
+					<script type="text/javascript">
+					$(document).ready(function(){
+						$('#publishForm').ajaxForm({
+							dataType: 'json',
+							success: function(data) {
+								if (data.success == '1') {
+									alert('You successfully added a new entry with entry_id '+data.entry_id);
+
+								} else if (data.success == '0') {					
+		                    		$('#mensajes').append(data.field_errors.title);
+		                    		$('#mensajes').append(data.field_errors.pre_marcador_local);
+		                    		$('#mensajes').append(data.field_errors.pre_marcador_visitante);
+		                    		$('#mensajes').append(data.field_errors.pre_resultado_de_partido);
+		                    		$('#mensajes').append(data.field_errors.pre_minuto_de_primer_gol);
+		                    		$('#mensajes').append(data.field_errors.quien_anota_primero);		                    		
+									 // alert('Failed with the following errors: '+ data.errors.join(', '));
+								}
+							}
+						});
+					});
+					</script>
+					{exp:channel:form channel="predicciones" return="site/ENTRY_ID" json="yes"}
+						<input type="hidden" name="id_de_partido" id="id_de_partido" value="{exp:url_title_to_entry_id url_title="{segment_3}"}">
+						<input type="hidden" name="id_de_partido_entry" id="id_de_partido_entry" value="{segment_3}">
+						<input type="hidden" name="pre_id_de_usuario" id="pre_id_de_usuario" value="{member_id}">
+						<input type="hidden" name="title" id="title" value="{username}-id-{member_id}-pred-{segment_3}-id-{exp:url_title_to_entry_id url_title="{segment_3}"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">				
+
+						<div class="form-group" id="pre_resultado_de_partido_cont">
+							{field:pre_resultado_de_partido}	
+						</div>
+
+						<div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group" id="pre_marcador_local_cont">
+
+										<label for="pre_marcador_local">Anota {equipo_local}</label>
+										<input type="text"  class="form-control" name="pre_marcador_local" id="pre_marcador_local" value="">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group" id="pre_marcador_visitante_cont">
+										<label for="pre_marcador_visitante">Anota {equipo_visitante}</label>
+										<input type="text"  class="form-control"  name="pre_marcador_visitante" id="pre_marcador_visitante" value="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+
+						<div class="form-group" id="quien_anota_primero_cont">
+							{field:quien_anota_primero}	
+						</div>
+						<hr>
+
+						<div class="form-group" id="pre_minuto_de_primer_gol_cont">
+							<label for="pre_minuto_de_primer_gol">Minuto de primer gol</label>
+							<input type="text"  class="form-control" name="pre_minuto_de_primer_gol" id="pre_minuto_de_primer_gol" value="">
+						</div>
+						<hr>
+						
+						<input type="submit" value="PREDECIR" class="btn btn-success">
+					{/exp:channel:form}
+					<div id="mensajes">
+					</div>
+				</div>
+			</div>
+			{/if}
+	
+			{if logged_out}
+
+
+				<div class="row">
+			        <div class="col-sm-12">
+			          <h1>Invitiación a jugar</h1>
+			        </div>
+			     </div>
+			{/if}
 	{/exp:channel:entries}
 
-	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1 text-center">
-			{if logged_in}
-			<script type="text/javascript">
-			$(document).ready(function(){
-				$('#publishForm').ajaxForm({
-					dataType: 'json',
-					success: function(data) {
-						if (data.success) {
-							alert('You successfully added a new entry with entry_id '+data.entry_id)
-						} else {
-							alert('Failed with the following errors: '+data.errors.join(', '));
-						}
-					}
-				});
-			});
-			</script>
-			{exp:channel:form channel="predicciones" return="site/ENTRY_ID" class="form-horizontal"  json="yes"}
-				<div class="form-group">
-					<label for="title">Titulo de entrada</label>
-					<input name="title" type="text" class="form-control">
-				</div>
-				<div class="form-group" id="pre_resultado_de_partido">
-					{field:pre_resultado_de_partido}	
-				</div>
-				
-				<input type="submit" value="PREDECIR" class="btn btn-success">
-
-			{/exp:channel:form}
-			{/if}
-		</div>
-	</div>
 	
-	
-	{if logged_out}
-
-
-		<div class="row">
-	        <div class="col-sm-12">
-	          <h1>Invitiación a jugar</h1>
-	        </div>
-	     </div>
-	{/if}
+			
 
 
 
@@ -87,3 +129,21 @@
 	</div>
 
 {embed="sitio/foot"}
+
+
+
+{"success":0,"errors":[],"field_errors":{"pre_marcador_local":"The Marcador Local field is required.","pre_marcador_visitante":"The Marcador Visitante field is required.","pre_resultado_de_partido":"The Resultado de partido field is required.","pre_minuto_de_primer_gol":"The MInuto de primer Gol field is required.","quien_anota_primero":"The \u00bfQuien anota primero? field is required."},"entry_id":false,"url_title":false,"channel_id":false}
+
+
+    "pre_marcador_local":"The Marcador Local field is required.",
+    "pre_marcador_visitante":"The Marcador Visitante field is required.",
+    "pre_resultado_de_partido":"The Resultado de partido field is required.",
+    "pre_minuto_de_primer_gol":"The MInuto de primer Gol field is required.",
+    "quien_anota_primero":"The ¿Quien anota primero? field is required."
+
+
+    pre_marcador_local
+pre_marcador_visitante
+pre_resultado_de_partido
+pre_minuto_de_primer_gol
+quien_anota_primero

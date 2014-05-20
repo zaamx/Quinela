@@ -54,20 +54,23 @@
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav ">
 									<li {if embed:my_active_nav=="home"}class="active"{/if}>
-										<a href="{path='sitio/index'}">Inicio</a>
+										<a href="{path='sitio/index'}">Home</a>
 									</li> 
-									<li {if embed:my_active_nav=="partidos"} class="active"{/if}>
-										<a href="{path='sitio/partidos'}">Partidos</a>
+									<li {if embed:my_active_nav=="perfil"} class="active"{/if}>
+										<a href="{path=sitio/perfil}/{member_id}/">Mi Perfil</a>
 									</li> 
-									<li {if embed:my_active_nav=="ranking"} class="active"{/if}>
-										<a href="{path='sitio/ranking'}">Ranking</a>
-									</li>
-									<li {if embed:my_active_nav=="premios"} class="active"{/if}>
+									
+									<!-- <li {if embed:my_active_nav=="premios"} class="active"{/if}>
 										<a href="{path='sitio/premios'}">Premios</a>
-									</li>
+									</li> -->
 									<li {if embed:my_active_nav=="medallas"} class="active"{/if}>
 										<a href="{path='sitio/medallas'}">Medallas</a>
 									</li>
+
+									<li {if embed:my_active_nav=="ranking"} class="active"{/if}>
+										<a href="{path='sitio/ranking'}">Ranking puntos</a>
+									</li>
+
 									<li {if embed:my_active_nav=="ranking-medallas"} class="active"{/if}>
 										<a href="{path='sitio/ranking-medallas'}">Ranking Medallas</a>
 									</li>
@@ -152,15 +155,27 @@
 				<div class="row">
 					<div class="col-sm-5 col-sm-offset-7">
 						<div class="profileInt text-right">
-							<h2><img src="http://placehold.it/50x50" class="img-circle"alt=""> Chicharito</h2>
+							{exp:user:stats dynamic="off" limit="1" log_views="off"}
+							<h2>
+								<a href="{path=sitio/perfil}/{member_id}/">
+									<img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{exp:user:theme_folder_url}code_pack/images/icon_profile.gif{/if}" width="150" alt="{screen_name}'s photo" />
+								</a>
+								{screen_name}
+							</h2>
 							<p>
 								<b>6000 </b><span>Puntos</span> 
 								<b>15 </b><span>Medallas</span> 
 								<b>Nivel Experto</b>
 							</p>
+							{/exp:user:stats}
 						</div>
 					</div>
 				</div>	
 			</div>
 		</div>
 	</header>
+
+
+	
+					
+	

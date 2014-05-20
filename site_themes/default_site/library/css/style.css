@@ -9,7 +9,7 @@ body {
   /* height: 100%; */
 }
 body {
-  background: url('../images/bg.png') no-repeat center top;
+  background: url('../images/home-mex.jpg') no-repeat center top;
   background-color: #eeeeee;
   background-size: 100% !important;
 }
@@ -51,7 +51,8 @@ header.head-interiores .bottom {
 #content article.item-partido .img-responsive {
   margin: 0 auto;
 }
-body.partido #pre_resultado_de_partido fieldset label {
+body.partido #pre_resultado_de_partido_cont fieldset label,
+body.partido #quien_anota_primero_cont fieldset label {
   display: block;
   width: 33.33%;
   float: left;

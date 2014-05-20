@@ -1,0 +1,601 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"gray-l",
+				"gray-light"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"gray-dar",
+				"gray-darker"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"margin",
+				"margin-top"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "sitio.group/medallas.html",
+			"settings":
+			{
+				"buffer_size": 4484,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/partido.html",
+			"settings":
+			{
+				"buffer_size": 5613,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/partidos.html",
+			"settings":
+			{
+				"buffer_size": 10950,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/ranking.html",
+			"settings":
+			{
+				"buffer_size": 6413,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/ranking-medallas.html",
+			"settings":
+			{
+				"buffer_size": 4008,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/perfil.html",
+			"settings":
+			{
+				"buffer_size": 6810,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "			<div id=\"leftcolumn\">\n				{exp:user:stats member_id=\"{segment_3}\" dynamic=\"off\" limit=\"1\" log_views=\"off\"}\n					<a href=\"{path=sitio/perfil}/{member_id}/\"><img src=\"{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{exp:user:theme_folder_url}code_pack/images/icon_profile.gif{/if}\" width=\"150\" alt=\"{screen_name}'s photo\" /></a><br /><br />\n				<ul>\n<!-- START - if viewing page other than Profile -->\n					{if segment_2 != \"profile\"}<li style=\"margin-bottom: 5px; border-bottom: 1px solid #d5d5d5\"><a href=\"{path=user_main/profile}/{member_id}/\">Back to Profile</a></li>{/if}\n<!-- END - if viewing page other than Profile -->\n\n					<li{if segment_2 == \"user_entries\"} class=\"selected\"{/if}><a href=\"{path=user_main/user_entries}/{member_id}/\">View {if segment_3 == logged_in_member_id}My{if:else}{screen_name}'s{/if} Entries</a></li>\n					<li{if segment_2 == \"user_comments\"} class=\"selected\"{/if}><a href=\"{path=user_main/user_comments}/{member_id}/\">View {if segment_3 == logged_in_member_id}My{if:else}{screen_name}'s{/if} Comments</a></li>\n					{if segment_3 != logged_in_member_id}\n					<li><a href=\"{path=member/messages/pm}/{member_id}/\">Send {screen_name} a Message</a></li>\n					{/if}\n\n<!-- START - if Current User -->\n					{if segment_3 == logged_in_member_id}\n					<li style=\"margin-top: 10px; border-top: 1px solid #d5d5d5\"><a href=\"{path=user_main/update_profile}/{member_id}/\"><small>Update My Profile</small></a></li>\n					{/if}\n<!-- END - if Current User -->\n				</ul>\n				{/exp:user:stats}\n			</div>",
+			"settings":
+			{
+				"buffer_size": 1528,
+				"line_ending": "Unix",
+				"name": "<div id=\"leftcolumn\">"
+			}
+		},
+		{
+			"file": "sitio.group/head.html",
+			"settings":
+			{
+				"buffer_size": 6644,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "library/less/_base.less",
+			"settings":
+			{
+				"buffer_size": 1784,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 252.0,
+		"selected_items":
+		[
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"pal",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/ranking-medallas.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/head.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3.1.1/variables.less",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/index.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/miembros.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/head-interiores.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/style.less",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/foot.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/partido.html",
+		"/home/alonso/public_html/quinela/system/expressionengine/config/config.php",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/partidos.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/index.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/paso1.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/_base.less",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/perfil.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3.1.1/.gitattributes",
+		"/home/alonso/public_html/quinela/system/expressionengine/plugins/pi.url_title_to_entry_id.php",
+		"/run/media/alonso/W7_TODO_EN_UNO/leeme.txt",
+		"/run/media/alonso/W7_TODO_EN_UNO/activador/leeme.txt",
+		"/run/media/alonso/W7_TODO_EN_UNO/darkreloaded",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/index.html~",
+		"/C/Users/zaana_000/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/zaana_000/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"		  						\n",
+			"<div class=\"col-sm-4\">",
+			"<img src=\"http://placehold.it/350x250\" class=\"img-responsive\" alt=\"\">",
+			"h3",
+			"  ",
+			";\n",
+			"script",
+			"<article class=\"text-center\">",
+			"modal",
+			"@border-radius-base",
+			"modal",
+			"7"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<div class=\"col-sm-3 text-center\">",
+			"<img src=\"http://placehold.it/150x150\" class=\"img-circle\" alt=\"\">",
+			"h4",
+			"<article class=\"text-center item-partido\">"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "sitio.group/medallas.html",
+					"settings":
+					{
+						"buffer_size": 4484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								645,
+								645
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sitio.group/partido.html",
+					"settings":
+					{
+						"buffer_size": 5613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1288,
+								1288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 312.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sitio.group/partidos.html",
+					"settings":
+					{
+						"buffer_size": 10950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								463,
+								463
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sitio.group/ranking.html",
+					"settings":
+					{
+						"buffer_size": 6413,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								510,
+								510
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sitio.group/ranking-medallas.html",
+					"settings":
+					{
+						"buffer_size": 4008,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2288,
+								2288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 815.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sitio.group/perfil.html",
+					"settings":
+					{
+						"buffer_size": 6810,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6169,
+								6169
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 761.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"settings":
+					{
+						"buffer_size": 1528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1486,
+								1486
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<div id=\"leftcolumn\">",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sitio.group/head.html",
+					"settings":
+					{
+						"buffer_size": 6644,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5888,
+								5888
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "library/less/_base.less",
+					"settings":
+					{
+						"buffer_size": 1784,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								209,
+								209
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"base",
+				"library/less/_base.less"
+			],
+			[
+				"hea",
+				"sitio.group/head.html"
+			],
+			[
+				"per",
+				"sitio.group/perfil.html"
+			],
+			[
+				"ra",
+				"sitio.group/ranking-medallas.html"
+			],
+			[
+				"ran",
+				"sitio.group/ranking-medallas.html"
+			],
+			[
+				"pard",
+				"sitio.group/partidos.html"
+			],
+			[
+				"part",
+				"sitio.group/partido.html"
+			],
+			[
+				"meda",
+				"sitio.group/medallas.html"
+			],
+			[
+				"head",
+				"sitio.group/head.html"
+			],
+			[
+				"inde",
+				"sitio.group/index.html"
+			],
+			[
+				"he",
+				"sitio.group/head.html"
+			],
+			[
+				"foot",
+				"sitio.group/foot.html"
+			],
+			[
+				"var",
+				"library/less/libs/bootstrap-3.1.1/variables.less"
+			],
+			[
+				"par",
+				"sitio.group/partido.html"
+			],
+			[
+				"sty",
+				"library/less/style.less"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

@@ -1,59 +1,228 @@
 {embed="sitio/head" my_body_class="ranking" my_active_nav="ranking" my_page_title="Ranking"}
-
-	<div id="content" class="container">
+<div id="content">
+	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
-				<h1>Ranking</h1>
+			<div class="col-sm-6">
+				<h2 class="greentxt">Tabla de posiciones y regalos</h2>
+				<p>No sólo se trata de hacer puntos. se trata de obtener reconocimientos sociales. Los badges podrás obtenerlos por recomendación y ganarlos por tus acciones.</p>
 			</div>
 		</div>
 		<div id="inner-content" class="row">
-			<div class="col-sm-12">
-				{exp:channel:entries channel="paises" orderby="nombre_de_pais" sort="asc" limit="10" paginate="bottom"}
-						<div class="row">
-							<div class="col-md-12">
-								{nombre_de_pais}		
-							</div>
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="row">
+					<h3>
+						ZONA DE PREMIOS
+					</h3>
+				</div>
+				<div class="row">
+					<div class="col-sm-2" id="lista-ranking-pluses">
+						<div class="item-ranking row">
+							<img src="http://placehold.it/50x50" class="img-circle" alt="">
+							<span>icono</span>
+							<h3>
+								Participante <br>
+								<small> icono 89000 puntos</small>
+							</h3>
+
 						</div>
-					
-					{paginate}
-					<!-- page-navigation -->
-					<div class="row">
-						<div class="col-md-12">
-						{pagination_links}
-							<ul class="pagination">
-								{first_page}
-								<li><a href="{pagination_url}">&laquo;</a></li>
-								{/first_page}
+						<div class="item-ranking row">
+							<img src="http://placehold.it/50x50" class="img-circle" alt="">
+							<span>icono</span>
+							<h3>
+								Participante <br>
+								<small> icono 89000 puntos</small>
+							</h3>
 
-								{previous_page}
-								<li><a href="{pagination_url}">&lsaquo;</a></li>
-								{/previous_page}
+						</div>
+						<div class="item-ranking row">
+							<img src="http://placehold.it/50x50" class="img-circle" alt="">
+							<span>icono</span>
+							<h3>
+								Participante <br>
+								<small> icono 89000 puntos</small>
+							</h3>
 
-								{page}
-								<li class="page-{pagination_page_number} {if current_page}active{/if}"><a href="{pagination_url}">{pagination_page_number}</a></li>
-								{/page}
+						</div>
+						<div class="item-ranking row">
+							<img src="http://placehold.it/50x50" class="img-circle" alt="">
+							<span>icono</span>
+							<h3>
+								Participante <br>
+								<small> icono 89000 puntos</small>
+							</h3>
 
-								{next_page}
-								<li><a href="{pagination_url}">&rsaquo;</a></li>
-								{/next_page}
+						</div>
+						<div class="item-ranking row">
+							<img src="http://placehold.it/50x50" class="img-circle" alt="">
+							<span>icono</span>
+							<h3>
+								Participante <br>
+								<small> icono 89000 puntos</small>
+							</h3>
 
-								{last_page}
-								<li><a href="{pagination_url}">&raquo;</a></li>
-								{/last_page}
-							</ul>
-							{/pagination_links}
+						</div>
+						<div class="item-ranking row">
+							<img src="http://placehold.it/50x50" class="img-circle" alt="">
+							<span>icono</span>
+							<h3>
+								Participante <br>
+								<small> icono 89000 puntos</small>
+							</h3>
+
 						</div>
 					</div>
+					<div class="col-sm-8" id="lista-premios">
+						<div class="item-premio row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<b>Posición</b>
+								<h3>1er</h3>
+								<p><b>Pantalla de tv 70" pulgadas</b></p>
+							</div>
+						</div>
+						<div class="item-premio row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<b>Posición</b>
+								<h3>1er</h3>
+								<p><b>Pantalla de tv 70" pulgadas</b></p>
+							</div>
+						</div>
+						<div class="item-premio row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<b>Posición</b>
+								<h3>1er</h3>
+								<p><b>Pantalla de tv 70" pulgadas</b></p>
+							</div>
+						</div>
+						<div class="item-premio row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<b>Posición</b>
+								<h3>1er</h3>
+								<p><b>Pantalla de tv 70" pulgadas</b></p>
+							</div>
+						</div>
+						<div class="item-premio row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<b>Posición</b>
+								<h3>1er</h3>
+								<p><b>Pantalla de tv 70" pulgadas</b></p>
+							</div>
+						</div>
+						<div class="item-premio row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<b>Posición</b>
+								<h3>1er</h3>
+								<p><b>Pantalla de tv 70" pulgadas</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
 
-					<!--ENDS page-navigation -->                
-					{/paginate}              
-							
-					{/exp:channel:entries}
+
+				<div class="row">
+					<h3>
+						ZONA SIN PREMIOS
+					</h3>
+				</div>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2" id="lista-ranking-minus">
+						<div class="item-ranking row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<span>icono</span>
+								<h3>
+									Participante <br>
+									<small> icono 89000 puntos</small>
+								</h3>
+							</div>
+						</div>
+						<div class="item-ranking row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<span>icono</span>
+								<h3>
+									Participante <br>
+									<small> icono 89000 puntos</small>
+								</h3>
+							</div>
+						</div>
+						<div class="item-ranking row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<span>icono</span>
+								<h3>
+									Participante <br>
+									<small> icono 89000 puntos</small>
+								</h3>
+							</div>
+						</div>
+						<div class="item-ranking row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<span>icono</span>
+								<h3>
+									Participante <br>
+									<small> icono 89000 puntos</small>
+								</h3>
+							</div>
+						</div>
+						<div class="item-ranking row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<span>icono</span>
+								<h3>
+									Participante <br>
+									<small> icono 89000 puntos</small>
+								</h3>
+							</div>
+						</div>
+						<div class="item-ranking row">
+							<div class="col-sm-4">
+								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+							</div>
+							<div class="col-sm-6">
+								<span>icono</span>
+								<h3>
+									Participante <br>
+									<small> icono 89000 puntos</small>
+								</h3>
+							</div>
+						</div>
+
+					</div>
+					
+				</div>
 			</div>
 		</div>
 	</div>
-
-
+</div>
 
 <!-- Vinculos para registros y perfiles en footer -->
 {embed="sitio/foot"}

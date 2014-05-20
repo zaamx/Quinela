@@ -1,0 +1,223 @@
+{embed="sitio/head" my_body_class="perfil" my_active_nav="perfil" my_page_title="Perfil | {title}"}
+<div id="content">
+  <div class="container">
+	<div class="row">
+	  <h3>{if logged_in_member_id == "{segment_3}"}Mi  {/if}Perfil</h3>
+	  
+	</div>
+	<div class="row">
+		  <div class="col-sm-3">
+				{if segment_3}
+					{exp:user:stats dynamic="off" limit="1" log_views="off"}
+						<h2>
+							<a href="{path=sitio/perfil}/{member_id}/">
+							  <img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{exp:user:theme_folder_url}code_pack/images/icon_profile.gif{/if}" width="150" alt="{screen_name}'s photo" />
+						  	</a><br>
+					  		{screen_name}
+						</h2>
+						<p>
+							<b>6000 </b><span>Puntos</span> <br>
+							<b>15 </b><span>Medallas</span> <br>
+							<b>Nivel Experto</b>
+						</p>
+					{/exp:user:stats}
+				
+				{if:else}
+					<h4>Error!</h4><p>You must specify a member ID to view a profile.</p>
+				{/if}
+		  </div>
+		  <div class="col-sm-8">
+		  		<div class="row">
+		  			<div class="col-sm-12">
+		  				{if segment_3}
+						  {exp:user:stats dynamic="off" limit="1" log_views="off"}
+								 <h2>
+									{screen_name} <br>
+									<small>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, nam nostrum excepturi quas accusantium dicta a impedit aliquid expedita corrupti!    
+									</small>
+								</h2>
+								<p>
+									<b>6000 </b><span>Puntos</span> <br>
+									<b>15 </b><span>Medallas</span> <br>
+									<b>Nivel Experto</b>
+								</p>
+							{/exp:user:stats}
+
+							{if:else}
+							<h4>Error!</h4><p>You must specify a member ID to view a profile.</p>
+						{/if}
+		  			</div>
+		  		</div>
+		  		<div class="row">
+		  			<div class="col-sm-12">
+		  				<h3>Badges</h3>
+		  				<ul class="list-inline">
+		  					<li>
+		  						<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						<a href="">5</a>
+		  					</li>
+		  					<li>
+		  						<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						<a href="">5</a>
+		  					</li>
+		  					<li>
+		  						<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						<a href="">5</a>
+		  					</li>
+		  					<li>
+		  						<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						<a href="">5</a>
+		  					</li>
+		  					<li>
+		  						<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						<a href="">5</a>
+		  					</li>
+		  					<li>
+		  						<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						<a href="">5</a>
+		  					</li>
+		  				</ul>
+		  			</div>
+		  		</div>
+		  		<div class="row">
+		  			<div class="col-sm-12">
+		  				<h3>Apuestas jugadas</h3>
+		  				<div class="row item-partido-perfil">
+		  					<div class="col-sm-2 text-center">
+		  						<h4>México</h4>
+		  						<img src="http://placehold.it/100x100" class="img-circle"> 
+		  					</div>
+		  					<div class="col-sm-2 text-center">
+		  						<h4>Croacia</h4>
+		  						<img src="http://placehold.it/100x100" class="img-circle">
+		  					</div>
+		  					<div class="col-sm-4 text-center">
+		  						<h4>2000 <br>
+		  							<small>
+		  								puntos
+		  							</small>
+		  						</h4>
+		  					</div>
+		  				</div>
+		  				<div class="row item-partido-perfil">
+		  					<div class="col-sm-2 text-center">
+		  						<h4>México</h4>
+		  						<img src="http://placehold.it/100x100" class="img-circle"> 
+		  					</div>
+		  					<div class="col-sm-2 text-center">
+		  						<h4>Croacia</h4>
+		  						<img src="http://placehold.it/100x100" class="img-circle">
+		  					</div>
+		  					<div class="col-sm-4 text-center">
+		  						<h4>2000 <br>
+		  							<small>
+		  								puntos
+		  							</small>
+		  						</h4>
+		  					</div>
+		  				</div>
+		  				<div class="row item-partido-perfil">
+		  					<div class="col-sm-2 text-center">
+		  						<h4>México</h4>
+		  						<img src="http://placehold.it/100x100" class="img-circle"> 
+		  					</div>
+		  					<div class="col-sm-2 text-center">
+		  						<h4>Croacia</h4>
+		  						<img src="http://placehold.it/100x100" class="img-circle">
+		  					</div>
+		  					<div class="col-sm-4 text-center">
+		  						<h4>2000 <br>
+		  							<small>
+		  								puntos
+		  							</small>
+		  						</h4>
+		  					</div>
+		  				</div>
+		  				<div class="row item-partido-perfil">
+		  					<div class="col-sm-2 text-center">
+		  						<h4>México</h4>
+		  						<img src="http://placehold.it/100x100" class="img-circle"> 
+		  					</div>
+		  					<div class="col-sm-2 text-center">
+		  						<h4>Croacia</h4>
+		  						<img src="http://placehold.it/100x100" class="img-circle">
+		  					</div>
+		  					<div class="col-sm-4 text-center">
+		  						<h4>2000 <br>
+		  							<small>
+		  								puntos
+		  							</small>
+		  						</h4>
+		  					</div>
+		  				</div>
+		  				<div class="row item-partido-perfil">
+		  					<div class="col-sm-2 text-center">
+		  						<h4>México</h4>
+		  						<img src="http://placehold.it/100x100" class="img-circle"> 
+		  					</div>
+		  					<div class="col-sm-2 text-center">
+		  						<h4>Croacia</h4>
+		  						<img src="http://placehold.it/100x100" class="img-circle">
+		  					</div>
+		  					<div class="col-sm-4 text-center">
+		  						<h4>2000 <br>
+		  							<small>
+		  								puntos
+		  							</small>
+		  						</h4>
+		  					</div>
+		  				</div>
+		  			</div>
+		  		</div>
+		  		<div class="row">
+		  			<div class="col-sm-12">
+		  				<h3>
+		  					¿Quieres darle un badge a esta persona?
+		  				</h3>
+		  				<ul class="list-inline">
+		  					<li>
+		  						<a href="">
+		  							<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						</a>
+		  					</li>
+		  					<li>
+		  						<a href="">
+		  							<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						</a>
+		  					</li>
+		  					<li>
+		  						<a href="">
+		  							<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						</a>
+		  					</li>
+		  					<li>
+		  						<a href="">
+		  							<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						</a>
+		  					</li>
+		  					<li>
+		  						<a href="">
+		  							<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						</a>
+		  					</li>
+		  					<li>
+		  						<a href="">
+		  							<img src="http://placehold.it/75x75" class="img-circle" alt="">
+		  						</a>
+		  					</li>
+		  				</ul>
+		  				<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, soluta aliquid ad et in maxime velit sed atque esse adipisci.
+
+		  				</p>
+		  				<a href="" class="btn btn-success col-sm-12">Dar Badge</a>
+
+		  			</div>
+		  		</div>
+				
+		  </div>
+	</div>
+  </div>
+</div>
+<!-- Vinculos para registros y perfiles en footer -->
+{embed="sitio/foot"}
