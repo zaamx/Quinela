@@ -1,10 +1,9 @@
 {if logged_in}
   {embed="sitio/partidos"}
 {/if}
+
 {if logged_out}
 {embed="sitio/head-interiores" my_body_class="home" my_active_nav="home" my_page_title="Home"}
-
-  
     <div id="home-ingreso">
       <div class="container">
         <div class="row">
@@ -33,6 +32,6 @@
         </div>
       </div>
     </div>
+    {embed="sitio/foot"}
 {/if}  	
 <!-- Vinculos para registros y perfiles en footer -->
-{embed="sitio/foot"}

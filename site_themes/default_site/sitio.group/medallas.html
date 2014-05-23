@@ -15,108 +15,33 @@
 						BADGES
 					</h3>
 				</div>
-				<div class="item-bad row">
-					<div class="imgBadge col-sm-2 text-center">
-						<img src="http://placehold.it/150x150" class="img-circle" alt="">
+				{exp:channel:entries channel="badges"  dynamic="no" limit="15" paginate="bottom"}							
+
+					<div class="item-bad row">
+						<div class="imgBadge col-sm-2 text-center">
+							<img src="{imagen_badge}"  height="150" width="150" class="img-circle" alt="">
+						</div>
+						<div class="desBadge col-sm-8">
+							<h4>
+								{title} <br>
+								<!-- <small>
+									Definir la descripción y las reglas del badge.
+								</small> -->
+							</h4>
+							<p>
+								{descripcion_badge}
+							</p>
+							
+						</div>
 					</div>
-					<div class="desBadge col-sm-8">
-						<h4>
-							Amateur <br>
-							<small>
-								Definir la descripción y las reglas del badge.
-							</small>
-						</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, nam, harum, accusantium, asperiores consequuntur quos voluptatem ducimus quasi adipisci reiciendis dolor rem beatae quia doloribus totam voluptatibus laboriosam expedita enim.
-						</p>
-						
-					</div>
-				</div>
-				<div class="item-bad row">
-					<div class="imgBadge col-sm-2 text-center">
-						<img src="http://placehold.it/150x150" class="img-circle" alt="">
-					</div>
-					<div class="desBadge col-sm-8">
-						<h4>
-							Amateur <br>
-							<small>
-								Definir la descripción y las reglas del badge.
-							</small>
-						</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, nam, harum, accusantium, asperiores consequuntur quos voluptatem ducimus quasi adipisci reiciendis dolor rem beatae quia doloribus totam voluptatibus laboriosam expedita enim.
-						</p>
-						
-					</div>
-				</div>
-				<div class="item-bad row">
-					<div class="imgBadge col-sm-2 text-center">
-						<img src="http://placehold.it/150x150" class="img-circle" alt="">
-					</div>
-					<div class="desBadge col-sm-8">
-						<h4>
-							Amateur <br>
-							<small>
-								Definir la descripción y las reglas del badge.
-							</small>
-						</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, nam, harum, accusantium, asperiores consequuntur quos voluptatem ducimus quasi adipisci reiciendis dolor rem beatae quia doloribus totam voluptatibus laboriosam expedita enim.
-						</p>
-						
-					</div>
-				</div>
-				<div class="item-bad row">
-					<div class="imgBadge col-sm-2 text-center">
-						<img src="http://placehold.it/150x150" class="img-circle" alt="">
-					</div>
-					<div class="desBadge col-sm-8">
-						<h4>
-							Amateur <br>
-							<small>
-								Definir la descripción y las reglas del badge.
-							</small>
-						</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, nam, harum, accusantium, asperiores consequuntur quos voluptatem ducimus quasi adipisci reiciendis dolor rem beatae quia doloribus totam voluptatibus laboriosam expedita enim.
-						</p>
-						
-					</div>
-				</div>
-				<div class="item-bad row">
-					<div class="imgBadge col-sm-2 text-center">
-						<img src="http://placehold.it/150x150" class="img-circle" alt="">
-					</div>
-					<div class="desBadge col-sm-8">
-						<h4>
-							Amateur <br>
-							<small>
-								Definir la descripción y las reglas del badge.
-							</small>
-						</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, nam, harum, accusantium, asperiores consequuntur quos voluptatem ducimus quasi adipisci reiciendis dolor rem beatae quia doloribus totam voluptatibus laboriosam expedita enim.
-						</p>
-						
-					</div>
-				</div>
-				<div class="item-bad row">
-					<div class="imgBadge col-sm-2 text-center">
-						<img src="http://placehold.it/150x150" class="img-circle" alt="">
-					</div>
-					<div class="desBadge col-sm-8">
-						<h4>
-							Amateur <br>
-							<small>
-								Definir la descripción y las reglas del badge.
-							</small>
-						</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, nam, harum, accusantium, asperiores consequuntur quos voluptatem ducimus quasi adipisci reiciendis dolor rem beatae quia doloribus totam voluptatibus laboriosam expedita enim.
-						</p>
-						
-					</div>
-				</div>
+
+				{if no_results}<span>This user has not posted any entries.</span>{/if}
+
+
+				{paginate}<li>Page {current_page} of {total_pages} page{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
+
+				{/exp:channel:entries}
+
 			</div>
 		</div>
 		

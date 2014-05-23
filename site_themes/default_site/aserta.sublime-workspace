@@ -43,7 +43,7 @@
 			"file": "sitio.group/medallas.html",
 			"settings":
 			{
-				"buffer_size": 4484,
+				"buffer_size": 1466,
 				"line_ending": "Unix"
 			}
 		},
@@ -51,15 +51,7 @@
 			"file": "sitio.group/partido.html",
 			"settings":
 			{
-				"buffer_size": 5613,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sitio.group/partidos.html",
-			"settings":
-			{
-				"buffer_size": 10950,
+				"buffer_size": 5009,
 				"line_ending": "Unix"
 			}
 		},
@@ -80,14 +72,6 @@
 			}
 		},
 		{
-			"file": "sitio.group/perfil.html",
-			"settings":
-			{
-				"buffer_size": 6810,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"contents": "			<div id=\"leftcolumn\">\n				{exp:user:stats member_id=\"{segment_3}\" dynamic=\"off\" limit=\"1\" log_views=\"off\"}\n					<a href=\"{path=sitio/perfil}/{member_id}/\"><img src=\"{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{exp:user:theme_folder_url}code_pack/images/icon_profile.gif{/if}\" width=\"150\" alt=\"{screen_name}'s photo\" /></a><br /><br />\n				<ul>\n<!-- START - if viewing page other than Profile -->\n					{if segment_2 != \"profile\"}<li style=\"margin-bottom: 5px; border-bottom: 1px solid #d5d5d5\"><a href=\"{path=user_main/profile}/{member_id}/\">Back to Profile</a></li>{/if}\n<!-- END - if viewing page other than Profile -->\n\n					<li{if segment_2 == \"user_entries\"} class=\"selected\"{/if}><a href=\"{path=user_main/user_entries}/{member_id}/\">View {if segment_3 == logged_in_member_id}My{if:else}{screen_name}'s{/if} Entries</a></li>\n					<li{if segment_2 == \"user_comments\"} class=\"selected\"{/if}><a href=\"{path=user_main/user_comments}/{member_id}/\">View {if segment_3 == logged_in_member_id}My{if:else}{screen_name}'s{/if} Comments</a></li>\n					{if segment_3 != logged_in_member_id}\n					<li><a href=\"{path=member/messages/pm}/{member_id}/\">Send {screen_name} a Message</a></li>\n					{/if}\n\n<!-- START - if Current User -->\n					{if segment_3 == logged_in_member_id}\n					<li style=\"margin-top: 10px; border-top: 1px solid #d5d5d5\"><a href=\"{path=user_main/update_profile}/{member_id}/\"><small>Update My Profile</small></a></li>\n					{/if}\n<!-- END - if Current User -->\n				</ul>\n				{/exp:user:stats}\n			</div>",
 			"settings":
 			{
@@ -100,7 +84,7 @@
 			"file": "sitio.group/head.html",
 			"settings":
 			{
-				"buffer_size": 6644,
+				"buffer_size": 6658,
 				"line_ending": "Unix"
 			}
 		},
@@ -109,6 +93,46 @@
 			"settings":
 			{
 				"buffer_size": 1784,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/index.html",
+			"settings":
+			{
+				"buffer_size": 1592,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/partidos.html",
+			"settings":
+			{
+				"buffer_size": 1892,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/part-partido.html",
+			"settings":
+			{
+				"buffer_size": 1050,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{if logged_in}\n			<div class=\"row\">\n				<div class=\"col-sm-10 col-sm-offset-1 text-center\">\n					<hr>\n\n					<script type=\"text/javascript\">\n					$(document).ready(function(){\n						$('#publishForm').ajaxForm({\n							dataType: 'json',\n							success: function(data) {\n								if (data.success == '1') {\n									alert('You successfully added a new entry with entry_id '+data.entry_id);\n\n								} else if (data.success == '0') {					\n		                    		$('#mensajes').append(data.field_errors.title);\n		                    		$('#mensajes').append(data.field_errors.pre_marcador_local);\n		                    		$('#mensajes').append(data.field_errors.pre_marcador_visitante);\n		                    		$('#mensajes').append(data.field_errors.pre_resultado_de_partido);\n		                    		$('#mensajes').append(data.field_errors.pre_minuto_de_primer_gol);\n		                    		$('#mensajes').append(data.field_errors.quien_anota_primero);		                    		\n									 // alert('Failed with the following errors: '+ data.errors.join(', '));\n								}\n							}\n						});\n					});\n					</script>\n					{exp:channel:form channel=\"badges_asignados\" return=\"site/ENTRY_ID\" json=\"yes\"}\n						<input type=\"hidden\" name=\"id_de_partido\" id=\"id_de_partido\" value=\"{exp:url_title_to_entry_id url_title=\"{segment_3}\"}\">\n						<input type=\"hidden\" name=\"id_de_partido_entry\" id=\"id_de_partido_entry\" value=\"{segment_3}\">\n						<input type=\"hidden\" name=\"pre_id_de_usuario\" id=\"pre_id_de_usuario\" value=\"{member_id}\">\n						<input type=\"hidden\" name=\"title\" id=\"title\" value=\"{username}-id-{member_id}-pred-{segment_3}-id-{exp:url_title_to_entry_id url_title=\"{segment_3}\"}-{entry_date}\" size=\"50\" maxlength=\"100\" onkeyup=\"liveUrlTitle();\">				\n\n						<div class=\"form-group\" id=\"pre_resultado_de_partido_cont\">\n							{field:pre_resultado_de_partido}	\n						</div>\n\n						<div>\n							<div class=\"row\">\n								<div class=\"col-sm-6\">\n									<div class=\"form-group\" id=\"pre_marcador_local_cont\">\n\n										<label for=\"pre_marcador_local\">Anota {equipo_local}</label>\n										<input type=\"text\"  class=\"form-control\" name=\"pre_marcador_local\" id=\"pre_marcador_local\" value=\"\">\n									</div>\n								</div>\n								<div class=\"col-sm-6\">\n									<div class=\"form-group\" id=\"pre_marcador_visitante_cont\">\n										<label for=\"pre_marcador_visitante\">Anota {equipo_visitante}</label>\n										<input type=\"text\"  class=\"form-control\"  name=\"pre_marcador_visitante\" id=\"pre_marcador_visitante\" value=\"\">\n									</div>\n								</div>\n							</div>\n						</div>\n						<hr>\n\n						<div class=\"form-group\" id=\"quien_anota_primero_cont\">\n							{field:quien_anota_primero}	\n						</div>\n						<hr>\n\n						<div class=\"form-group\" id=\"pre_minuto_de_primer_gol_cont\">\n							<label for=\"pre_minuto_de_primer_gol\">Minuto de primer gol</label>\n							<input type=\"text\"  class=\"form-control\" name=\"pre_minuto_de_primer_gol\" id=\"pre_minuto_de_primer_gol\" value=\"\">\n						</div>\n						<hr>\n						\n						<input type=\"submit\" value=\"PREDECIR\" class=\"btn btn-success\">\n					{/exp:channel:form}\n					<div id=\"mensajes\">\n					</div>\n				</div>\n			</div>\n			{/if}",
+			"settings":
+			{
+				"buffer_size": 3150,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/perfil.html",
+			"settings":
+			{
+				"buffer_size": 7091,
 				"line_ending": "Unix"
 			}
 		}
@@ -197,6 +221,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<div class=\"col-md-3\">\n							<article class=\"text-center item-partido\">\n								<div class=\"row\">\n									<div class=\"col-sm-6 col-sm-offset-3 text-center\">\n										<img src=\"http://placehold.it/50x50\" class=\"img-circle\"alt=\"\">\n									</div>\n								</div>\n								<header >\n									<div class=\"row\">\n										<div class=\"col-sm-6 text-center\">\n											{equipo_local} <br>\n											<img src=\"http://placehold.it/100x100\" class=\"img-circle img-responsive\"alt=\"\">\n										</div>\n										<div class=\"col-sm-6 text-center\">\n											{equipo_visitante} <br>\n											<img src=\"http://placehold.it/100x100\" class=\"img-circle img-responsive\"alt=\"\">\n										</div>\n									</div>\n									<div class=\"row\">\n										<b>Grupo A</b>\n										<p>\n											Arena Sao Paoulo\n										</p>\n										<p>\n											{fecha_de_partido format=\"%Y %m %d\"}\n										</p>\n									</div>\n									<div class=\"row\">\n										<div class=\"col-sm-12\">\n											<h3><i class=\"fa fa-star-o\"></i>  8, 000 puntos</h3>\n										</div>\n									</div>\n								</header>\n								<footer>\n									<a class=\"btn btn-success\" href=\"{url_title_path='sitio/partido'}\">PREDECIR</a>\n								</footer>\n							</article>\n						</div>",
 			"		  						\n",
 			"<div class=\"col-sm-4\">",
 			"<img src=\"http://placehold.it/350x250\" class=\"img-responsive\" alt=\"\">",
@@ -216,6 +241,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
 			"<div class=\"col-sm-3 text-center\">",
 			"<img src=\"http://placehold.it/150x150\" class=\"img-circle\" alt=\"\">",
 			"h4",
@@ -230,7 +256,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 10,
 			"sheets":
 			[
 				{
@@ -238,15 +264,15 @@
 					"file": "sitio.group/medallas.html",
 					"settings":
 					{
-						"buffer_size": 4484,
+						"buffer_size": 1466,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								645,
-								645
+								1350,
+								1350
 							]
 						],
 						"settings":
@@ -265,15 +291,15 @@
 					"file": "sitio.group/partido.html",
 					"settings":
 					{
-						"buffer_size": 5613,
+						"buffer_size": 5009,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1288,
-								1288
+								1741,
+								1741
 							]
 						],
 						"settings":
@@ -282,40 +308,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 312.0,
+						"translation.y": 582.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "sitio.group/partidos.html",
-					"settings":
-					{
-						"buffer_size": 10950,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								463,
-								463
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "sitio.group/ranking.html",
 					"settings":
 					{
@@ -342,7 +341,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "sitio.group/ranking-medallas.html",
 					"settings":
 					{
@@ -369,35 +368,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "sitio.group/perfil.html",
-					"settings":
-					{
-						"buffer_size": 6810,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6169,
-								6169
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 761.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 4,
 					"settings":
 					{
 						"buffer_size": 1528,
@@ -407,8 +378,8 @@
 						"selection":
 						[
 							[
-								1486,
-								1486
+								412,
+								412
 							]
 						],
 						"settings":
@@ -424,11 +395,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 5,
 					"file": "sitio.group/head.html",
 					"settings":
 					{
-						"buffer_size": 6644,
+						"buffer_size": 6658,
 						"regions":
 						{
 						},
@@ -451,7 +422,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 6,
 					"file": "library/less/_base.less",
 					"settings":
 					{
@@ -476,6 +447,233 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sitio.group/index.html",
+					"settings":
+					{
+						"buffer_size": 1592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								175,
+								175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sitio.group/partido.html",
+					"settings":
+					{
+						"buffer_size": 5009,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1269,
+								1269
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sitio.group/partidos.html",
+					"settings":
+					{
+						"buffer_size": 1892,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								502,
+								502
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "sitio.group/part-partido.html",
+					"settings":
+					{
+						"buffer_size": 1050,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								332,
+								332
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"settings":
+					{
+						"buffer_size": 3150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1091,
+								1091
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 39.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 11,
+					"file": "sitio.group/perfil.html",
+					"settings":
+					{
+						"buffer_size": 7091,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3041,
+								3041
+							],
+							[
+								3191,
+								3191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1196.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 0,
+					"file": "sitio.group/medallas.html",
+					"settings":
+					{
+						"buffer_size": 1466,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								409,
+								409
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sitio.group/head.html",
+					"settings":
+					{
+						"buffer_size": 6658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5856,
+								5856
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1879.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		}
@@ -497,11 +695,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.400625,
 			1.0
 		],
 		"rows":
@@ -522,16 +727,28 @@
 		"selected_items":
 		[
 			[
+				"he",
+				"sitio.group/head.html"
+			],
+			[
+				"meda",
+				"sitio.group/medallas.html"
+			],
+			[
+				"part",
+				"sitio.group/partidos.html"
+			],
+			[
+				"per",
+				"sitio.group/perfil.html"
+			],
+			[
 				"base",
 				"library/less/_base.less"
 			],
 			[
 				"hea",
 				"sitio.group/head.html"
-			],
-			[
-				"per",
-				"sitio.group/perfil.html"
 			],
 			[
 				"ra",
@@ -546,24 +763,12 @@
 				"sitio.group/partidos.html"
 			],
 			[
-				"part",
-				"sitio.group/partido.html"
-			],
-			[
-				"meda",
-				"sitio.group/medallas.html"
-			],
-			[
 				"head",
 				"sitio.group/head.html"
 			],
 			[
 				"inde",
 				"sitio.group/index.html"
-			],
-			[
-				"he",
-				"sitio.group/head.html"
 			],
 			[
 				"foot",
@@ -596,6 +801,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 150.0,
+	"side_bar_width": 223.0,
 	"status_bar_visible": true
 }

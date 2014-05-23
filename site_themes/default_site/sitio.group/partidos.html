@@ -15,162 +15,11 @@
 						<h4><i class="fa fa-calendar"></i> 13 de junio</h4>
 						<hr>
 					</div>
-					{exp:channel:entries channel="partidos" search:fecha="jue 12 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					<div class="row">
-						<div class="col-md-3">
-							<article class="text-center item-partido">
-								<div class="row">
-									<div class="col-sm-6 col-sm-offset-3 text-center">
-										<img src="http://placehold.it/50x50" class="img-circle"alt="">
-									</div>
-								</div>
-								<header >
-									<div class="row">
-										<div class="col-sm-6 text-center">
-											{equipo_local} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-										<div class="col-sm-6 text-center">
-											{equipo_visitante} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-									</div>
-									<div class="row">
-										<b>Grupo A</b>
-										<p>
-											Arena Sao Paoulo
-										</p>
-										<p>
-											{fecha_de_partido format="%Y %m %d"}
-										</p>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
-										</div>
-									</div>
-								</header>
-								<footer>
-									<a class="btn btn-success" href="{url_title_path='sitio/partido'}">PREDECIR</a>
-								</footer>
-							</article>
-						</div>
-						<div class="col-md-3">
-							<article class="text-center item-partido">
-								<div class="row">
-									<div class="col-sm-6 col-sm-offset-3 text-center">
-										<img src="http://placehold.it/50x50" class="img-circle"alt="">
-									</div>
-								</div>
-								<header >
-									<div class="row">
-										<div class="col-sm-6 text-center">
-											{equipo_local} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-										<div class="col-sm-6 text-center">
-											{equipo_visitante} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-									</div>
-									<div class="row">
-										<b>Grupo A</b>
-										<p>
-											Arena Sao Paoulo
-										</p>
-										<p>
-											{fecha_de_partido format="%Y %m %d"}
-										</p>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
-										</div>
-									</div>
-								</header>
-								<footer>
-									<a class="btn btn-success" href="{url_title_path='sitio/partido'}">PREDECIR</a>
-								</footer>
-							</article>
-						</div>
-						<div class="col-md-3">
-							<article class="text-center item-partido">
-								<div class="row">
-									<div class="col-sm-6 col-sm-offset-3 text-center">
-										<img src="http://placehold.it/50x50" class="img-circle"alt="">
-									</div>
-								</div>
-								<header >
-									<div class="row">
-										<div class="col-sm-6 text-center">
-											{equipo_local} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-										<div class="col-sm-6 text-center">
-											{equipo_visitante} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-									</div>
-									<div class="row">
-										<b>Grupo A</b>
-										<p>
-											Arena Sao Paoulo
-										</p>
-										<p>
-											{fecha_de_partido format="%Y %m %d"}
-										</p>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
-										</div>
-									</div>
-								</header>
-								<footer>
-									<a class="btn btn-success" href="{url_title_path='sitio/partido'}">PREDECIR</a>
-								</footer>
-							</article>
-						</div>
-						<div class="col-md-3">
-							<article class="text-center item-partido">
-								<div class="row">
-									<div class="col-sm-6 col-sm-offset-3 text-center">
-										<img src="http://placehold.it/50x50" class="img-circle"alt="">
-									</div>
-								</div>
-								<header >
-									<div class="row">
-										<div class="col-sm-6 text-center">
-											{equipo_local} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-										<div class="col-sm-6 text-center">
-											{equipo_visitante} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-									</div>
-									<div class="row">
-										<b>Grupo A</b>
-										<p>
-											Arena Sao Paoulo
-										</p>
-										<p>
-											{fecha_de_partido format="%Y %m %d"}
-										</p>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
-										</div>
-									</div>
-								</header>
-								<footer>
-									<a class="btn btn-success" href="{url_title_path='sitio/partido'}">PREDECIR</a>
-								</footer>
-							</article>
-						</div>
-					</div>
+					{exp:channel:entries channel="partidos" search:fecha="jue 12 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
+						{part-partido}
 					{/exp:channel:entries}
+					</div>
 				</div>
 
 				<div class="partidos-dia">
@@ -178,164 +27,47 @@
 						<h4><i class="fa fa-calendar"></i> 13 de junio</h4>
 						<hr>
 					</div>
-					{exp:channel:entries channel="partidos" search:fecha="jue 12 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					<div class="row">
-						<div class="col-md-3">
-							<article class="text-center item-partido">
-								<div class="row">
-									<div class="col-sm-6 col-sm-offset-3 text-center">
-										<img src="http://placehold.it/50x50" class="img-circle"alt="">
-									</div>
-								</div>
-								<header >
-									<div class="row">
-										<div class="col-sm-6 text-center">
-											{equipo_local} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-										<div class="col-sm-6 text-center">
-											{equipo_visitante} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-									</div>
-									<div class="row">
-										<b>Grupo A</b>
-										<p>
-											Arena Sao Paoulo
-										</p>
-										<p>
-											{fecha_de_partido format="%Y %m %d"}
-										</p>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
-										</div>
-									</div>
-								</header>
-								<footer>
-									<a class="btn btn-success" href="{url_title_path='sitio/partido'}">PREDECIR</a>
-								</footer>
-							</article>
-						</div>
-						<div class="col-md-3">
-							<article class="text-center item-partido">
-								<div class="row">
-									<div class="col-sm-6 col-sm-offset-3 text-center">
-										<img src="http://placehold.it/50x50" class="img-circle"alt="">
-									</div>
-								</div>
-								<header >
-									<div class="row">
-										<div class="col-sm-6 text-center">
-											{equipo_local} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-										<div class="col-sm-6 text-center">
-											{equipo_visitante} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-									</div>
-									<div class="row">
-										<b>Grupo A</b>
-										<p>
-											Arena Sao Paoulo
-										</p>
-										<p>
-											{fecha_de_partido format="%Y %m %d"}
-										</p>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
-										</div>
-									</div>
-								</header>
-								<footer>
-									<a class="btn btn-success" href="{url_title_path='sitio/partido'}">PREDECIR</a>
-								</footer>
-							</article>
-						</div>
-						<div class="col-md-3">
-							<article class="text-center item-partido">
-								<div class="row">
-									<div class="col-sm-6 col-sm-offset-3 text-center">
-										<img src="http://placehold.it/50x50" class="img-circle"alt="">
-									</div>
-								</div>
-								<header >
-									<div class="row">
-										<div class="col-sm-6 text-center">
-											{equipo_local} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-										<div class="col-sm-6 text-center">
-											{equipo_visitante} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-									</div>
-									<div class="row">
-										<b>Grupo A</b>
-										<p>
-											Arena Sao Paoulo
-										</p>
-										<p>
-											{fecha_de_partido format="%Y %m %d"}
-										</p>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
-										</div>
-									</div>
-								</header>
-								<footer>
-									<a class="btn btn-success" href="{url_title_path='sitio/partido'}">PREDECIR</a>
-								</footer>
-							</article>
-						</div>
-						<div class="col-md-3">
-							<article class="text-center item-partido">
-								<div class="row">
-									<div class="col-sm-6 col-sm-offset-3 text-center">
-										<img src="http://placehold.it/50x50" class="img-circle"alt="">
-									</div>
-								</div>
-								<header >
-									<div class="row">
-										<div class="col-sm-6 text-center">
-											{equipo_local} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-										<div class="col-sm-6 text-center">
-											{equipo_visitante} <br>
-											<img src="http://placehold.it/100x100" class="img-circle img-responsive"alt="">
-										</div>
-									</div>
-									<div class="row">
-										<b>Grupo A</b>
-										<p>
-											Arena Sao Paoulo
-										</p>
-										<p>
-											{fecha_de_partido format="%Y %m %d"}
-										</p>
-									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
-										</div>
-									</div>
-								</header>
-								<footer>
-									<a class="btn btn-success" href="{url_title_path='sitio/partido'}">PREDECIR</a>
-								</footer>
-							</article>
-						</div>
-					</div>
+					{exp:channel:entries channel="partidos" search:fecha="vie 13 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
+					{part-partido}
 					{/exp:channel:entries}
+					</div>
 				</div>
+
+				jue 12 de jun de 14
+				vie 13 de jun de 14
+				sáb 14 de jun de 14
+				dom 15 de jun de 14
+				lun 16 de jun de 14
+				mar 17 de jun de 14
+				mié 18 de jun de 14
+				jue 19 de jun de 14
+				vie 20 de jun de 14
+				sáb 21 de jun de 14
+				dom 22 de jun de 14
+				lun 23 de jun de 14
+				mar 24 de jun de 14
+				mié 25 de jun de 14
+				jue 26 de jun de 14
+				vie 27 de jun de 14
+				sáb 28 de jun de 14
+				dom 29 de jun de 14
+				lun 30 de jun de 14
+				mar 1 de jul de 14
+				mié 2 de jul de 14
+				jue 3 de jul de 14
+				vie 4 de jul de 14
+				sáb 5 de jul de 14
+				dom 6 de jul de 14
+				lun 7 de jul de 14
+				mar 8 de jul de 14
+				mié 9 de jul de 14
+				jue 10 de jul de 14
+				vie 11 de jul de 14
+				sáb 12 de jul de 14
+				dom 13 de jul de 14
 			</div>
 		</div>
 	</div>
 	</div>
+{embed="sitio/foot"}

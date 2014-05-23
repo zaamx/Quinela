@@ -1,0 +1,38 @@
+<div class="col-md-3">
+	<article class="text-center item-partido">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3 text-center">
+				<img src="http://placehold.it/50x50" class="img-circle"alt="">
+			</div>
+		</div>
+		<header >
+			<div class="row">
+				<div class="col-sm-6 text-center">
+					{equipo_local:nombre_de_pais} <br>
+					<img src="{equipo_local:bandera_seleccion}" class="img-circle img-responsive"alt="">
+				</div>
+				<div class="col-sm-6 text-center">
+					{equipo_visitante:nombre_de_pais} <br>
+					<img src="{equipo_visitante:bandera_seleccion}" class="img-circle img-responsive"alt="">
+				</div>
+			</div>
+			<div class="row">
+				<b>Grupo A</b>
+				<p>
+					Arena Sao Paoulo
+				</p>
+				<p>
+					{fecha_de_partido format="%Y %m %d"}
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
+				</div>
+			</div>
+		</header>
+		<footer>
+			<a class="btn btn-success" href="{url_title_path='sitio/partido'}">PREDECIR</a>
+		</footer>
+	</article>
+</div>
