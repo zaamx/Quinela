@@ -1,0 +1,40 @@
+
+	{exp:user:stats member_id="{segment_3}" dynamic="off" limit="1" log_views="off"}
+		<a href="{path=sitio/perfil}/{member_id}/">
+			<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{exp:user:theme_folder_url}code_pack/images/icon_profile.gif{/if}" width="150" alt="{screen_name}'s photo" />
+		</a>
+		<h2>
+			{screen_name}
+		</h2>
+		<hr>
+		<p>
+			<b>6000 </b><span>Puntos</span> <br>
+			<b>15 </b><span>Medallas</span> <br>
+			<b>Nivel Experto</b>
+		</p>
+		<hr>
+
+
+		{if segment_3 == logged_in_member_id}
+			<ul>
+				<!-- START - if Current User -->
+				<li>
+					<a href="{path=sitio/actualizar-perfil}/{member_id}/">
+						<small>Editar Perfil y Avatar</small>
+					</a>
+				</li>
+
+				<li>
+					<a href="{path=sitio/actualizar-cuenta}/{member_id}/">
+						<small>Editar Usuario y contraseña</small>
+					</a>
+				</li>
+			<!-- END - if Current User -->
+			</ul>
+		{/if}
+
+		
+
+	{/exp:user:stats}
+
+	

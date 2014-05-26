@@ -52,6 +52,7 @@
 			</div>
 			{if logged_in}
 				<div class="row">
+					<h1>{logged_in_member_id} / {member_group} / </h1>
 					<div class="col-sm-10 col-sm-offset-1 text-center">
 						<hr>
 						<script type="text/javascript">
@@ -78,8 +79,8 @@
 						{exp:channel:form channel="predicciones" return="site/ENTRY_ID" json="yes"}
 							<input type="hidden" name="id_de_partido" id="id_de_partido" value="{exp:url_title_to_entry_id url_title="{segment_3}"}">
 							<input type="hidden" name="id_de_partido_entry" id="id_de_partido_entry" value="{segment_3}">
-							<input type="hidden" name="pre_id_de_usuario" id="pre_id_de_usuario" value="{member_id}">
-							<input type="hidden" name="title" id="title" value="{username}-id-{member_id}-pred-{segment_3}-id-{exp:url_title_to_entry_id url_title="{segment_3}"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">				
+							<input type="hidden" name="pre_id_de_usuario" id="pre_id_de_usuario" value="{logged_in_member_id}">
+							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-pred-{segment_3}-id-{exp:url_title_to_entry_id url_title="{segment_3}"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">				
 
 							<div class="form-group" id="pre_resultado_de_partido_cont">
 								{field:pre_resultado_de_partido}	

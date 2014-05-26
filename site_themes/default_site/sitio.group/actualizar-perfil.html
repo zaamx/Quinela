@@ -1,0 +1,117 @@
+{embed="sitio/head" my_body_class="perfil" my_active_nav="perfil" my_page_title="Perfil | {title}"}
+<div id="content">
+	<div class="container">
+		<div class="row">
+			<h3>{if logged_in_member_id == "{segment_3}"}Mi  {/if}Perfil</h3>
+
+		</div>
+		<div class="row">
+
+			<!-- ///////////////////////////////  Sidebar ///////////////////////////////   -->
+			
+
+			<!-- ///////////////////////////////  Contenido ///////////////////////////////   -->
+
+
+
+			
+		{if logged_out}
+
+		{embed="user_inc/login"}
+
+		{if:else}
+		<div class="col-sm-3">			
+			{embed="sitio/perfil-sidebar"}
+		</div>
+		
+			<div class="col-sm-8">
+
+				<div class="row">
+
+
+				{if segment_3 == "exito"}
+					<div class="alert alert-success alert-dismissable">
+					  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					  You've successfully updated your profile!
+					</div>
+				{/if}
+
+				{if segment_3 == "exito-avatar"}
+					<div class="alert alert-success alert-dismissable">
+					  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						You've successfully updated your Avatar or Profile Photo!
+					</div>
+					
+				{/if}
+
+
+				<h5>Fill in or edit the fields below to update your profile:</h5>
+				<hr />
+
+				{exp:user:edit return="sitio/actualizar-perfil/exito" screen_name_password_required="no" error_page="sitio/error-perfil"}
+					<p><label for="screen_name">Screen Name:</label><input type="text" name="screen_name" id="screen_name" value="{screen_name}" style="width: 450px; font-weight: bold;" /></p>
+
+					<div class="form-group">
+  						<label for="miembro_pertenencia">Oficina de pertenencia</label> <br>
+
+  						<b>Actual: {miembro_pertenencia}</b> <br>
+
+	  						<script type="text/javascript">
+								$(document).ready(function(){
+									$('select[name="miembro_pertenencia"]').find('option[value="{miembro_pertenencia}"]').attr("selected",true);
+								});
+							</script>
+
+  							<span>
+  								Cambiar:
+  							</span>
+  							<br>
+			                 <select name="miembro_pertenencia">
+			                  {select_miembro_pertenencia}
+			                      <option value="{value}">{value}</option>
+			                  {/select_miembro_pertenencia}
+			                </select>
+  						</div>
+
+					<p><label for="bio">Bio:</label><textarea name="bio" id="bio" rows="10" cols="50" style="width: 450px; height: 200px;">{bio}</textarea></p>
+					<p><input type="submit" name="submit" value="Update" />
+				{/exp:user:edit}  
+
+
+
+				<hr>
+				<hr>
+				<hr>
+
+				
+				<h5>Your Avatar</h5>
+				{exp:user:edit return="sitio/actualizar-perfil/exito-avatar" override_return="sitio/actualizar-perfil/exito-avatar" error_page="sitio/error-perfil"}
+				<p>{if avatar_filename}<label>Current Avatar: </label><img src="{avatar_url}{avatar_filename}" width="{avatar_width}" height="{avatar_height}" />{if:else}You currently do not have an avatar uploaded.{/if}</p>
+				<p><label for="avatar_filename">Upload a New Avatar: </label><input type="file" name="avatar_filename" id="avatar_filename" /></p>
+
+				<div class="sr-only">|
+						<script type="text/javascript">
+							$(document).ready(function(){
+								$('select[name="miembro_pertenencia"]').find('option[value="{miembro_pertenencia}"]').attr("selected",true);
+							});
+						</script>
+	                	<select name="miembro_pertenencia">
+			                  {select_miembro_pertenencia}
+			                      <option value="{value}">{value}</option>
+			                  {/select_miembro_pertenencia}
+	               		 </select>
+				</div>
+
+				<p><input type="submit" value="Update" /> <input type="submit" name="remove_avatar" value="Remove Current Avatar?" /></p>
+				{/exp:user:edit}
+
+				</div><!--  close row -->
+			</div> <!-- close col -->
+
+		{/if}
+				
+		</div>
+	</div>
+</div>
+<!-- Vinculos para registros y perfiles en footer -->
+{embed="sitio/foot"}

@@ -12,7 +12,7 @@
 
 				<div class="partidos-dia">
 					<div class="row">
-						<h4><i class="fa fa-calendar"></i> 13 de junio</h4>
+						<h4><i class="fa fa-calendar"></i> 12 de junio</h4>
 						<hr>
 					</div>
 					<div class="row">
@@ -29,6 +29,18 @@
 					</div>
 					<div class="row">
 					{exp:channel:entries channel="partidos" search:fecha="vie 13 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 14 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="sáb 14 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>

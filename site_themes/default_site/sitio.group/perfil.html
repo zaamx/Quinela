@@ -10,20 +10,7 @@
 			<!-- ///////////////////////////////  Sidebar ///////////////////////////////   -->
 			<div class="col-sm-3">
 				{if segment_3}
-				{exp:user:stats dynamic="off" limit="1" log_views="off"}
-				<h2>
-					<a href="{path=sitio/perfil}/{member_id}/">
-						<img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{exp:user:theme_folder_url}code_pack/images/icon_profile.gif{/if}" width="100" height="100" alt="{screen_name}'s photo" />
-					</a><br>
-					{screen_name}
-				</h2>
-				<p>
-					<b>6000 </b><span>Puntos</span> <br>
-					<b>15 </b><span>Medallas</span> <br>
-					<b>Nivel Experto</b>
-				</p>
-				{/exp:user:stats}
-				
+					{embed="sitio/perfil-sidebar"}
 				{if:else}
 				<h4>Error!</h4><p>You must specify a member ID to view a profile.</p>
 				{/if}
@@ -39,11 +26,11 @@
 				<div class="row">
 					<div class="col-sm-12">
 						{if segment_3}
-						{exp:user:stats dynamic="off" limit="1" log_views="off"}
+						{exp:user:stats member_id="{segment_3}" limit="1"}
 						<h2>
 							{screen_name} <br>
 							<small>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, nam nostrum excepturi quas accusantium dicta a impedit aliquid expedita corrupti!    
+								{bio}  
 							</small>
 						</h2>
 						<p>
@@ -201,7 +188,7 @@
 						{exp:channel:form channel="badges_asignados" return="site/ENTRY_ID" json="yes"}
 
 						<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}">
-						<input type="hidden" name="title" id="title" value="{username}-id-{member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+						<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 						<div class="sr-only">
 
 							{field:lista_badges}		
