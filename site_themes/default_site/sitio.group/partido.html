@@ -1,4 +1,4 @@
-{embed="sitio/head" my_body_class="partido" my_active_nav="partidos" my_page_title="Partido | "}
+{embed="sitio/head-partido" my_body_class="partido" my_active_nav="partidos" my_page_title="Partido | "}
 <link href="{path=css/_ee_channel_form_css}" type="text/css" rel="stylesheet" media="screen">
 	<div id="content">
 		<div class="container">
@@ -16,6 +16,18 @@
 				}
 			</style>
 		{/if}
+			<div class="row">
+				<div class="col-sm-12">
+					<ul id="pasos-prediccion">
+						<li class="activaa">1/5</li>
+						<li class="activaa">2/5</li>
+						<li class="activaa">3/5</li>
+						<li>4/5</li>
+						<li>5/5</li>
+					</ul>
+
+				</div>
+			</div>
 		
 			<div class="row">
 				<div class="col-md-12">
@@ -31,16 +43,25 @@
 								<div class="col-sm-2 text-center">
 
 									<h3>8, 000 <br>puntos <br>disputados</h3>
-									<b>Grupo A</b>
-									<p>
-										Arena Sao Paoulo
+
+									<b>
+									{categories limit="1" show_group="1"}
+										{category_name}
+									{/categories}
+									</b>
+
+									<p>									
+									{categories limit="1" show_group="2"}
+										{category_name}
+									{/categories}
 									</p>
+
 									<p>
 										{fecha_de_partido format="%Y %m %d"}
 									</p>
-									<p><br><br>
-										<b>Selecciona tu mejor predicción <br>
-										¿Quíen crees que gane el encuentro ó predices el empate?</b>
+									<p>
+										{pre_texto_central}
+										
 									</p>
 								</div>
 								<div class="col-sm-4 text-center">
@@ -94,6 +115,8 @@
 							<div class="form-group" id="pre_resultado_de_partido_cont">
 								{field:pre_resultado_de_partido}	
 							</div>
+
+							<hr>
 
 							<div class="pasos">
 								{pre_marcadores}

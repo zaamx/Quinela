@@ -14,6 +14,9 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+body.gracias {
+  color: #eeeeee;
+}
 /*********************
 02. LAYOUT & GRID STYLES
 *********************/
@@ -62,6 +65,31 @@ header.head-interiores .bottom {
 .headings h1 small {
   color: #eeeeee;
 }
+.pasos {
+  margin: 5px 0;
+  padding: 5px 0 10px;
+  text-align: center;
+  margin-bottom: 1px solid #eeeeee;
+}
+ul#pasos-prediccion {
+  display: block;
+  margin: 0 0 ;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+ul#pasos-prediccion li {
+  display: block;
+  float: left;
+  width: 20%;
+  text-align: center;
+  color: #eeeeee;
+  background: #555555;
+  padding: 10px;
+}
+ul#pasos-prediccion li.activaa {
+  background: #5cb85c;
+}
 /*********************
 03. POSTS & CONTENT STYLES
 *********************/
@@ -74,7 +102,7 @@ header.head-interiores .bottom {
 }
 #content {
   padding: 20px 0 20px;
-  background: #eeeeee;
+  background: rgba(255, 255, 255, 0.8);
 }
 #content article.item-partido {
   margin: 0 0 10px;

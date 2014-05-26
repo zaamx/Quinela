@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-align"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"list-s",
+				"list-style"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
 				"gray-l",
 				"gray-light"
 			],
@@ -16,10 +44,6 @@
 				"padding"
 			],
 			[
-				"tex",
-				"text-transform"
-			],
-			[
 				"gray-dar",
 				"gray-darker"
 			],
@@ -30,77 +54,56 @@
 			[
 				"pos",
 				"position"
-			],
-			[
-				"margin",
-				"margin-top"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "sitio.group/medallas.html",
+			"file": "sitio.group/perfil.html",
 			"settings":
 			{
-				"buffer_size": 1466,
+				"buffer_size": 7112,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sitio.group/partido.html",
+			"file": "sitio.group/perfil-sidebar.html",
 			"settings":
 			{
-				"buffer_size": 5009,
+				"buffer_size": 928,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sitio.group/ranking.html",
+			"file": "sitio.group/foot.html",
 			"settings":
 			{
-				"buffer_size": 6413,
+				"buffer_size": 11723,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sitio.group/ranking-medallas.html",
+			"file": "sitio.group/actualizar-perfil.html",
 			"settings":
 			{
-				"buffer_size": 4008,
+				"buffer_size": 4334,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "			<div id=\"leftcolumn\">\n				{exp:user:stats member_id=\"{segment_3}\" dynamic=\"off\" limit=\"1\" log_views=\"off\"}\n					<a href=\"{path=sitio/perfil}/{member_id}/\"><img src=\"{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg{/if}\" width=\"150\" alt=\"{screen_name}'s photo\" /></a><br /><br />\n				<ul>\n<!-- START - if viewing page other than Profile -->\n					{if segment_2 != \"profile\"}<li style=\"margin-bottom: 5px; border-bottom: 1px solid #d5d5d5\"><a href=\"{path=user_main/profile}/{member_id}/\">Back to Profile</a></li>{/if}\n<!-- END - if viewing page other than Profile -->\n\n					<li{if segment_2 == \"user_entries\"} class=\"selected\"{/if}><a href=\"{path=user_main/user_entries}/{member_id}/\">View {if segment_3 == logged_in_member_id}My{if:else}{screen_name}'s{/if} Entries</a></li>\n					<li{if segment_2 == \"user_comments\"} class=\"selected\"{/if}><a href=\"{path=user_main/user_comments}/{member_id}/\">View {if segment_3 == logged_in_member_id}My{if:else}{screen_name}'s{/if} Comments</a></li>\n					{if segment_3 != logged_in_member_id}\n					<li><a href=\"{path=member/messages/pm}/{member_id}/\">Send {screen_name} a Message</a></li>\n					{/if}\n\n<!-- START - if Current User -->\n					{if segment_3 == logged_in_member_id}\n					<li style=\"margin-top: 10px; border-top: 1px solid #d5d5d5\"><a href=\"{path=user_main/update_profile}/{member_id}/\"><small>Update My Profile</small></a></li>\n					{/if}\n<!-- END - if Current User -->\n				</ul>\n				{/exp:user:stats}\n			</div>",
+			"file": "sitio.group/actualizar-avatar.html",
 			"settings":
 			{
-				"buffer_size": 1528,
-				"line_ending": "Unix",
-				"name": "<div id=\"leftcolumn\">"
-			}
-		},
-		{
-			"file": "sitio.group/head.html",
-			"settings":
-			{
-				"buffer_size": 6658,
+				"buffer_size": 2330,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "library/less/_base.less",
+			"file": "sitio.group/actualizar-cuenta.html",
 			"settings":
 			{
-				"buffer_size": 1784,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "sitio.group/index.html",
-			"settings":
-			{
-				"buffer_size": 1592,
+				"buffer_size": 2142,
 				"line_ending": "Unix"
 			}
 		},
@@ -108,7 +111,95 @@
 			"file": "sitio.group/partidos.html",
 			"settings":
 			{
-				"buffer_size": 1892,
+				"buffer_size": 2619,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/head-partido.html",
+			"settings":
+			{
+				"buffer_size": 5571,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/miembros.html",
+			"settings":
+			{
+				"buffer_size": 1266,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/alonso/Descargas/slick-master/index.html",
+			"settings":
+			{
+				"buffer_size": 21350,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "library/less/_base.less",
+			"settings":
+			{
+				"buffer_size": 3235,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/ranking.html",
+			"settings":
+			{
+				"buffer_size": 3051,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/ranking-medallas.html",
+			"settings":
+			{
+				"buffer_size": 2301,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "library/less/_768up.less",
+			"settings":
+			{
+				"buffer_size": 615,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/index.html",
+			"settings":
+			{
+				"buffer_size": 1391,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "library/less/_992up.less",
+			"settings":
+			{
+				"buffer_size": 257,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "library/css/style.css",
+			"settings":
+			{
+				"buffer_size": 2498,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "library/less/libs/bootstrap-3.1.1/variables.less",
+			"settings":
+			{
+				"buffer_size": 25374,
 				"line_ending": "Unix"
 			}
 		},
@@ -116,23 +207,55 @@
 			"file": "sitio.group/part-partido.html",
 			"settings":
 			{
-				"buffer_size": 1050,
+				"buffer_size": 1652,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "{if logged_in}\n			<div class=\"row\">\n				<div class=\"col-sm-10 col-sm-offset-1 text-center\">\n					<hr>\n\n					<script type=\"text/javascript\">\n					$(document).ready(function(){\n						$('#publishForm').ajaxForm({\n							dataType: 'json',\n							success: function(data) {\n								if (data.success == '1') {\n									alert('You successfully added a new entry with entry_id '+data.entry_id);\n\n								} else if (data.success == '0') {					\n		                    		$('#mensajes').append(data.field_errors.title);\n		                    		$('#mensajes').append(data.field_errors.pre_marcador_local);\n		                    		$('#mensajes').append(data.field_errors.pre_marcador_visitante);\n		                    		$('#mensajes').append(data.field_errors.pre_resultado_de_partido);\n		                    		$('#mensajes').append(data.field_errors.pre_minuto_de_primer_gol);\n		                    		$('#mensajes').append(data.field_errors.quien_anota_primero);		                    		\n									 // alert('Failed with the following errors: '+ data.errors.join(', '));\n								}\n							}\n						});\n					});\n					</script>\n					{exp:channel:form channel=\"badges_asignados\" return=\"site/ENTRY_ID\" json=\"yes\"}\n						<input type=\"hidden\" name=\"id_de_partido\" id=\"id_de_partido\" value=\"{exp:url_title_to_entry_id url_title=\"{segment_3}\"}\">\n						<input type=\"hidden\" name=\"id_de_partido_entry\" id=\"id_de_partido_entry\" value=\"{segment_3}\">\n						<input type=\"hidden\" name=\"pre_id_de_usuario\" id=\"pre_id_de_usuario\" value=\"{member_id}\">\n						<input type=\"hidden\" name=\"title\" id=\"title\" value=\"{username}-id-{member_id}-pred-{segment_3}-id-{exp:url_title_to_entry_id url_title=\"{segment_3}\"}-{entry_date}\" size=\"50\" maxlength=\"100\" onkeyup=\"liveUrlTitle();\">				\n\n						<div class=\"form-group\" id=\"pre_resultado_de_partido_cont\">\n							{field:pre_resultado_de_partido}	\n						</div>\n\n						<div>\n							<div class=\"row\">\n								<div class=\"col-sm-6\">\n									<div class=\"form-group\" id=\"pre_marcador_local_cont\">\n\n										<label for=\"pre_marcador_local\">Anota {equipo_local}</label>\n										<input type=\"text\"  class=\"form-control\" name=\"pre_marcador_local\" id=\"pre_marcador_local\" value=\"\">\n									</div>\n								</div>\n								<div class=\"col-sm-6\">\n									<div class=\"form-group\" id=\"pre_marcador_visitante_cont\">\n										<label for=\"pre_marcador_visitante\">Anota {equipo_visitante}</label>\n										<input type=\"text\"  class=\"form-control\"  name=\"pre_marcador_visitante\" id=\"pre_marcador_visitante\" value=\"\">\n									</div>\n								</div>\n							</div>\n						</div>\n						<hr>\n\n						<div class=\"form-group\" id=\"quien_anota_primero_cont\">\n							{field:quien_anota_primero}	\n						</div>\n						<hr>\n\n						<div class=\"form-group\" id=\"pre_minuto_de_primer_gol_cont\">\n							<label for=\"pre_minuto_de_primer_gol\">Minuto de primer gol</label>\n							<input type=\"text\"  class=\"form-control\" name=\"pre_minuto_de_primer_gol\" id=\"pre_minuto_de_primer_gol\" value=\"\">\n						</div>\n						<hr>\n						\n						<input type=\"submit\" value=\"PREDECIR\" class=\"btn btn-success\">\n					{/exp:channel:form}\n					<div id=\"mensajes\">\n					</div>\n				</div>\n			</div>\n			{/if}",
+			"file": "sitio.group/medallas.html",
 			"settings":
 			{
-				"buffer_size": 3150,
+				"buffer_size": 1465,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sitio.group/perfil.html",
+			"file": "sitio.group/partido.html",
 			"settings":
 			{
-				"buffer_size": 7091,
+				"buffer_size": 6199,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "user_inc.group/profile_column.html",
+			"settings":
+			{
+				"buffer_size": 2811,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "user_main.group/members.html",
+			"settings":
+			{
+				"buffer_size": 3571,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "user_main.group/search_results.html",
+			"settings":
+			{
+				"buffer_size": 1666,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sitio.group/gracias.html",
+			"settings":
+			{
+				"buffer_size": 960,
 				"line_ending": "Unix"
 			}
 		}
@@ -140,15 +263,19 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 252.0,
+		"height": 172.0,
 		"selected_items":
 		[
 			[
-				"ht",
+				"htm",
 				"Set Syntax: HTML"
 			],
 			[
-				"htm",
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"ht",
 				"Set Syntax: HTML"
 			],
 			[
@@ -181,21 +308,42 @@
 	},
 	"file_history":
 	[
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/ranking-medallas.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/head.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3.1.1/variables.less",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/index.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/miembros.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/head-interiores.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/style.less",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/aserta.sublime-workspace",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_main.group/update_avatar_photo.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/foot.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_inc.group/profile_column.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_main.group/profile.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_main.group/update_profile.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_main.group/members.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_inc.group/control_column.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_main.group/update_account.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/error-perfil.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_inc.group/error_template.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/actualizar-avatar.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_inc.group/guest_column.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/ranking.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/partido.html",
-		"/home/alonso/public_html/quinela/system/expressionengine/config/config.php",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_inc.group/index.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/medallas.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/ranking-medallas.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/_base.less",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/index.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/partidos.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/part-partido.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/perfil.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/head.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/gracias.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_main.group/index.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_inc.group/header.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/head-interiores.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/config.prod.php",
+		"/home/alonso/public_html/quinela/system/expressionengine/config/config.php",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/partido-int.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3.1.1/variables.less",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/miembros.html",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/style.less",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/index.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/paso1.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/_base.less",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/perfil.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3.1.1/.gitattributes",
 		"/home/alonso/public_html/quinela/system/expressionengine/plugins/pi.url_title_to_entry_id.php",
 		"/run/media/alonso/W7_TODO_EN_UNO/leeme.txt",
@@ -211,9 +359,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -221,6 +370,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"{exp:user:theme_folder_url}code_pack/images/icon_profile.gif",
+			"green",
+			"headings",
+			"user_inc/error_template",
+			"id=\"wrapper\"",
+			"{member_id}",
+			"pre_id_de_usuario",
+			"gana",
+			"/home/user/example.com/",
+			"http://example.com/",
+			"{equipo_visitante}",
+			"\"{equipo_visitante}\"",
+			" \"{equipo_visitante}\"",
 			"<div class=\"col-md-3\">\n							<article class=\"text-center item-partido\">\n								<div class=\"row\">\n									<div class=\"col-sm-6 col-sm-offset-3 text-center\">\n										<img src=\"http://placehold.it/50x50\" class=\"img-circle\"alt=\"\">\n									</div>\n								</div>\n								<header >\n									<div class=\"row\">\n										<div class=\"col-sm-6 text-center\">\n											{equipo_local} <br>\n											<img src=\"http://placehold.it/100x100\" class=\"img-circle img-responsive\"alt=\"\">\n										</div>\n										<div class=\"col-sm-6 text-center\">\n											{equipo_visitante} <br>\n											<img src=\"http://placehold.it/100x100\" class=\"img-circle img-responsive\"alt=\"\">\n										</div>\n									</div>\n									<div class=\"row\">\n										<b>Grupo A</b>\n										<p>\n											Arena Sao Paoulo\n										</p>\n										<p>\n											{fecha_de_partido format=\"%Y %m %d\"}\n										</p>\n									</div>\n									<div class=\"row\">\n										<div class=\"col-sm-12\">\n											<h3><i class=\"fa fa-star-o\"></i>  8, 000 puntos</h3>\n										</div>\n									</div>\n								</header>\n								<footer>\n									<a class=\"btn btn-success\" href=\"{url_title_path='sitio/partido'}\">PREDECIR</a>\n								</footer>\n							</article>\n						</div>",
 			"		  						\n",
 			"<div class=\"col-sm-4\">",
@@ -241,6 +403,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg",
+			"sitio/error-perfil",
+			"{logged_in_member_id}",
+			"/home/zaa/dev.zaa.mx/quinela/",
+			"http://www.dev.zaa.mx/quinela",
 			"",
 			"<div class=\"col-sm-3 text-center\">",
 			"<img src=\"http://placehold.it/150x150\" class=\"img-circle\" alt=\"\">",
@@ -261,18 +428,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "sitio.group/medallas.html",
+					"file": "sitio.group/perfil.html",
 					"settings":
 					{
-						"buffer_size": 1466,
+						"buffer_size": 7112,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1350,
-								1350
+								4094,
+								4094
 							]
 						],
 						"settings":
@@ -281,25 +448,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2002.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "sitio.group/partido.html",
+					"file": "sitio.group/perfil-sidebar.html",
 					"settings":
 					{
-						"buffer_size": 5009,
+						"buffer_size": 928,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1741,
-								1741
+								601,
+								601
 							]
 						],
 						"settings":
@@ -308,160 +475,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 582.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "sitio.group/ranking.html",
+					"file": "sitio.group/foot.html",
 					"settings":
 					{
-						"buffer_size": 6413,
+						"buffer_size": 11723,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								510,
-								510
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "sitio.group/ranking-medallas.html",
-					"settings":
-					{
-						"buffer_size": 4008,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2288,
-								2288
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 815.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"settings":
-					{
-						"buffer_size": 1528,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								412,
-								412
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<div id=\"leftcolumn\">",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "sitio.group/head.html",
-					"settings":
-					{
-						"buffer_size": 6658,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5888,
-								5888
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "library/less/_base.less",
-					"settings":
-					{
-						"buffer_size": 1784,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								209,
-								209
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "sitio.group/index.html",
-					"settings":
-					{
-						"buffer_size": 1592,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								175,
-								175
+								0,
+								0
 							]
 						],
 						"settings":
@@ -477,19 +509,73 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "sitio.group/partido.html",
+					"buffer": 3,
+					"file": "sitio.group/actualizar-perfil.html",
 					"settings":
 					{
-						"buffer_size": 5009,
+						"buffer_size": 4334,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1269,
-								1269
+								498,
+								498
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 104.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sitio.group/actualizar-avatar.html",
+					"settings":
+					{
+						"buffer_size": 2330,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								572,
+								572
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 156.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "sitio.group/actualizar-cuenta.html",
+					"settings":
+					{
+						"buffer_size": 2142,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								469,
+								469
 							]
 						],
 						"settings":
@@ -504,25 +590,80 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 6,
 					"file": "sitio.group/partidos.html",
 					"settings":
 					{
-						"buffer_size": 1892,
+						"buffer_size": 2619,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								502,
-								502
+								1004,
+								1004
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sitio.group/head-partido.html",
+					"settings":
+					{
+						"buffer_size": 5571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4769,
+								4769
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1496.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sitio.group/miembros.html",
+					"settings":
+					{
+						"buffer_size": 1266,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								892,
+								892
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -532,24 +673,23 @@
 				},
 				{
 					"buffer": 9,
-					"file": "sitio.group/part-partido.html",
+					"file": "/home/alonso/Descargas/slick-master/index.html",
 					"settings":
 					{
-						"buffer_size": 1050,
+						"buffer_size": 21350,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								332,
-								332
+								396,
+								396
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -559,22 +699,104 @@
 				},
 				{
 					"buffer": 10,
+					"file": "library/less/_base.less",
 					"settings":
 					{
-						"buffer_size": 3150,
+						"buffer_size": 3235,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1091,
-								1091
+								1279,
+								1279
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1170.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "sitio.group/ranking.html",
+					"settings":
+					{
+						"buffer_size": 3051,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1112,
+								1112
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 143.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "sitio.group/ranking-medallas.html",
+					"settings":
+					{
+						"buffer_size": 2301,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1127,
+								1127
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 202.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "library/less/_768up.less",
+					"settings":
+					{
+						"buffer_size": 615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -582,59 +804,130 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 11,
-					"file": "sitio.group/perfil.html",
+					"buffer": 14,
+					"file": "sitio.group/index.html",
 					"settings":
 					{
-						"buffer_size": 7091,
+						"buffer_size": 1391,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3041,
-								3041
-							],
-							[
-								3191,
-								3191
+								529,
+								529
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1209.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 0,
-					"file": "sitio.group/medallas.html",
+					"buffer": 15,
+					"file": "library/less/_992up.less",
 					"settings":
 					{
-						"buffer_size": 1466,
+						"buffer_size": 257,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								409,
-								409
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "library/css/style.css",
+					"settings":
+					{
+						"buffer_size": 2498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1982,
+								1982
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1170.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "library/less/libs/bootstrap-3.1.1/variables.less",
+					"settings":
+					{
+						"buffer_size": 25374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								581,
+								581
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "sitio.group/part-partido.html",
+					"settings":
+					{
+						"buffer_size": 1652,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								984,
+								984
 							]
 						],
 						"settings":
@@ -649,19 +942,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "sitio.group/head.html",
+					"buffer": 19,
+					"file": "sitio.group/medallas.html",
 					"settings":
 					{
-						"buffer_size": 6658,
+						"buffer_size": 1465,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5856,
-								5856
+								652,
+								652
 							]
 						],
 						"settings":
@@ -670,7 +963,393 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1879.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "sitio.group/partido.html",
+					"settings":
+					{
+						"buffer_size": 6199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2543,
+								2543
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 757.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "sitio.group/partido.html",
+					"settings":
+					{
+						"buffer_size": 6199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1620,
+								1620
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 318.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 0,
+					"file": "sitio.group/perfil.html",
+					"settings":
+					{
+						"buffer_size": 7112,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5141,
+								5141
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2385.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "sitio.group/ranking.html",
+					"settings":
+					{
+						"buffer_size": 3051,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1120,
+								1120
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 156.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "user_inc.group/profile_column.html",
+					"settings":
+					{
+						"buffer_size": 2811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "user_main.group/members.html",
+					"settings":
+					{
+						"buffer_size": 3571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "user_main.group/search_results.html",
+					"settings":
+					{
+						"buffer_size": 1666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "sitio.group/index.html",
+					"settings":
+					{
+						"buffer_size": 1391,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								628,
+								628
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sitio.group/foot.html",
+					"settings":
+					{
+						"buffer_size": 11723,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								558,
+								558
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sitio.group/actualizar-perfil.html",
+					"settings":
+					{
+						"buffer_size": 4334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1356,
+								1356
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 468.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sitio.group/head-partido.html",
+					"settings":
+					{
+						"buffer_size": 5571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4101,
+								4101
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1455.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "sitio.group/gracias.html",
+					"settings":
+					{
+						"buffer_size": 960,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								960,
+								960
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 20,
+					"file": "sitio.group/partido.html",
+					"settings":
+					{
+						"buffer_size": 6199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								572,
+								572
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "sitio.group/partidos.html",
+					"settings":
+					{
+						"buffer_size": 2619,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								346,
+								346
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -706,7 +1385,7 @@
 		"cols":
 		[
 			0.0,
-			0.400625,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -727,24 +1406,156 @@
 		"selected_items":
 		[
 			[
-				"he",
+				"part",
+				"sitio.group/partidos.html"
+			],
+			[
+				"bas",
+				"library/less/_base.less"
+			],
+			[
+				"partd",
+				"sitio.group/partido.html"
+			],
+			[
+				"",
 				"sitio.group/head.html"
 			],
 			[
-				"meda",
-				"sitio.group/medallas.html"
+				"grac",
+				"sitio.group/gracias.html"
 			],
 			[
-				"part",
-				"sitio.group/partidos.html"
+				"base",
+				"library/less/_base.less"
+			],
+			[
+				"gracas",
+				"sitio.group/gracias.html"
+			],
+			[
+				"partido",
+				"sitio.group/partido.html"
+			],
+			[
+				"head",
+				"sitio.group/head.html"
+			],
+			[
+				"in",
+				"sitio.group/index.html"
 			],
 			[
 				"per",
 				"sitio.group/perfil.html"
 			],
 			[
-				"base",
-				"library/less/_base.less"
+				"foo",
+				"sitio.group/foot.html"
+			],
+			[
+				"9",
+				"library/less/_992up.less"
+			],
+			[
+				"7",
+				"library/less/_768up.less"
+			],
+			[
+				"inde",
+				"sitio.group/index.html"
+			],
+			[
+				"ran",
+				"sitio.group/ranking-medallas.html"
+			],
+			[
+				"meda",
+				"sitio.group/medallas.html"
+			],
+			[
+				"perf",
+				"sitio.group/perfil.html"
+			],
+			[
+				"part-",
+				"sitio.group/part-partido.html"
+			],
+			[
+				"var",
+				"library/less/libs/bootstrap-3.1.1/variables.less"
+			],
+			[
+				"partid",
+				"sitio.group/partidos.html"
+			],
+			[
+				"he",
+				"sitio.group/head.html"
+			],
+			[
+				"768",
+				"library/less/_768up.less"
+			],
+			[
+				"sty",
+				"library/css/style.css"
+			],
+			[
+				"_",
+				"library/less/_992up.less"
+			],
+			[
+				"76",
+				"library/less/_768up.less"
+			],
+			[
+				"miem",
+				"sitio.group/miembros.html"
+			],
+			[
+				"rana",
+				"sitio.group/ranking-medallas.html"
+			],
+			[
+				"rank",
+				"sitio.group/ranking.html"
+			],
+			[
+				"meme",
+				"user_main.group/members.html"
+			],
+			[
+				"side",
+				"sitio.group/perfil-sidebar.html"
+			],
+			[
+				"par",
+				"sitio.group/partidos.html"
+			],
+			[
+				"foot",
+				"sitio.group/foot.html"
+			],
+			[
+				"inter",
+				"sitio.group/head-interiores.html"
+			],
+			[
+				"graca",
+				"sitio.group/gracias.html"
+			],
+			[
+				"index",
+				"sitio.group/index.html"
+			],
+			[
+				"conf",
+				"sitio.group/config.prod.php"
+			],
+			[
+				"partidos",
+				"sitio.group/partidos.html"
 			],
 			[
 				"hea",
@@ -755,36 +1566,8 @@
 				"sitio.group/ranking-medallas.html"
 			],
 			[
-				"ran",
-				"sitio.group/ranking-medallas.html"
-			],
-			[
 				"pard",
 				"sitio.group/partidos.html"
-			],
-			[
-				"head",
-				"sitio.group/head.html"
-			],
-			[
-				"inde",
-				"sitio.group/index.html"
-			],
-			[
-				"foot",
-				"sitio.group/foot.html"
-			],
-			[
-				"var",
-				"library/less/libs/bootstrap-3.1.1/variables.less"
-			],
-			[
-				"par",
-				"sitio.group/partido.html"
-			],
-			[
-				"sty",
-				"library/less/style.less"
 			]
 		],
 		"width": 0.0
@@ -798,7 +1581,7 @@
 		"width": 0.0
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": false,
 	"side_bar_width": 223.0,

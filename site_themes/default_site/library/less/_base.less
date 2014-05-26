@@ -13,7 +13,9 @@ body {
 	background-size: cover; 
 	background-attachment:fixed;
 }
-
+body.gracias {
+	color: @gray-lighter;
+}
 
 /*********************
 02. LAYOUT & GRID STYLES
@@ -83,6 +85,32 @@ header.head-interiores {
 		}
 	}
 }
+.pasos {
+	margin: 5px 0;
+	padding: 5px 0 10px;
+	text-align: center;
+	margin-bottom: 1px solid @gray-lighter;
+} 
+
+ul#pasos-prediccion {
+	display: block;
+	margin: 0 0 ;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	li {
+		display: block;
+		float: left;
+		width: 20%;
+		text-align: center;
+		color: @gray-lighter;
+		background: @gray;
+		padding: 10px;
+		&.activaa {
+			background: @brand-success;
+		}
+	}
+}
 /*********************
 03. POSTS & CONTENT STYLES
 *********************/
@@ -95,7 +123,8 @@ header.head-interiores {
 }
 #content {
 	padding: 20px 0 20px;
-	background: @gray-lighter;
+	// background: @gray-lighter;
+	background: rgba(255, 255, 255, 0.8);
 	article.item-partido{
 		margin: 0 0 10px;
 		h5 {

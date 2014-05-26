@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="{site_url}//themes/site_themes/default_site/favicon.ico">
+
+	<title>{site_name} | {embed:my_page_title}</title> 
+
+	<!-- Bootstrap core CSS -->
+	<link href="{site_url}/themes/site_themes/default_site/library/css/libs/bootstrap-3.1.1/bootstrap.css" rel="stylesheet">
+	<link href="{site_url}/themes/site_themes/default_site/library/fonts/libs/Font-Awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{site_url}/themes/site_themes/default_site/library/js/libs/slick/slick.css"/>
+
+
+
+	<link href="{site_url}/themes/site_themes/default_site/library/css/style.css" rel="stylesheet">
+
+
+	{exp:jquery:script_tag}
+
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="{embed:my_body_class}">
+
+	<header class="head-interiores">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 text-center">
+						<a href="{path='site_index'}" id="logo">							
+							<img src="{site_url}/themes/site_themes/default_site/library/images/error-dato-assets/logo-interiores.png">
+						</a>
+					</div>
+					<div class="col-md-10">
+						<nav class="navbar navbar-inverse" role="navigation">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand sr-only" href="{path='site_index'}">{site_name}</a>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav ">
+									<li {if embed:my_active_nav=="home"}class="active"{/if}>
+										<a href="{path='sitio/index'}">Home</a>
+									</li> 
+									<li {if embed:my_active_nav=="perfil"} class="active"{/if}>
+										<a href="{path=sitio/perfil}/{member_id}/">Mi Perfil</a>
+									</li> 
+									
+									<!-- <li {if embed:my_active_nav=="premios"} class="active"{/if}>
+										<a href="{path='sitio/premios'}">Premios</a>
+									</li> -->
+									<li {if embed:my_active_nav=="medallas"} class="active"{/if}>
+										<a href="{path='sitio/medallas'}">Medallas</a>
+									</li>
+
+									<li {if embed:my_active_nav=="ranking"} class="active"{/if}>
+										<a href="{path='sitio/ranking'}">Ranking puntos</a>
+									</li>
+
+									<li {if embed:my_active_nav=="ranking-medallas"} class="active"{/if}>
+										<a href="{path='sitio/ranking-medallas'}">Ranking Medallas</a>
+									</li>
+								</ul>
+								<ul class="nav navbar-nav navbar-right">
+									<li class="divider-vertical"></li>
+
+									<!-- Si esta dentro -->
+									{if logged_in}
+									<li>
+										<a href="{path=sitio/perfil}/{member_id}/">
+											{screen_name}
+										</a>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-cog"></i>
+											<b class="caret"></b>
+										</a>
+										<ul class="dropdown-menu">
+											<li>
+												<a href="{path=sitio/actualizar-perfil}/{member_id}/">Editar tu perfil</a>
+											</li>
+											<li>
+												<a href="{path=sitio/miembros}">Ver lista de miembro</a>
+											</li>
+											<li class="divider"></li>
+											<li>
+												<a href="{path='logout'}">Salir</a>
+											</li>
+										</ul>
+									</li>
+									{/if}
+									<!-- /Si esta dentro -->
+								</ul>
+							</div><!-- /.navbar-collapse -->
+						</nav>      
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-7">
+						<div class="headings">
+							<h1>
+								{titulo_interiores} <br>
+								<small>
+										{sub_titulo_interiores}
+								</small>
+							</h1>
+							{exp:channel:entries channel="partidos" limit="1" disable="paginate"}
+								<p>
+									{descripcion}
+								</p>    
+							{/exp:channel:entries}
+							
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5 col-sm-offset-7">
+						<div class="profileInt text-right">
+							{exp:user:stats dynamic="off" limit="1" log_views="off"}
+							<h2>
+								<a href="{path=sitio/perfil}/{member_id}/">
+									<img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg{/if}" height="55" width="55"  alt="{screen_name}'s photo" />
+								</a>
+								{screen_name}
+							</h2>
+							<p>
+								<b>6000 </b><span>Puntos</span> 
+								<b>15 </b><span>Medallas</span> 
+								<b>Nivel Experto</b>
+							</p>
+							{/exp:user:stats}
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</header>
+
+
+	
+					
+	
