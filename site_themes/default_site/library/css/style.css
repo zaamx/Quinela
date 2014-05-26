@@ -11,7 +11,7 @@ body {
 body {
   background: url('../images/home-mex.jpg') no-repeat center top;
   background-color: #eeeeee;
-  background-size: 100% !important;
+  background-size: cover;
 }
 /*********************
 02. LAYOUT & GRID STYLES
