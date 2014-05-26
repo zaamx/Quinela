@@ -8,9 +8,10 @@ html, body {
 }
 body {
 
-	background: url('../images/home-mex.jpg') no-repeat center top;
+	background: url('../images/shutterstock_175577192_.jpg') no-repeat center top;
 	background-color: @gray-lighter;
 	background-size: cover; 
+	background-attachment:fixed;
 }
 
 
@@ -18,11 +19,15 @@ body {
 02. LAYOUT & GRID STYLES
 *********************/
 
+#logo {
+	margin:10px 0;
+	display: block;
+}
 #container {}
 
 
 #home-ingreso {
-	margin-top: 150px;
+	margin-top: 100px;
 	color: @gray-lighter;
 }
 .modal {
@@ -40,8 +45,42 @@ header.head-interiores {
 	}
 	.bottom {
 		background: rgba(0, 0, 0, 0.7);
-		padding: 10px 0;
+		padding: 5px 0;
 
+	}
+}
+
+.head-title {
+	width: 200px;
+	height: 5px;
+
+	&.head-green {
+		background: @brand-success;
+	}
+	&.head-blue {
+		background: @brand-primary;
+
+	}
+	&.head-orange {
+		background: @brand-warning;
+	}	
+}
+
+
+.forced-height {
+	height: 40px;
+}
+
+.slick-prev:before, .slick-next:before {
+	color: @brand-success;
+}
+
+
+.headings {
+	h1 {
+		small {
+		 color: @gray-lighter;	
+		}
 	}
 }
 /*********************
@@ -58,6 +97,11 @@ header.head-interiores {
 	padding: 20px 0 20px;
 	background: @gray-lighter;
 	article.item-partido{
+		margin: 0 0 10px;
+		h5 {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
 		.img-responsive {
 			margin: 0 auto;
 		}
@@ -66,6 +110,16 @@ header.head-interiores {
 }
 
 body.partido {
+	article.item-partido{
+		margin: 0 0 10px;
+		h2 {
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.img-responsive {
+			margin: 0 auto;
+		}
+	}
 	#pre_resultado_de_partido_cont, #quien_anota_primero_cont {
 		fieldset {
 			label {
@@ -80,6 +134,37 @@ body.partido {
 	}
 }
 
+.item-bad {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.item-ranking {
+	margin-top: 15px ;
+	margin-bottom: 60px;
+	position: relative;
+	img.item-micro{
+		display: block;
+	    position: absolute;
+	    right: -37px;
+	    z-index: 200;
+	    top: -25px;
+	}
+	h4 {
+		margin-top: 30px;
+		font-size: 16px;
+		color: @gray-darker;
+		text-transform: uppercase;
+		small {
+		font-size: 14px;
+		 color:	@gray-darker;
+		}
+	}
+}
+.item-premio  {
+	margin-top: 15px ;
+	margin-bottom: 60px;
+	position: relative;
+}
 /*********************
 04. SIDEBARS & ASIDES
 *********************/
@@ -112,22 +197,7 @@ body.partido {
 /*********************
 05. FOOTER STYLES
 *********************/
-body.home {
-	.footer-gral {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: @gray-darker;
-		clear: both;
-		padding: 20px 0;
-		a {
-			color: @gray-lighter;
-		}
-		#inner-footer {
-		}
-	}
-}
+
 .footer-gral {
 	background: @gray-darker;
 	clear: both;

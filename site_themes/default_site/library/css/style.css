@@ -9,15 +9,20 @@ body {
   /* height: 100%; */
 }
 body {
-  background: url('../images/home-mex.jpg') no-repeat center top;
+  background: url('../images/shutterstock_175577192_.jpg') no-repeat center top;
   background-color: #eeeeee;
   background-size: cover;
+  background-attachment: fixed;
 }
 /*********************
 02. LAYOUT & GRID STYLES
 *********************/
+#logo {
+  margin: 10px 0;
+  display: block;
+}
 #home-ingreso {
-  margin-top: 150px;
+  margin-top: 100px;
   color: #eeeeee;
 }
 .modal {
@@ -32,7 +37,30 @@ header.head-interiores {
 }
 header.head-interiores .bottom {
   background: rgba(0, 0, 0, 0.7);
-  padding: 10px 0;
+  padding: 5px 0;
+}
+.head-title {
+  width: 200px;
+  height: 5px;
+}
+.head-title.head-green {
+  background: #5cb85c;
+}
+.head-title.head-blue {
+  background: #428bca;
+}
+.head-title.head-orange {
+  background: #f0ad4e;
+}
+.forced-height {
+  height: 40px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #5cb85c;
+}
+.headings h1 small {
+  color: #eeeeee;
 }
 /*********************
 03. POSTS & CONTENT STYLES
@@ -48,7 +76,24 @@ header.head-interiores .bottom {
   padding: 20px 0 20px;
   background: #eeeeee;
 }
+#content article.item-partido {
+  margin: 0 0 10px;
+}
+#content article.item-partido h5 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
 #content article.item-partido .img-responsive {
+  margin: 0 auto;
+}
+body.partido article.item-partido {
+  margin: 0 0 10px;
+}
+body.partido article.item-partido h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+body.partido article.item-partido .img-responsive {
   margin: 0 auto;
 }
 body.partido #pre_resultado_de_partido_cont fieldset label,
@@ -56,6 +101,37 @@ body.partido #quien_anota_primero_cont fieldset label {
   display: block;
   width: 33.33%;
   float: left;
+}
+.item-bad {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.item-ranking {
+  margin-top: 15px ;
+  margin-bottom: 60px;
+  position: relative;
+}
+.item-ranking img.item-micro {
+  display: block;
+  position: absolute;
+  right: -37px;
+  z-index: 200;
+  top: -25px;
+}
+.item-ranking h4 {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #222222;
+  text-transform: uppercase;
+}
+.item-ranking h4 small {
+  font-size: 14px;
+  color: #222222;
+}
+.item-premio {
+  margin-top: 15px ;
+  margin-bottom: 60px;
+  position: relative;
 }
 /*********************
 04. SIDEBARS & ASIDES
@@ -66,18 +142,6 @@ body.partido #quien_anota_primero_cont fieldset label {
 /*********************
 05. FOOTER STYLES
 *********************/
-body.home .footer-gral {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #222222;
-  clear: both;
-  padding: 20px 0;
-}
-body.home .footer-gral a {
-  color: #eeeeee;
-}
 .footer-gral {
   background: #222222;
   clear: both;
@@ -93,6 +157,10 @@ GENERAL STYLES
   /*********************
 HEADER STYLES
 *********************/
+  #logo {
+    margin: 0 !important;
+    display: block;
+  }
   /*********************
 SIDEBARS & ASIDES
 *********************/

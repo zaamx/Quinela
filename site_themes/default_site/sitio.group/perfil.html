@@ -58,7 +58,7 @@
 							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="{segment_3}"  dynamic="no" limit="15" paginate="bottom"}
 							
 							<li class="item-badge">
-								<img  height="100" width="100" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">
+								<img  height="63" width="63" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">
 							</li> 
 
 							{if no_results}<span>This user has not posted any entries.</span>{/if}
@@ -88,14 +88,14 @@
 										{partido_rel:equipo_local}
 											<div class="col-sm-6">
 												{partido_rel:equipo_local:nombre_de_pais}<br>
-												<img class="img-circle" src="{partido_rel:equipo_local:bandera_seleccion}" alt="{partido_rel:equipo_local:nombre_de_pais}"  height="100" width="100" >
+												<img class="img-circle" src="{partido_rel:equipo_local:bandera_seleccion}" alt="{partido_rel:equipo_local:nombre_de_pais}"  height="72" width="72" >
 											</div>
 										{/partido_rel:equipo_local}
 
 										{partido_rel:equipo_visitante}
 											<div class="col-sm-6">
 												{partido_rel:equipo_visitante:nombre_de_pais}<br>
-												<img class="img-circle" src="{partido_rel:equipo_visitante:bandera_seleccion}" alt="{partido_rel:equipo_visitante:nombre_de_pais}"  height="100" width="100" >	
+												<img class="img-circle" src="{partido_rel:equipo_visitante:bandera_seleccion}" alt="{partido_rel:equipo_visitante:nombre_de_pais}" height="72" width="72" >	
 											</div>
 										{/partido_rel:equipo_visitante}
 									{/partido_rel}	
@@ -141,28 +141,24 @@
 						<h3>
 							¿Quieres darle un badge a esta persona?
 						</h3>
+						
+						<div id="slider-badges">
 
-						<ul class="list-inline">
+							{exp:channel:entries channel="badges"  dynamic="no" }
 
-							{exp:channel:entries channel="badges"  dynamic="no" limit="15" paginate="bottom"}
-
-							<li>
 
 								<div class="item">
 
-									<img alt="{entry_id}"  height="100" width="100" class="img-circle item-img" src="{imagen_badge}" alt="">
+									<img alt="{entry_id}"  height="63" width="63" class="img-circle item-img" src="{imagen_badge}" alt="">
 								</div> 
 
-							</li>
 
 							{if no_results}<span>This user has not posted any entries.</span>{/if}
 
-
-							{paginate}<li>Page {current_page} of {total_pages} page{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
-
 							{/exp:channel:entries}
+						</div>
+						<br>
 
-						</ul>
 
 						<script type="text/javascript">
 						$(document).ready(function(){
@@ -170,7 +166,9 @@
 								dataType: 'json',
 								success: function(data) {
 									if (data.success == '1') {
-										alert('You successfully added a new entry with entry_id '+data.entry_id);
+										//alert('You successfully added a new entry with entry_id '+data.entry_id);
+										if(alert('Le haz dado un badge a tu amigo')){}
+										else    window.location.reload(); 
 
 									} else if (data.success == '0') {					
 										$('#mensajes').append(data.field_errors.title);
@@ -183,7 +181,41 @@
 							$('img.item-img').click(function () {
 								$('select[name="lista_badges[data][]"]').find('option[value="' + $(this).attr("alt") + '"]').attr("selected",true);
 							});
+							$('#slider-badges').slick({
+							  dots: true,
+							  infinite: false,
+							  speed: 300,
+							  slidesToShow: 6,
+							  slidesToScroll: 6,
+							  responsive: [
+							    {
+							      breakpoint: 1024,
+							      settings: {
+							        slidesToShow: 5,
+							        slidesToScroll: 5,
+							        infinite: true,
+							        dots: true
+							      }
+							    },
+							    {
+							      breakpoint: 600,
+							      settings: {
+							        slidesToShow: 4,
+							        slidesToScroll: 4
+							      }
+							    },
+							    {
+							      breakpoint: 480,
+							      settings: {
+							        slidesToShow: 3,
+							        slidesToScroll: 3
+							      }
+							    }
+							  ]
+							});
+
 						});
+
 						</script>
 						{exp:channel:form channel="badges_asignados" return="site/ENTRY_ID" json="yes"}
 

@@ -14,123 +14,46 @@
 					</h3>
 				</div>
 				<div class="row">
-					<div class="col-sm-2" id="lista-ranking-pluses">
-						<div class="item-ranking row">
-							<img src="http://placehold.it/50x50" class="img-circle" alt="">
-							<span>icono</span>
-							<h3>
-								Participante <br>
-								<small> icono 89000 puntos</small>
-							</h3>
+					<div class="col-sm-2 col-xs-4" id="lista-ranking-pluses">
+						{exp:user:users orderby="screen_name" sort="asc" limit="10" paginate="bottom" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
 
+						<div class="item-ranking text-right row">
+							<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
+							
+							<h4>
+								<a href="{path=sitio/perfil}/{member_id}/">
+					                <b>{screen_name}</b>
+					             </a> <br>
+								<small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small>
+							</h4>
 						</div>
-						<div class="item-ranking row">
-							<img src="http://placehold.it/50x50" class="img-circle" alt="">
-							<span>icono</span>
-							<h3>
-								Participante <br>
-								<small> icono 89000 puntos</small>
-							</h3>
 
-						</div>
-						<div class="item-ranking row">
-							<img src="http://placehold.it/50x50" class="img-circle" alt="">
-							<span>icono</span>
-							<h3>
-								Participante <br>
-								<small> icono 89000 puntos</small>
-							</h3>
 
-						</div>
-						<div class="item-ranking row">
-							<img src="http://placehold.it/50x50" class="img-circle" alt="">
-							<span>icono</span>
-							<h3>
-								Participante <br>
-								<small> icono 89000 puntos</small>
-							</h3>
+						{if user_no_results}<div>No members found.</div>{/if}
 
-						</div>
-						<div class="item-ranking row">
-							<img src="http://placehold.it/50x50" class="img-circle" alt="">
-							<span>icono</span>
-							<h3>
-								Participante <br>
-								<small> icono 89000 puntos</small>
-							</h3>
-
-						</div>
-						<div class="item-ranking row">
-							<img src="http://placehold.it/50x50" class="img-circle" alt="">
-							<span>icono</span>
-							<h3>
-								Participante <br>
-								<small> icono 89000 puntos</small>
-							</h3>
-
-						</div>
+						{paginate}<li>Page {current_page} of {total_pages} page{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
+						{/exp:user:users}
 					</div>
-					<div class="col-sm-8" id="lista-premios">
-						<div class="item-premio row">
-							<div class="col-sm-3 text-center">
-								<img src="http://placehold.it/150x150" class="img-circle" alt="">
+					<div class="col-sm-8 col-xs-8" id="lista-premios">
+						{exp:channel:entries channel="premios" category="21" orderby="posicion_premio" sort="desc" dynamic="no" limit="50" paginate="bottom"}							
+
+							<div class="item-premio row">
+								<div class="col-sm-4">
+									<img src="{imagen_de_premio}" class="img-responsive" alt="">
+								</div>
+								<div class="col-sm-6">
+									<b>Posición</b>
+									<h3>{posicion_premio}</h3>
+									<p><b>{titulo_premio}</b></p>
+								</div>
 							</div>
-							<div class="col-sm-6">
-								<b>Posición</b>
-								<h3>1er</h3>
-								<p><b>Pantalla de tv 70" pulgadas</b></p>
-							</div>
-						</div>
-						<div class="item-premio row">
-							<div class="col-sm-3 text-center">
-								<img src="http://placehold.it/150x150" class="img-circle" alt="">
-							</div>
-							<div class="col-sm-6">
-								<b>Posición</b>
-								<h3>1er</h3>
-								<p><b>Pantalla de tv 70" pulgadas</b></p>
-							</div>
-						</div>
-						<div class="item-premio row">
-							<div class="col-sm-3 text-center">
-								<img src="http://placehold.it/150x150" class="img-circle" alt="">
-							</div>
-							<div class="col-sm-6">
-								<b>Posición</b>
-								<h3>1er</h3>
-								<p><b>Pantalla de tv 70" pulgadas</b></p>
-							</div>
-						</div>
-						<div class="item-premio row">
-							<div class="col-sm-3 text-center">
-								<img src="http://placehold.it/150x150" class="img-circle" alt="">
-							</div>
-							<div class="col-sm-6">
-								<b>Posición</b>
-								<h3>1er</h3>
-								<p><b>Pantalla de tv 70" pulgadas</b></p>
-							</div>
-						</div>
-						<div class="item-premio row">
-							<div class="col-sm-3 text-center">
-								<img src="http://placehold.it/150x150" class="img-circle" alt="">
-							</div>
-							<div class="col-sm-6">
-								<b>Posición</b>
-								<h3>1er</h3>
-								<p><b>Pantalla de tv 70" pulgadas</b></p>
-							</div>
-						</div>
-						<div class="item-premio row">
-							<div class="col-sm-3 text-center">
-								<img src="http://placehold.it/150x150" class="img-circle" alt="">
-							</div>
-							<div class="col-sm-6">
-								<b>Posición</b>
-								<h3>1er</h3>
-								<p><b>Pantalla de tv 70" pulgadas</b></p>
-							</div>
-						</div>
+
+						{if no_results}<span>This user has not posted any entries.</span>{/if}
+
+
+						{paginate}<li>Page {current_page} of {total_pages} page{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
+
+						{/exp:channel:entries}
 					</div>
 				</div>
 

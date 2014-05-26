@@ -8,7 +8,11 @@
 		{if fondo_partido != ""}
 			<style type="text/css">
 				body {
-					background: url('{fondo_partido}') no-repeat center top;
+					background-image: url('{fondo_partido}');
+					background-repeat: no-repeat;
+					background-color: @gray-lighter;
+					background-size: cover; 
+					background-attachment:fixed;
 				}
 			</style>
 		{/if}
@@ -22,7 +26,7 @@
 									<h2>
 										{equipo_local:nombre_de_pais}
 									</h2>
-									<img src="{equipo_local:bandera_seleccion}"  height="300" width="300"  class="img-circle" alt="">
+									<img src="{equipo_local:bandera_seleccion}"  height="300" width="300"  class="img-responsive" alt="">
 								</div>
 								<div class="col-sm-2 text-center">
 
@@ -43,7 +47,7 @@
 									<h2>
 										{equipo_visitante:nombre_de_pais}
 									</h2>
-									<img src="{equipo_visitante:bandera_seleccion}"  height="300" width="300"  class="img-circle" alt="">
+									<img src="{equipo_visitante:bandera_seleccion}"  height="300" width="300"  class="img-responsive" alt="">
 								</div>
 							</div>
 						</header>
@@ -52,7 +56,6 @@
 			</div>
 			{if logged_in}
 				<div class="row">
-					<h1>{logged_in_member_id} / {member_group} / </h1>
 					<div class="col-sm-10 col-sm-offset-1 text-center">
 						<hr>
 						<script type="text/javascript">
@@ -61,7 +64,9 @@
 									dataType: 'json',
 									success: function(data) {
 										if (data.success == '1') {
-											alert('You successfully added a new entry with entry_id '+data.entry_id);
+											// alert('You successfully added a new entry with entry_id '+data.entry_id);
+											if(alert('Gracias por hacer tu prediccion')){}
+											else    window.location.reload(); 
 
 										} else if (data.success == '0') {					
 				                    		$('#mensajes').append(data.field_errors.title);
@@ -76,15 +81,23 @@
 								
 							});
 						</script>
-						{exp:channel:form channel="predicciones" return="site/ENTRY_ID" json="yes"}
+						{exp:channel:form channel="predicciones" return="sitio/partidos" json="yes"}
 							<input type="hidden" name="id_de_partido" id="id_de_partido" value="{exp:url_title_to_entry_id url_title="{segment_3}"}">
 							<input type="hidden" name="id_de_partido_entry" id="id_de_partido_entry" value="{segment_3}">
 							<input type="hidden" name="pre_id_de_usuario" id="pre_id_de_usuario" value="{logged_in_member_id}">
-							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-pred-{segment_3}-id-{exp:url_title_to_entry_id url_title="{segment_3}"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">				
+							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-pred-{segment_3}-id-{exp:url_title_to_entry_id url_title="{segment_3}"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
+
+							<div class="pasos">
+								{pred_resultado_partido}
+							</div>			
 
 							<div class="form-group" id="pre_resultado_de_partido_cont">
 								{field:pre_resultado_de_partido}	
 							</div>
+
+							<div class="pasos">
+								{pre_marcadores}
+							</div>	
 
 							<div>
 								<div class="row">
@@ -105,10 +118,18 @@
 							</div>
 							<hr>
 
+							<div class="pasos">
+								{pre_quien_anota}
+							</div>	
+
 							<div class="form-group" id="quien_anota_primero_cont">
 								{field:quien_anota_primero}	
 							</div>
 							<hr>
+
+							<div class="pasos">
+								{pre_min_primer}
+							</div>	
 
 							<div class="form-group" id="pre_minuto_de_primer_gol_cont">
 								<label for="pre_minuto_de_primer_gol">Minuto de primer gol</label>

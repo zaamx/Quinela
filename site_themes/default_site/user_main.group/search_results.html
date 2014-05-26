@@ -27,7 +27,7 @@
 				<hr />
 				<ul>
 					{exp:user:results orderby="screen_name" sort="asc" limit="10" paginate="bottom"}
-					<li class="forced-height"><small style="float: right;">Joined {join_date format="%F %j, %Y"}</small><img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{exp:user:theme_folder_url}code_pack/images/icon_profile.gif{/if}" height="35" width="35" alt="{screen_name}'s photo" style="float: left; margin-right: 10px;" /><a href="{path=user_main/profile}/{member_id}/"><b>{screen_name}</b></a><br />{location}</li>
+					<li class="forced-height"><small style="float: right;">Joined {join_date format="%F %j, %Y"}</small><img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg{/if}" height="35" width="35" alt="{screen_name}'s photo" style="float: left; margin-right: 10px;" /><a href="{path=user_main/profile}/{member_id}/"><b>{screen_name}</b></a><br />{location}</li>
 					{if user_no_results}<li>No results found.</li>{/if}
 					{paginate}<li>Page {current_page} of {total_pages} page{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
 					{/exp:user:results}

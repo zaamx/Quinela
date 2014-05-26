@@ -3,22 +3,21 @@
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3 text-center">
 				{if partido_activo == "Activo"}
-					<img src="http://placehold.it/50x50/000000" class="img-circle"alt="">
+					<img src="{site_url}/themes/site_themes/default_site/library/images/PREDICCIONES1-assets/partido-activo.png">
 				{if:elseif partido_activo == "Inactivo"}
-					<img src="http://placehold.it/50x50" class="img-circle"alt="">
+					<img src="{site_url}/themes/site_themes/default_site/library/images/PREDICCIONES1-assets/partido-inactivo.png">
 				{/if}
-				
 			</div>
 		</div>
 		<header >
 			<div class="row">
 				<div class="col-sm-6 text-center">
-					{equipo_local:nombre_de_pais} <br>
-					<img src="{equipo_local:bandera_seleccion}"  height="150" width="150" class="img-circle"alt="">
+					<h5 class="text-center">{equipo_local:nombre_de_pais}</h5>
+					<img src="{equipo_local:bandera_seleccion}"  height="72" width="72" class="img-circle" alt="{equipo_local:nombre_de_pais}">
 				</div>
 				<div class="col-sm-6 text-center">
-					{equipo_visitante:nombre_de_pais} <br>
-					<img src="{equipo_visitante:bandera_seleccion}"  height="150" width="150" class="img-circle"alt="">
+					<h5 class="text-center">{equipo_visitante:nombre_de_pais}</h5>
+					<img src="{equipo_visitante:bandera_seleccion}"  height="72" width="72" class="img-circle" alt="{equipo_visitante:nombre_de_pais}">
 				</div>
 			</div>
 			<div class="row">
@@ -31,7 +30,7 @@
 				</p>
 			</div>
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-12" style="font-size:18px;">
 					<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
 				</div>
 			</div>

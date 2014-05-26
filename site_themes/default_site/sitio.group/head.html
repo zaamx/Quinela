@@ -13,6 +13,11 @@
 	<!-- Bootstrap core CSS -->
 	<link href="{site_url}/themes/site_themes/default_site/library/css/libs/bootstrap-3.1.1/bootstrap.css" rel="stylesheet">
 	<link href="{site_url}/themes/site_themes/default_site/library/fonts/libs/Font-Awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{site_url}/themes/site_themes/default_site/library/js/libs/slick/slick.css"/>
+
+
+
 	<link href="{site_url}/themes/site_themes/default_site/library/css/style.css" rel="stylesheet">
 
 
@@ -32,12 +37,12 @@
 		<div class="top">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
-						<a href="{path='site_index'}">
-							<img src="{site_url}/themes/site_themes/default_site/library/images/logo_Aserta.png">
+					<div class="col-md-2 text-center">
+						<a href="{path='site_index'}" id="logo">							
+							<img src="{site_url}/themes/site_themes/default_site/library/images/error-dato-assets/logo-interiores.png">
 						</a>
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-10">
 						<nav class="navbar navbar-inverse" role="navigation">
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<div class="navbar-header">
@@ -95,7 +100,7 @@
 												<a href="{path=sitio/actualizar-perfil}/{member_id}/">Editar tu perfil</a>
 											</li>
 											<li>
-												<a href="{path=sitio/miembros">Ver lista de miembro</a>
+												<a href="{path=sitio/miembros}">Ver lista de miembro</a>
 											</li>
 											<li class="divider"></li>
 											<li>
@@ -105,31 +110,6 @@
 									</li>
 									{/if}
 									<!-- /Si esta dentro -->
-									<!-- Si esta fuera -->
-									{if logged_out}
-									<!--<li><a href="/users/sign_up">Registrarse</a></li>-->
-									<li class="dropdown">
-										<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-
-										<div class="dropdown-menu" style="padding: 10px;min-width:240px;">
-											{exp:member:login_form form_class="form-horizontal"}
-											<input id="user_username" class="form-control" style="margin-bottom:.5em" type="text" name="username" size="30" placeholder="Usuario"/>
-											<input id="user_password" class="form-control" style="margin-bottom:.5em" type="password" name="password" size="30"  placeholder="Contraseña"/>
-											{if auto_login}
-											<div class="checkbox" >
-												<label class="string optional"  for="user_remember_me">
-													<input id="user_remember_me" type="checkbox" name="auto_login" value="1"> Recuerdame
-												</label>
-											</div>
-											{/if}
-											<input class="btn btn-primary" style="margin-top:.75em;width: 100%; height: 32px; font-size: 13px;" type="submit" name="submit" value="Acceder">
-											<a href="{path='member/forgot_password'}">¿Olvidaste tu contraseña?</a>
-											{/exp:member:login_form}                  
-
-										</div>
-									</li>
-									{/if}
-									<!-- /Si esta fuera -->
 								</ul>
 							</div><!-- /.navbar-collapse -->
 						</nav>      
@@ -139,13 +119,13 @@
 					<div class="col-sm-12">
 						<div class="headings">
 							<h1>
-								Copa Aserta <br>
+								{titulo_interiores} <br>
 								<small>
-									Etapa: Lorem ipsum dolor sit amet.
+										{sub_titulo_interiores}
 								</small>
 							</h1>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quos sunt earum voluptatum voluptatem vitae.
+									{copy_interiores}
 							</p>    
 						</div>
 					</div>
@@ -160,7 +140,7 @@
 							{exp:user:stats dynamic="off" limit="1" log_views="off"}
 							<h2>
 								<a href="{path=sitio/perfil}/{member_id}/">
-									<img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{exp:user:theme_folder_url}code_pack/images/icon_profile.gif{/if}" height="100" width="100"  alt="{screen_name}'s photo" />
+									<img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg{/if}" height="55" width="55"  alt="{screen_name}'s photo" />
 								</a>
 								{screen_name}
 							</h2>
