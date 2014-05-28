@@ -1,0 +1,120 @@
+{exp:channel:entries channel="predicciones" author_id="CURRENT_USER" dynamic="no" limit="1" disable="categories|member_data|pagination|category_fields"  search:id_de_partido="{embed:id_partido}" }
+
+<div class="sr-only">
+	<span data-idUser="{pre_id_de_usuario}">
+	</span>
+	<span data-idPartido="{id_de_partido}">
+	</span>
+</div>
+
+<div class="alert alert-warning text-center">
+	<b>Gracias. Ya tenemos tu prediccion para este partido</b>
+</div>
+
+{if no_results}
+
+<div class="row">
+	<div class="col-sm-10 col-sm-offset-1 text-center">
+		<hr>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#publishForm').ajaxForm({
+					dataType: 'json',
+					success: function(data) {
+						if (data.success == '1') {
+							// alert('You successfully added a new entry with entry_id '+data.entry_id);
+							if(alert('Gracias por hacer tu prediccion')){}
+							else   window.location.href = '{embed:urlDestino}/{embed:nombrePost}/'+data.entry_id;
+
+
+
+						} else if (data.success == '0') {					
+                    		$('#mensajes').append(data.field_errors.title);
+                    		$('#mensajes').append(data.field_errors.pre_marcador_local);
+                    		$('#mensajes').append(data.field_errors.pre_marcador_visitante);
+                    		$('#mensajes').append(data.field_errors.pre_resultado_de_partido);
+                    		$('#mensajes').append(data.field_errors.pre_minuto_de_primer_gol);
+                    		$('#mensajes').append(data.field_errors.quien_anota_primero);
+						}
+					}
+				});
+				
+			});
+		</script>
+		{exp:channel:form channel="predicciones" return="sitio/partidos" json="yes"}
+			<input type="hidden" name="id_de_partido" id="id_de_partido" value="{exp:url_title_to_entry_id url_title="{segment_3}"}">
+			<input type="hidden" name="id_de_partido_entry" id="id_de_partido_entry" value="{segment_3}">
+			<input type="hidden" name="pre_id_de_usuario" id="pre_id_de_usuario" value="{logged_in_member_id}">
+			<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-pred-{segment_3}-id-{exp:url_title_to_entry_id url_title="{segment_3}"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
+
+			<div class="pasos">
+				{pred_resultado_partido}
+			</div>			
+
+			<div class="form-group" id="pre_resultado_de_partido_cont">
+				{field:pre_resultado_de_partido}	
+			</div>
+
+			<hr>
+
+			<div class="pasos">
+				{pre_marcadores}
+			</div>	
+
+			<div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group" id="pre_marcador_local_cont">
+
+							<label for="pre_marcador_local">Anota Local</label>
+							<input type="text"  class="form-control" name="pre_marcador_local" id="pre_marcador_local" value="">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group" id="pre_marcador_visitante_cont">
+							<label for="pre_marcador_visitante">Anota Visitante</label>
+							<input type="text"  class="form-control"  name="pre_marcador_visitante" id="pre_marcador_visitante" value="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+
+			<div class="pasos">
+				{pre_quien_anota}
+			</div>	
+
+			<div class="form-group" id="quien_anota_primero_cont">
+				{field:quien_anota_primero}	
+			</div>
+			<hr>
+
+			<div class="pasos">
+				{pre_min_primer}
+			</div>	
+
+			<div class="form-group" id="pre_minuto_de_primer_gol_cont">
+				<label for="pre_minuto_de_primer_gol">Minuto de primer gol</label>
+				<input type="text"  class="form-control" name="pre_minuto_de_primer_gol" id="pre_minuto_de_primer_gol" value="">
+			</div>
+			<hr>
+
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('select[name="partido_rel[data][]"]').find('option[value="{exp:url_title_to_entry_id url_title="{segment_3}"}"]').attr("selected",true);
+				});
+			</script>
+			<div class="sr-only">
+				{field:partido_rel}	
+			</div>
+			<input type="submit" value="PREDECIR" class="btn btn-success">
+		{/exp:channel:form}
+		<div id="mensajes">
+		</div>
+	</div>
+</div>
+
+{/if}
+
+
+{/exp:channel:entries}

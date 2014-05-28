@@ -34,6 +34,13 @@ body.gracias {
 .close {
   color: #eeeeee;
 }
+.bdActive {
+  border: 2px solid #5cb85c;
+}
+.form-horizontal .has-feedback .form-control-feedback {
+  right: 3px;
+  top: 26px;
+}
 header.head-interiores {
   padding: 20px 0 0;
   color: #eeeeee;

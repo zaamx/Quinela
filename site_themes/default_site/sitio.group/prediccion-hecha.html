@@ -81,20 +81,51 @@
 
 			{/exp:channel:entries}
 
-			<?php $id_partido = '{exp:url_title_to_entry_id url_title="{segment_3}"}'; ?>
-
-			<?php $nombrePost = '{segment_3}'; ?>
-
-			<?php $urlDestino = "{path='sitio/prediccion-hecha'}"; ?>
-
-			
-
-
-
 			{if logged_in}
 
-			{embed="sitio/pred-form" id_partido="<?php echo $id_partido; ?>" nombrePost="<?php echo $nombrePost; ?>" urlDestino="<?php echo $urlDestino; ?>" }
 
+				{if segment_4}
+					{exp:channel:entries channel="predicciones" author_id="CURRENT_USER" entry_id="{segment_4}" dynamic="no" limit="1" disable="categories|member_data|pagination|category_fields"}
+
+					<div class="row text-center">
+						<div class="col-md-12">
+							{pre_resultado_de_partido}	
+						</div>
+					</div>
+
+					<div class="row text-center">
+						<div class="col-md-6">
+							<label for="">Anota Local</label> <br>
+							{pre_marcador_local}
+
+						</div>
+						<div class="col-md-6">
+							<label for="">Anota Visitante</label> <br>
+							{pre_marcador_visitante}
+						</div>
+					</div>
+
+					<div class="row text-center">
+						<div class="col-md-12">
+							{quien_anota_primero}
+						</div>
+					</div>
+					<div class="row text-center">
+						<div class="col-md-12">
+							<label for="">Minuto de primer gol</label> <br>
+							{pre_minuto_de_primer_gol}
+						</div>
+					</div>
+
+
+					{/exp:channel:entries}
+
+				{if:else}
+
+				<div class="alert alert-warning">
+					<b>Nada que mostrar</b>
+				</div>
+				{/if}
 
 			{/if}
 

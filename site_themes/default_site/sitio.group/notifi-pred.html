@@ -1,0 +1,31 @@
+
+Hello {mbr_screen_name},
+{exp:channel:entries channel="predicciones" entry_id="{entry_id}"}
+
+Tu prediccion para el partido: 
+
+
+{partido_rel}
+	{partido_rel:equipo_local}
+			{partido_rel:equipo_local:nombre_de_pais}<br>
+	{/partido_rel:equipo_local}
+ vs
+	{partido_rel:equipo_visitante}
+			{partido_rel:equipo_visitante:nombre_de_pais}<br>
+	{/partido_rel:equipo_visitante}
+{/partido_rel}
+
+Marcador Local: 
+{pre_marcador_local}
+Marcador Visitante:
+{pre_marcador_visitante}
+
+Por: 
+
+1000
+
+puntos.
+
+Se ha realizado con exito.
+
+{/exp:channel:entries} 

@@ -85,24 +85,6 @@ var timeToWaitForLast = 100;
 */
 
 /*
- * We're going to swap out the gravatars.
- * In the functions.php file, you can see we're not loading the gravatar
- * images on mobile to save bandwidth. Once we hit an acceptable viewport
- * then we can swap out those images since they are located in a data attribute.
-*/
-function loadGravatars() {
-  // set the viewport using the function above
-  viewport = updateViewportDimensions();
-  // if the viewport is tablet or larger, we load in the gravatars
-  if (viewport.width >= 768) {
-  jQuery('.comment img[data-gravatar]').each(function(){
-    jQuery(this).attr('src',$(this).attr('data-gravatar'));
-  });
-	}
-} // end function
-
-
-/*
  * Put all your regular jQuery in here.
 */
 jQuery(document).ready(function($) {
@@ -111,7 +93,113 @@ jQuery(document).ready(function($) {
    * Let's fire off the gravatar function
    * You can remove this if you don't need it
   */
-  loadGravatars();
+  // loadGravatars();
+
+  $("#member_form").validate({
+        rules: {
+          screen_name: {
+            required: true,
+            accept: "[a-zA-Z]+"
+          },
+          username: {
+            required: true,
+            email: true,
+          },
+          miembro_pertenencia: {
+            required: true
+          },
+          password: {
+            required: true
+          },
+          password_confirm: {
+            required: true,
+            equalTo: "#password"
+          },
+          accept_terms: {
+            required: true
+          }
+        },
+        messages: {
+          screen_name: {
+            required: '*Ingresa tu nombre',
+            accept: '*Solo letras para el nombre'
+          },
+          username: {
+            required: '*Ingresa tu correo electr&oacute;nico',
+            email: '*Ingresa un correo electr&oacute;nico correcto',
+          },
+          miembro_pertenencia: {
+            required: '*Debes especificar tu oficina'
+          },
+          password: {
+            required: '*Debes especificar tu password'
+          },
+          password_confirm: {
+            required: '*Tu password no coincide'
+          },
+          accept_terms: {
+            required: '*Debes aceptar términos y condiciones'
+          }
+        },
+        highlight: function(element) {
+            var id_attr = "#" + $( element ).attr("id") + "1";
+            $(element).closest('.form-group').addClass('has-error has-feedback');
+            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');         
+        },
+        unhighlight: function(element) {
+            var id_attr = "#" + $( element ).attr("id") + "1";
+            $(element).closest('.form-group').removeClass('has-error');
+            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');         
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function(error, element) {
+            if(element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        }      
+  });
+  $("#login-form").validate({
+        rules: {
+          username: {
+            required: true,
+            email: true,
+          },
+          password: {
+            required: true
+          }
+        },
+        messages: {
+          username: {
+            required: '*Ingresa tu correo electr&oacute;nico',
+            email: '*Ingresa un correo electr&oacute;nico correcto',
+          },
+          password: {
+            required: '*Debes especificar tu password'
+          },
+        },
+        highlight: function(element) {
+            var id_attr = "#" + $( element ).attr("id") + "1";
+            $(element).closest('.form-group').addClass('has-error has-feedback');
+            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');         
+        },
+        unhighlight: function(element) {
+            var id_attr = "#" + $( element ).attr("id") + "1";
+            $(element).closest('.form-group').removeClass('has-error');
+            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');         
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function(error, element) {
+            if(element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        }      
+  });
 
 
 }); /* end of as page load scripts */

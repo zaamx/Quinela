@@ -27,135 +27,6 @@
   	</footer>
 
 
-  	<!-- Modal Formularios -->
-  	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  		<div class="modal-dialog">
-  			<div class="modal-content">
-  				<div class="modal-header">
-  					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-  					<h4 class="modal-title text-center" id="myModalLabel">¿Estás listo para vivir tu pasión?&nbsp;</h4>
-  				</div>
-  				<div class="modal-body">
-  					<div class="text-center">
-  						<b>¿Ya te registraste? Ingresa ahora</b>
-  					</div>
-  					
-  					{exp:member:login_form return="sitio/partidos" form_class="form-horizontal"}
-  						<div class="form-group">
-  							<label for="email">Correo electrónico</label>
-  							<input id="user_username" class="form-control" style="margin-bottom:.5em" type="text" name="username" size="30" placeholder="Usuario"/>
-  						</div>
-  						<div class="form-group">
-  							<label for="contra1">Contraseña</label>
-  							<input id="user_password" class="form-control" style="margin-bottom:.5em" type="password" name="password" size="30"  placeholder="Contraseña"/>
-  						</div>
-  						{if auto_login}
-						<div class="checkbox">
-  							<label>
-  								<input id="user_remember_me" type="checkbox" name="auto_login" value="1"> Recuerdame
-  							</label>
-  						</div>
-						{/if}
-						<div class="text-center col-sm-12">
-							<a href="{path='member/forgot_password'}">¿Olvidaste tu contraseña?</a> <br>
-  							<input class="btn btn-success col-sm-8 col-sm-offset-2" type="submit" name="submit" value="Acceder">	
-						</div>
-  						
-  					{/exp:member:login_form}
-
-  					<div class="text-center">
-  						<span>
-  							¿No recuerdas tu contraseña? Da click
-  							<a href="#" data-toggle="modal" data-target="#recuperapwd" data-dismiss="modal" aria-hidden="true">
-	  							aquí
-	  						</a>
-  						</span>
-  						<br>
-  						<a href="#" data-toggle="modal" data-target="#acerca" data-dismiss="modal" aria-hidden="true"> Mas acerca de la copa Aserta</a>
-  					</div>
-
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-
-
-  	<div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  		<div class="modal-dialog">
-  			<div class="modal-content">
-  				<div class="modal-header">
-  					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-  					<h4 class="modal-title text-center" id="myModalLabel">¿Estás listo para vivir tu pasión?&nbsp;</h4>
-  				</div>
-  				<div class="modal-body">
-  					<div class="text-center">
-  						<b>Registrate colocando tus datos</b>  
-  					</div>
-
-
-  					{exp:user:register return="sitio/gracias" override_return="sitio/gracias" error_page="sitio/gracias" form:class="your_class" }
-
-  						<div class="form-group">
-  							<label for="screen_name">Nombre</label>
-                <input type="text" name="screen_name" id="screen_name" class="form-control" placeholder="ejemplo@aserta.com"/>
-  						</div>
-  						<div class="form-group">
-                <label for="username">Correo electrónico</label>
-                <input type="text" name="username" id="username" class="form-control" placeholder="ejemplo@aserta.com"/>
-              </div>
-
-              <div class="form-group">
-  							<label for="miembro_pertenencia">Oficina de pertenencia</label>
-                
-                 <select name="miembro_pertenencia">
-                  {select_miembro_pertenencia}
-                      <option value="{value}">{value}</option>
-                  {/select_miembro_pertenencia}
-                </select>
-  						</div>
-
-  						<div class="form-group">
-  							<label for="password">Contraseña</label>
-  							<input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
-  						</div>
-  						<div class="form-group">
-  							<label for="password_confirm">ConfirmarContraseña</label>
-  							<input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Contraseña">
-  						</div>
-  						<div class="checkbox">
-  							<label>
-                  <input type="checkbox" name="accept_terms" value="y" /> He leido y acépto
-  								<a href="#" data-toggle="modal" data-target="#terminos" data-dismiss="modal" aria-hidden="true">
-  									los terminos y condiciones de privacidad
-  								</a>
-  							</label>
-  						</div>
-
-              {if captcha}
-                <p>Please enter in the word you see below:
-                    <input type="text" name="captcha" /></p>
-                <p>{captcha}</p>
-              {/if}
-  						<button type="submit" class="btn btn-success">Registrar</button>
-
-              {if no_results}
-                  <p>You're currently logged in, and must be logged
-                      out to view this form.</p>
-              {/if}
-               
-  					{/exp:user:register}
-
-  					<div class="text-center">
-  						<a href="#" data-toggle="modal" data-target="#acerca" data-dismiss="modal" aria-hidden="true"> Mas acerca de la copa Aserta</a>
-  					</div>
-
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-
-
-
   	<!-- Modal que es copa aserta-->
   	<div class="modal fade" id="acerca" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   		<div class="modal-dialog">
@@ -235,72 +106,8 @@
   		</div>
   	</div>
 
-  	<!-- Modal olvido pwd -->
-  	<div class="modal fade" id="recuperapwd" tabindex="-1" role="dialog" aria-labelledby="reglasLabel" aria-hidden="true">
-  		<div class="modal-dialog">
-  			<div class="modal-content">
-  				<div class="modal-header">
-  					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-  					<h4 class="modal-title text-center" id="reglasLabel">¿No recuerdas tu contraseña?&nbsp;</h4>
-  				</div>
-  				<div class="modal-body">
-  					<div class="text-center">
-  						¿Olvidaste tu contraseña? No te preocupes, te mandaremos la información  a tu correo electrónico.
-  					</div>
-
-<!--  -->
 
 
-
-  				</div>
-  			</div>
-  		</div>
-  	</div>
-
-    
-
-
-		<!-- <div class="container">
-			<div class="row">
-				<div class="col-sm-4">
-						{if logged_in}
-						<dl>
-							<dt>Usuario</dt>
-							<dd>
-								<a href="{path='member/profile'}">Edit your profile</a>
-							</dd>
-							<dd>
-								<a href="{path='member/memberlist'}">View the Memberlist</a><br>
-							</dd>
-							<dd>
-								<a href="{path='logout'}">Log Out</a>
-							</dd>
-						</dl>
-						{/if}
-						{if logged_out}
-						<dl>
-							<dt>No usuario</dt>
-							<dd>
-								Are you a member? Please <a href="{path='member/login'}">log-in</a>
-							</dd>
-							<dd>
-								Not a member? <a href="{path='member/register'}">Register</a>
-							</dd>
-							<dd>
-								Have you <a href="{path='member/forgot'}">forgotten your password</a>?
-							</dd>
-						</dl>
-						{/if}
-					</div>
-					<div class="col-sm-4">
-						
-					</div>
-					<div class="col-sm-4">
-						
-					</div>
-			</div>
-		</div> -->
-		
 	</footer>
 
 
@@ -310,8 +117,8 @@
     
     <script src="{site_url}/themes/site_themes/default_site/library/js/libs/bootstrap.min.js"></script>
     <script src="{site_url}/themes/site_themes/default_site/library/js/libs/jquery.form.js"></script>
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js"></script>
 	<script type="text/javascript" src="{site_url}/themes/site_themes/default_site/library/js/libs/slick/slick.min.js"></script>
 
     <script src="{site_url}/themes/site_themes/default_site/library/js/scripts.js"></script>    

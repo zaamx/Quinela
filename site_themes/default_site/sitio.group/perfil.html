@@ -180,6 +180,13 @@
 
 							$('img.item-img').click(function () {
 								$('select[name="lista_badges[data][]"]').find('option[value="' + $(this).attr("alt") + '"]').attr("selected",true);
+
+								if (!$(this).hasClass('bdActive')) {
+							    // Remove the class from anything that is active
+							    $('img.item-img.bdActive').removeClass('bdActive');
+							    // And make this active
+							    $(this).addClass('bdActive');
+							  }
 							});
 							$('#slider-badges').slick({
 							  dots: true,
@@ -213,7 +220,6 @@
 							    }
 							  ]
 							});
-
 						});
 
 						</script>

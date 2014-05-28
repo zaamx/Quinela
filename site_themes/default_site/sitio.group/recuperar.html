@@ -1,0 +1,49 @@
+{embed="sitio/head-interiores" my_body_class="home" my_active_nav="home" my_page_title="Home"}
+<div id="home-ingreso">
+	<div class="container">
+		
+		<div class="row">
+            <div class="col-sm-12">
+                <div id="intro" class="text-center">
+                	<a href="{path='site_index'}" id="logo">	
+	                  <img src="{site_url}/themes/site_themes/default_site/library/images/LOGO_VERTICAL_FONDO_CLARO.png">
+                  	</a>
+              	</div>
+            </div>
+        </div>
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h1 class="text-center">¿Estás listo para vivir tu pasión?</h1>
+				<p class="text-center">
+					<b>¿Ya te registraste? Ingresa ahora</b>
+				</p>
+				<!-- //////////////////////////////////////////// -->
+
+				<h5>Recupera tu password</h5>
+				{exp:user:forgot_password form:class="form-inline"}
+
+				<div class="input-group">
+					<input class="form-control" name="email" id="email" type="text" placeholder="Correo electrónico"/>
+				    <span class="input-group-btn">
+				      <button type="submit" class="btn btn-success">Recuperar Password</button>
+				    </span>
+			      
+			    </div><!-- /input-group -->
+
+				{/exp:user:forgot_password}
+
+
+
+
+
+				<!-- //////////////////////////////////////////// -->
+				<div class="text-center">
+					<a href="#" data-toggle="modal" data-target="#acerca" data-dismiss="modal" aria-hidden="true"> Mas acerca de la copa Aserta</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+{embed="sitio/foot"}
