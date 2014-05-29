@@ -1,4 +1,4 @@
-{embed="sitio/head" my_body_class="perfil" my_active_nav="perfil" my_page_title="Perfil | {title}"}
+{embed="sitio/head" my_body_class="perfil-edit" my_active_nav="perfil" my_page_title="Perfil | {title}"}
 <div id="content">
 	<div class="container">
 		<div class="row">
@@ -99,7 +99,13 @@
 				
 				<h5>Your Avatar</h5>
 				{exp:user:edit return="sitio/actualizar-perfil/exito-avatar" override_return="sitio/actualizar-perfil/exito-avatar" error_page="sitio/error-perfil"}
-				<p>{if avatar_filename}<label>Current Avatar: </label><img src="{avatar_url}{avatar_filename}" width="{avatar_width}" height="{avatar_height}" />{if:else}You currently do not have an avatar uploaded.{/if}</p>
+				<p>{if avatar_filename}
+					<label>Current Avatar: </label>
+					<img class="img-responsive" src="{avatar_url}{avatar_filename}" width="{avatar_width}" height="{avatar_height}" />
+					{if:else}
+					You currently do not have an avatar uploaded.
+					{/if}
+				</p>
 				<p><label for="avatar_filename">Upload a New Avatar: </label><input type="file" name="avatar_filename" id="avatar_filename" /></p>
 
 				<div class="sr-only">|

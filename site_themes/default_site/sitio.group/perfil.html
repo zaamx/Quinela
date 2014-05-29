@@ -169,6 +169,22 @@
 											}
 										});
 
+								$('#tester > #publishForm').ajaxForm({
+									dataType: 'json',
+									success: function(data) {
+										if (data.success == '1') {
+											//alert('You successfully added a new entry with entry_id '+data.entry_id);
+											if(alert('Le haz dado un comentario a tu amigo')){}
+											else    window.location.reload(); 
+
+										} else if (data.success == '0') {					
+											$('#mensajes2').append(data.field_errors.title);
+											$('#mensajes2').append(data.field_errors.comentario);                 		
+												 // alert('Failed with the following errors: '+ data.errors.join(', '));
+												}
+											}
+										});
+
 								$('img.item-img').click(function () {
 									$('select[name="lista_badges[data][]"]').find('option[value="' + $(this).attr("alt") + '"]').attr("selected",true);
 
@@ -223,9 +239,33 @@
 								<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, soluta aliquid ad et in maxime velit sed atque esse adipisci.
 								</p>
 							</div>
-							<input type="submit" value="Dar Badge" class="btn btn-success col-sm-12">
+							<input type="submit" value="Dar Badge" class="btn btn-success col-sm-6 col-sm-offset-3">
 							{/exp:channel:form}
 							<div id="mensajes">
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12" id="tester">
+							<h3>Comentario</h3>
+							{exp:channel:form channel="comentarios" return="site/perfil/{segment_3}" status="Open" json="yes"}
+							<input type="hidden" name="usuario_receptor_comentario" id="usuario_receptor_comentario" value="{segment_3}">
+						
+							<div class="form-group has-feedback">
+								<label for="title">Nombre</label>
+								<input type="text" name="title" id="title" class="form-control" placeholder="Titulo de tu comentario"/>
+							</div>
+
+							<textarea  class="form-control" id="comentario" name="comentario"  rows="10">
+								
+							</textarea>
+								<hr>
+
+							<input type="submit" value="Comentar" class="btn btn-success col-sm-6 col-sm-offset-3">
+
+							{/exp:channel:form}
+							<div id="mensajes2">
 							</div>
 						</div>
 					</div>

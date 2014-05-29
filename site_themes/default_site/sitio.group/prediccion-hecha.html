@@ -17,7 +17,7 @@
 				}
 			</style>
 		{/if}
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-sm-12">
 					<ul id="pasos-prediccion">
 						<li class="activaa">1/5</li>
@@ -28,7 +28,7 @@
 					</ul>
 
 				</div>
-			</div>
+			</div> -->
 		
 			<div class="row">
 				<div class="col-md-12">
@@ -87,36 +87,81 @@
 				{if segment_4}
 					{exp:channel:entries channel="predicciones" author_id="CURRENT_USER" entry_id="{segment_4}" dynamic="no" limit="1" disable="categories|member_data|pagination|category_fields"}
 
+
+
 					<div class="row text-center">
 						<div class="col-md-12">
-							{pre_resultado_de_partido}	
+							<h1>Este es el resumen de tu predicción</h1>
+						</div>
+					</div>
+
+					<div class="row text-center">
+						<div class="col-md-12">
+							<h3>
+								Resultado de partido
+							</h3>
+							<div class="well">
+								<h5>
+								{pre_resultado_de_partido}		
+							</h5>	
+							</div>
+							
+						</div>
+					</div>
+
+					<div class="row text-center">
+						<div class="col-md-12">
+							<h3>
+								Marcador
+							</h3>
 						</div>
 					</div>
 
 					<div class="row text-center">
 						<div class="col-md-6">
-							<label for="">Anota Local</label> <br>
-							{pre_marcador_local}
-
+							<label for="">Anota Local</label>
+							<div class="well">
+								<b>
+									{pre_marcador_local}	
+								</b>
+								
+							</div>
 						</div>
 						<div class="col-md-6">
 							<label for="">Anota Visitante</label> <br>
-							{pre_marcador_visitante}
+							<div class="well">
+								<b>
+									{pre_marcador_visitante}	
+								</b>
+							</div>
 						</div>
 					</div>
 
 					<div class="row text-center">
 						<div class="col-md-12">
-							{quien_anota_primero}
-						</div>
-					</div>
-					<div class="row text-center">
-						<div class="col-md-12">
-							<label for="">Minuto de primer gol</label> <br>
-							{pre_minuto_de_primer_gol}
+							<h3>
+								Equipo que anota primero
+							</h3>
 						</div>
 					</div>
 
+					<div class="row text-center">
+						<div class="col-md-12">
+							<div class="well">
+								<b>
+								{quien_anota_primero}	
+							</b>	
+							</div>
+						</div>
+					</div>
+
+					<div class="row text-center">
+						<div class="col-md-6 col-md-offset-3">
+							<a href="{path='site_index'}" class="btn btn-success">
+								Continua participando
+							</a>
+						</div>
+					</div>
 
 					{/exp:channel:entries}
 
