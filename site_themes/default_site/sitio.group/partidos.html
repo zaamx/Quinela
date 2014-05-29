@@ -1,7 +1,7 @@
 {embed="sitio/head" my_active_nav="home" my_page_title="Home"}
 	<div id="content">
 	<div class="container">
-		<div class="row">
+<!-- 		<div class="row">
 				<div class="col-sm-12">
 					<ul id="pasos-prediccion">
 						<li class="activaa">1/5</li>
@@ -12,14 +12,22 @@
 					</ul>
 <br>
 				</div>
-			</div>
+			</div> -->
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-sm-10">
 				<div class="head-title head-green">
 					
 				</div>
 				<h2 class="greentxt">Predicciones actuales</h2>
 				<p>Podrás hacer las selecciones que quieras</p>
+			</div>
+
+			<div class="col-sm-2">
+				<h5>
+					<a href="#" data-toggle="modal" data-target="#modalInstrucciones">
+						Instrucciones <i class="fa fa-question"></i>
+					</a>
+				</h5>
 			</div>
 		</div>
 		<div id="inner-content" class="row">
@@ -55,50 +63,351 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="sáb 14 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
+					{exp:channel:entries channel="partidos" search:fecha="sáb 14 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
 				</div>
-
-				<div class="sr-only">
-					jue 12 de jun de 14
-				vie 13 de jun de 14
-				sáb 14 de jun de 14
-				dom 15 de jun de 14
-				lun 16 de jun de 14
-				mar 17 de jun de 14
-				mié 18 de jun de 14
-				jue 19 de jun de 14
-				vie 20 de jun de 14
-				sáb 21 de jun de 14
-				dom 22 de jun de 14
-				lun 23 de jun de 14
-				mar 24 de jun de 14
-				mié 25 de jun de 14
-				jue 26 de jun de 14
-				vie 27 de jun de 14
-				sáb 28 de jun de 14
-				dom 29 de jun de 14
-				lun 30 de jun de 14
-				mar 1 de jul de 14
-				mié 2 de jul de 14
-				jue 3 de jul de 14
-				vie 4 de jul de 14
-				sáb 5 de jul de 14
-				dom 6 de jul de 14
-				lun 7 de jul de 14
-				mar 8 de jul de 14
-				mié 9 de jul de 14
-				jue 10 de jul de 14
-				vie 11 de jul de 14
-				sáb 12 de jul de 14
-				dom 13 de jul de 14
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 15 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="dom 15 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
 				</div>
-
-				
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 16 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="lun 16 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 17 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="mar 17 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 18 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="mié 18 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 19 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="jue 19 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 20 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="vie 20 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 21 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="sáb 21 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 22 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="dom 22 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 23 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="lun 23 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 24 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="mar 24 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 25 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="mié 25 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 26 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="jue 26 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 27 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="vie 27 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 28 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="sáb 28 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 29 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="dom 29 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 30 de junio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="lun 30 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 1 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="mar 1 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 2 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="mié 2 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 3 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="jue 3 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 4 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="vie 4 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 5 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="sáb 5 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 6 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="dom 6 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 7 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="lun 7 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 8 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="mar 8 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 9 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="mié 9 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 10 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="jue 10 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 11 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="vie 11 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 12 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="sáb 12 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>
+				<div class="partidos-dia">
+					<div class="row">
+						<h4><i class="fa fa-calendar"></i> 13 de julio</h4>
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:fecha="dom 13 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{part-partido}
+					{/exp:channel:entries}
+					</div>
+				</div>				
 			</div>
 		</div>
 	</div>
 	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="modalInstrucciones" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">Instrucciones</h4>
+	      </div>
+	      <div class="modal-body">
+	        	<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 {embed="sitio/foot"}

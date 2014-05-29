@@ -21,9 +21,16 @@
 				</div>
 			</div>
 			<div class="row">
-				<b>Grupo A</b>
-				<p>
-					Arena Sao Paoulo
+				<b>
+				{categories limit="1" show_group="1"}
+					{category_name}
+				{/categories}
+				</b>
+
+				<p>									
+				{categories limit="1" show_group="2"}
+					{category_name}
+				{/categories}
 				</p>
 				<p>
 					{fecha_de_partido format="%Y %m %d"}

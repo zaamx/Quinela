@@ -132,117 +132,106 @@
 					</div>
 				</div>
 
-				<!-- ///////////////////////////////  Dar Badge ///////////////////////////////   -->
-				<div class="row">
-					<div class="col-sm-12">
+				{if segment_3 == logged_in_member_id}					
 
+				{if:else}
+					<!-- ///////////////////////////////  Dar Badge ///////////////////////////////   -->
+					<div class="row">
+						<div class="col-sm-12">
+							<h3>
+								¿Quieres darle un badge a esta persona?
+							</h3>
+							<div id="slider-badges">
+								{exp:channel:entries channel="badges"  dynamic="no" }
+									<div class="item">
 
+										<img alt="{entry_id}"  height="63" width="63" class="img-circle item-img" src="{imagen_badge}" alt="">
+									</div> 
+								{if no_results}<span>This user has not posted any entries.</span>{/if}
+								{/exp:channel:entries}
+							</div>
+							<br>
+							<script type="text/javascript">
+							$(document).ready(function(){
+								$('#publishForm').ajaxForm({
+									dataType: 'json',
+									success: function(data) {
+										if (data.success == '1') {
+											//alert('You successfully added a new entry with entry_id '+data.entry_id);
+											if(alert('Le haz dado un badge a tu amigo')){}
+											else    window.location.reload(); 
 
-						<h3>
-							¿Quieres darle un badge a esta persona?
-						</h3>
-						
-						<div id="slider-badges">
-
-							{exp:channel:entries channel="badges"  dynamic="no" }
-
-
-								<div class="item">
-
-									<img alt="{entry_id}"  height="63" width="63" class="img-circle item-img" src="{imagen_badge}" alt="">
-								</div> 
-
-
-							{if no_results}<span>This user has not posted any entries.</span>{/if}
-
-							{/exp:channel:entries}
-						</div>
-						<br>
-
-
-						<script type="text/javascript">
-						$(document).ready(function(){
-							$('#publishForm').ajaxForm({
-								dataType: 'json',
-								success: function(data) {
-									if (data.success == '1') {
-										//alert('You successfully added a new entry with entry_id '+data.entry_id);
-										if(alert('Le haz dado un badge a tu amigo')){}
-										else    window.location.reload(); 
-
-									} else if (data.success == '0') {					
-										$('#mensajes').append(data.field_errors.title);
-										$('#mensajes').append(data.field_errors.lista_badges);                 		
-											 // alert('Failed with the following errors: '+ data.errors.join(', '));
+										} else if (data.success == '0') {					
+											$('#mensajes').append(data.field_errors.title);
+											$('#mensajes').append(data.field_errors.lista_badges);                 		
+												 // alert('Failed with the following errors: '+ data.errors.join(', '));
+												}
 											}
-										}
-									});
+										});
 
-							$('img.item-img').click(function () {
-								$('select[name="lista_badges[data][]"]').find('option[value="' + $(this).attr("alt") + '"]').attr("selected",true);
+								$('img.item-img').click(function () {
+									$('select[name="lista_badges[data][]"]').find('option[value="' + $(this).attr("alt") + '"]').attr("selected",true);
 
-								if (!$(this).hasClass('bdActive')) {
-							    // Remove the class from anything that is active
-							    $('img.item-img.bdActive').removeClass('bdActive');
-							    // And make this active
-							    $(this).addClass('bdActive');
-							  }
+									if (!$(this).hasClass('bdActive')) {
+								    // Remove the class from anything that is active
+								    $('img.item-img.bdActive').removeClass('bdActive');
+								    // And make this active
+								    $(this).addClass('bdActive');
+								  }
+								});
+								$('#slider-badges').slick({
+								  dots: true,
+								  infinite: false,
+								  speed: 300,
+								  slidesToShow: 6,
+								  slidesToScroll: 6,
+								  responsive: [
+								    {
+								      breakpoint: 1024,
+								      settings: {
+								        slidesToShow: 5,
+								        slidesToScroll: 5,
+								        infinite: true,
+								        dots: true
+								      }
+								    },
+								    {
+								      breakpoint: 600,
+								      settings: {
+								        slidesToShow: 4,
+								        slidesToScroll: 4
+								      }
+								    },
+								    {
+								      breakpoint: 480,
+								      settings: {
+								        slidesToShow: 3,
+								        slidesToScroll: 3
+								      }
+								    }
+								  ]
+								});
 							});
-							$('#slider-badges').slick({
-							  dots: true,
-							  infinite: false,
-							  speed: 300,
-							  slidesToShow: 6,
-							  slidesToScroll: 6,
-							  responsive: [
-							    {
-							      breakpoint: 1024,
-							      settings: {
-							        slidesToShow: 5,
-							        slidesToScroll: 5,
-							        infinite: true,
-							        dots: true
-							      }
-							    },
-							    {
-							      breakpoint: 600,
-							      settings: {
-							        slidesToShow: 4,
-							        slidesToScroll: 4
-							      }
-							    },
-							    {
-							      breakpoint: 480,
-							      settings: {
-							        slidesToShow: 3,
-							        slidesToScroll: 3
-							      }
-							    }
-							  ]
-							});
-						});
+							</script>
 
-						</script>
-						{exp:channel:form channel="badges_asignados" return="site/ENTRY_ID" json="yes"}
-
-						<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}">
-						<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
-						<div class="sr-only">
-
-							{field:lista_badges}		
-
-							<hr>
-							<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, soluta aliquid ad et in maxime velit sed atque esse adipisci.
-							</p>
-						</div>
-
-						<input type="submit" value="Dar Badge" class="btn btn-success col-sm-12">
-
-						{/exp:channel:form}
-						<div id="mensajes">
+							{exp:channel:form channel="badges_asignados" return="site/ENTRY_ID" status="Open" json="yes"}
+							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}">
+							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+							<div class="sr-only">
+								{field:lista_badges}		
+								<hr>
+								<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, soluta aliquid ad et in maxime velit sed atque esse adipisci.
+								</p>
+							</div>
+							<input type="submit" value="Dar Badge" class="btn btn-success col-sm-12">
+							{/exp:channel:form}
+							<div id="mensajes">
+							</div>
 						</div>
 					</div>
-				</div>
+				{/if}
+
+				
 			</div>
 		</div>
 	</div>
