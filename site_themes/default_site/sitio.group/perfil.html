@@ -12,7 +12,7 @@
 				{if segment_3}
 					{embed="sitio/perfil-sidebar"}
 				{if:else}
-				<h4>Error!</h4><p>You must specify a member ID to view a profile.</p>
+					<h4>Error!</h4><p>You must specify a member ID to view a profile.</p>
 				{/if}
 			</div>
 
@@ -29,14 +29,10 @@
 						{exp:user:stats member_id="{segment_3}" limit="1"}
 						<h2>
 							{screen_name} <br>
-							<small>
-								{bio}  
-							</small>
 						</h2>
 						<p>
 							<b>6000 </b><span>Puntos</span> <br>
 							<b>15 </b><span>Medallas</span> <br>
-							<b>Nivel Experto</b>
 						</p>
 						{/exp:user:stats}
 
@@ -58,7 +54,7 @@
 							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="{segment_3}"  dynamic="no" limit="15" paginate="bottom"}
 							
 							<li class="item-badge">
-								<img  height="63" width="63" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">
+								<img  height="90" width="90" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">
 							</li> 
 
 							{if no_results}<span>This user has not posted any entries.</span>{/if}

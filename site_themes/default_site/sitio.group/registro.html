@@ -1,5 +1,5 @@
 {embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
-<div id="home-ingreso">
+<div id="home-ingreso-b">
 	<div class="container">
 
 		<div class="row">
@@ -56,9 +56,13 @@
 				</div>
 				<div class="checkbox">
 					<label>
-						<input type="checkbox" name="accept_terms" value="y" /> He leido y acépto
-						<a href="#" data-toggle="modal" data-target="#terminos" data-dismiss="modal" aria-hidden="true">
-							los terminos y condiciones de privacidad
+						<input type="checkbox" name="accept_terms" value="y" /> He leído y acepto los 
+						<a href="{path='sitio/terminos'}">
+							términos y condiciones
+						</a>
+							y 
+						<a href="{path='sitio/politicas'}">
+							aviso de privacidad.
 						</a>
 					</label>
 				</div>
@@ -69,7 +73,7 @@
 				    <p>{captcha}</p>
 				{/if}
 
-				<button type="submit" class="btn btn-success">Registrar</button>
+				<button type="submit" class="btn btn-success">REGÍSTRATE</button>
 
 			{if no_results}
 		    <p>You're currently logged in, and must be logged
@@ -78,9 +82,6 @@
 			 
 			{/exp:user:register}
 			
-				<div class="text-center">
-					<a href="#" data-toggle="modal" data-target="#acerca" data-dismiss="modal" aria-hidden="true"> Mas acerca de la copa Aserta</a>
-				</div>
 			</div>
 		</div>
 	</div>

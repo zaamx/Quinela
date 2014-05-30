@@ -4,22 +4,22 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2 class="greentxt">Badges</h2>
+				<h2 class="greentxt">Insignias</h2>
 				<p>No sólo se trata de hacer puntos. se trata de obtener reconocimientos sociales. Los badges podrás obtenerlos por recomendación y ganarlos por tus acciones.</p>
 			</div>
 		</div>
 		<div id="inner-content" class="row">
-			<div class="col-sm-10 col-sm-offset-1">
+			<div class="col-sm-5">
 				<div class="row">
 					<h3>
-						BADGES
+						Insignias
 					</h3>
 				</div>
-				{exp:channel:entries channel="badges"  dynamic="no" limit="15" paginate="bottom"}							
+				{exp:channel:entries channel="badges"  dynamic="no" paginate="bottom"}							
 
 					<div class="item-bad row">	
-						<div class="imgBadge col-sm-2 text-center">
-							<img src="{imagen_badge}"  height="90" width="90" class="img-circle" alt="">
+						<div class="imgBadge col-sm-4 text-center">
+							<img src="{imagen_badge}"  height="110" width="110" class="img-circle" alt="">
 						</div>
 						<div class="desBadge col-sm-8">
 							<h4>
@@ -34,11 +34,43 @@
 							
 						</div>
 					</div>
+					<hr>
 
-				{if no_results}<span>This user has not posted any entries.</span>{/if}
+				{if no_results}<span>This user has not posted any entries.</span>{/if}				
 
+				{/exp:channel:entries}
 
-				{paginate}<li>Page {current_page} of {total_pages} page{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
+			</div>
+			<div class="col-sm-1">
+			</div>
+			<div class="col-sm-5">
+				<div class="row">
+					<h3>
+						Insignias
+					</h3>
+				</div>
+				{exp:channel:entries channel="badges"  dynamic="no" paginate="bottom"}							
+
+					<div class="item-bad row">	
+						<div class="imgBadge col-sm-4 text-center">
+							<img src="{imagen_badge}"  height="110" width="110" class="img-circle" alt="">
+						</div>
+						<div class="desBadge col-sm-8">
+							<h4>
+								{title} <br>
+								<!-- <small>
+									Definir la descripción y las reglas del badge.
+								</small> -->
+							</h4>
+							<p>
+								{descripcion_badge}
+							</p>
+							
+						</div>
+					</div>
+					<hr>
+
+				{if no_results}<span>This user has not posted any entries.</span>{/if}				
 
 				{/exp:channel:entries}
 

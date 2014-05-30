@@ -62,7 +62,13 @@
 				<hr />
 
 				{exp:user:edit return="sitio/actualizar-perfil/exito" screen_name_password_required="no" error_page="sitio/error-perfil"}
-					<p><label for="screen_name">Screen Name:</label><input type="text" name="screen_name" id="screen_name" value="{screen_name}" style="width: 450px; font-weight: bold;" /></p>
+
+					<div class="form-group">
+						<label for="screen_name">Nombre de usuario</label>
+						<input type="text" class="form-control" name="screen_name" id="screen_name" value="{screen_name}"/>
+					</div>
+
+
 
 					<div class="form-group">
   						<label for="miembro_pertenencia">Oficina de pertenencia</label> <br>
@@ -79,21 +85,15 @@
   								Cambiar:
   							</span>
   							<br>
-			                 <select name="miembro_pertenencia">
+
+			                 <select name="miembro_pertenencia" class="form-control">
 			                  {select_miembro_pertenencia}
 			                      <option value="{value}">{value}</option>
 			                  {/select_miembro_pertenencia}
 			                </select>
   						</div>
-
-					<p><label for="bio">Bio:</label><textarea name="bio" id="bio" rows="10" cols="50" style="width: 450px; height: 200px;">{bio}</textarea></p>
-					<p><input type="submit" name="submit" value="Update" />
+					<input type="submit" class="btn btn-success" name="submit" value="Actualizar" />
 				{/exp:user:edit}  
-
-
-
-				<hr>
-				<hr>
 				<hr>
 
 				
@@ -106,8 +106,12 @@
 					You currently do not have an avatar uploaded.
 					{/if}
 				</p>
-				<p><label for="avatar_filename">Upload a New Avatar: </label><input type="file" name="avatar_filename" id="avatar_filename" /></p>
 
+				<div class="form-group">
+				    <label for="avatar_filename" >Upload a New Avatar: </label>
+				    <input  class="form-control" type="file" name="avatar_filename" id="avatar_filename" />
+				</div>
+				
 				<div class="sr-only">|
 						<script type="text/javascript">
 							$(document).ready(function(){
@@ -121,7 +125,13 @@
 	               		 </select>
 				</div>
 
-				<p><input type="submit" value="Update" /> <input type="submit" name="remove_avatar" value="Remove Current Avatar?" /></p>
+				<div class="form-group">
+					<input  class="btn btn-success" type="submit" value="Actualizar" />
+				</div>
+
+				<div class="form-group">
+					<input class="btn btn-danger" type="submit" name="remove_avatar" value="Remover avatar actual" />
+				</div>
 				{/exp:user:edit}
 
 				</div><!--  close row -->

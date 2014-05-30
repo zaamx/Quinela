@@ -5,16 +5,7 @@
 			<h3>{if logged_in_member_id == "{segment_3}"}Mi  {/if}Perfil</h3>
 
 		</div>
-		<div class="row">
-
-			<!-- ///////////////////////////////  Sidebar ///////////////////////////////   -->
-			
-
-			<!-- ///////////////////////////////  Contenido ///////////////////////////////   -->
-
-
-
-			
+		<div class="row">			
 		{if logged_out}
 
 		{embed="user_inc/login"}
@@ -37,17 +28,40 @@
 				<h5>Fill in or edit the fields below to update your profile:</h5>
 				<hr />
 
+
+</div>
+
 				{exp:user:edit return="sitio/actualizar-cuenta/exito" error_page="sitio/error-perfil"}
-				<p><label for="email">Email:</label><input type="text" name="email" id="email" value="{email}" style="width: 450px;" /></p>
-				<p><label for="username">Username:</label><input type="text" name="username" id="username" value="{username}" style="width: 450px;" /></p>
-				<p><label for="password">New Password:</label><input type="password" name="password" id="password" style="width: 450px;" /></p>
-				<p><label for="password_confirm">Confirm New Password:</label><input type="password" name="password_confirm" id="password_confirm" style="width: 450px;" /></p>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="text" name="email" id="email" value="{email}" class="form-control" />
+				</div>
+
+				<div class="form-group">
+					<label for="username">Username:</label>
+					<input type="text" name="username" id="username" value="{username}" class="form-control" />
+				</div>
+
+				<div class="form-group">
+					<label for="password">New Password:</label>
+					<input type="password" name="password" id="password" class="form-control" />
+				</div>
+
+				<div class="form-group">
+					<label for="password_confirm">Confirm New Password:</label>
+					<input type="password" name="password_confirm" id="password_confirm" class="form-control" />
+				</div>
 
 				<hr />
-				<p>In order to update this page, you'll have to submit the current password:</p>
-				<p><label for="current_password">Current Password:</label><input type="password" name="current_password" id="current_password" style="width: 450px;" /></p>
 
-				<p><input type="submit" name="submit" value="Update" />
+				<p>In order to update this page, you'll have to submit the current password:</p>
+				
+				<div class="form-group">
+					<label for="current_password">Current Password:</label>
+					<input type="password" name="current_password" id="current_password" class="form-control" />
+				</div>
+
+				<input class="btn btn-success" type="submit" name="submit" value="Update" />
 				{/exp:user:edit}  
 
 

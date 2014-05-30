@@ -34,20 +34,39 @@ img.icono-menu {
 	width: 12px;
 	height: 12px;
 }
-#home-ingreso {
+#home-ingreso, #home-ingreso-b {
+	position: relative;
 	background: rgba(0, 0, 0, 0.6);
 		color : @gray-lighter;
 		padding: 100px 0 30px;	
 		margin: 0;
 	color: @gray-lighter;
-}
-.modal {
-	color: @gray-lighter !important; 	
-}
-.close  {
-	color: @gray-lighter;	
-}
+	// text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.9);
 
+	.link-bottom {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 20px 0;
+		a {
+			font-size: 40px;
+			color: @gray-lighter;
+
+		}
+	}
+}
+.link-help {
+	font-size: 20px;
+	float: right;
+	a {
+		color: @gray;
+		text-decoration: none;
+		&:hover {
+			color: @brand-success;
+		}
+	}
+}
 .bdActive {
 	border: 2px solid @brand-success;
 }
@@ -58,6 +77,9 @@ img.icono-menu {
 }
 .profileInt {
 	text-align: center !important;
+}
+.uppercase {
+	text-transform: uppercase;
 }
 
 
@@ -193,6 +215,7 @@ body.perfil-edit {
 }
 body.singles {
 	#home-ingreso {
+		position: relative;
 		background: rgba(0, 0, 0, 0.6);
 		color : @gray-lighter;
 		padding: 100px 0 30px;	
@@ -264,8 +287,6 @@ body.singles {
 05. FOOTER STYLES
 *********************/
 #home-foot {
-	background-image: url('../images/aficionado.png');
-	background-repeat: no-repeat;
 	background-color: #fff;
 }
 .footer-gral {

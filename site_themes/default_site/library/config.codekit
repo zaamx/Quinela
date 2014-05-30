@@ -114,6 +114,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/aficionado.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 142544,
+		"inputAbbreviatedPath": "\/images\/aficionado.png",
+		"outputAbbreviatedPath": "\/images\/aficionado.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/apple-icon-touch.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -268,6 +279,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/inicio-assets\/gracias_estrella.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3440,
+		"inputAbbreviatedPath": "\/images\/inicio-assets\/gracias_estrella.png",
+		"outputAbbreviatedPath": "\/images\/inicio-assets\/gracias_estrella.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/inicio-assets\/gracias_rara.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3808,
+		"inputAbbreviatedPath": "\/images\/inicio-assets\/gracias_rara.png",
+		"outputAbbreviatedPath": "\/images\/inicio-assets\/gracias_rara.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/inicio-assets\/gracias_users.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2876,
+		"inputAbbreviatedPath": "\/images\/inicio-assets\/gracias_users.png",
+		"outputAbbreviatedPath": "\/images\/inicio-assets\/gracias_users.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/inicio-assets\/logo_inicio.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -363,6 +407,17 @@
 		"initialSize": 5683,
 		"inputAbbreviatedPath": "\/images\/logo_Aserta.png",
 		"outputAbbreviatedPath": "\/images\/logo_Aserta.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/LOGO_HOR_FONDO_CLARO.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11877,
+		"inputAbbreviatedPath": "\/images\/LOGO_HOR_FONDO_CLARO.png",
+		"outputAbbreviatedPath": "\/images\/LOGO_HOR_FONDO_CLARO.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -534,6 +589,17 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/js\/min\/scripts-ck.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/scripts-ck.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/scripts-ck-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/js\/scripts.js": {
 		"fileType": 64,
@@ -1485,6 +1551,15 @@
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
+		},
+	"\/less\/libs\/css\/theme.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/libs\/css\/theme.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/less\/login.less": {
 		"allowInsecureImports": 0,

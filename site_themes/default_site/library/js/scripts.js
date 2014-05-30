@@ -95,6 +95,20 @@ jQuery(document).ready(function($) {
   */
   // loadGravatars();
 
+
+  function heroInit() {
+        var hero        = jQuery('#home-ingreso'),
+            winHeight   = jQuery(window).height(),
+            heroHeight  = winHeight;
+          
+            hero.css({height: heroHeight+"px"});
+      };
+      
+    jQuery(window).on("resize", heroInit);
+    jQuery(document).on("ready", heroInit);
+
+    
+
   $("#member_form").validate({
         rules: {
           screen_name: {

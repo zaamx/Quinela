@@ -21,24 +21,23 @@
 				</div>
 			</div>
 			<div class="row">
-				<b>
-				{categories limit="1" show_group="1"}
-					{category_name}
-				{/categories}
-				</b>
-
-				<p>									
-				{categories limit="1" show_group="2"}
-					{category_name}
-				{/categories}
-				</p>
-				<p>
-					{fecha_de_partido format="%Y %m %d"}
-				</p>
-			</div>
-			<div class="row">
-				<div class="col-sm-12" style="font-size:18px;">
-					<h3><i class="fa fa-star-o"></i>  8, 000 puntos</h3>
+				<div class="col-sm-12 text-center">
+					<p style="margin: -11px; display: block;">
+						<b>
+							VS
+						</b>
+					</p>
+					<h5 class="uppercase">
+						{categories limit="1" show_group="1"}
+							{category_name}
+						{/categories}	
+					</h5>
+					<p>
+						{categories limit="1" show_group="2"}
+							{category_name}
+						{/categories}
+					</p>
+					<h4><i class="fa fa-star-o"></i>  8, 000 puntos</h4>
 				</div>
 			</div>
 		</header>
