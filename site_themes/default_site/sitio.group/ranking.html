@@ -3,56 +3,62 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2 class="greentxt">Tabla de posiciones y regalos</h2>
-				<p>No sólo se trata de hacer puntos. se trata de obtener reconocimientos sociales. Los badges podrás obtenerlos por recomendación y ganarlos por tus acciones.</p>
+				<h2 class="greentxt">¿Crees que vas por buen camino?</h2>
+				<p>Consulta tu posición, averigua qué premio tienes hasta ahora y ¡compite por tu favorito!</p>
 			</div>
 		</div>
 		<div id="inner-content" class="row">
-			<div class="col-sm-10 col-sm-offset-1">
+			<div class="col-sm-6">
 				<div class="row">
-					<h3>
-						ZONA DE PREMIOS
+					<h3 class="text-center">
+						ZONA DE CAMPEONES
 					</h3>
 				</div>
 				<div class="row">
-					<div class="col-sm-2 col-xs-4" id="lista-ranking-pluses">
-						{exp:user:users orderby="screen_name" sort="asc" limit="10" paginate="bottom" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
+					<div class="col-sm-4 col-xs-4" id="lista-ranking-pluses">
+						{!-- 
+						{exp:user:users orderby="screen_name" sort="asc" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
 
-						<div class="item-ranking text-right row">
-							<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
+
+
+
+						<!-- <div class="item-ranking text-right row">
+							<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
+
+							{embed="sitio/rank" id_usuario="{member_id}"}
+
+							<div class="texto-usuario">
+								<h4>
+									<a href="{path=sitio/perfil2}/{member_id}/">
+						                <b>{screen_name}</b>
+						             </a> <br> -->
+
+
+									<!-- <small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small> -->
+								<!-- </h4>
+							</div>
 							
-							<h4>
-								<a href="{path=sitio/perfil}/{member_id}/">
-					                <b>{screen_name}</b>
-					             </a> <br>
-								<small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small>
-							</h4>
-						</div>
+						</div> -->
 
 						{if user_no_results}<div>No members found.</div>{/if}
 
-						{paginate}<li>Page {current_page} of {total_pages} page{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
 						{/exp:user:users}
+						--}
 					</div>
-					<div class="col-sm-8 col-xs-8" id="lista-premios">
+					<div class="col-sm-6 col-xs-8" id="lista-premios">
 
-						{exp:channel:entries channel="premios" category="21" orderby="posicion_premio" sort="desc" dynamic="no" limit="50" paginate="bottom"}							
+						{exp:channel:entries channel="premios" category="21" orderby="posicion_premio" sort="asc" dynamic="no" limit="50" disable="pagination"}							
 
-							<div class="item-premio row">
-								<div class="col-sm-4">
-									<img src="{imagen_de_premio}" class="img-responsive" alt="">
+							<div class="item-premio">
+									<img src="{imagen_de_premio}" class="img-premio" alt="">
+									<div class="texto-premio">
+										<h4>Posición: {posicion_premio}</h4>
+										<p>{titulo_premio}</p>
+									</div>
 								</div>
-								<div class="col-sm-6">
-									<b>Posición</b>
-									<h3>{posicion_premio}</h3>
-									<p><b>{titulo_premio}</b></p>
-								</div>
-							</div>
 
-						{if no_results}<span>This user has not posted any entries.</span>{/if}
+						{if no_results}<span>El usuario aun no ha jugado.</span>{/if}
 
-
-						{paginate}<li>Page {current_page} of {total_pages} page{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
 
 						{/exp:channel:entries}
 
@@ -60,26 +66,46 @@
 				</div>
 
 
+
+			</div>
+
+			<div class="col-sm-6" id="lista-ranking-minus">
 				<div class="row">
-					<h3>
-						ZONA SIN PREMIOS
+					<h3 class="text-center">
+						ZONA BANCA
 					</h3>
 				</div>
 				<div class="row">
-					<div class="col-sm-8 col-sm-offset-2" id="lista-ranking-minus">
+					<div class="col-sm-8 col-sm-offset-2" >
 
-						<div class="item-ranking row">
-							<div class="col-sm-4">
-								<img src="http://placehold.it/350x250" class="img-responsive" alt="">
+						
+{!-- 
+						{exp:user:users orderby="screen_name" sort="asc" disable="pagination" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
+
+
+						
+
+						<!-- <div class="text-left row">
+							<div class="col-sm-4 col-xs-4">
+								<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="75" width="75" alt="{screen_name}'s photo" class="img-circle" />
 							</div>
-							<div class="col-sm-6">
-								<span>icono</span>
-								<h3>
-									Participante <br>
-									<small> icono 89000 puntos</small>
-								</h3>
+
+							<div class="col-sm-8 col-xs-4">
+								<h4>
+									<a href="{path=sitio/perfil2}/{member_id}/">
+						                <b>{screen_name}</b>
+						             </a> <br>
+									<small><i class="fa fa-star-o"></i> {embed="sitio/rank" id_usuario="{member_id}"}</small>
+								</h4>
 							</div>
-						</div>
+							
+						</div> -->
+
+						{if user_no_results}<div>No members found.</div>{/if}
+
+						{/exp:user:users}
+
+--}
 
 					</div>
 					

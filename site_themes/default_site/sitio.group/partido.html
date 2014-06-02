@@ -17,6 +17,9 @@
 				}
 			</style>
 		{/if}
+
+
+		
 <!-- 			<div class="row">
 				<div class="col-sm-12">
 					<ul id="pasos-prediccion">
@@ -44,7 +47,13 @@
 								</div>
 								<div class="col-sm-2 text-center">
 
-									<h3>8, 000 <br>puntos <br>disputados</h3>
+									<h4>V.S.</h4>
+
+									
+
+
+									<h3>{exp:math formula="[1] + [2] + [3]" params="{clasificacion_partido:puntos_por_prediccion_de_resulta}|{clasificacion_partido:puntos_por_prediccion_de_marcado}|{clasificacion_partido:puntos_por_prediccion_de_quien_a}"}
+									 <br>puntos <br>disputados</h3>
 
 									<b>
 									{categories limit="1" show_group="1"}
@@ -58,9 +67,6 @@
 									{/categories}
 									</p>
 
-									<p>
-										{fecha_de_partido format="%Y %m %d"}
-									</p>
 									<p>
 										{pre_texto_central}
 										

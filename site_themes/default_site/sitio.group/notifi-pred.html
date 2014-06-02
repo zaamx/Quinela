@@ -1,18 +1,21 @@
+Hola {mbr_screen_name},
 
-Hello {mbr_screen_name},
 {exp:channel:entries channel="predicciones" entry_id="{entry_id}"}
 
-Tu prediccion para el partido: 
+Nuevamente jugaste como los grandes y te hemos mandado el resumen de tu predicción para el partido: 
+
 
 
 {partido_rel}
-	{partido_rel:equipo_local}
-			{partido_rel:equipo_local:nombre_de_pais}<br>
-	{/partido_rel:equipo_local}
+    {partido_rel:equipo_local}
+            {partido_rel:equipo_local:nombre_de_pais}<br>
+    {/partido_rel:equipo_local}
  vs
-	{partido_rel:equipo_visitante}
-			{partido_rel:equipo_visitante:nombre_de_pais}<br>
-	{/partido_rel:equipo_visitante}
+    {partido_rel:equipo_visitante}
+            {partido_rel:equipo_visitante:nombre_de_pais}<br>
+    {/partido_rel:equipo_visitante}
+
+
 {/partido_rel}
 
 Marcador Local: 
@@ -20,12 +23,16 @@ Marcador Local:
 Marcador Visitante:
 {pre_marcador_visitante}
 
-Por: 
+Con esta predicción estás jugando por 
 
-1000
+    {!--
+    {exp:math formula="[1] + [2] + [3]" params="{partido_rel:clasificacion_partido:puntos_por_prediccion_de_resulta}|{partido_rel:clasificacion_partido:puntos_por_prediccion_de_marcado}|{partido_rel:clasificacion_partido:puntos_por_prediccion_de_quien_a}"}
+	--}
 
 puntos.
 
-Se ha realizado con exito.
 
-{/exp:channel:entries} 
+Los cuales han quedado registrados.
+Muchas gracias por tu predicción y sigue jugando en la Copa Aserta.
+
+{/exp:channel:entries}

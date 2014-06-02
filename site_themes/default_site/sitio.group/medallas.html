@@ -5,17 +5,18 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<h2 class="greentxt">Insignias</h2>
-				<p>No sólo se trata de hacer puntos. se trata de obtener reconocimientos sociales. Los badges podrás obtenerlos por recomendación y ganarlos por tus acciones.</p>
+				<p> Gana reconocimiento social con las insignias que pueden regalarte los demás participantes y obtén el mayor número de insignias por tu desempeño. </p>
 			</div>
 		</div>
 		<div id="inner-content" class="row">
+
 			<div class="col-sm-5">
 				<div class="row">
 					<h3>
-						Insignias
+						Insignias de desempeño
 					</h3>
 				</div>
-				{exp:channel:entries channel="badges"  dynamic="no" paginate="bottom"}							
+				{exp:channel:entries channel="badges" category="24" dynamic="no" paginate="bottom"}							
 
 					<div class="item-bad row">	
 						<div class="imgBadge col-sm-4 text-center">
@@ -36,20 +37,23 @@
 					</div>
 					<hr>
 
-				{if no_results}<span>This user has not posted any entries.</span>{/if}				
+				{if no_results}<span>El usuario aun no ha jugado.</span>{/if}				
 
 				{/exp:channel:entries}
 
 			</div>
+
+			
 			<div class="col-sm-1">
 			</div>
+
 			<div class="col-sm-5">
 				<div class="row">
 					<h3>
-						Insignias
+						Insignias Sociales
 					</h3>
 				</div>
-				{exp:channel:entries channel="badges"  dynamic="no" paginate="bottom"}							
+				{exp:channel:entries channel="badges" category="23"  dynamic="no" paginate="bottom"}							
 
 					<div class="item-bad row">	
 						<div class="imgBadge col-sm-4 text-center">
@@ -70,11 +74,12 @@
 					</div>
 					<hr>
 
-				{if no_results}<span>This user has not posted any entries.</span>{/if}				
+				{if no_results}<span>El usuario aun no ha jugado.</span>{/if}				
 
 				{/exp:channel:entries}
 
 			</div>
+			
 		</div>
 		
 	</div>

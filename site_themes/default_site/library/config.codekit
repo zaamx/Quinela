@@ -224,6 +224,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/default-user.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3151,
+		"inputAbbreviatedPath": "\/images\/default-user.jpg",
+		"outputAbbreviatedPath": "\/images\/default-user.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/error-dato-assets\/logo-interiores.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -264,6 +275,39 @@
 		"initialSize": 255398,
 		"inputAbbreviatedPath": "\/images\/home-mex.jpg",
 		"outputAbbreviatedPath": "\/images\/home-mex.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/inicio-assets\/explicacion-1_03.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4094,
+		"inputAbbreviatedPath": "\/images\/inicio-assets\/explicacion-1_03.png",
+		"outputAbbreviatedPath": "\/images\/inicio-assets\/explicacion-1_03.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/inicio-assets\/explicacion-1_07.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8878,
+		"inputAbbreviatedPath": "\/images\/inicio-assets\/explicacion-1_07.png",
+		"outputAbbreviatedPath": "\/images\/inicio-assets\/explicacion-1_07.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/inicio-assets\/explicacion-1_11.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3959,
+		"inputAbbreviatedPath": "\/images\/inicio-assets\/explicacion-1_11.png",
+		"outputAbbreviatedPath": "\/images\/inicio-assets\/explicacion-1_11.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -440,6 +484,50 @@
 		"initialSize": 29840,
 		"inputAbbreviatedPath": "\/images\/LOGO_VERTICAL_FONDO_OSCURO.png",
 		"outputAbbreviatedPath": "\/images\/LOGO_VERTICAL_FONDO_OSCURO.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/PREDICCIONES1-assets\/instrucciones_1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3579,
+		"inputAbbreviatedPath": "\/images\/PREDICCIONES1-assets\/instrucciones_1.png",
+		"outputAbbreviatedPath": "\/images\/PREDICCIONES1-assets\/instrucciones_1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/PREDICCIONES1-assets\/instrucciones_2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8880,
+		"inputAbbreviatedPath": "\/images\/PREDICCIONES1-assets\/instrucciones_2.png",
+		"outputAbbreviatedPath": "\/images\/PREDICCIONES1-assets\/instrucciones_2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/PREDICCIONES1-assets\/instrucciones_3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6721,
+		"inputAbbreviatedPath": "\/images\/PREDICCIONES1-assets\/instrucciones_3.png",
+		"outputAbbreviatedPath": "\/images\/PREDICCIONES1-assets\/instrucciones_3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/PREDICCIONES1-assets\/instrucciones_4.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6128,
+		"inputAbbreviatedPath": "\/images\/PREDICCIONES1-assets\/instrucciones_4.png",
+		"outputAbbreviatedPath": "\/images\/PREDICCIONES1-assets\/instrucciones_4.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

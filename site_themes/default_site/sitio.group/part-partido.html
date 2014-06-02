@@ -13,11 +13,21 @@
 			<div class="row">
 				<div class="col-sm-6 col-xs-6 text-center">
 					<h5 class="text-center">{equipo_local:nombre_de_pais}</h5>
+					{if partido_activo == "Activo"}
 					<img src="{equipo_local:bandera_seleccion}"  height="72" width="72" class="img-circle" alt="{equipo_local:nombre_de_pais}">
+					{if:elseif partido_activo == "Inactivo"}
+					<img src="{equipo_local:bandera_inactiva}"  height="72" width="72" class="img-circle" alt="{equipo_local:nombre_de_pais}">
+					{/if}
+					
 				</div>
 				<div class="col-sm-6 col-xs-6 text-center">
 					<h5 class="text-center">{equipo_visitante:nombre_de_pais}</h5>
+					{if partido_activo == "Activo"}
 					<img src="{equipo_visitante:bandera_seleccion}"  height="72" width="72" class="img-circle" alt="{equipo_visitante:nombre_de_pais}">
+					{if:elseif partido_activo == "Inactivo"}
+					<img src="{equipo_visitante:bandera_inactiva}"  height="72" width="72" class="img-circle" alt="{equipo_local:nombre_de_pais}">
+					{/if}
+					
 				</div>
 			</div>
 			<div class="row">
@@ -37,7 +47,12 @@
 							{category_name}
 						{/categories}
 					</p>
-					<h4><i class="fa fa-star-o"></i>  8, 000 puntos</h4>
+
+					
+
+					<h4><i class="fa fa-star-o"></i>
+						{exp:math formula="[1] + [2] + [3]" params="{clasificacion_partido:puntos_por_prediccion_de_resulta}|{clasificacion_partido:puntos_por_prediccion_de_marcado}|{clasificacion_partido:puntos_por_prediccion_de_quien_a}"}
+					 puntos</h4>
 				</div>
 			</div>
 		</header>

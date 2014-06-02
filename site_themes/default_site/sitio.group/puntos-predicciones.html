@@ -1,0 +1,184 @@
+{embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
+<div id="home-ingreso-b">
+	<div class="container">
+
+
+		{if group_id == '1'}
+			<div class="row">
+	            <div class="col-sm-12">
+
+
+	            	
+				      	{exp:channel:entries channel="partidos" entry_id="{segment_3}" search:partido_cerrado="cerrado" orderby="fecha_de_partido" sort="asc" limit="8" paginate="bottom"}
+				      	<table class="table table-bordered">
+				      		<thead>
+				      			<tr>
+				      				<th>Local</th>
+				      				<th>Visitante</th>
+				      				<th>Resultado</th>
+				      				<th>Marcador local</th>
+				      				<th>Marcador visitante</th>
+				      				<th>Quien Anoto Primero</th>
+				      			</tr>
+				      		</thead>
+				      		<tbody>
+				      			<tr>
+				      				<td>
+				      					{equipo_local:nombre_de_pais}
+				      				</td>
+				      				<td>
+				      					{equipo_visitante:nombre_de_pais}
+				      				</td>
+				      				<td>
+				      					{resultado_de_partido}
+				      				</td>
+				      				<td>
+				      					{marcador_local}
+				      				</td>
+				      				<td>
+				      					{marcador_visitante}
+				      				</td>
+				      				<td>
+				      					{quien_mete_primer_gol}
+				      				</td>
+				      			</tr>
+
+				      		</tbody>
+				      	</table>
+
+				      		{clasificacion_partido:title} <br>
+				      		{clasificacion_partido:puntos_por_prediccion_de_resulta} <br>
+				      		{clasificacion_partido:puntos_por_prediccion_de_marcado} <br>
+				      		{clasificacion_partido:puntos_por_prediccion_de_quien_a}
+
+
+				      		{if channel_short_name == "jobs-opps"}
+							{if:else}
+							{/if}
+				      	
+
+
+				      	<table class="table table-bordered">
+				      		<thead>
+				      			<tr>
+				      				<th>ID</th>
+				      				<th>Autor</th>
+				      				<th>Resultado</th>
+				      				<th>Marcador local</th>
+				      				<th>Marcador visitante</th>
+				      				<th>Puntos de Marcador</th>
+				      				<th>Quien Anoto Primero</th>
+				      				<th>Total</th>
+				      			</tr>
+				      		</thead>
+				      		<tbody>
+				      			{parents field="partido_rel"}
+				      			<tr>
+				      				<td >
+				      					{parents:entry_id}
+				      				</td>
+				      				<td >
+				      					{parents:author}
+				      				</td>
+				      				<td>
+				      					{if parents:pre_resultado_de_partido == resultado_de_partido}
+
+					      					<span class="label label-success">
+					      						{parents:pre_resultado_de_partido}
+					      					</span>
+
+					      					<span class="label label-info">
+					      						{clasificacion_partido:puntos_por_prediccion_de_resulta}
+					      					</span>
+
+					      					{if:else}
+
+					      					<span class="label label-warning">
+					      						{parents:pre_resultado_de_partido}
+					      					</span>
+
+										{/if}
+				      				</td>	
+				      				<td>
+				      					{if parents:pre_marcador_local == marcador_local}
+
+					      					<span class="label label-success">
+					      						{parents:pre_marcador_local}
+					      					</span>
+
+
+					      					{if:else}
+
+					      					<span class="label label-warning">
+					      						{parents:pre_marcador_local}
+					      					</span>
+
+										{/if}
+				      				</td>
+				      				<td>
+				      					{if parents:pre_marcador_visitante == marcador_visitante}
+
+					      					<span class="label label-success">
+					      						{parents:pre_marcador_visitante}
+					      					</span>
+
+					      					{if:else}
+
+					      					<span class="label label-warning">
+					      						{parents:pre_marcador_visitante}
+					      					</span>
+
+										{/if}
+				      					
+				      				</td>
+				      				<td>
+
+				      				{if parents:pre_marcador_visitante == marcador_visitante AND parents:pre_marcador_local == marcador_local}
+				      					<span class="label label-info">
+					      					{clasificacion_partido:puntos_por_prediccion_de_marcado} 
+					      				</span>
+				      				{/if}
+				      				</td>
+
+				      				<td>
+				      					{if parents:quien_anota_primero == quien_mete_primer_gol}
+					      					<span class="label label-success">
+					      						{parents:quien_anota_primero}
+					      					</span>
+					      					<span class="label label-info">
+					      						{clasificacion_partido:puntos_por_prediccion_de_quien_a}
+					      					</span>
+
+					      					{if:else}
+
+					      					<span class="label label-warning">
+					      						{parents:quien_anota_primero}
+					      					</span>
+										{/if}
+				      					
+				      				</td>	
+
+				      				<td>
+				      					<a href="{path='sitio/puntos-asignacion'}/{parents:entry_id}" class="btn btn-success">
+				      						Asignar puntos
+				      					</a>				      					
+				      				</td>
+				      			</tr>
+				      			{/parents}
+				      		</tbody>
+				      	</table>	
+						{/exp:channel:entries}
+				      
+	            	
+	            </div>
+	        </div>
+		{if:else}
+			<div class="row">
+	            <div class="col-sm-12">
+	            	nada 	       
+	            </div>
+	        </div>
+		{/if}		
+	</div>
+</div>
+{embed="sitio/foot"}

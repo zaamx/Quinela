@@ -1,0 +1,117 @@
+{embed="sitio/head" my_body_class="perfil" my_active_nav="perfil" my_page_title="Perfil | {title}"}
+<div id="content">
+	<div class="container">
+		<div class="row">
+
+			<!-- ///////////////////////////////  Sidebar ///////////////////////////////   -->
+			<div class="col-sm-3">
+				{if segment_4}
+					{embed="sitio/perfil-sidebar"}
+				{if:else}
+					<h4>Error!</h4><p>You must specify a member ID to view a profile.</p>
+				{/if}
+			</div>
+			<!-- ///////////////////////////////  Contenido ///////////////////////////////   -->
+
+			<div class="col-sm-8">
+
+				<!-- ///////////////////////////////  Badges ///////////////////////////////   -->
+
+				<div class="row">
+						<div class="col-md-12" id="tester">
+							<h3>Comentario</h3>
+
+							{exp:channel:entries channel="activ_comentarios_perfil"  author_id="{segment_4}"  status="Open" dynamic="no" limit="1"}
+
+								<div class="sr-only">
+									{title}	
+								</div>
+								
+								<?php $IDcomentarios = '{entry_id}'; ?>
+								<?php $IDcomentariosTitle = '{title}	'; ?>
+
+							{/exp:channel:entries}							
+
+
+
+							{exp:comment:entries sort="asc" limit="20" dynamic="no"}
+						        <div class="comentario">
+									<div class="row">
+										<div class="col-sm-3 col-xs-4">
+											<a href="{path='site_index'}/sitio/perfil2/{author_id}">
+												<img class="img-circle" src="{if avatar}{avatar_url}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" width="75" height="75" alt="{author} avatar" />	
+											</a>
+										</div>
+										<div class="col-sm-9 col-xs-8">
+											{comment}
+											<p>Por <a href="{path='site_index'}/sitio/perfil2/{author_id}">{name}</a> el dia {comment_date format="%d-%m-%Y"}</p>
+										</div>
+									</div>
+									<hr>
+								</div>
+							{/exp:comment:entries}
+
+
+							{exp:comment:form channel="activ_comentarios_perfil" return="sitio/perfil2/{segment_4}"}
+
+						        {if logged_out}
+						                <div class="form-group">
+						                	<label for="name">Nombre:</label> 
+						                	<input class="form-control" type="text" name="name" value="{name}"/>
+						                </div>
+						                <div class="form-group">
+						                	<label for="email">Email:</label> 
+						                	<input class="form-control" type="text" name="email" value="{email}"/>
+						                </div>
+						                <div class="form-group">
+						                	<label for="location">Ubicación:</label> 
+						                	<input class="form-control" type="text" name="location" value="{location}"/>
+						                </div>
+						                <div class="form-group">
+						                	<label for="url">URL:</label> 
+						                	<input class="form-control" type="text" name="url" value="{url}"/>
+						                </div>
+						        {/if}
+						        <div class="form-group">
+							        <label for="comment">Comentario:</label>
+							        <textarea class="form-control" name="comment" cols="70" rows="10">{comment}</textarea>
+							    </div>
+
+							    <div class="checkbox">
+								    <label>
+								      <input type="checkbox" name="save_info" value="yes" {save_info} /> Recordar mi informaciónpersonal
+								    </label>
+								  </div>
+
+								  <div class="checkbox">
+								    <label>
+								      <input type="checkbox" name="notify_me" value="yes" {notify_me} /> Notificarme de nuevos comentarios
+								    </label>
+								  </div>
+
+
+						        {if captcha}
+				                	<div class="form-group">
+								        <label for="captcha">Ingresa el texto de la imagen inferior</label>
+								        <input class="form-control" type="text" name="captcha" value="{captcha_word}"  /></p>
+								    </div>
+								    <br />
+					                {captcha}
+					                <br />						                
+						        {/if}
+
+						        <input type="submit" class="btn btn-success col-sm-6 col-sm-offset-3" name="submit" value="Enviar" />
+							{/exp:comment:form}
+
+							<div id="mensajes2">
+							</div>
+						</div>
+					</div>
+
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Vinculos para registros y perfiles en footer -->
+{embed="sitio/foot"}

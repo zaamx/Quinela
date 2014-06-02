@@ -62,7 +62,7 @@
 										<a href="{path='sitio/index'}"><i class="fa fa-home"></i> PREDICCIONES</a>
 									</li> 
 									<li {if embed:my_active_nav=="perfil"} class="active"{/if}>
-										<a href="{path=sitio/perfil}/{member_id}/"><i class="fa fa-user"></i> MI PERFIL</a>
+										<a href="{path=sitio/perfil2}/{member_id}/"><i class="fa fa-user"></i> MI PERFIL</a>
 									</li> 
 									
 									<!-- <li {if embed:my_active_nav=="premios"} class="active"{/if}>
@@ -96,7 +96,7 @@
 									<!-- Si esta dentro -->
 									{if logged_in}
 									<!-- <li>
-										<a href="{path=sitio/perfil}/{member_id}/">
+										<a href="{path=sitio/perfil2}/{member_id}/">
 											{screen_name}
 										</a>
 									</li> -->
@@ -110,7 +110,7 @@
 												<a href="{path=sitio/actualizar-perfil}/{member_id}/">Editar tu perfil</a>
 											</li>
 											<li>
-												<a href="{path=sitio/miembros}">Ver lista de miembro</a>
+												<a href="{path=sitio/miembros}">Listado de participantes</a>
 											</li>
 											<li class="divider"></li>
 											<li>
@@ -149,14 +149,16 @@
 						<div class="profileInt text-right">
 							{exp:user:stats dynamic="off" limit="1" log_views="off"}
 							<h2>
-								<a href="{path=sitio/perfil}/{member_id}/">
-									<img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg{/if}" height="55" width="55"  alt="{screen_name}'s photo" />
+								<a href="{path=sitio/perfil2}/{member_id}/">
+									<img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="55" width="55"  alt="{screen_name}'s photo" />
 								</a>
 								{screen_name}
 							</h2>
+
 							<p>
-								<b>6000 </b><span>Puntos</span> 
-								<b>15 </b><span>Medallas</span> 
+								{embed="sitio/part-puntos" id_usuario="{member_id}"}
+								{embed="sitio/part-insignias" id_usuario="{member_id}"}
+								
 							</p>
 							{/exp:user:stats}
 						</div>

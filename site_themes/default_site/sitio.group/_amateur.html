@@ -1,0 +1,37 @@
+{if embed:id_insigniaDada == "96"}
+	<div class="alert alert-success">
+		<b>Ganaste la Insignia Novato por hacer tu primera prediccion</b>
+	</div>
+{/if}
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#publishForm').ajaxForm({
+			dataType: 'json',
+			success: function(data) {
+				if (data.success == '1') {
+			//alert('You successfully added a new entry with entry_id '+data.entry_id);
+			if(alert('La insignia es ahora es tuya')){}
+				else    window.location.reload(); 
+
+		} else if (data.success == '0') {					
+			$('#mensajes').append(data.field_errors.title);
+			$('#mensajes').append(data.field_errors.lista_badges);                 		
+				 // alert('Failed with the following errors: '+ data.errors.join(', '));
+				}
+			}
+		});
+		$('select[name="lista_badges[data][]"]').find('option[value="{embed:id_insigniaDada}"]').attr("selected",true);
+	});
+</script>
+
+{exp:channel:form channel="badges_asignados" return="site/ENTRY_ID" status="open" json="yes"}
+<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}">
+<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+<div class="sr-only">
+	{field:lista_badges}		
+</div>
+<input type="submit" value="Aceptar insignia" class="btn btn-success col-sm-4 col-sm-offset-4">
+{/exp:channel:form}
+<div id="mensajes">
+</div>

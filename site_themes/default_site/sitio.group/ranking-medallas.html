@@ -4,56 +4,57 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1>Ranking Medallas</h1>
+					<h2 class="greentxt">¿En qué lugar estás del ranking de insignias?</h2>
+					<p>Pronto descubrirás premios en esta zona, ponte a calentar para activar tu sentido social en la quiniela Copa Aserta.</p>
 				</div>
 			</div>
 			<div id="inner-content" class="row">
-				<div class="row">
-					<h3>
-						ZONA DE PREMIOS
-					</h3>
-				</div>
-				<div class="row">
-					<div class="col-sm-2 col-xs-4" id="lista-ranking-pluses">
-						{exp:user:users orderby="screen_name" sort="asc" limit="10" paginate="bottom" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
-
-						<div class="item-ranking text-right row">
-							<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
-							
-							<h4>
-								<a href="{path=sitio/perfil}/{member_id}/">
-					                <b>{screen_name}</b>
-					             </a> <br>
-								<small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small>
-							</h4>
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-12">
+							<h3>
+								ZONA DE CAMPEONES
+							</h3>	
 						</div>
-
-
-						{if user_no_results}<div>No members found.</div>{/if}
-
-						{paginate}<li>Page {current_page} of {total_pages} page{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
-						{/exp:user:users}
 					</div>
-					<div class="col-sm-8 col-xs-8" id="lista-premios">
-						{exp:channel:entries channel="premios" category="21" orderby="posicion_premio" sort="desc" dynamic="no" limit="50" paginate="bottom"}							
-
-							<div class="item-premio row">
-								<div class="col-sm-4">
-									<img src="{imagen_de_premio}" class="img-responsive" alt="">
+					<div class="row">
+						<div class="col-sm-2  col-sm-offset-3 col-xs-4" id="lista-ranking-pluses">
+							{!--  
+							{exp:user:users orderby="screen_name" sort="asc" limit="4" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
+<!-- 
+							<div class="item-ranking text-right">
+								<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
+								<div class="texto-usuario">
+									<h4>
+										<a href="{path=sitio/perfil2}/{member_id}/">
+							                <b>{screen_name}</b>
+							             </a> <br>
+										<small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small>
+									</h4>
 								</div>
-								<div class="col-sm-6">
-									<b>Posición</b>
-									<h3>{posicion_premio}</h3>
-									<p><b>{titulo_premio}</b></p>
+							</div> -->
+
+
+							{if user_no_results}<div>No members found.</div>{/if}
+							{/exp:user:users}
+
+							--}
+						</div>
+						<div class="col-sm-3 col-xs-8" id="lista-premios">
+							{exp:channel:entries channel="premios" category="21" orderby="posicion_premio" sort="asc" dynamic="no" limit="4" disable="paginate" }							
+
+								<div class="item-premio">
+									<img src="{imagen_de_premio}" class="img-premio" alt="">
+									<div class="texto-premio">
+										<h4>Posición: {posicion_premio}</h4>
+										<p>{titulo_premio}</p>
+									</div>
 								</div>
-							</div>
 
-						{if no_results}<span>This user has not posted any entries.</span>{/if}
+							{if no_results}<span>El usuario aun no ha jugado.</span>{/if}
 
-
-						{paginate}<li>Page {current_page} of {total_pages} page{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
-
-						{/exp:channel:entries}
+							{/exp:channel:entries}
+						</div>
 					</div>
 				</div>
 

@@ -111,6 +111,10 @@ jQuery(document).ready(function($) {
 
   $("#member_form").validate({
         rules: {
+          nombre: {
+            required: true,
+            accept: "[a-zA-Z]+"
+          },
           screen_name: {
             required: true,
             accept: "[a-zA-Z]+"
@@ -131,11 +135,18 @@ jQuery(document).ready(function($) {
           },
           accept_terms: {
             required: true
+          },
+          captcha: {
+            required: true
           }
         },
         messages: {
+          nombre: {
+            required: '*Ingresa tu nombre completo',
+            accept: '*Solo letras para el nombre'
+          },
           screen_name: {
-            required: '*Ingresa tu nombre',
+            required: '*Ingresa tu nombre de usuario',
             accept: '*Solo letras para el nombre'
           },
           username: {
@@ -146,13 +157,16 @@ jQuery(document).ready(function($) {
             required: '*Debes especificar tu oficina'
           },
           password: {
-            required: '*Debes especificar tu password'
+            required: '*Debes especificar tu contraseña'
           },
           password_confirm: {
-            required: '*Tu password no coincide'
+            required: '*No coincide tu contraseña int&eacute;ntalo de nuevo'
           },
           accept_terms: {
-            required: '*Debes aceptar términos y condiciones'
+            required: '*Debes aceptar términos y condiciones y avisos de privacidad'
+          },
+          captcha: {
+            required: '*Es obligatorio que escribas la palabras que ves abajo '
           }
         },
         highlight: function(element) {
@@ -191,7 +205,7 @@ jQuery(document).ready(function($) {
             email: '*Ingresa un correo electr&oacute;nico correcto',
           },
           password: {
-            required: '*Debes especificar tu password'
+            required: '*Debes especificar tu contraseña'
           },
         },
         highlight: function(element) {
@@ -215,5 +229,16 @@ jQuery(document).ready(function($) {
         }      
   });
 
+
+
+  $('.item-badge a').popover({
+    trigger: 'hover',
+    html: true
+  })
+
+  $('.item a').popover({
+    trigger: 'hover',
+    html: true
+  })
 
 }); /* end of as page load scripts */

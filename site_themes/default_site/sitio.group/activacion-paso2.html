@@ -1,0 +1,60 @@
+{embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
+<div id="home-ingreso">
+	<div class="container">
+
+		<div class="row">
+            <div class="col-sm-12">
+                <div id="intro" class="text-center">
+                	<a href="{path='site_index'}" id="logo">	
+	                  <img src="{site_url}/themes/site_themes/default_site/library/images/LOGO_HOR_FONDO_CLARO.png">
+                  	</a>
+              	</div>
+            </div>
+        </div>
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				{exp:user:edit return="{path='site_index'}" screen_name_password_required="no" error_page="sitio/error-perfil"}
+
+							<div class="form-group">
+								<label for="screen_name">Nombre de usuario</label>
+								<input type="text" class="form-control" name="screen_name" id="screen_name" value="{screen_name}"/>
+							</div>
+
+							<div class="form-group">
+								<label for="Nombre">Nombre</label>
+								<input type="text" class="form-control" name="Nombre" id="Nombre" value="{Nombre}"/>
+							</div>
+
+
+
+							<div class="form-group">
+		  						<label for="miembro_pertenencia">Oficina de pertenencia</label> <br>
+
+		  						<b>Actual: {miembro_pertenencia}</b> <br>
+
+			  						<script type="text/javascript">
+										$(document).ready(function(){
+											$('select[name="miembro_pertenencia"]').find('option[value="{miembro_pertenencia}"]').attr("selected",true);
+										});
+									</script>
+
+		  							<span>
+		  								Cambiar:
+		  							</span>
+		  							<br>
+
+					                 <select name="miembro_pertenencia" class="form-control">
+					                  {select_miembro_pertenencia}
+					                      <option value="{value}">{value}</option>
+					                  {/select_miembro_pertenencia}
+					                </select>
+		  						</div>
+							<input type="submit" class="btn btn-success" name="submit" value="Actualizar" />
+						{/exp:user:edit}  
+
+			</div>
+		</div>
+	</div>
+</div>
+{embed="sitio/foot"}

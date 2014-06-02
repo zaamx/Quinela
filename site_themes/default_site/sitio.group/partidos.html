@@ -13,13 +13,14 @@
 <br>
 				</div>
 			</div> -->
+
+
 		<div class="row">
 			<div class="col-sm-10">
 				<div class="head-title head-green">
-					
 				</div>
-				<h2 class="greentxt">Predicciones actuales</h2>
-				<p>Podrás hacer las selecciones que quieras</p>
+				<h2 class="greentxt">Predicciones por caducar</h2>
+				<p>Esta son los partidos en los que puedes hacer tu predicción, pero apúrate porque están a punto de cerrar y ya no podrás tener acceso.</p>
 			</div>
 
 			<div class="col-sm-2">
@@ -28,8 +29,33 @@
 						AYUDA <i class="fa fa-question-circle"></i> 
 					</a>
 				</h5>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="partidos-dia">
+					<div class="row">
+						<hr>
+					</div>
+					<div class="row">
+					{exp:channel:entries channel="partidos" search:partido_activo="Activo" orderby="fecha_de_partido" sort="asc" limit="8" paginate="bottom"}
+						{part-partido}
+						
+					{/exp:channel:entries}
+
+					</div>
+				</div>
+			</div>
+		</div>
 
 
+		<div class="row">
+			<div class="col-sm-10">
+				<div class="head-title head-blue">
+				</div>
+				<h2 class="bleuetxt">Calendario Completo</h2>
+				<p>Estos son todos los encuentros de la justa mundialista. No dejes escapar ninguno para que sigas sumando puntos.</p>
 			</div>
 		</div>
 		<div id="inner-content" class="row">
@@ -65,7 +91,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="sáb 14 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="sáb 14 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -76,7 +102,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="dom 15 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="dom 15 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -87,7 +113,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="lun 16 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="lun 16 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -98,7 +124,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="mar 17 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="mar 17 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -109,7 +135,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="mié 18 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="mié 18 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -120,7 +146,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="jue 19 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="jue 19 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -131,7 +157,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="vie 20 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="vie 20 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -142,7 +168,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="sáb 21 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="sáb 21 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -153,7 +179,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="dom 22 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="dom 22 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -164,7 +190,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="lun 23 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="lun 23 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -175,7 +201,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="mar 24 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="mar 24 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -186,7 +212,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="mié 25 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="mié 25 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -197,7 +223,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="jue 26 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="jue 26 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -208,7 +234,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="vie 27 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="vie 27 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -219,7 +245,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="sáb 28 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="sáb 28 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -230,7 +256,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="dom 29 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="dom 29 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -241,7 +267,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="lun 30 de jun de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="lun 30 de jun de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -252,7 +278,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="mar 1 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="mar 1 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -263,7 +289,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="mié 2 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="mié 2 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -274,7 +300,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="jue 3 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="jue 3 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -285,7 +311,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="vie 4 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="vie 4 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -296,7 +322,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="sáb 5 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="sáb 5 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -307,7 +333,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="dom 6 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="dom 6 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -318,7 +344,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="lun 7 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="lun 7 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -329,7 +355,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="mar 8 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="mar 8 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -340,7 +366,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="mié 9 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="mié 9 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -351,7 +377,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="jue 10 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="jue 10 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -362,7 +388,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="vie 11 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="vie 11 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -373,7 +399,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="sáb 12 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="sáb 12 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>
@@ -384,7 +410,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:fecha="dom 13 de jul de 14" orderby="fecha" sort="asc" limit="4" disable="categories|member_data|pagination|category_fields"}
+					{exp:channel:entries channel="partidos" search:fecha="dom 13 de jul de 14" orderby="fecha" sort="asc" limit="4" paginate="bottom"}
 					{part-partido}
 					{/exp:channel:entries}
 					</div>

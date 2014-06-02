@@ -1,0 +1,178 @@
+{embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
+<div id="home-ingreso-b">
+	<div class="container">
+
+
+		{if group_id == '1'}
+			<div class="row">
+	            <div class="col-sm-12">
+
+
+	            	{exp:channel:entries channel="predicciones" entry_id="{segment_3}"}
+
+	            		<table class="table table-bordered">
+				      		<thead>
+				      			<tr>
+				      				<th>ID</th>
+				      				<th>Autor</th>
+				      				<th>Resultado</th>
+				      				<th>Marcador local</th>
+				      				<th>Marcador visitante</th>
+				      				<th>Quien Anoto Primero</th>
+				      				<th>Total</th>
+				      			</tr>
+				      		</thead>
+				      		<tbody>
+				      			
+				      			<tr>
+				      				<td >
+				      					{entry_id}
+				      				</td>
+				      				<td >
+				      					{author}
+				      				</td>
+				      				<td>
+				      					pre resultado partido: {pre_resultado_de_partido} <br>
+				      					partido rel resultado partido: {partido_rel:resultado_de_partido} <br>
+
+				      					partido_rel:marcador_local :  {partido_rel:marcador_local} <br>
+										pre_marcador_local : {pre_marcador_local} <br>
+
+
+										partido_rel:marcador_visitante : {partido_rel:marcador_visitante} <br>
+					      				pre_marcador_visitante : {pre_marcador_visitante} <br>
+
+
+					      				partido_rel:quien_mete_primer_gol : {partido_rel:quien_mete_primer_gol} <br>
+					      				quien_anota_primero : {quien_anota_primero} <br>
+
+
+
+
+
+
+				      					<!--{if '{pre_resultado_de_partido}' == '{partido_rel:resultado_de_partido}'}
+				      						<?php $valPartido = '{partido_rel:puntos_marcador}';?>
+				      						<span class="label label-success">
+													{partido_rel:resultado_de_partido}
+				      						</span>
+				      						<div class="label label-warning">
+				      							{pre_resultado_de_partido}
+				      						</div>
+										{if:else}
+											<?php // $valPartido = '0';?>
+										{/if}-->
+
+										<?php 
+											$prdp = strval('{pre_resultado_de_partido}');
+											$rdp  = strval('{partido_rel:resultado_de_partido}');
+											if (trim($prdp) == trim($rdp)) {
+												$valPartido = '{partido_rel:puntos_marcador}';
+					      						echo'<span class="label label-success">
+														{partido_rel:resultado_de_partido}
+						      						</span>
+						      						<div class="label label-warning">
+						      							{pre_resultado_de_partido}
+						      						</div>';
+											}else{
+												$valPartido = '0';
+											}
+										?>
+				      				</td>	
+				      				<td>
+				      					<span class="label label-warning">
+				      						{partido_rel:marcador_local}
+					      					{pre_marcador_local}
+					      				</span>
+				      				</td>
+				      				<td>
+				      					<span class="label label-success">
+				      						{partido_rel:marcador_visitante}
+					      					{pre_marcador_visitante}
+					      				</span>
+				      				</td>
+				      				<td>
+				      					<!--{if '{partido_rel:marcador_local}' == '{pre_marcador_local}' AND '{partido_rel:marcador_visitante}' == '{pre_marcador_visitante}'}
+
+				      					
+				      						<?php $valMarcador = '{partido_rel:puntos_quien_anota}';?>
+
+				      					{if:else}
+											<?php //$valMarcador = 0;?>
+
+										{/if}-->
+										<?php 
+											if ('{partido_rel:marcador_local}' == '{pre_marcador_local}' && 
+												'{partido_rel:marcador_visitante}' == '{pre_marcador_visitante}') {
+												$valMarcador = '{partido_rel:puntos_quien_anota}';
+											}else{
+												$valMarcador = 0;												
+											}
+										?>
+				      				</td>
+				      				<td>
+				      					<span class="label label-success">
+				      						<!--{if '{partido_rel:quien_mete_primer_gol}' == '{quien_anota_primero}'}
+				      						
+				      							<?php $valPrimero = '{partido_rel:puntos_resultado}';?>
+
+				      						{if:else}
+				      							<?php // $valPrimero = 0;?>
+				      						{/if}-->
+
+				      						<?php 
+				      							if ('{partido_rel:quien_mete_primer_gol}' == '{quien_anota_primero}') {
+				      								$valPrimero = '{partido_rel:puntos_resultado}';
+				      							}else{
+				      								$valPrimero = 0;
+				      							}
+				      						?>
+
+				      						{partido_rel:quien_mete_primer_gol}
+					      					{quien_anota_primero}
+					      				</span>
+				      				</td>	
+				      				<td>
+				      					<?php echo $valPrimero; ?>
+										<?php echo $valMarcador; ?>
+										<?php echo $valPartido; ?>
+										//
+				      					<?php echo $valPrimero + $valMarcador + $valPartido; ?>
+				      				</td>
+				      			</tr>
+				      		</tbody>
+				      	</table>
+
+
+
+				      	{exp:channel:form channel="puntos_usuarios" return="sitio/puntos" status="Open"}
+							
+							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-Pred-" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+							<input type="hidden" name="id_usuario" id="id_usuario" value="{author_id}">
+							<input type="hidden" name="id_prediccion" id="id_prediccion" value="{entry_id}">
+							<input type="hidden" name="id_partido" id="id_partido" value="{partido_rel:entry_id}">
+							<input type="hidden" name="puntos_prediccion" id="puntos_prediccion" value="<?php echo $valPrimero + $valMarcador + $valPartido; ?>">
+
+							<div class="form-group">
+							    <label for="exampleInputEmail1">Puntos Asignados</label>
+							    <input class="form-control" type="text" name="puntos_prediccion" id="puntos_prediccion" value="<?php echo $valPrimero + $valMarcador + $valPartido; ?>" disabled>
+							</div>
+
+							<input type="submit" value="Dar insignia" class="btn btn-success col-sm-4 col-sm-offset-4">
+						{/exp:channel:form}
+
+						
+
+	            	{/exp:channel:entries}
+	            </div>
+	        </div>
+		{if:else}
+			<div class="row">
+	            <div class="col-sm-12">
+	            	nada 	       
+	            </div>
+	        </div>
+		{/if}		
+	</div>
+</div>
+{embed="sitio/foot"}

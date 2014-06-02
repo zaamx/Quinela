@@ -37,12 +37,12 @@
 		<div class="top">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-2 text-center">
+					<div class="col-md-3 text-center">
 						<a href="{path='site_index'}" id="logo">							
-							<img src="{site_url}/themes/site_themes/default_site/library/images/error-dato-assets/logo-interiores.png">
+							<img src="{site_url}/themes/site_themes/default_site/library/images/LOGO_HOR_FONDO_CLARO.png">
 						</a>
 					</div>
-					<div class="col-md-10">
+					<div class="col-md-9">
 						<nav class="navbar navbar-inverse" role="navigation">
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<div class="navbar-header">
@@ -59,37 +59,47 @@
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav ">
 									<li {if embed:my_active_nav=="home"}class="active"{/if}>
-										<a href="{path='sitio/index'}">Home</a>
+										<a href="{path='sitio/index'}"><i class="fa fa-home"></i> PREDICCIONES</a>
 									</li> 
 									<li {if embed:my_active_nav=="perfil"} class="active"{/if}>
-										<a href="{path=sitio/perfil}/{member_id}/">Mi Perfil</a>
+										<a href="{path=sitio/perfil2}/{member_id}/"><i class="fa fa-user"></i> MI PERFIL</a>
 									</li> 
 									
 									<!-- <li {if embed:my_active_nav=="premios"} class="active"{/if}>
 										<a href="{path='sitio/premios'}">Premios</a>
 									</li> -->
 									<li {if embed:my_active_nav=="medallas"} class="active"{/if}>
-										<a href="{path='sitio/medallas'}">Medallas</a>
+										<a href="{path='sitio/medallas'}"> 
+											<img class="icono-menu" src="{site_url}/themes/site_themes/default_site/library/images/badges-assets/badges_menu.png">
+											 INSIGNIAS</a>
 									</li>
 
 									<li {if embed:my_active_nav=="ranking"} class="active"{/if}>
-										<a href="{path='sitio/ranking'}">Ranking puntos</a>
+										<a href="{path='sitio/ranking'}">
+											<i class="fa fa-star-o"></i> 
+											RANKING PUNTOS</a>
 									</li>
 
 									<li {if embed:my_active_nav=="ranking-medallas"} class="active"{/if}>
-										<a href="{path='sitio/ranking-medallas'}">Ranking Medallas</a>
+										<a href="{path='sitio/ranking-medallas'}">
+											<img class="icono-menu" src="{site_url}/themes/site_themes/default_site/library/images/badges-assets/badges_ranking.png">
+											RANKING INSIGNIAS</a>
 									</li>
+
+									<!-- <li {if embed:my_active_nav=="miebros"} class="active"{/if}>
+										<a href="{path=sitio/miembros}">BUSCADOR DE AMIGOS</a>
+									</li> -->
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
 									<li class="divider-vertical"></li>
 
 									<!-- Si esta dentro -->
 									{if logged_in}
-									<li>
-										<a href="{path=sitio/perfil}/{member_id}/">
+									<!-- <li>
+										<a href="{path=sitio/perfil2}/{member_id}/">
 											{screen_name}
 										</a>
-									</li>
+									</li> -->
 									<li class="dropdown">
 										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 											<i class="fa fa-cog"></i>
@@ -100,7 +110,7 @@
 												<a href="{path=sitio/actualizar-perfil}/{member_id}/">Editar tu perfil</a>
 											</li>
 											<li>
-												<a href="{path=sitio/miembros}">Ver lista de miembro</a>
+												<a href="{path=sitio/miembros}">Listado de participantes</a>
 											</li>
 											<li class="divider"></li>
 											<li>
@@ -142,15 +152,14 @@
 						<div class="profileInt text-right">
 							{exp:user:stats dynamic="off" limit="1" log_views="off"}
 							<h2>
-								<a href="{path=sitio/perfil}/{member_id}/">
-									<img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg{/if}" height="55" width="55"  alt="{screen_name}'s photo" />
+								<a href="{path=sitio/perfil2}/{member_id}/">
+									<img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="55" width="55"  alt="{screen_name}'s photo" />
 								</a>
 								{screen_name}
 							</h2>
 							<p>
-								<b>6000 </b><span>Puntos</span> 
-								<b>15 </b><span>Medallas</span> 
-								<b>Nivel Experto</b>
+								{embed="sitio/part-puntos" id_usuario="{member_id}"}
+								{embed="sitio/part-insignias" id_usuario="{member_id}"}
 							</p>
 							{/exp:user:stats}
 						</div>

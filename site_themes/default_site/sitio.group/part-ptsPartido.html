@@ -1,0 +1,11 @@
+{exp:channel:entries channel="puntos_usuarios" dynamic="no" search:id_usuario="{embed:id_usuario}" search:id_partido="{embed:id_partido}" disable="categories|member_data|pagination|category_fields"}
+
+		<h4>{puntos_prediccion}<br>
+			<small>
+				puntos ganados
+			</small>
+		</h4>
+		{if no_results}
+		<b>Este partido aun no tiene marcador.</b>
+		{/if}
+{/exp:channel:entries}

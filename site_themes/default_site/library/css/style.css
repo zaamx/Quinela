@@ -94,7 +94,7 @@ header.head-interiores .bottom {
   background: #5cb85c;
 }
 .head-title.head-blue {
-  background: #428bca;
+  background: #0097c6;
 }
 .head-title.head-orange {
   background: #f0ad4e;
@@ -105,6 +105,9 @@ header.head-interiores .bottom {
 .slick-prev:before,
 .slick-next:before {
   color: #5cb85c;
+}
+.headings h1 {
+  line-height: 30px;
 }
 .headings h1 small {
   color: #eeeeee;
@@ -141,6 +144,10 @@ ul#pasos-prediccion li.activaa {
   color: #5cb85c;
   text-transform: uppercase;
 }
+.bleuetxt {
+  color: #0097c6;
+  text-transform: uppercase;
+}
 .partidos-dia {
   padding: 10px 0;
 }
@@ -149,7 +156,7 @@ ul#pasos-prediccion li.activaa {
   background: rgba(255, 255, 255, 0.8);
 }
 #content article.item-partido {
-  margin: 0 0 10px;
+  margin: 10px 0 10px;
 }
 #content article.item-partido h5 {
   text-transform: uppercase;
@@ -178,6 +185,12 @@ body.perfil-edit #content {
   background: rgba(0, 0, 0, 0.9);
   color: #eeeeee;
 }
+a.item-badgelink {
+  display: block;
+}
+a.item-badgelink2 {
+  display: block;
+}
 body.singles #home-ingreso {
   position: relative;
   background: rgba(0, 0, 0, 0.6);
@@ -189,9 +202,12 @@ body.singles #home-ingreso {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.item-ranking,
+.item-premio {
+  height: 150px;
+  margin-bottom: 40px;
+}
 .item-ranking {
-  margin-top: 15px ;
-  margin-bottom: 60px;
   position: relative;
 }
 .item-ranking img.item-micro {
@@ -199,22 +215,50 @@ body.singles #home-ingreso {
   position: absolute;
   right: -37px;
   z-index: 200;
-  top: -25px;
+  top: -10px;
 }
-.item-ranking h4 {
-  margin-top: 30px;
+.item-ranking .texto-usuario {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3px 4px;
+}
+.item-ranking .texto-usuario h4 {
   font-size: 16px;
   color: #222222;
   text-transform: uppercase;
 }
-.item-ranking h4 small {
+.item-ranking .texto-usuario h4 small {
   font-size: 14px;
   color: #222222;
 }
 .item-premio {
-  margin-top: 15px ;
-  margin-bottom: 60px;
   position: relative;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  font-size: 10px;
+}
+.item-premio img.img-premio {
+  width: auto;
+  height: 100%;
+}
+.item-premio .texto-premio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3px 4px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #eeeeee;
+}
+.item-premio .texto-premio h4 {
+  color: #eeeeee;
+  margin: 0;
+}
+#lista-ranking-minus {
+  border-left: 2px solid #f0ad4e;
 }
 /*********************
 04. SIDEBARS & ASIDES

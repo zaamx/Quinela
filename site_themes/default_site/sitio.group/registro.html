@@ -17,15 +17,20 @@
 			<div class="col-md-4 col-md-offset-4">
 				<h1 class="text-center">¿Estás listo para vivir tu pasión?</h1>
 				<p class="text-center">
-					<b>Registrate colocando tus datos</b>  
+					<b>Reg&iacute;strate y debuta en la Copa Aserta</b>  
 				</p>
 
 				
 			{exp:user:register return="sitio/gracias" override_return="sitio/gracias" error_page="sitio/gracias" form:class="your_class" }
 
 				<div class="form-group has-feedback">
-					<label for="screen_name">Nombre</label>
-					<input type="text" name="screen_name" id="screen_name" class="form-control" placeholder="Juanito Banana"/>
+					<label for="nombre">Nombre completo</label>
+					<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Lupita Robles"/>
+					<span class="glyphicon form-control-feedback" id="nombre1"></span>
+				</div>
+				<div class="form-group has-feedback">
+					<label for="screen_name">Nombre de usuario</label>
+					<input type="text" name="screen_name" id="screen_name" class="form-control" placeholder="Lupix"/>
 					<span class="glyphicon form-control-feedback" id="screen_name1"></span>
 				</div>
 				<div class="form-group has-feedback">
@@ -50,7 +55,7 @@
 					<span class="glyphicon form-control-feedback" id="password1"></span>
 				</div>
 				<div class="form-group has-feedback">
-					<label for="password_confirm">ConfirmarContraseña</label>
+					<label for="password_confirm">Confirmar contraseña</label>
 					<input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Contraseña">
 					<span class="glyphicon form-control-feedback" id="password_confirm1"></span>
 				</div>
@@ -62,15 +67,18 @@
 						</a>
 							y 
 						<a href="{path='sitio/politicas'}">
-							aviso de privacidad.
+							avisos de privacidad.
 						</a>
 					</label>
 				</div>
 
 				{if captcha}
-			    <p>Please enter in the word you see below:
-				        <input type="text" name="captcha" /></p>
-				    <p>{captcha}</p>
+				<div class="form-group has-feedback">
+					<label for="captcha">Escribe la palabras que ves abajo</label>
+					<input id="captcha" class="form-control"  type="text" name="captcha" />
+					<br>
+					{captcha}
+				</div>
 				{/if}
 
 				<button type="submit" class="btn btn-success">REGÍSTRATE</button>

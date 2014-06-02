@@ -25,120 +25,179 @@
 		</div>
 		
 			<div class="col-sm-8">
+				<div class="row">
+					<div class="col-sm-12">
+						{if segment_4 == "bienvenido"}
+							<div class="panel panel-success">
+						      <div class="panel-heading">
+						        <h3 class="panel-title">
+						        	Bienvenido, gracias por confirmar tu email.
+						        </h3>
+						      </div>
+						      <div class="panel-body">
+						        Solo nos faltan un par de datos para que puedas demostrar tu conocimiento y pasión futbolera.
+						      </div>
+						    </div>
+						{/if}
+
+						{if segment_3 == "exito"}
+							<div class="alert alert-success alert-dismissable">
+							  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+							  Haz actualizado tu perfil
+							</div>
+						{/if}
+
+						{if segment_3 == "exito-avatar"}
+							<div class="alert alert-success alert-dismissable">
+							  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								Haz actualizado tu imagen de perfil
+							</div>
+							
+						{/if}
+					</div>
+				</div>
 
 				<div class="row">
+					<div class="col-sm-12">
+						{exp:channel:entries channel="activ_comentarios_perfil" author_id="CURRENT_USER" status="closed|open" dynamic="no" limit="1"}
+
+							{if status == "open"}
+
+								<div class="alert alert-success">
+									<b>Tienes activados los comentarios en tu perfil</b>
+								</div>
+
+								{exp:channel:form channel="activ_comentarios_perfil"  entry_id="{entry_id}" return="sitio/actualizar-perfil/{segment_3}" status="closed"}
+									<input type="hidden" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
+
+									<input type="submit" value="Desactivar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
+								{/exp:channel:form}
 
 
-				{if segment_4 == "bienvenido"}
-					<div class="panel panel-success">
-				      <div class="panel-heading">
-				        <h3 class="panel-title">
-				        	Bienvenido, gracias por confirmar tu email.
-				        </h3>
-				      </div>
-				      <div class="panel-body">
-				        Solo nos faltan un par de datos para que puedas demostrar tu conocimiento y pasión futbolera.
-				      </div>
-				    </div>
-				{/if}
+							{if:elseif status == "closed"}
 
-				{if segment_3 == "exito"}
-					<div class="alert alert-success alert-dismissable">
-					  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-					  You've successfully updated your profile!
+								<div class="alert alert-success">
+									<b>Tienes desactivados los comentarios en tu perfil</b>
+								</div>
+
+								{exp:channel:form channel="activ_comentarios_perfil"  entry_id="{entry_id}" return="sitio/actualizar-perfil/{segment_3}" status="open"}
+									<input type="hidden" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
+
+									<input type="submit" value="Activar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
+								{/exp:channel:form}
+
+							{/if}
+
+							{if no_results}
+								{exp:channel:form channel="activ_comentarios_perfil" return="sitio/actualizar-perfil/{segment_3}" status="open"}
+
+								<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-coment" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
+
+								<input type="submit" value="Activar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
+								{/exp:channel:form}
+							{/if}
+						{/exp:channel:entries}
 					</div>
-				{/if}
+				</div>
+				<hr>
 
-				{if segment_3 == "exito-avatar"}
-					<div class="alert alert-success alert-dismissable">
-					  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-						You've successfully updated your Avatar or Profile Photo!
-					</div>
-					
-				{/if}
-
-
-				<h5>Fill in or edit the fields below to update your profile:</h5>
-				<hr />
-
-				{exp:user:edit return="sitio/actualizar-perfil/exito" screen_name_password_required="no" error_page="sitio/error-perfil"}
-
-					<div class="form-group">
-						<label for="screen_name">Nombre de usuario</label>
-						<input type="text" class="form-control" name="screen_name" id="screen_name" value="{screen_name}"/>
-					</div>
+				<div class="row">
+					<div class="col-sm-12">
 
 
 
-					<div class="form-group">
-  						<label for="miembro_pertenencia">Oficina de pertenencia</label> <br>
+						<h5>Llena o edita los campos abajo, para actualizar tu perfil:</h5>
+						
 
-  						<b>Actual: {miembro_pertenencia}</b> <br>
+						<hr />
 
-	  						<script type="text/javascript">
+						{exp:user:edit return="sitio/actualizar-perfil/exito" screen_name_password_required="no" error_page="sitio/error-perfil"}
+
+							<div class="form-group">
+								<label for="screen_name">Nombre de usuario</label>
+								<input type="text" class="form-control" name="screen_name" id="screen_name" value="{screen_name}"/>
+							</div>
+
+							<div class="form-group">
+								<label for="Nombre">Nombre</label>
+								<input type="text" class="form-control" name="Nombre" id="Nombre" value="{Nombre}"/>
+							</div>
+
+
+
+							<div class="form-group">
+		  						<label for="miembro_pertenencia">Oficina de pertenencia</label> <br>
+
+		  						<b>Actual: {miembro_pertenencia}</b> <br>
+
+			  						<script type="text/javascript">
+										$(document).ready(function(){
+											$('select[name="miembro_pertenencia"]').find('option[value="{miembro_pertenencia}"]').attr("selected",true);
+										});
+									</script>
+
+		  							<span>
+		  								Cambiar:
+		  							</span>
+		  							<br>
+
+					                 <select name="miembro_pertenencia" class="form-control">
+					                  {select_miembro_pertenencia}
+					                      <option value="{value}">{value}</option>
+					                  {/select_miembro_pertenencia}
+					                </select>
+		  						</div>
+							<input type="submit" class="btn btn-success" name="submit" value="Actualizar" />
+						{/exp:user:edit}  
+						<hr>
+
+
+
+						
+						<h5>Your Avatar</h5>
+						{exp:user:edit return="sitio/actualizar-perfil/exito-avatar" override_return="sitio/actualizar-perfil/exito-avatar" error_page="sitio/error-perfil"}
+						<p>{if avatar_filename}
+							<label>Tu foto:  </label>
+							<img class="img-responsive" src="{avatar_url}{avatar_filename}" width="{avatar_width}" height="{avatar_height}" />
+							{if:else}
+							Actualmente no tienes una imagen de perfil.
+							{/if}
+						</p>
+
+						<div class="form-group">
+						    <label for="avatar_filename" >Carga una nueva foto: </label>
+						    <input  class="form-control" type="file" name="avatar_filename" id="avatar_filename" />
+						</div>
+						
+						<div class="sr-only">|
+							<script type="text/javascript">
 								$(document).ready(function(){
 									$('select[name="miembro_pertenencia"]').find('option[value="{miembro_pertenencia}"]').attr("selected",true);
 								});
 							</script>
+		                	<select name="miembro_pertenencia">
+				                  {select_miembro_pertenencia}
+				                      <option value="{value}">{value}</option>
+				                  {/select_miembro_pertenencia}
+		               		 </select>
+		               		 <div class="form-group">
+								<label for="Nombre">Nombre</label>
+								<input type="text" class="form-control" name="Nombre" id="Nombre" value="{Nombre}"/>
+							</div>
+						</div>
 
-  							<span>
-  								Cambiar:
-  							</span>
-  							<br>
+						<div class="form-group">
+							<input  class="btn btn-success" type="submit" value="Actualizar" />
+						</div>
 
-			                 <select name="miembro_pertenencia" class="form-control">
-			                  {select_miembro_pertenencia}
-			                      <option value="{value}">{value}</option>
-			                  {/select_miembro_pertenencia}
-			                </select>
-  						</div>
-					<input type="submit" class="btn btn-success" name="submit" value="Actualizar" />
-				{/exp:user:edit}  
-				<hr>
-
-				
-				<h5>Your Avatar</h5>
-				{exp:user:edit return="sitio/actualizar-perfil/exito-avatar" override_return="sitio/actualizar-perfil/exito-avatar" error_page="sitio/error-perfil"}
-				<p>{if avatar_filename}
-					<label>Current Avatar: </label>
-					<img class="img-responsive" src="{avatar_url}{avatar_filename}" width="{avatar_width}" height="{avatar_height}" />
-					{if:else}
-					You currently do not have an avatar uploaded.
-					{/if}
-				</p>
-
-				<div class="form-group">
-				    <label for="avatar_filename" >Upload a New Avatar: </label>
-				    <input  class="form-control" type="file" name="avatar_filename" id="avatar_filename" />
-				</div>
-				
-				<div class="sr-only">|
-						<script type="text/javascript">
-							$(document).ready(function(){
-								$('select[name="miembro_pertenencia"]').find('option[value="{miembro_pertenencia}"]').attr("selected",true);
-							});
-						</script>
-	                	<select name="miembro_pertenencia">
-			                  {select_miembro_pertenencia}
-			                      <option value="{value}">{value}</option>
-			                  {/select_miembro_pertenencia}
-	               		 </select>
-				</div>
-
-				<div class="form-group">
-					<input  class="btn btn-success" type="submit" value="Actualizar" />
-				</div>
-
-				<div class="form-group">
-					<input class="btn btn-danger" type="submit" name="remove_avatar" value="Remover avatar actual" />
-				</div>
-				{/exp:user:edit}
-
+						<div class="form-group">
+							<input class="btn btn-danger" type="submit" name="remove_avatar" value="Remover foto actual" />
+						</div>
+						{/exp:user:edit}
+					</div>
 				</div><!--  close row -->
 			</div> <!-- close col -->
-
 		{/if}
-				
 		</div>
 	</div>
 </div>

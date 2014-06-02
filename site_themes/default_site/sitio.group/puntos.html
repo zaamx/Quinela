@@ -1,0 +1,71 @@
+{embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
+<div id="home-ingreso-b">
+	<div class="container">
+
+
+		{if group_id == '1'}
+			<div class="row">
+	            <div class="col-sm-12">
+	            	<table class="table table-bordered">
+				      <thead>
+				        <tr>
+				          <th>Local</th>
+				          <th>Visitante</th>
+				          <th>Resultado</th>
+				          <th>Marcador local</th>
+				          <th>Marcador visitante</th>
+				          <th>Quien Anoto Primero</th>
+				          <th>Asignar puntos</th>
+				        </tr>
+				      </thead>
+				      <tbody>
+				      	{exp:channel:entries channel="partidos" search:partido_cerrado="cerrado" orderby="fecha_de_partido" sort="asc" limit="8" paginate="bottom"}
+				      		<tr>
+				      			<td>
+				      				{equipo_local:nombre_de_pais}
+				      			</td>
+				      			<td>
+				      				{equipo_visitante:nombre_de_pais}
+				      			</td>
+				      			<td>
+				      				{resultado_de_partido}
+				      			</td>
+				      			<td>
+				      				{marcador_local}
+				      			</td>
+				      			<td>
+				      				{marcador_visitante}
+				      			</td>
+				      			
+				      			<td>
+				      				{quien_mete_primer_gol}
+				      			</td>
+
+				      			<td>
+				      				{if partido_cerrado == "cerrado"}
+
+				      					<a href="{path='sitio/puntos-predicciones'}/{entry_id}" class="btn btn-success">
+				      						Ver predicciones
+				      					</a>
+
+									{if:elseif partido_cerrado == "abierto"}
+										Partido aun no cerrado
+									{/if}
+				      			</td>
+				      		</tr>
+						{/exp:channel:entries}
+				      </tbody>
+				    </table>
+	            	
+	            </div>
+	        </div>
+		{if:else}
+			<div class="row">
+	            <div class="col-sm-12">
+	            	nada 	       
+	            </div>
+	        </div>
+		{/if}		
+	</div>
+</div>
+{embed="sitio/foot"}

@@ -228,7 +228,7 @@
 		"regex": false,
 		"replace_history":
 		[
-			"{site_url}/themes/site_themes/default_site/library/images/big_horns.jpg",
+			"{site_url}/themes/site_themes/default_site/library/images/default-user.jpg",
 			"sitio/error-perfil",
 			"{logged_in_member_id}",
 			"/home/zaa/dev.zaa.mx/quinela/",
