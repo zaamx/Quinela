@@ -20,7 +20,7 @@
 				<div class="head-title head-green">
 				</div>
 				<h2 class="greentxt">Predicciones por caducar</h2>
-				<p>Esta son los partidos en los que puedes hacer tu predicción, pero apúrate porque están a punto de cerrar y ya no podrás tener acceso.</p>
+				<p>Estos son los partidos en los que puedes hacer tu predicción, pero apúrate porque están a punto de cerrar y ya no podrás tener acceso.</p>
 			</div>
 
 			<div class="col-sm-2">
@@ -39,7 +39,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:partido_activo="Activo" orderby="fecha_de_partido" sort="asc" limit="8" paginate="bottom"}
+					{exp:channel:entries channel="partidos" search:partido_activo="Activo" orderby="fecha_de_partido" sort="asc" limit="4" paginate="bottom"}
 						{part-partido}
 						
 					{/exp:channel:entries}
@@ -454,4 +454,4 @@
 	  </div>
 	</div>
 
-{embed="sitio/foot"}
+{embed="sitio/foot2"}

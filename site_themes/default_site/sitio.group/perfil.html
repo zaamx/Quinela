@@ -33,17 +33,15 @@
 
 							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="{segment_3}"  dynamic="no" disable="pagination"}
 							
-							<li class="item-badge">
-								<a class="item-badgelink" href="#"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="{lista_badges:descripcion_ganado}" data-title="{lista_badges:title}">
-									<img  height="90" width="90" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">	
-								</a>
-							</li>
+								<li class="item-badge">
+									<a class="item-badgelink" href="#"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="{lista_badges:descripcion_ganado}" data-title="{lista_badges:title}">
+										<img  height="90" width="90" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">	
+									</a>
+								</li>
 
-							{if entry_id == "96"}
-								{exp:stash:set_value name="NoDarMedalla" value="0" parse="inward"}
-							{/if}
-
-							
+								{if entry_id == "96"}
+									<?php $NoDar = '0'; ?>
+								{/if}
 
 							{if no_results}<span>El usuario aun no ha jugado.</span>{/if}
 
@@ -96,10 +94,18 @@
 							
 						</div>
 
+
+
 							{if count == 1}
+							
+								{if count == 1}
+
+
 
 							<?php $id_insigniaDada = '96'; ?>
-							{!--		{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"} --}
+
+							{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"} --}
+
 					
 							{/if}
 
@@ -227,8 +233,10 @@
 								<div class="sr-only">
 									{title}	
 								</div>
-								<?php $IDcomentarios = '{entry_id}'; ?>
-								<?php $IDcomentariosTitle = '{url_title}'; ?>
+
+								{exp:stash:set name="idComentario"}{entry_id}{/exp:stash:set}
+
+								{exp:stash:set name="titComentario"}{url_title}{/exp:stash:set}
 
 								<div id="comentarios">
 								
@@ -236,12 +244,12 @@
 
 								<script type="text/javascript">
 									$(document).ready(function(){
-										$("#comentarios").load("{path='site_index'}/sitio/comentariosajax/<?php echo $IDcomentariosTitle; ?>/{segment_3}");
+										$("#comentarios").load("{path='site_index'}/sitio/comentariosajax/{exp:stash:get name="titComentario"}/{segment_3}");
 	    								return false;
 									});
 								</script>
 
-								<a  class="btn btn-success col-sm-6 col-sm-offset-3" href="{path='site_index'}/sitio/perfil-comentarios/<?php  echo $IDcomentariosTitle; ?>/{segment_3}"> 
+								<a  class="btn btn-success col-sm-6 col-sm-offset-3" href="{path='site_index'}/sitio/perfil-comentarios/{exp:stash:get name="titComentario"}/{segment_3}"> 
 										Comentar
 								</a>
 							{if no_results}
@@ -261,4 +269,4 @@
 	</div>
 </div>
 <!-- Vinculos para registros y perfiles en footer -->
-{embed="sitio/foot"}
+{embed="sitio/foot2"}

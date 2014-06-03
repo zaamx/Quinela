@@ -1,14 +1,4 @@
-{exp:channel:entries channel="activ_comentarios_perfil"  author_id="{segment_4}"  status="Open" dynamic="no" limit="1"}
-
-	<div class="sr-only">
-		{title}	
-	</div>
-	<?php $IDcomentarios = '{entry_id}'; ?>
-	<?php $IDcomentariosTitle = '{title}	'; ?>
-
-{/exp:channel:entries}							
-
-{exp:comment:entries sort="asc" limit="20" dynamic="no"}
+{exp:comment:entries channel="activ_comentarios_perfil" url_title="{segment_3}" sort="asc" dynamic="no" limit="20"}
 	<div class="comentario">
 		<div class="row">
 			<div class="col-sm-3 col-xs-4">

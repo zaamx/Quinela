@@ -7,12 +7,16 @@ Stylesheet: Main Stylesheet
 html,
 body {
   /* height: 100%; */
+  height: 100%;
+  width: 100%;
 }
 body {
   background: url('../images/shutterstock_175577192_.jpg') no-repeat center top;
   background-color: #eeeeee;
   background-size: cover;
   background-attachment: fixed;
+  height: 100%;
+  width: 100%;
 }
 body.gracias {
   color: #eeeeee;
@@ -34,7 +38,11 @@ img.icono-menu {
   height: 12px;
 }
 #home-ingreso,
-#home-ingreso-b {
+#home-ingreso-b,
+#home-ingreso-c {
+  display: table;
+  width: 100%;
+  height: 100%;
   position: relative;
   background: rgba(0, 0, 0, 0.6);
   padding: 100px 0 30px;
@@ -42,7 +50,8 @@ img.icono-menu {
   color: #eeeeee;
 }
 #home-ingreso .link-bottom,
-#home-ingreso-b .link-bottom {
+#home-ingreso-b .link-bottom,
+#home-ingreso-c .link-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -50,9 +59,15 @@ img.icono-menu {
   padding: 20px 0;
 }
 #home-ingreso .link-bottom a,
-#home-ingreso-b .link-bottom a {
+#home-ingreso-b .link-bottom a,
+#home-ingreso-c .link-bottom a {
   font-size: 40px;
   color: #eeeeee;
+}
+#home-ingreso-c {
+  background: none !important;
+  text-shadow: 5px 4px 2px #000000;
+  font-size: 15px;
 }
 .link-help {
   font-size: 20px;
@@ -75,12 +90,20 @@ img.icono-menu {
 .profileInt {
   text-align: center !important;
 }
+.profileInt h3 {
+  margin: 0;
+}
 .uppercase {
   text-transform: uppercase;
 }
 header.head-interiores {
   padding: 20px 0 0;
   color: #eeeeee;
+}
+header.head-interiores .top {
+  background: none !important;
+  text-shadow: 5px 4px 2px #000000;
+  font-size: 15px;
 }
 header.head-interiores .bottom {
   background: rgba(0, 0, 0, 0.7);
@@ -271,6 +294,7 @@ body.singles #home-ingreso {
 *********************/
 #home-foot {
   background-color: #fff;
+  padding-bottom: 30px;
 }
 .footer-gral {
   background: #222222;
@@ -316,6 +340,8 @@ SIDEBARS & ASIDES
     margin-top: 0.75em;
     padding-left: 1em;
   }
+}
+@media only screen and (min-width: 992px) {
   #home-foot {
     background-image: url('../images/aficionado.png');
     background-repeat: no-repeat;

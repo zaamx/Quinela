@@ -81,11 +81,15 @@
 				</div>
 				{/if}
 
-				<button type="submit" class="btn btn-success">REGÍSTRATE</button>
+				<button type="submit" class="btn btn-success">REG&Iacute;STRATE</button>
 
 			{if no_results}
-		    <p>You're currently logged in, and must be logged
-			        out to view this form.</p>
+
+			<div class="alert alert-warning">
+				<b>
+					Tienes una sesi&oacute;n activa, necesitas salir para ver el contenido de este formulario.
+				</b>
+			</div>
 			{/if}
 			 
 			{/exp:user:register}
@@ -94,4 +98,4 @@
 		</div>
 	</div>
 </div>
-{embed="sitio/foot"}
+{embed="sitio/foot2"}

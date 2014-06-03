@@ -6,19 +6,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="shortcut icon" href="{site_url}//themes/site_themes/default_site/favicon.ico">
+	<link rel="shortcut icon" href="{site_url}themes/site_themes/default_site/favicon.ico">
 
 	<title>{site_name} | {embed:my_page_title}</title> 
 
 	<!-- Bootstrap core CSS -->
-	<link href="{site_url}/themes/site_themes/default_site/library/css/libs/bootstrap-3.1.1/bootstrap.css" rel="stylesheet">
-	<link href="{site_url}/themes/site_themes/default_site/library/fonts/libs/Font-Awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
+	<link href="{site_url}themes/site_themes/default_site/library/css/libs/bootstrap-3/bootstrap.css" rel="stylesheet">
+	<link href="{site_url}themes/site_themes/default_site/library/fonts/libs/Font-Awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="{site_url}/themes/site_themes/default_site/library/js/libs/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="{site_url}themes/site_themes/default_site/library/js/libs/slick/slick.css"/>
 
 
 
-	<link href="{site_url}/themes/site_themes/default_site/library/css/style.css" rel="stylesheet">
+	<link href="{site_url}themes/site_themes/default_site/library/css/style.css" rel="stylesheet">
 
 
 	{exp:jquery:script_tag}
@@ -148,18 +148,14 @@
 					<div class="col-sm-5 col-sm-offset-7">
 						<div class="profileInt text-right">
 							{exp:user:stats dynamic="off" limit="1" log_views="off"}
-							<h2>
+							<h3>
 								<a href="{path=sitio/perfil2}/{member_id}/">
 									<img  class="img-circle" src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="55" width="55"  alt="{screen_name}'s photo" />
 								</a>
 								{screen_name}
-							</h2>
-
-							<p>
+							</h3>
 								{embed="sitio/part-puntos" id_usuario="{member_id}"}
 								{embed="sitio/part-insignias" id_usuario="{member_id}"}
-								
-							</p>
 							{/exp:user:stats}
 						</div>
 					</div>

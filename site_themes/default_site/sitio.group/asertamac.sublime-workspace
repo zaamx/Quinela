@@ -126,7 +126,7 @@
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/index.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_992up.less",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/css/style.css",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/libs/bootstrap-3.1.1/variables.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/libs/bootstrap-3/variables.less",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-partido.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/medallas.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/user_inc.group/profile_column.html",
@@ -164,12 +164,12 @@
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/config.prod.php",
 		"/home/alonso/public_html/quinela/system/expressionengine/config/config.php",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/partido-int.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3.1.1/variables.less",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3/variables.less",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/miembros.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/style.less",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/index.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/paso1.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3.1.1/.gitattributes",
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3/.gitattributes",
 		"/home/alonso/public_html/quinela/system/expressionengine/plugins/pi.url_title_to_entry_id.php",
 		"/run/media/alonso/W7_TODO_EN_UNO/leeme.txt",
 		"/run/media/alonso/W7_TODO_EN_UNO/activador/leeme.txt",
@@ -384,7 +384,7 @@
 			],
 			[
 				"var",
-				"library/less/libs/bootstrap-3.1.1/variables.less"
+				"library/less/libs/bootstrap-3/variables.less"
 			],
 			[
 				"partid",

@@ -160,7 +160,7 @@ jQuery(document).ready(function($) {
             required: '*Debes especificar tu contraseña'
           },
           password_confirm: {
-            required: '*No coincide tu contraseña int&eacute;ntalo de nuevo'
+            required: '*No coincide tu contraseña, int&eacute;ntalo de nuevo'
           },
           accept_terms: {
             required: '*Debes aceptar términos y condiciones y avisos de privacidad'
