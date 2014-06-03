@@ -27,7 +27,7 @@
 					success: function(data) {
 						if (data.success == '1') {
 							// alert('You successfully added a new entry with entry_id '+data.entry_id);
-							if(alert('Gracias por hacer tu predicci&oacute;n')){}
+							if(alert('Gracias por hacer tu predicción')){}
 							else   window.location.href = '{embed:urlDestino}/{embed:nombrePost}/'+data.entry_id;
 
 
@@ -70,13 +70,13 @@
 					<div class="col-sm-3 col-sm-offset-3">
 						<div class="form-group" id="pre_marcador_local_cont">
 
-							<label for="pre_marcador_local">Anota Local</label>
+							<label for="pre_marcador_local">Goles local</label>
 							<input type="text"  class="form-control" name="pre_marcador_local" id="pre_marcador_local" value="">
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="form-group" id="pre_marcador_visitante_cont">
-							<label for="pre_marcador_visitante">Anota Visitante</label>
+							<label for="pre_marcador_visitante">Goles visitante</label>
 							<input type="text"  class="form-control"  name="pre_marcador_visitante" id="pre_marcador_visitante" value="">
 						</div>
 					</div>

@@ -33,21 +33,11 @@
 
 							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="{segment_3}"  dynamic="no" disable="pagination"}
 							
-								<li class="item-badge">
+								<li class="item-badge" id="{entry_id}-{lista_badges:entry_id}">
 									<a class="item-badgelink" href="#"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="{lista_badges:descripcion_ganado}" data-title="{lista_badges:title}">
 										<img  height="90" width="90" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">	
 									</a>
 								</li>
-
-								{if entry_id == "96"}
-
-									<?php $id_insigniaDada = '96'; ?>
-									<?php echo $id_insigniaDada; ?>
-									
-								{/if}
-
-
-							
 
 							{if no_results}<span>El usuario aun no ha jugado.</span>{/if}
 
@@ -103,11 +93,13 @@
 
 
 							{if count == 1}
+								{if segment_3 == logged_in_member_id}	
+										{exp:stash:get name="uno"}
 
-							<?php echo $id_insigniaDada; ?>
-							{!--		{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"} --}
+										<?php $id_insigniaDada = '96'; ?>
 
-					
+										{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
+								{/if}
 							{/if}
 
 							{if count == 2} 

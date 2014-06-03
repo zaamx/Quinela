@@ -1,80 +1,19 @@
-<div class="navbar navbar-default" role="navigation">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="{path='site_index'}">{site_name}</a>
-					</div>
-					<div class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<li {if embed:my_active_nav=="home"}class="active"{/if}>
-								<a href="{path='sitio/index'}">Inicio</a>
-							</li> 
-							<li {if embed:my_active_nav=="partidos"} class="active"{/if}>
-								<a href="{path='sitio/partidos'}">Partidos</a>
-							</li> 
-							<li {if embed:my_active_nav=="ranking"} class="active"{/if}>
-								<a href="{path='sitio/ranking'}">Ranking</a>
-							</li>
-							<li {if embed:my_active_nav=="premios"} class="active"{/if}>
-								<a href="{path='sitio/premios'}">Premios</a>
-							</li>
-							<li {if embed:my_active_nav=="medallas"} class="active"{/if}>
-								<a href="{path='sitio/medallas'}">Medallas</a>
-							</li>
-							<li {if embed:my_active_nav=="ranking-medallas"} class="active"{/if}>
-								<a href="{path='sitio/ranking-medallas'}">Ranking Medallas</a>
-							</li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li class="divider-vertical"></li>
-
-							<!-- Si esta dentro -->
-							{if logged_in}
-							<li>
-								<a href="{path:your_profile}">
-									{exp:member:custom_profile_data}
-									{screen_name}
-									{/exp:member:custom_profile_data}
-								</a>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									
-									<i class="fa fa-cog"></i>
-									<b class="caret"></b>
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a href="{path='member/profile'}">Editar tu perfil</a>
-									</li>
-									<li>
-										<a href="{path='member/memberlist'}">Ver lista de miembro</a>
-									</li>
-									<li class="divider"></li>
-									<li>
-										<a href="{path='logout'}">Salir</a>
-									</li>
-								</ul>
-							</li>
-							{/if}
-							<!-- /Si esta dentro -->
-						</ul>
-
-					</div><!--/.nav-collapse -->
-				</div><!--/.container-fluid -->
-			</div>
-
-<div id='pageheader'>
-<table style="width:100%;" border="0" cellpadding="0" cellspacing="0">
-<tr>
-<td>
-<div class="heading"><h1 class="h3">{page_title}</h1></div>
-</td>
-</tr>
-</table>
+<div class="row">
+    <div class="col-sm-12">
+        <div id="intro" class="text-center">
+        	<a href="{path='site_index'}" id="logo">	
+              <img src="{site_url}/themes/site_themes/default_site/library/images/LOGO_HOR_FONDO_CLARO.png">
+          	</a>
+      	</div>
+    </div>
 </div>
+<div class="row">
+	<div class="col-sm-12">
+		<div id='pageheader'>
+			<div class="heading text-center">
+				<h1 class="h3">Recupera tu contraseña</h1>
+			</div>
+		</div>
+	</div>
+</div>
+

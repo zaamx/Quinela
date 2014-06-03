@@ -16,13 +16,13 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-4 col-xs-4" id="lista-ranking-pluses">
-						{!-- 
+						
 						{exp:user:users orderby="screen_name" sort="asc" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
 
 
 
 
-						<!-- <div class="item-ranking text-right row">
+						<div class="item-ranking text-right row">
 							<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
 
 							{embed="sitio/rank" id_usuario="{member_id}"}
@@ -31,19 +31,19 @@
 								<h4>
 									<a href="{path=sitio/perfil2}/{member_id}/">
 						                <b>{screen_name}</b>
-						             </a> <br> -->
+						             </a> <br> 
 
 
 									<!-- <small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small> -->
-								<!-- </h4>
+								 </h4>
 							</div>
 							
-						</div> -->
+						</div> 
 
 						{if user_no_results}<div>No members found.</div>{/if}
 
 						{/exp:user:users}
-						--}
+						
 					</div>
 					<div class="col-sm-6 col-xs-8" id="lista-premios">
 
@@ -79,13 +79,13 @@
 					<div class="col-sm-8 col-sm-offset-2" >
 
 						
-{!-- 
+
 						{exp:user:users orderby="screen_name" sort="asc" disable="pagination" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
 
 
 						
 
-						<!-- <div class="text-left row">
+						<div class="text-left row">
 							<div class="col-sm-4 col-xs-4">
 								<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="75" width="75" alt="{screen_name}'s photo" class="img-circle" />
 							</div>
@@ -99,13 +99,12 @@
 								</h4>
 							</div>
 							
-						</div> -->
+						</div> 
 
 						{if user_no_results}<div>No members found.</div>{/if}
 
 						{/exp:user:users}
 
---}
 
 					</div>
 					

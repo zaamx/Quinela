@@ -14,18 +14,17 @@
 
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				{exp:user:edit return="{path='site_index'}" screen_name_password_required="no" error_page="sitio/error-perfil"}
+				{exp:user:edit return="{path='site_index'}recuperar/reset" screen_name_password_required="no" error_page="sitio/error-perfil"}
+
+							<div class="form-group">
+								<label for="Nombre">Nombre completo</label>
+								<input type="text" class="form-control" name="Nombre" id="Nombre" value="{Nombre}"/>
+							</div>
 
 							<div class="form-group">
 								<label for="screen_name">Nombre de usuario</label>
 								<input type="text" class="form-control" name="screen_name" id="screen_name" value="{screen_name}"/>
 							</div>
-
-							<div class="form-group">
-								<label for="Nombre">Nombre</label>
-								<input type="text" class="form-control" name="Nombre" id="Nombre" value="{Nombre}"/>
-							</div>
-
 
 
 							<div class="form-group">
@@ -50,6 +49,18 @@
 					                  {/select_miembro_pertenencia}
 					                </select>
 		  						</div>
+		  					<div class="checkbox">
+								<label>
+									<input type="checkbox" name="terminosos" value="y" /> He leído y acepto los 
+									<a href="{path='sitio/terminos'}">
+										términos y condiciones
+									</a>
+										y 
+									<a href="{path='sitio/politicas'}">
+										avisos de privacidad.
+									</a>
+								</label>
+							</div>
 							<input type="submit" class="btn btn-success" name="submit" value="Actualizar" />
 						{/exp:user:edit}  
 

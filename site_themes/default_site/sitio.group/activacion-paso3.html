@@ -13,89 +13,19 @@
         </div>
 
         <div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						{exp:channel:entries channel="activ_comentarios_perfil" author_id="CURRENT_USER" status="closed|open" dynamic="no" limit="1"}
+			<div class="col-md-8 col-md-offset-2 text-center">
 
-							{if status == "open"}
+				<h3>Muchas gracias por actualizar tu informaci&oacute;n.
+					<br>
+					<small>Para terminar el registro te invitamos a solicitar una nueva contraseña.</small>
+				</h3>
+				{exp:user:logout return="sitio/recuperar/fin"}
+				    <a href="{url}" class="btn btn-success">Solicitar contraseña</a>
+				{/exp:user:logout}
 
-								<div class="alert alert-success">
-									<b>Tienes activados los comentarios en tu perfil</b>
-								</div>
-
-								{exp:channel:form channel="activ_comentarios_perfil"  entry_id="{entry_id}" return="sitio/actualizar-perfil/{segment_3}" status="closed"}
-									<input type="hidden" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
-
-									<input type="submit" value="Desactivar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
-								{/exp:channel:form}
+				
 
 
-							{if:elseif status == "closed"}
-
-								<div class="alert alert-success">
-									<b>Tienes desactivados los comentarios en tu perfil</b>
-								</div>
-
-								{exp:channel:form channel="activ_comentarios_perfil"  entry_id="{entry_id}" return="sitio/actualizar-perfil/{segment_3}" status="open"}
-									<input type="hidden" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
-
-									<input type="submit" value="Activar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
-								{/exp:channel:form}
-
-							{/if}
-
-							{if no_results}
-								{exp:channel:form channel="activ_comentarios_perfil" return="sitio/actualizar-perfil/{segment_3}" status="open"}
-
-								<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-coment" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
-
-								<input type="submit" value="Activar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
-								{/exp:channel:form}
-							{/if}
-						{/exp:channel:entries}
-					</div>
-				</div>
-
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				{exp:user:edit return="{site_url}" override_return="{site_url}" error_page="sitio/error-perfil"}
-						<p>{if avatar_filename}
-							<label>Tu foto:  </label>
-							<img class="img-responsive" src="{avatar_url}{avatar_filename}" width="{avatar_width}" height="{avatar_height}" />
-							{if:else}
-							Actualmente no tienes una imagen de perfil.
-							{/if}
-						</p>
-
-						<div class="form-group">
-						    <label for="avatar_filename" >Carga una nueva foto: </label>
-						    <input  class="form-control" type="file" name="avatar_filename" id="avatar_filename" />
-						</div>
-						
-						<div class="sr-only">|
-							<script type="text/javascript">
-								$(document).ready(function(){
-									$('select[name="miembro_pertenencia"]').find('option[value="{miembro_pertenencia}"]').attr("selected",true);
-								});
-							</script>
-		                	<select name="miembro_pertenencia">
-				                  {select_miembro_pertenencia}
-				                      <option value="{value}">{value}</option>
-				                  {/select_miembro_pertenencia}
-		               		 </select>
-		               		 <div class="form-group">
-								<label for="Nombre">Nombre</label>
-								<input type="text" class="form-control" name="Nombre" id="Nombre" value="{Nombre}"/>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<input  class="btn btn-success" type="submit" value="Actualizar" />
-						</div>
-
-						<div class="form-group">
-							<input class="btn btn-danger" type="submit" name="remove_avatar" value="Remover avatar actual" />
-						</div>
-						{/exp:user:edit}
 			</div>
 		</div>
 	</div>

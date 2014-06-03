@@ -8,12 +8,14 @@
 		<hr>
 		<p>
 			
-			{embed="sitio/part-puntos" id_usuario="{segment_3}"}
-			{embed="sitio/part-insignias" id_usuario="{segment_3}"}
+			{embed="sitio/part-puntosSB" id_usuario="{segment_3}"}
+			
+			{embed="sitio/part-insigniasSB" id_usuario="{segment_3}"}
 
 		</p>
 		<hr>
 		{if segment_3 == logged_in_member_id}
+			
 			<ul>
 				<!-- START - if Current User -->
 				<li>
@@ -30,9 +32,6 @@
 			<!-- END - if Current User -->
 			</ul>
 		{/if}
-
-		
-
 	{/exp:user:stats}
 
 	
