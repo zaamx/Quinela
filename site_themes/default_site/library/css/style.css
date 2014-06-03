@@ -171,8 +171,12 @@ ul#pasos-prediccion li.activaa {
   color: #0097c6;
   text-transform: uppercase;
 }
+.orangetxt {
+  color: #f0ad4e;
+  text-transform: uppercase;
+}
 .partidos-dia {
-  padding: 10px 0;
+  padding: 10px 0px 45px;
 }
 #content {
   padding: 20px 0 20px;

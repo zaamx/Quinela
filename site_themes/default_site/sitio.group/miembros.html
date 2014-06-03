@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-sm-12">
         <ul>
-          {exp:user:users orderby="screen_name" sort="asc" limit="10" paginate="bottom" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
+          {exp:user:users orderby="screen_name" sort="asc" limit="100" paginate="bottom" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
 					<li class="forced-height">
             <small style="float: right;">Juega desde {join_date format="%F %j, %Y"}</small>
               <img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="35" width="35" alt="{screen_name}'s photo" style="float: left; margin-right: 10px;" />
@@ -14,7 +14,7 @@
               <br />{location}
             </li>
 					{if user_no_results}<li>Sin miembros</li>{/if}
-					{paginate}<li>Pagina {current_page} de {total_pages} pagina {if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
+					{paginate}<li>Pagina {current_page} de {total_pages} pagina{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
 					{/exp:user:users}
           </ul>
       </div>
