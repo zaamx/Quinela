@@ -3,20 +3,24 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <ul>
+
           {exp:user:users orderby="screen_name" sort="asc" limit="100" paginate="bottom" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
-					<li class="forced-height">
-            <small style="float: right;">Juega desde {join_date format="%F %j, %Y"}</small>
-              <img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="35" width="35" alt="{screen_name}'s photo" style="float: left; margin-right: 10px;" />
-              <a href="{path=sitio/perfil2}/{member_id}/">
+            <div class="row">
+              <div class="col-sm-8">
+                <img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="35" width="35" alt="{screen_name}'s photo" class="img-circle" />
+
+                <a href="{path=sitio/perfil2}/{member_id}/">
                 <b>{screen_name}</b>
               </a>
-              <br />{location}
-            </li>
+              </div>
+              <div class="col-sm-4">
+                <small>Juega desde {join_date format="%F %j, %Y"}</small>    
+              </div>
+            </div>
+            <hr>
 					{if user_no_results}<li>Sin miembros</li>{/if}
 					{paginate}<li>Pagina {current_page} de {total_pages} pagina{if total_pages > "1"}s{/if} &nbsp; &nbsp; &nbsp; {pagination_links}</li>{/paginate}
 					{/exp:user:users}
-          </ul>
       </div>
     </div>
   </div>

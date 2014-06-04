@@ -14,16 +14,18 @@
 
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				{exp:user:edit return="{path='site_index'}recuperar/reset" screen_name_password_required="no" error_page="sitio/error-perfil"}
+				{exp:user:edit return="{path='site_index'}recuperar/reset" screen_name_password_required="no" error_page="sitio/error-perfil" form:id="activacionpaso2" }
 
-							<div class="form-group">
+							<div class="form-group has-feedback">
 								<label for="Nombre">Nombre completo</label>
 								<input type="text" class="form-control" name="Nombre" id="Nombre" value="{Nombre}"/>
+								<span class="glyphicon form-control-feedback" id="Nombre1"></span>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group has-feedback">
 								<label for="screen_name">Nombre de usuario</label>
 								<input type="text" class="form-control" name="screen_name" id="screen_name" value="{screen_name}"/>
+								<span class="glyphicon form-control-feedback" id="screen_name1"></span>
 							</div>
 
 
