@@ -153,6 +153,7 @@
 							<input type="hidden" name="id_partido" id="id_partido" value="{partido_rel:entry_id}">
 							<input type="hidden" name="puntos_prediccion" id="puntos_prediccion" value="<?php echo $valPrimero + $valMarcador + $valPartido; ?>">
 
+
 							<div class="form-group">
 							    <label for="exampleInputEmail1">Puntos Asignados</label>
 							    <input class="form-control" type="text" name="puntos_prediccion" id="puntos_prediccion" value="<?php echo $valPrimero + $valMarcador + $valPartido; ?>" disabled>
@@ -161,9 +162,22 @@
 							<input type="submit" value="Dar insignia" class="btn btn-success col-sm-4 col-sm-offset-4">
 						{/exp:channel:form}
 
+
+						<div class="well">
+	            		{exp:user:edit member_id="{author_id}" dynamic="off" }
+						    <p>
+						    	<input class="form-control" type="text" name="puntos" id="puntos" value="<?php echo $valPrimero + $valMarcador + $valPartido; ?>">
+						    </p>
+						    <p><input type="submit" value="Submit" /></p>
+						{/exp:user:edit}
+	            	</div>
+
 						
 
 	            	{/exp:channel:entries}
+
+
+	            	
 	            </div>
 	        </div>
 		{if:else}

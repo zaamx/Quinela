@@ -4,16 +4,69 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h2 class="greentxt">¿En qué lugar estás del ranking de insignias?</h2>
-					<p>Demuestra tu popularidad y mete gol de media cancha estando en el primer lugar de insignias.</p>
+					<h2 class="greentxt">
+						¿En qué lugar estás del ranking de insignias? <br>
+						<small>
+							Demuestra tu popularidad y mete gol de media cancha estando en el primer lugar de insignias.
+						</small>
+					</h2>
+					
 				</div>
 			</div>
 			<div id="inner-content" class="row">
-				<div class="col-sm-12">
-					<div class="row">
-						<div class="col-sm-2  col-sm-offset-3 col-xs-4" id="lista-ranking-pluses">
-							{!--  
-							{exp:user:users orderby="screen_name" sort="asc" limit="100" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
+				<div class="col-sm-10 col-sm-offset-1">
+					<div class="row" id="lista-premios">
+						{exp:channel:entries channel="premios" category="22" orderby="posicion_premio" sort="asc" dynamic="no" limit="3" disable="paginate" }
+							<div class="col-sm-4">
+								<div class="item-premio">
+									<img src="{imagen_de_premio}" class="img-premio" alt="">
+									<div class="texto-premio">
+										<h4>{posicion_premio} &deg; lugar</h4>
+										<p>{titulo_premio}</p>
+									</div>
+								</div>
+							</div>
+
+						{if no_results}<span>El usuario aun no ha jugado.</span>{/if}
+
+						{/exp:channel:entries}
+					</div>
+
+					<div class="row" id="lista-ranking-pluses">
+
+						{exp:user:users orderby="screen_name" sort="asc" limit="100" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
+
+
+
+						
+
+						{if count <= 3}
+
+						<div class="col-sm-4">
+							<div class="item-ranking text-right">
+								<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
+								<div class="texto-usuario">
+									<h4>
+										<a href="{path=sitio/perfil2}/{member_id}/">
+							                <b>{screen_name}</b>
+							             </a> <br>
+										<!-- <small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small> -->
+									</h4>
+								</div>
+							</div>
+						
+						</div>
+
+						{/if}
+						
+
+					    {if count >= 4}
+
+					    <div class="col-sm-12">
+					    	<div class="row">
+					    		<div class="col-sm-6 col-sm-offset-3">
+					    			
+					    		
 
 							<div class="item-ranking text-right">
 								<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
@@ -26,34 +79,32 @@
 									</h4>
 								</div>
 							</div>
-
-
-							{if user_no_results}<div>No members found.</div>{/if}
-							{/exp:user:users}
-
-							--}
+							</div>
+					    	</div>
+						
 						</div>
-						<div class="col-sm-3 col-xs-8" id="lista-premios">
-							{exp:channel:entries channel="premios" category="22" orderby="posicion_premio" sort="asc" dynamic="no" limit="4" disable="paginate" }							
 
-								<div class="item-premio">
-									<img src="{imagen_de_premio}" class="img-premio" alt="">
-									<div class="texto-premio">
-										<h4>{posicion_premio} &deg; lugar</h4>
-										<p>{titulo_premio}</p>
-									</div>
-								</div>
+					    {/if}
 
-							{if no_results}<span>El usuario aun no ha jugado.</span>{/if}
 
-							{/exp:channel:entries}
-						</div>
+
+						{if user_no_results}<div>No members found.</div>{/if}
+						{/exp:user:users}
+							
+
 					</div>
+
 				</div>
+			</div>
 
 			</div>
 		</div>
 	</div>
+
+
+
+
+
 
 
 

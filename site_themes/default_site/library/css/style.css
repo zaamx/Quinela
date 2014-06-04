@@ -106,6 +106,9 @@ header.head-interiores .top {
   background: none !important;
   text-shadow: 5px 1px 5px #000000;
 }
+header.head-interiores .top .navbar {
+  text-shadow: none;
+}
 header.head-interiores .top p {
   font-size: 17px;
 }
