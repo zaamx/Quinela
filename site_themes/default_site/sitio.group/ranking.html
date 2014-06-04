@@ -15,37 +15,26 @@
 					</h3>
 				</div>
 				<div class="row">
-					<div class="col-sm-4 col-xs-4" id="lista-ranking-pluses">
-						{exp:channel:puntos_usuarios}
+					<div class="col-sm-6 col-xs-4" id="lista-ranking-pluses">
+						<?php 
+						$ranking = array();
+						$rankingIds = array();
+						?>
 						
-						{/exp:channel:puntos_usuarios}
+						{exp:channel:entries channel="puntos_usuarios"}
+							<?php 
+							$ranking['{id_usuario}'] =(isset($ranking['{id_usuario}'])) ? $ranking['{id_usuario}'] + '{puntos_prediccion}' : '{puntos_prediccion}'; 
+								?>
+						{/exp:channel:entries} 
+						<?php arsort($ranking); ?>	
 						
-						{exp:user:users orderby="screen_name" sort="asc" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
+						<?php foreach($ranking as $user => $rank){ ?>
+							{embed="sitio/item-ranking" mid="<?php echo $user; ?>" total="<?php echo $rank; ?>"}						
+						<?php } ?>
+						{embed="sitio/ranking-resto" limit="<?php echo (50 - count($ranking)); ?>" members_id_not ="<?php foreach($ranking as $user => $rank) { echo $user.'|'; } ?>" }
+						
 
 
-
-
-						<div class="item-ranking text-right row">
-							<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
-
-							{embed="sitio/rank" id_usuario="{member_id}"}
-
-							<div class="texto-usuario">
-								<h4>
-									<a href="{path=sitio/perfil2}/{member_id}/">
-						                <b>{screen_name}</b>
-						             </a> <br> 
-
-
-									<!-- <small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small> -->
-								 </h4>
-							</div>
-							
-						</div> 
-
-						{if user_no_results}<div>No members found.</div>{/if}
-
-						{/exp:user:users}
 						
 					</div>
 					<div class="col-sm-6 col-xs-8" id="lista-premios">
@@ -80,10 +69,10 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2" >
-
+					{embed="sitio/ranking-banca" limit="50" offset="<?php echo (50 - count($ranking)); ?>" members_id_not ="<?php foreach($ranking as $user => $rank) { echo $user.'|'; } ?>" }
 						
 
-						{exp:user:users orderby="screen_name" sort="asc" disable="pagination" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
+						{exp:user:users orderby="screen_name" sort="asc" disable="pagination" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%
 
 
 						

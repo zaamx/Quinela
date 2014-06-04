@@ -1,0 +1,22 @@
+{segment_3}
+{exp:user:users member_id="{segment_3}" dynamic="yes" limit="1" log_views="on"}
+		<div class="item-ranking text-right row">
+							<img src="{if avatar_filename}{site_url}images/avatars/{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
+
+							<div class='element' title='{embed:total}'>
+								<b>{embed:total}</b> <span>Puntos</span> <br>	
+							</div>
+
+							<div class="texto-usuario">
+								<h4>
+									<a href="{path=sitio/perfil2}/{member_id}/">
+						                <b>{screen_name}</b>
+						             </a> <br> 
+
+
+									<!-- <small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small> -->
+								 </h4>
+							</div>
+							
+						</div> 
+{/exp:user:users}

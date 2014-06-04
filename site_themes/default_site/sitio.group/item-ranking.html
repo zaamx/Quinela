@@ -1,0 +1,28 @@
+{exp:user:users member_id="{embed:mid}" dynamic="yes" limit="1" log_views="on"}
+	
+<div class="text-left row item-ranking">
+							<div class="col-sm-4 col-xs-4">
+								<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="75" width="75" alt="{screen_name}'s photo" class="img-circle" />
+							</div>
+
+							<div class="col-sm-8 col-xs-4">
+								<h4>
+									<a href="{path=sitio/perfil2}/{member_id}/">
+						                <b>{screen_name}</b>
+						             </a> <br>
+									<small><i class="fa fa-star-o"></i> 
+										<div class='element' title='{embed:total}'>
+											<b>{embed:total}</b> <span>Puntos</span> <br>	
+										</div>
+									</small>
+								</h4>
+							</div>
+							
+						</div> 
+{/exp:user:users}
+<style>
+	.item-ranking{
+		height: 150px;
+	}
+
+</style>
