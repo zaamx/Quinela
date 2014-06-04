@@ -44,11 +44,12 @@ img.icono-menu {
   width: 100%;
   height: 100%;
   position: relative;
-  text-shadow: 5px 4px 2px #000000;
-  background: rgba(0, 0, 0, 0.6);
+  text-shadow: 5px 1px 5px #000000;
+  background: rgba(0, 0, 0, 0.3);
   padding: 100px 0 30px;
   margin: 0;
   color: #eeeeee;
+  font-size: 17px;
 }
 #home-ingreso .link-bottom,
 #home-ingreso-b .link-bottom,
@@ -67,7 +68,7 @@ img.icono-menu {
 }
 #home-ingreso-c {
   background: none !important;
-  text-shadow: 5px 4px 2px #000000;
+  text-shadow: 5px 1px 5px #000000;
   font-size: 15px;
 }
 .link-help {
@@ -103,8 +104,10 @@ header.head-interiores {
 }
 header.head-interiores .top {
   background: none !important;
-  text-shadow: 5px 4px 2px #000000;
-  font-size: 15px;
+  text-shadow: 5px 1px 5px #000000;
+}
+header.head-interiores .top p {
+  font-size: 17px;
 }
 header.head-interiores .bottom {
   background: rgba(0, 0, 0, 0.7);
@@ -309,6 +312,9 @@ body.singles #home-ingreso {
 .footer-gral a {
   color: #eeeeee;
 }
+.checkbox .help-block {
+  color: #FF0000;
+}
 @media only screen and (min-width: 768px) {
   /*********************
 GENERAL STYLES
@@ -353,17 +359,7 @@ SIDEBARS & ASIDES
     background-color: #fff;
   }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  body {
-    background-attachment: scroll;
-  }
-}
 /*
 iPHONE 5 MEDIA QUERY
 Want to get fancy for no good reason? Knock yourself out.
 */
-@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  body {
-    background-attachment: scroll;
-  }
-}

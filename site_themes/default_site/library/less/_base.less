@@ -46,12 +46,13 @@ img.icono-menu {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	text-shadow: 5px 4px 2px rgba(0, 0, 0, 1);
-	background: rgba(0, 0, 0, 0.6);
+	text-shadow: 5px 1px 5px rgba(0, 0, 0, 1);
+	background: rgba(0, 0, 0, 0.3);
 	color : @gray-lighter;
 	padding: 100px 0 30px;	
 	margin: 0;
 	color: @gray-lighter;
+	font-size: 17px;
 
 	.link-bottom {
 		position: absolute;
@@ -68,7 +69,7 @@ img.icono-menu {
 }
 #home-ingreso-c {
 	background: none !important;
-	text-shadow: 5px 4px 2px rgba(0, 0, 0, 1);
+	text-shadow: 5px 1px 5px rgba(0, 0, 0, 1);
 	font-size: 15px;
 
 }
@@ -106,9 +107,15 @@ header.head-interiores {
 	padding: 20px 0 0;
 	color: @gray-lighter;
 	.top {
+		.navbar {
+			
+		}
 		background: none !important;
-		text-shadow: 5px 4px 2px rgba(0, 0, 0, 1);
-		font-size: 15px;
+		text-shadow: 5px 1px 5px rgba(0, 0, 0, 1);
+		p {
+			font-size: 17px;	
+		}
+		
 
 	}
 	.bottom {
@@ -385,5 +392,11 @@ body.singles {
 		color: @gray-lighter;
 	}
 	#inner-footer {
+	}
+}
+
+.checkbox {
+	.help-block {
+		color: #FF0000;
 	}
 }
