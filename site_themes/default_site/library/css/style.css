@@ -267,6 +267,18 @@ body.singles #home-ingreso {
   font-size: 14px;
   color: #222222;
 }
+.item-ranking {
+  height: 150px !important;
+}
+.item-ranking-medalla {
+  height: 50px;
+  margin-bottom: 40px;
+}
+.item-ranking-medalla img {
+  position: absolute;
+  right: 0;
+  top: -30px;
+}
 .item-premio {
   position: relative;
   width: 100%;
@@ -288,6 +300,30 @@ body.singles #home-ingreso {
   color: #eeeeee;
 }
 .item-premio .texto-premio h4 {
+  color: #eeeeee;
+  margin: 0;
+}
+.item-premio-med {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  font-size: 10px;
+}
+.item-premio-med img.img-premio {
+  width: 100%;
+  height: auto;
+}
+.item-premio-med .texto-premio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3px 4px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #eeeeee;
+}
+.item-premio-med .texto-premio h4 {
   color: #eeeeee;
   margin: 0;
 }
