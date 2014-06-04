@@ -30,10 +30,13 @@
 						<h3>Mis insignias</h3>
 
 						<ul class="list-inline">
-
+							<?php 
+							$lista_badges = array();
+							?>
 							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="{segment_3}"  dynamic="no" disable="pagination"}
 							
 								<li class="item-badge" id="{entry_id}-{lista_badges:entry_id}">
+									<?php $lista_badges[] = '{lista_badges:entry_id}'; ?>
 									<a class="item-badgelink" href="#"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="{lista_badges:descripcion_ganado}" data-title="{lista_badges:title}">
 										<img  height="90" width="90" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">	
 									</a>
@@ -97,8 +100,9 @@
 										{exp:stash:get name="uno"}
 
 										<?php $id_insigniaDada = '96'; ?>
-
-										{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
+										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
+											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
+										<?php } ?>
 								{/if}
 							{/if}
 

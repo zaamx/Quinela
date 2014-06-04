@@ -80,6 +80,7 @@
 			</div>
 
 			<div class="row">
+				<?php $idBadgeAsoc = '0'; ?>
 				{parents field="partido_de_insignia"}
 					<?php $idBadgeAsoc = "{parents:entry_id}"; ?>
 				{/parents}
@@ -170,7 +171,7 @@
 
 					
 
-					{if {exp:stash:not_empty name="idBadgeAsocN"}}
+					{if {exp:stash:get name="idBadgeAsocN"} > 0}
 						<script type="text/javascript">
 							$(document).ready(function(){
 								$('#publishForm').ajaxForm({
