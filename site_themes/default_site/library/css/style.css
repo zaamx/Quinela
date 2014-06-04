@@ -353,7 +353,17 @@ SIDEBARS & ASIDES
     background-color: #fff;
   }
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  body {
+    background-attachment: scroll;
+  }
+}
 /*
 iPHONE 5 MEDIA QUERY
 Want to get fancy for no good reason? Knock yourself out.
 */
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    background-attachment: scroll;
+  }
+}
