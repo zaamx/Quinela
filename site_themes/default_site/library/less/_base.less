@@ -17,7 +17,7 @@ body {
 	background-attachment:fixed;
 	height: 100%;
     width: 100%;
-    
+
 }
 
 body.gracias {
@@ -41,10 +41,14 @@ img.icono-menu {
 	width: 12px;
 	height: 12px;
 }
-#home-ingreso, #home-ingreso-b, #home-ingreso-c {
-	display: table;
+
+#home-ingreso-b {
+display: table;
 	width: 100%;
 	height: 100%;
+}
+#home-ingreso, #home-ingreso-b, #home-ingreso-c {
+	
 	position: relative;
 	text-shadow: 5px 1px 5px rgba(0, 0, 0, 1);
 	background: rgba(0, 0, 0, 0.3);
@@ -193,6 +197,7 @@ ul#pasos-prediccion {
 	text-transform: uppercase;
 	small {
 		text-transform: initial;
+		color: @gray-darker;
 	}
 }
 
@@ -250,11 +255,25 @@ body.partido {
 		}
 	}
 }
+body.ranking-medallas {
+	.item-premio-med {
+		height: 195px;
+		overflow: hidden;
+		img.img-premio {
+			height: 100%;
+			width: auto;
+		}
+		.texto-premio {
+			word-wrap: break-word;
+		}
+	}
+}
 
 body.perfil-edit {
 	#content {
 		background: rgba(0, 0, 0, 0.9);
 		color : @gray-lighter;
+		padding-bottom: 200px;
 	}
 }
 
@@ -284,7 +303,9 @@ body.singles {
 		margin: 0;
 	}
 }
-
+.partido-midle {
+	padding: 80px 0 0;
+}
 .item-bad {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -298,12 +319,18 @@ body.singles {
 
 .item-ranking {
 	position: relative;
-	img.item-micro{
+	word-wrap: break-word;
+	a.item-a {
 		display: block;
-	    position: absolute;
-	    right: -37px;
-	    z-index: 200;
-	    top: -10px;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		left: -53px;
+		z-index: 200;
+		top: -4px;
+		img.item-micro{
+			
+		}	
 	}
 	.texto-usuario {
 		position: absolute;

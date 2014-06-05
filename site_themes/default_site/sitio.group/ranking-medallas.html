@@ -16,6 +16,7 @@
 			<div id="inner-content" class="row">
 				<div class="col-sm-10 col-sm-offset-1">
 					<div class="row" id="lista-premios">
+						{!--
 						{exp:channel:entries channel="premios" category="22" orderby="posicion_premio" sort="asc" dynamic="no" limit="3" disable="paginate" }
 							<div class="col-sm-4">
 								<div class="item-premio-med">
@@ -29,6 +30,7 @@
 
 						{if no_results}<span>El usuario aun no ha jugado.</span>{/if}
 						{/exp:channel:entries}
+						--}
 					</div>
 
 					<div class="row" id="lista-ranking-pluses">
@@ -38,14 +40,13 @@
 						{if count <= 3}
 
 						<div class="col-sm-4">
-							<div class="item-ranking-medalla">
-								<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
-								<div class="texto-usuario">
+							<div class="item-premio-med">
+								<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-premio" />
+								<div class="texto-premio">
 									<h4>
 										<a href="{path=sitio/perfil2}/{member_id}/">
 							                <b>{screen_name}</b>
 							             </a>
-										<!-- <small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small> -->
 									</h4>
 								</div>
 							</div>
@@ -57,6 +58,11 @@
 					    <div class="col-sm-12">
 					    	<div class="row">
 					    		<div class="col-sm-6 col-sm-offset-3">
+					    			<div class="row">
+					    				<div class="col-md-12">
+					    					<hr>
+					    				</div>
+					    			</div>
 					    			<div class="row">
 					    				<div class="col-sm-4">
 					    					<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
@@ -70,7 +76,7 @@
 						    						<!-- <small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small> -->
 						    					</h4>
 						    				</div>
-						    				<hr>
+						    				
 					    				</div>
 					    			</div>
 					    		</div>

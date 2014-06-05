@@ -224,7 +224,7 @@
 				<div class="row">
 						<div class="col-md-12" id="tester">
 							<hr>
-							<h3>Este es el apoyo de tus amigos</h3>
+							<h3>Zona de comentarios</h3>
 
 							{exp:channel:entries channel="activ_comentarios_perfil" author_id="{segment_3}" status="Open" dynamic="no" limit="1"}
 								<div class="sr-only">
@@ -260,7 +260,7 @@
 								
 							{if no_results}
 								<div class="alert alert-warning">
-									<b>Este usuario no tiene activados los comentarios</b>
+									<b>Este usuario no tiene activados los comentarios. Recuerda que se activan en "<a href="{path=sitio/actualizar-perfil}/{member_id}/">Editar Perfil</a>"</b>
 								</div>
 							{/if}
 

@@ -233,53 +233,7 @@ jQuery(document).ready(function($) {
   });
 
 
-  $("#activacionpaso2").validate({
-        rules: {
-          Nombre: {
-            required: true,
-            accept: "[a-zA-Z]+"
-          },
-          screen_name: {
-            required: true,
-            accept: "[a-zA-Z]+"
-          },
-          terminosos: {
-            required: true
-          }
-        },
-        messages: {
-          Nombre: {
-            required: '*Ingresa tu nombre completo',
-            accept: '*Solo letras para el nombre'
-          },
-          screen_name: {
-            required: '*Ingresa tu nombre de usuario',
-            accept: '*Solo letras para el nombre'
-          },
-          terminosos: {
-            required: '*Debes aceptar términos y condiciones y avisos de privacidad'
-          }
-        },
-        highlight: function(element) {
-            var id_attr = "#" + $( element ).attr("id") + "1";
-            $(element).closest('.form-group').addClass('has-error has-feedback');
-            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');         
-        },
-        unhighlight: function(element) {
-            var id_attr = "#" + $( element ).attr("id") + "1";
-            $(element).closest('.form-group').removeClass('has-error');
-            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');         
-        },
-        errorElement: 'span',
-        errorClass: 'help-block',
-        errorPlacement: function(error, element) {
-            if(element.parent('.input-group').length) {
-                error.insertAfter(element.parent());
-            } else {
-                error.insertAfter(element);
-            }
-        }      
-  });
+  
 
 
 

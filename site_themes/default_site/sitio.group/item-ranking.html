@@ -1,11 +1,11 @@
 {exp:user:users member_id="{embed:mid}" dynamic="yes" limit="1" log_views="off"}	
-<div class="text-left row item-ranking">
-	<div class="col-sm-4 col-xs-12">
-		<a href="{path=sitio/perfil2}/{member_id}/">
-			<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="75" width="75" alt="{screen_name}'s photo" class="img-circle" />
+<div class="item-ranking">
+
+		<a class="item-a" href="{path=sitio/perfil2}/{member_id}/">
+			<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
 		</a>
-	</div>
-	<div class="col-sm-8 col-xs-12">
+
+	<div class="texto-usuario">
 		<h4>
 			<a class="hidden-xs" href="{path=sitio/perfil2}/{member_id}/">
                 <b>{screen_name}</b>
