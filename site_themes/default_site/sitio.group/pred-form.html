@@ -22,6 +22,18 @@
 		<hr>
 		<script type="text/javascript">
 			$(document).ready(function(){
+				 $("#publishForm").submit(function( event ){
+
+                    if ($(this).valid()){
+                        $("input:text,select").each(function(){
+                            $(this).prop('readonly', true);
+                        });
+
+                        $("button:submit").prop('disabled', true);
+                    }else{
+                        event.preventDefault();
+                    }
+                });
 				$('#publishForm').ajaxForm({
 					dataType: 'json',
 					success: function(data) {

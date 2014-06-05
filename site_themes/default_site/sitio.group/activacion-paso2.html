@@ -1,5 +1,5 @@
 {embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
-<div id="home-ingreso">
+<div id="home-ingreso-b">
 	<div class="container">
 
 		<div class="row">
@@ -24,7 +24,7 @@
 							</div>
 
 							<div class="form-group has-feedback">
-								<label for="screen_name">Nombre de usuario (con este nombre te identificar&aacute;s en la plataforma.)</label>
+								<label for="screen_name">Nombre de usuario (con este nombre te identificar&aacute;s en la plataforma)</label>
 								<input type="text" class="form-control" name="screen_name" id="screen_name" value="{screen_name}"/>
 								<span class="glyphicon form-control-feedback" id="screen_name1"></span>
 							</div>
@@ -98,12 +98,17 @@
 				submit="no";
 			 }
 			}
-		jQuery.validator.addMethod("lettersonly", function(value, element) {
-		    return this.optional(element) || /^[^\@]+$/i.test(value);
-		}, "Only alphabetical characters"); 
+		// jQuery.validator.addMethod("lettersonly", function(value, element) {
+		//     return this.optional(element) || /^[a-zA-Z\s]+$/i.test(value);
+		// }, "Only alphabetical characters"); 
+ 
+
 		
 		$(document).ready(function(){
+			$.validator.addMethod("accept", function(value, element, param) { return value.match(new RegExp("." + param + "$")); });
+
 			new botbuster();
+
 			 $("#activacionpaso2").validate({
 			 	submitHandler: function(form) {
 					if (submit=="yes") {
@@ -113,12 +118,12 @@
 		        rules: {
 		          Nombre: {
 		            required: true,
-		            lettersonly: true
-		            // accept: "[a-zA-Z]+"
+		            // lettersonly: true
+		            accept: "[a-zA-Z\s]+"
 		          },
 		          screen_name: {
 		            required: true,
-		            accept: "[a-zA-Z]+"
+		            accept: "[a-zA-Z\s]+"
 		          },
 		          terminosos: {
 		            required: true
@@ -127,11 +132,11 @@
 		        messages: {
 		          Nombre: {
 		            required: '*Ingresa tu nombre completo',
-		            accept: '*Solo letras para el nombre'
+		            accept: '*Solo letras para el nombre completo.'
 		          },
 		          screen_name: {
 		            required: '*Ingresa tu nombre de usuario',
-		            accept: '*Solo letras para el nombre'
+		            accept: '*Solo letras para el nombre de usuario'
 		          },
 		          terminosos: {
 		            required: '*Debes aceptar términos y condiciones y avisos de privacidad'

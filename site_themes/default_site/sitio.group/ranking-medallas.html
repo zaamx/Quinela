@@ -35,8 +35,23 @@
 
 					<div class="row" id="lista-ranking-pluses">
 
-						{exp:user:users orderby="screen_name" sort="asc" limit="100" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
+						<?php $badgesbyusers = array(); ?>
 
+
+						{exp:channel:entries channel="badges_asignados" dynamic="no" disable="pagination"}
+							{lista_badges}
+								<?php $badgesbyusers['{usuario_receptor_badge}'] = (isset($badgesbyusers['{usuario_receptor_badge}'])) ? $badgesbyusers['{usuario_receptor_badge}'] + '{lista_badges:valor_medalla}' : '{lista_badges:valor_medalla}' ; ?>
+							{/lista_badges}
+							
+						{/exp:channel:entries}
+						<?php arsort($badgesbyusers); ?>
+						<?php $count = 0; foreach($badgesbyusers as $user => $rank){ $count++; ?>
+							{embed="sitio/item-ranking-badges" mid="<?php echo $user; ?>" total="<?php echo $rank; ?>" countU="<?php echo $count;?>"}
+						<?php } ?>
+						{embed="sitio/ranking-resto-badges" limit="<?php echo (100 - count($ranking)); ?>" members_id_not ="<?php foreach($badgesbyusers as $user => $rank) { echo $user.'|'; } ?>" }
+
+						{!--
+						{exp:user:users orderby="screen_name" sort="asc" limit="100" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
 						{if count <= 3}
 
 						<div class="col-sm-4">
@@ -89,14 +104,20 @@
 
 
 						{if user_no_results}<div>No members found.</div>{/if}
-						{/exp:user:users}
-							
-
+						{/exp:user:users} --}
 					</div>
 
 				</div>
 			</div>
 
+
+							
+						<?php foreach($badgesbyusers as $k => $b){ ?>
+							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="<?php echo $k; ?>"  dynamic="no" disable="pagination"}
+								{title}<br>
+							{/exp:channel:entries}
+
+						<?php } ?>
 			</div>
 		</div>
 	</div>
