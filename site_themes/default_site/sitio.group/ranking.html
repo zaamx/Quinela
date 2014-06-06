@@ -59,7 +59,7 @@
 					<div class="col-sm-8 col-sm-offset-2" >
 					{embed="sitio/ranking-banca" limit="50" offset="<?php echo (50 - count($ranking)); ?>" members_id_not ="<?php foreach($ranking as $user => $rank) { echo $user.'|'; } ?>" }
 						
-						{exp:user:users orderby="screen_name" sort="asc" disable="pagination" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%						
+						{exp:user:users orderby="screen_name"  group_id="5" sort="asc" disable="pagination" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%						
 
 						<div class="text-left row">
 							<div class="col-sm-4 col-xs-4">
