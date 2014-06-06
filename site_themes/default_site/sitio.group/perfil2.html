@@ -97,8 +97,6 @@
 
 							{if count == 1}
 								{if segment_3 == logged_in_member_id}	
-										{exp:stash:get name="uno"}
-
 										<?php $id_insigniaDada = '96'; ?>
 										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
 											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
@@ -106,9 +104,13 @@
 								{/if}
 							{/if}
 
-							{if count == 2} 
-
-							Profesional
+							{if count == 2}
+								{if segment_3 == logged_in_member_id}	
+										<?php $id_insigniaDada = '96'; ?>
+										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
+											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
+										<?php } ?>
+								{/if}
 
 							{/if}
 
@@ -134,7 +136,7 @@
 							<div id="slider-badges">
 								{exp:channel:entries channel="badges"   category="23"  dynamic="no" }
 									<div class="item" data-title="{title}" >
-										<a href="#" class="item-badgelink2" data-container="body" data-toggle="popover" data-placement="bottom" data-content="{descripcion_badge}" data-title="{title}">
+										<a href="#" class="item-badgelink2" data-container="body" data-toggle="popover" data-placement="top" data-content="{descripcion_badge}" data-title="{title}">
 											<img alt="{entry_id}"  height="63" width="63" class="img-circle item-img" src="{imagen_badge}" alt="{title}">	
 										</a>
 									</div> 

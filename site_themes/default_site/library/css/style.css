@@ -47,7 +47,7 @@ img.icono-menu {
 #home-ingreso-c {
   position: relative;
   text-shadow: 5px 1px 5px #000000;
-  background: rgba(0, 0, 0, 0.3);
+  background: url('../images/PIXEL_NEGRO.png');
   padding: 100px 0 30px;
   margin: 0;
   color: #eeeeee;
@@ -115,7 +115,7 @@ header.head-interiores .top p {
   font-size: 17px;
 }
 header.head-interiores .bottom {
-  background: rgba(0, 0, 0, 0.7);
+  background: url('../images/PIXEL_NEGRO.png');
   padding: 5px 0;
 }
 .head-title {
@@ -201,7 +201,7 @@ ul#pasos-prediccion li.activaa {
 }
 #content {
   padding: 20px 0 20px;
-  background: rgba(255, 255, 255, 0.8);
+  background: url('../images/PIXEL_BLANCO.png');
 }
 #content article.item-partido {
   margin: 10px 0 10px;
@@ -241,7 +241,7 @@ body.ranking-medallas .item-premio-med .texto-premio {
   word-wrap: break-word;
 }
 body.perfil-edit #content {
-  background: rgba(0, 0, 0, 0.9);
+  background: url('../images/PIXEL_NEGRO.png');
   color: #eeeeee;
   padding-bottom: 200px;
 }
@@ -253,7 +253,7 @@ a.item-badgelink2 {
 }
 body.singles #home-ingreso {
   position: relative;
-  background: rgba(0, 0, 0, 0.6);
+  background: url('../images/PIXEL_NEGRO.png');
   color: #eeeeee;
   padding: 100px 0 30px;
   margin: 0;
@@ -329,7 +329,7 @@ body.singles #home-ingreso {
   left: 0;
   right: 0;
   padding: 3px 4px;
-  background: rgba(0, 0, 0, 0.8);
+  background: url('../images/PIXEL_NEGRO.png');
   color: #eeeeee;
 }
 .item-premio .texto-premio h4 {

@@ -11,11 +11,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/css\/libs\/bootstrap-3.1.1\/bootstrap.css": {
+	"\/css\/libs\/bootstrap-3\/bootstrap-ie7.css": {
 		"fileType": 16,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/css\/libs\/bootstrap-3.1.1\/bootstrap.css",
+		"inputAbbreviatedPath": "\/css\/libs\/bootstrap-3\/bootstrap-ie7.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -912,7 +912,7 @@
 		"outputAbbreviatedPath": "\/css\/libs\/bootstrap-3\/bootstrap.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 2,
+		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
