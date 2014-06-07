@@ -50,7 +50,7 @@
 						{if segment_3 == "exito-avatar"}
 							<div class="alert alert-success alert-dismissable">
 							  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								Haz actualizado tu imagen de perfil
+								Has actualizado tu imagen de perfil
 							</div>
 							
 						{/if}
@@ -70,7 +70,7 @@
 								{exp:channel:form channel="activ_comentarios_perfil"  entry_id="{entry_id}" return="sitio/actualizar-perfil/{segment_3}" status="closed"}
 									<input type="hidden" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
 
-									<input type="submit" value="Desactivar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
+									<input type="submit" value="Desactivar comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
 								{/exp:channel:form}
 
 
@@ -83,7 +83,7 @@
 								{exp:channel:form channel="activ_comentarios_perfil"  entry_id="{entry_id}" return="sitio/actualizar-perfil/{segment_3}" status="open"}
 									<input type="hidden" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
 
-									<input type="submit" value="Activar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
+									<input type="submit" value="Activar comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
 								{/exp:channel:form}
 
 							{/if}
@@ -93,7 +93,7 @@
 
 								<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-coment" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
 
-								<input type="submit" value="Activar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
+								<input type="submit" value="Activar comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
 								{/exp:channel:form}
 							{/if}
 						{/exp:channel:entries}
@@ -106,7 +106,7 @@
 
 
 
-						<h5>Llena o edita los campos abajo, para actualizar tu perfil:</h5>
+						<h5>Llena los siguientes campos para actualizar tu perfil:</h5>
 						
 
 						<hr />
@@ -147,7 +147,7 @@
 					                  {/select_miembro_pertenencia}
 					                </select>
 		  						</div>
-							<input type="submit" class="btn btn-success" name="submit" value="Actualizar" />
+							<input type="submit" class="btn btn-success" name="submit" value="Cambiar" />
 						{/exp:user:edit}  
 						<hr>
 
@@ -157,7 +157,6 @@
 						<h5>Tu imagen de perfil</h5>
 						{exp:user:edit return="sitio/actualizar-perfil/exito-avatar" override_return="sitio/actualizar-perfil/exito-avatar" error_page="sitio/error-perfil"}
 						<p>{if avatar_filename}
-							<label>Tu foto:  </label>
 							<img class="img-responsive" src="{avatar_url}{avatar_filename}" width="{avatar_width}" height="{avatar_height}" />
 							{if:else}
 							Actualmente no tienes una imagen de perfil.
@@ -165,7 +164,7 @@
 						</p>
 
 						<div class="form-group">
-						    <label for="avatar_filename" >Carga una nueva foto: </label>
+						    <label for="avatar_filename" >Carga una nueva foto</label>
 						    <input  class="form-control" type="file" name="avatar_filename" id="avatar_filename" />
 						</div>
 						
