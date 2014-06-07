@@ -14,9 +14,10 @@
 			if(alert('La insignia es ahora es tuya')){}
 				else    window.location.reload(); 
 
-		} else if (data.success == '0') {					
-			$('#mensajes').append(data.field_errors.title);
-			$('#mensajes').append(data.field_errors.lista_badges);                 		
+		} else if (data.success == '0') {
+			$('#mensajes').show();			
+			$('#mensajes .alert').append(data.field_errors.title+'<br>');
+			$('#mensajes .alert').append(data.field_errors.lista_badges+'<br>');                 		
 				 // alert('Failed with the following errors: '+ data.errors.join(', '));
 				}
 			}
@@ -33,5 +34,9 @@
 </div>
 <input type="submit" value="Aceptar insignia" class="btn btn-success col-sm-4 col-sm-offset-4">
 {/exp:channel:form}
-<div id="mensajes">
-</div>
+<div id="mensajes" style="display:none;">
+			<hr>
+			<div class="alert alert-warning">
+				
+			</div>
+		</div>

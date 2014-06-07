@@ -187,12 +187,13 @@
 							if(alert('Gracias por hacer tu predicción')){}
 							else   window.location.href = '{embed:urlDestino}/{embed:nombrePost}/'+data.entry_id;
 						} else if (data.success == '0') {
-                    		$('#mensajes .alert').append(data.field_errors.title);
-                    		$('#mensajes .alert').append(data.field_errors.pre_marcador_local);
-                    		$('#mensajes .alert').append(data.field_errors.pre_marcador_visitante);
-                    		$('#mensajes .alert').append(data.field_errors.pre_resultado_de_partido);
-                    		$('#mensajes .alert').append(data.field_errors.pre_minuto_de_primer_gol);
-                    		$('#mensajes .alert').append(data.field_errors.quien_anota_primero);
+							 $('#mensajes').show();
+                    		// $('#mensajes .alert').append(data.field_errors.title+'<br>');
+                    		$('#mensajes .alert').append(data.field_errors.pre_marcador_local+'<br>');
+                    		$('#mensajes .alert').append(data.field_errors.pre_marcador_visitante+'<br>');
+                    		$('#mensajes .alert').append(data.field_errors.pre_resultado_de_partido+'<br>');
+                    		// $('#mensajes .alert').append(data.field_errors.pre_minuto_de_primer_gol+'<br>');
+                    		$('#mensajes .alert').append(data.field_errors.quien_anota_primero+'<br>');
 						}
 					}
 				});
@@ -257,8 +258,9 @@
 			</div>
 			<input type="submit" value="PREDECIR"  class="btn btn-success">
 		{/exp:channel:form}
-		<div id="mensajes">
-			<div class="alert">
+		<div id="mensajes" style="display:none;">
+			<hr>
+			<div class="alert alert-warning">
 				
 			</div>
 		</div>
