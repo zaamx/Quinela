@@ -228,13 +228,39 @@
 						<div class="form-group" id="pre_marcador_local_cont">
 
 							<label for="pre_marcador_local">Goles local</label>
+							<select class="form-control" name="pre_marcador_local" id="pre_marcador_local">
+								<option value="0" >0</option>
+								<option value="1" >1</option>
+								<option value="2" >2</option>
+								<option value="3" >3</option>
+								<option value="4" >4</option>
+								<option value="5" >5</option>
+								<option value="6" >6</option>
+								<option value="7" >7</option>
+								<option value="8" >8</option>
+								<option value="9" >9</option>
+								<option value="10" >10</option>
+							</select>
 							<input type="text"  class="form-control" name="pre_marcador_local" id="pre_marcador_local" value="">
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="form-group" id="pre_marcador_visitante_cont">
 							<label for="pre_marcador_visitante">Goles visitante</label>
-							<input type="text"  class="form-control"  name="pre_marcador_visitante" id="pre_marcador_visitante" value="">
+							<!--<input type="text"  class="form-control"  name="pre_marcador_visitante" id="pre_marcador_visitante" value="">-->
+							<select class="form-control" name="pre_marcador_visitante" id="pre_marcador_visitante">
+								<option value="0" >0</option>
+								<option value="1" >1</option>
+								<option value="2" >2</option>
+								<option value="3" >3</option>
+								<option value="4" >4</option>
+								<option value="5" >5</option>
+								<option value="6" >6</option>
+								<option value="7" >7</option>
+								<option value="8" >8</option>
+								<option value="9" >9</option>
+								<option value="10" >10</option>
+							</select>
 						</div>
 					</div>
 				</div>
@@ -258,7 +284,7 @@
 			<div class="sr-only">
 				{field:partido_rel}
 			</div>
-			<input type="submit" value="PREDECIR"  class="btn btn-success">
+			<input type="submit" value="Confirmar"  class="btn btn-success">
 		{/exp:channel:form}
 		<div id="mensajes">
 		</div>
