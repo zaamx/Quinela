@@ -12,7 +12,7 @@ body {
 }
 body {
   background: url('../images/shutterstock_175577192_.jpg') no-repeat center top;
-  background-color: #eeeeee;
+  background-color: #000;
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
@@ -37,10 +37,18 @@ img.icono-menu {
   width: 12px;
   height: 12px;
 }
+.supermargenbotom {
+  margin-bottom: 250px;
+}
 #home-ingreso-b {
   display: table;
   width: 100%;
   height: 100%;
+}
+#home-ingreso-c {
+  background: none !important;
+  text-shadow: 5px 1px 5px #000000;
+  font-size: 15px;
 }
 #home-ingreso,
 #home-ingreso-b,
@@ -67,11 +75,6 @@ img.icono-menu {
 #home-ingreso-c .link-bottom a {
   font-size: 40px;
   color: #eeeeee;
-}
-#home-ingreso-c {
-  background: none !important;
-  text-shadow: 5px 1px 5px #000000;
-  font-size: 15px;
 }
 .link-help {
   font-size: 20px;
