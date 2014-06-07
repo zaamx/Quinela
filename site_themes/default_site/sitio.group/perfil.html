@@ -1,4 +1,4 @@
-{embed="sitio/head" my_body_class="perfil" my_active_nav="perfil" my_page_title="Perfil | {title}"}
+{embed="sitio/head" my_body_class="perfil" my_active_nav="perfil" my_page_title="Perfil"}
 <div id="content">
 	<div class="container">
 		<div class="row">
@@ -32,10 +32,10 @@
 						<ul class="list-inline">
 
 							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="{segment_3}"  dynamic="no" disable="pagination"}
-							
+
 								<li class="item-badge">
 									<a class="item-badgelink" href="#"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="{lista_badges:descripcion_ganado}" data-title="{lista_badges:title}">
-										<img  height="90" width="90" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">	
+										<img  height="90" width="90" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">
 									</a>
 								</li>
 
@@ -73,17 +73,17 @@
 										{partido_rel:equipo_visitante}
 											<div class="col-sm-3">
 												{partido_rel:equipo_visitante:nombre_de_pais}<br>
-												<img class="img-circle" src="{partido_rel:equipo_visitante:bandera_seleccion}" alt="{partido_rel:equipo_visitante:nombre_de_pais}" height="72" width="72" >	
+												<img class="img-circle" src="{partido_rel:equipo_visitante:bandera_seleccion}" alt="{partido_rel:equipo_visitante:nombre_de_pais}" height="72" width="72" >
 											</div>
 										{/partido_rel:equipo_visitante}
 										<div class="col-sm-4 text-center">
 											{embed="sitio/part-ptsPartido" id_usuario="{segment_3}" id_partido="{partido_rel:entry_id}"}
 										</div>
-									{/partido_rel}	
+									{/partido_rel}
 								</div>
 								<div class="row">
 									<div class="col-sm-3">
-										{pre_marcador_local}	
+										{pre_marcador_local}
 									</div>
 									<div class="col-sm-3">
 										{pre_marcador_visitante}
@@ -91,13 +91,13 @@
 								</div>
 							</div>
 
-							
+
 						</div>
 
 
 
 							{if count == 1}
-							
+
 								{if count == 1}
 
 
@@ -106,10 +106,10 @@
 
 							{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"} --}
 
-					
+
 							{/if}
 
-							{if count == 2} 
+							{if count == 2}
 
 							Profesional
 
@@ -124,7 +124,7 @@
 					</div>
 				</div>
 
-				{if segment_3 == logged_in_member_id}					
+				{if segment_3 == logged_in_member_id}
 
 				{if:else}
 					<!-- ///////////////////////////////  Dar Badge ///////////////////////////////   -->
@@ -138,9 +138,9 @@
 								{exp:channel:entries channel="badges"   category="23"  dynamic="no" }
 									<div class="item" data-title="{title}" >
 										<a href="#" class="item-badgelink2" data-container="body" data-toggle="popover" data-placement="bottom" data-content="{descripcion_badge}" data-title="{title}">
-											<img alt="{entry_id}"  height="63" width="63" class="img-circle item-img" src="{imagen_badge}" alt="{title}">	
+											<img alt="{entry_id}"  height="63" width="63" class="img-circle item-img" src="{imagen_badge}" alt="{title}">
 										</a>
-									</div> 
+									</div>
 								{if no_results}<span>El usuario aun no ha jugado.</span>{/if}
 								{/exp:channel:entries}
 							</div>
@@ -153,18 +153,17 @@
 										if (data.success == '1') {
 											//alert('You successfully added a new entry with entry_id '+data.entry_id);
 											if(alert('Le haz dado una insignia a tu amigo')){}
-											else    window.location.reload(); 
-
-										} else if (data.success == '0') {					
+											else    window.location.reload();
+										} else if (data.success == '0') {
 											$('#mensajes').append(data.field_errors.title);
-											$('#mensajes').append(data.field_errors.lista_badges);                 		
+											$('#mensajes').append(data.field_errors.lista_badges);
 												 // alert('Failed with the following errors: '+ data.errors.join(', '));
 												}
 											}
 										});
 
 								$('.item-badgelink2').click(function (event) {
-									event.preventDefault(); 
+									event.preventDefault();
 									$('select[name="lista_badges[data][]"]').find('option[value="' + $(this).children('img.item-img').attr("alt") + '"]').attr("selected",true);
 
 
@@ -215,11 +214,15 @@
 							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}">
 							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 							<div class="sr-only">
-								{field:lista_badges}		
+								{field:lista_badges}
 							</div>
 							<input type="submit" value="Dar insignia" class="btn btn-success col-sm-4 col-sm-offset-4">
 							{/exp:channel:form}
-							<div id="mensajes">
+							<div id="mensajes" style="display:none;">
+								<hr>
+								<div class="alert alert-warning">
+
+								</div>
 							</div>
 						</div>
 					</div>
@@ -231,7 +234,7 @@
 
 							{exp:channel:entries channel="activ_comentarios_perfil" author_id="{segment_3}" status="Open" dynamic="no" limit="1"}
 								<div class="sr-only">
-									{title}	
+									{title}
 								</div>
 
 								{exp:stash:set name="idComentario"}{entry_id}{/exp:stash:set}
@@ -239,7 +242,7 @@
 								{exp:stash:set name="titComentario"}{url_title}{/exp:stash:set}
 
 								<div id="comentarios">
-								
+
 								</div>
 
 								<script type="text/javascript">
@@ -249,7 +252,7 @@
 									});
 								</script>
 
-								<a  class="btn btn-success col-sm-6 col-sm-offset-3" href="{path='site_index'}/sitio/perfil-comentarios/{exp:stash:get name="titComentario"}/{segment_3}"> 
+								<a  class="btn btn-success col-sm-6 col-sm-offset-3" href="{path='site_index'}/sitio/perfil-comentarios/{exp:stash:get name="titComentario"}/{segment_3}">
 										Comentar
 								</a>
 							{if no_results}
@@ -263,7 +266,7 @@
 						</div>
 					</div>
 
-				
+
 			</div>
 		</div>
 	</div>

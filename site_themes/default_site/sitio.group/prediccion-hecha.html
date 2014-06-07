@@ -101,7 +101,7 @@
 					<div class="row text-center">
 						<div class="col-md-4 col-md-offset-4">
 							<h3>
-								Resultado de partido
+								Resultado del partido
 							</h3>
 							<div class="well">
 								<h5>
@@ -181,8 +181,9 @@
 										// else    window.location.reload(); 
 
 									} else if (data.success == '0') {					
-										$('#mensajes').append(data.field_errors.title);
-										$('#mensajes').append(data.field_errors.lista_badges);                 		
+										$('#mensajes').show();
+										$('#mensajes .alert').append(data.field_errors.title+'<br>');
+										$('#mensajes .alert').append(data.field_errors.lista_badges+'<br>');                 		
 											 // alert('Failed with the following errors: '+ data.errors.join(', '));
 											}
 										}
@@ -201,8 +202,11 @@
 							<input type="submit" value="Sigue participando" class="btn btn-success col-sm-6 col-sm-offset-3">
 						{/exp:channel:form}
 
-						<div id="mensajes">
-							
+						<div id="mensajes" style="display:none;">
+							<hr>
+							<div class="alert alert-warning">
+								
+							</div>
 						</div>
 
 					{if:else}

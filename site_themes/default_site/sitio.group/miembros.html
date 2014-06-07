@@ -1,21 +1,21 @@
-{embed="sitio/head" my_body_class="perfil" my_active_nav="miembros" my_page_title="Perfil | {title}"}
+{embed="sitio/head" my_body_class="perfil" my_active_nav="miembros" my_page_title="Perfil | Miembros"}
 <div id="content">
   <div class="container">
     <div class="row">
-      
+
 
           {exp:user:users orderby="screen_name" group_id="5" sort="asc" limit="100" paginate="bottom" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
-          
-            
+
+
               <div class="col-sm-6">
                 <img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="35" width="35" alt="{screen_name}'s photo" class="img-circle" />
                 <a href="{path=sitio/perfil2}/{member_id}/">
                   <b>{screen_name}</b>
                 </a>
                 <hr>
-              </div>  
-                
-          
+              </div>
+
+
 					{if user_no_results}
           <li>Sin miembros</li>
           {/if}

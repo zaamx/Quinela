@@ -100,14 +100,14 @@ jQuery(document).ready(function($) {
         var hero        = jQuery('#home-ingreso'),
             winHeight   = jQuery(window).height(),
             heroHeight  = winHeight;
-          
+
             hero.css({height: heroHeight+"px"});
       };
-      
+
     jQuery(window).on("resize", heroInit);
     jQuery(document).on("ready", heroInit);
 
-    
+
 
   $("#member_form").validate({
         rules: {
@@ -172,12 +172,12 @@ jQuery(document).ready(function($) {
         highlight: function(element) {
             var id_attr = "#" + $( element ).attr("id") + "1";
             $(element).closest('.form-group').addClass('has-error has-feedback');
-            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');         
+            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');
         },
         unhighlight: function(element) {
             var id_attr = "#" + $( element ).attr("id") + "1";
             $(element).closest('.form-group').removeClass('has-error');
-            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');         
+            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');
         },
         errorElement: 'span',
         errorClass: 'help-block',
@@ -187,7 +187,7 @@ jQuery(document).ready(function($) {
             } else {
                 error.insertAfter(element);
             }
-        }      
+        }
   });
 
 
@@ -214,12 +214,12 @@ jQuery(document).ready(function($) {
         highlight: function(element) {
             var id_attr = "#" + $( element ).attr("id") + "1";
             $(element).closest('.form-group').addClass('has-error has-feedback');
-            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');         
+            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');
         },
         unhighlight: function(element) {
             var id_attr = "#" + $( element ).attr("id") + "1";
             $(element).closest('.form-group').removeClass('has-error');
-            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');         
+            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');
         },
         errorElement: 'span',
         errorClass: 'help-block',
@@ -229,11 +229,11 @@ jQuery(document).ready(function($) {
             } else {
                 error.insertAfter(element);
             }
-        }      
+        }
   });
 
 
-  
+
 
 
 

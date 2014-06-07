@@ -186,16 +186,14 @@
 							// alert('You successfully added a new entry with entry_id '+data.entry_id);
 							if(alert('Gracias por hacer tu predicción')){}
 							else   window.location.href = '{embed:urlDestino}/{embed:nombrePost}/'+data.entry_id;
-
-
-
 						} else if (data.success == '0') {
-                    		$('#mensajes').append(data.field_errors.title);
-                    		$('#mensajes').append(data.field_errors.pre_marcador_local);
-                    		$('#mensajes').append(data.field_errors.pre_marcador_visitante);
-                    		$('#mensajes').append(data.field_errors.pre_resultado_de_partido);
-                    		$('#mensajes').append(data.field_errors.pre_minuto_de_primer_gol);
-                    		$('#mensajes').append(data.field_errors.quien_anota_primero);
+							 $('#mensajes').show();
+                    		// $('#mensajes .alert').append(data.field_errors.title+'<br>');
+                    		$('#mensajes .alert').append(data.field_errors.pre_marcador_local+'<br>');
+                    		$('#mensajes .alert').append(data.field_errors.pre_marcador_visitante+'<br>');
+                    		$('#mensajes .alert').append(data.field_errors.pre_resultado_de_partido+'<br>');
+                    		// $('#mensajes .alert').append(data.field_errors.pre_minuto_de_primer_gol+'<br>');
+                    		$('#mensajes .alert').append(data.field_errors.quien_anota_primero+'<br>');
 						}
 					}
 				});
@@ -286,7 +284,11 @@
 			</div>
 			<input type="submit" value="Confirmar"  class="btn btn-success">
 		{/exp:channel:form}
-		<div id="mensajes">
+		<div id="mensajes" style="display:none;">
+			<hr>
+			<div class="alert alert-warning">
+				
+			</div>
 		</div>
 	</div>
 </div>
