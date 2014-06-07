@@ -1,4 +1,4 @@
-{embed="sitio/head" my_body_class="ranking-medallas" my_active_nav="ranking-medallas" my_page_title="Ranking Medallas"}
+{embed="sitio/head" my_body_class="ranking-medallas" my_active_nav="ranking-medallas" my_page_title="Ranking Insignias"}
 
 	<div id="content">
 		<div class="container">
@@ -10,7 +10,7 @@
 							Demuestra tu popularidad y mete gol de media cancha estando en el primer lugar de insignias.
 						</small>
 					</h2>
-					
+
 				</div>
 			</div>
 			<div id="inner-content" class="row">
@@ -42,7 +42,7 @@
 							{lista_badges}
 								<?php $badgesbyusers['{usuario_receptor_badge}'] = (isset($badgesbyusers['{usuario_receptor_badge}'])) ? $badgesbyusers['{usuario_receptor_badge}'] + '{lista_badges:valor_medalla}' : '{lista_badges:valor_medalla}' ; ?>
 							{/lista_badges}
-							
+
 						{/exp:channel:entries}
 						<?php arsort($badgesbyusers); ?>
 						<?php $count = 0; foreach($badgesbyusers as $user => $rank){ $count++; ?>
@@ -91,7 +91,7 @@
 						    						<!-- <small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small> -->
 						    					</h4>
 						    				</div>
-						    				
+
 					    				</div>
 					    			</div>
 					    		</div>
@@ -111,7 +111,7 @@
 			</div>
 
 
-							
+
 						<?php foreach($badgesbyusers as $k => $b){ ?>
 							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="<?php echo $k; ?>"  dynamic="no" disable="pagination"}
 								{title}<br>
