@@ -1,5 +1,5 @@
 {embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
-<div id="home-ingreso">
+<div id="home-ingreso-b">
 	<div class="container">
 
 		<div class="row">
@@ -12,18 +12,21 @@
             </div>
         </div>
 
+
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				{exp:user:edit return="{path='site_index'}recuperar/reset" screen_name_password_required="no" error_page="sitio/error-perfil"}
+				{exp:user:edit return="{path='sitio/recuperar/fin'}" screen_name_password_required="no" error_page="sitio/error-perfil" form:id="activacionpaso2" }
 
-							<div class="form-group">
+							<div class="form-group has-feedback">
 								<label for="Nombre">Nombre completo</label>
 								<input type="text" class="form-control" name="Nombre" id="Nombre" value="{Nombre}"/>
+								<span class="glyphicon form-control-feedback" id="Nombre1"></span>
 							</div>
 
-							<div class="form-group">
-								<label for="screen_name">Nombre de usuario</label>
+							<div class="form-group has-feedback">
+								<label for="screen_name">Nombre de usuario (con este nombre te identificar&aacute;s en la plataforma)</label>
 								<input type="text" class="form-control" name="screen_name" id="screen_name" value="{screen_name}"/>
+								<span class="glyphicon form-control-feedback" id="screen_name1"></span>
 							</div>
 
 
@@ -37,12 +40,10 @@
 											$('select[name="miembro_pertenencia"]').find('option[value="{miembro_pertenencia}"]').attr("selected",true);
 										});
 									</script>
-
 		  							<span>
 		  								Cambiar:
 		  							</span>
 		  							<br>
-
 					                 <select name="miembro_pertenencia" class="form-control">
 					                  {select_miembro_pertenencia}
 					                      <option value="{value}">{value}</option>
@@ -61,11 +62,119 @@
 									</a>
 								</label>
 							</div>
-							<input type="submit" class="btn btn-success" name="submit" value="Actualizar" />
-						{/exp:user:edit}  
+							<label for="BotBootInput">Por favor, ingresa la respuesta corrrecta a la suma mostrada a continuaci&oacute;n</label>
+							<div id="botty" class="form-group">
+							</div>
 
+							<input type="submit"  name="submit"  class="btn btn-success"  value="Actualizar" />
+						{/exp:user:edit}  
 			</div>
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+
+		var submit="no";
+
+		// Simple, anti-spam scheme  
+		var a = Math.ceil(Math.random() * 10);
+		var b = Math.ceil(Math.random() * 10);       
+		var c = " " + a + " + " + b;
+                
+        function botbuster()
+		{
+		var bot_answer_field = " <input id='BotBootInput' class='form-control' type='text' maxlength='2' size='2'/>";
+		document.getElementById("botty").innerHTML = c + bot_answer_field;
+		}
+
+		function ValidBotBoot(){
+		    var d = parseInt(document.getElementById('BotBootInput').value);
+			c = eval(c);
+			  if (d == c) {
+				submit="yes";
+			    }
+			else if (d != c) {
+				alert("Respuesta invalida por favor introduce la suma correcta");
+				submit="no";
+			 }
+			return submit;
+			}
+		// jQuery.validator.addMethod("lettersonly", function(value, element) {
+		//     return this.optional(element) || /^[a-zA-Z\s]+$/i.test(value);
+		// }, "Only alphabetical characters"); 
+ 
+
+		function isValidEmailAddress(emailAddress) {
+		    var pattern = new RegExp(/^[a-zA-Záéíóú]+(\s*[a-zA-Záéíóú]*)*[a-zA-Záéíóú]+$/);
+		    return pattern.test(emailAddress);
+		};
+		$(document).ready(function(){
+
+			isValidEmailAddress("dfsdfasd@dsfasdfas dfasdfsadf")
+
+
+			$.validator.addMethod("accept", function(value, element, param) { 
+				 	var pattern = new RegExp(/^[a-zA-Záéíóú]+(\s*[a-zA-Záéíóú]*)*[a-zA-Záéíóú]+$/);
+		    		return pattern.test(value);
+		    	 });
+
+			new botbuster();
+
+			 $("#activacionpaso2").validate({
+			 	submitHandler: function(form) {
+					var validBoot = ValidBotBoot();
+					if (validBoot=="yes") {
+				       		form.submit();
+					}
+				},
+		        rules: {
+		          Nombre: {
+		            required: true,
+		            // lettersonly: true
+		            accept: true
+		          },
+		          screen_name: {
+		            required: true,
+		            accept: true
+		          },
+		          terminosos: {
+		            required: true
+		          }
+		        },
+		        messages: {
+		          Nombre: {
+		            required: '*Ingresa tu nombre completo',
+		            accept: '*Solo letras para el nombre de usuario'
+		          },
+		          screen_name: {
+		            required: '*Ingresa tu nombre de usuario',
+		            accept: '*Solo letras para el nombre de usuario'
+		          },
+		          terminosos: {
+		            required: '*Debes aceptar términos y condiciones y avisos de privacidad'
+		          }
+		        },
+		        highlight: function(element) {
+		            var id_attr = "#" + $( element ).attr("id") + "1";
+		            $(element).closest('.form-group').addClass('has-error has-feedback');
+		            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');         
+		        },
+		        unhighlight: function(element) {
+		            var id_attr = "#" + $( element ).attr("id") + "1";
+		            $(element).closest('.form-group').removeClass('has-error');
+		            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');         
+		        },
+		        errorElement: 'span',
+		        errorClass: 'help-block',
+		        errorPlacement: function(error, element) {
+		            if(element.parent('.input-group').length) {
+		                error.insertAfter(element.parent());
+		            } else {
+		                error.insertAfter(element);
+		            }
+		        }      
+		  });
+		});
+
+  </script>
 {embed="sitio/foot2"}
