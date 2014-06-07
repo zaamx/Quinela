@@ -1,0 +1,70 @@
+{embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
+<div id="home-ingreso">
+	<div class="container">
+
+		<div class="row">
+            <div class="col-sm-12">
+                <div id="intro" class="text-center">
+                	<a href="{path='site_index'}" id="logo">	
+	                  <img src="{site_url}/themes/site_themes/default_site/library/images/LOGO_HOR_FONDO_CLARO.png">
+                  	</a>
+              	</div>
+            </div>
+        </div>
+        <div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<ul>
+				{exp:channel:entries channel="retas"    dynamic="no" disable="pagination"}
+						<li>{title}</li>
+						<li>{retador}</li>
+						<li>{partido}</li>
+						<li>{usuarios_disponibles}</li>
+						<li></li>
+				{/exp:channel:entries}
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<script type="text/javascript">
+							$(document).ready(function(){
+								$('#publishForm').ajaxForm({
+									dataType: 'json',
+									success: function(data) {
+									if (data.success == '1') {
+										//alert('You successfully added a new entry with entry_id '+data.entry_id);
+										if(alert('Tu predicción fue confirmada')){}
+										else   window.location.href = '{site_url}';
+										// else    window.location.reload(); 
+
+									} else if (data.success == '0') {					
+										$('#mensajes').append(data.field_errors.title);
+										$('#mensajes').append(data.field_errors.lista_badges);                 		
+											 // alert('Failed with the following errors: '+ data.errors.join(', '));
+											}
+										}
+									});
+								$('select[name="partido[data][]"]').find('option[value="{exp:url_title_to_entry_id url_title="{segment_3}"}"]').attr("selected",true);	
+							});
+						</script>
+
+						{exp:channel:form channel="retas" return="sitio/perfil2" status="open" json="yes"}
+							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-reta-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+							<input type="hidden" name="retador" id="retador" value="{logged_in_member_id}">
+							<div class="sr-only">
+								{field:partido}	
+							</div>
+							{field:usuarios_disponibles}
+							<input type="submit" value="Confirmar" class="btn btn-success col-sm-6 col-sm-offset-3">
+						{/exp:channel:form}
+
+						<div id="mensajes">
+							
+						</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+{embed="sitio/foot2"}

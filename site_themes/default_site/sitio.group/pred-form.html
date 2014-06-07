@@ -8,8 +8,8 @@
 </div>
 <div class="row">
 	<div class="col-sm-6 col-sm-offset-3">
-		<div class="alert alert-warning text-center">
-			<b>Gracias. Ya tenemos tu predicci&oacute;n para este partido</b>
+		<div class="alert alert-warning text-center" style="margin:75px 0 200px;">
+			<b>Gracias. Ya tenemos tu predicci&oacute;n para este partido.</b>
 		</div>		
 	</div>
 </div>
@@ -22,6 +22,18 @@
 		<hr>
 		<script type="text/javascript">
 			$(document).ready(function(){
+				 $("#publishForm").submit(function( event ){
+
+                    if ($(this).valid()){
+                        $("input:text,select").each(function(){
+                            $(this).prop('readonly', true);
+                        });
+
+                        $("button:submit").prop('disabled', true);
+                    }else{
+                        event.preventDefault();
+                    }
+                });
 				$('#publishForm').ajaxForm({
 					dataType: 'json',
 					success: function(data) {
@@ -67,14 +79,14 @@
 
 			<div>
 				<div class="row">
-					<div class="col-sm-3 col-sm-offset-3">
+					<div class="col-sm-4 col-sm-offset-2">
 						<div class="form-group" id="pre_marcador_local_cont">
 
 							<label for="pre_marcador_local">Goles local</label>
 							<input type="text"  class="form-control" name="pre_marcador_local" id="pre_marcador_local" value="">
 						</div>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-4">
 						<div class="form-group" id="pre_marcador_visitante_cont">
 							<label for="pre_marcador_visitante">Goles visitante</label>
 							<input type="text"  class="form-control"  name="pre_marcador_visitante" id="pre_marcador_visitante" value="">

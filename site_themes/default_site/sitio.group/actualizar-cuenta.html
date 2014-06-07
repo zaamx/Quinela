@@ -21,7 +21,7 @@
 				{if segment_3 == "exito"}
 				<div class="alert alert-success alert-dismissable">
 				 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-					You've successfully updated your account!
+					Has actualizado tu cuenta
 				</div>
 				{/if}
 
@@ -32,36 +32,27 @@
 </div>
 
 				{exp:user:edit return="sitio/actualizar-cuenta/exito" error_page="sitio/error-perfil"}
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="text" name="email" id="email" value="{email}" class="form-control" />
-				</div>
 
 				<div class="form-group">
-					<label for="username">Username:</label>
-					<input type="text" name="username" id="username" value="{username}" class="form-control" />
-				</div>
-
-				<div class="form-group">
-					<label for="password">New Password:</label>
+					<label for="password">Nueva contraseña:</label>
 					<input type="password" name="password" id="password" class="form-control" />
 				</div>
 
 				<div class="form-group">
-					<label for="password_confirm">Confirm New Password:</label>
+					<label for="password_confirm">Confirma nueva contraseña</label>
 					<input type="password" name="password_confirm" id="password_confirm" class="form-control" />
 				</div>
 
 				<hr />
 
-				<p>In order to update this page, you'll have to submit the current password:</p>
+				<p>Ingresa tu contraseña actual para poder asignar la nueva:</p>
 				
 				<div class="form-group">
-					<label for="current_password">Current Password:</label>
+					<label for="current_password">Contraseña actual</label>
 					<input type="password" name="current_password" id="current_password" class="form-control" />
 				</div>
 
-				<input class="btn btn-success" type="submit" name="submit" value="Update" />
+				<input class="btn btn-success" type="submit" name="submit" value="Actualizar" />
 				{/exp:user:edit}  
 
 

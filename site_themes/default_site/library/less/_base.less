@@ -12,12 +12,12 @@ html, body {
 body {
 
 	background: url('../images/shutterstock_175577192_.jpg') no-repeat center top;
-	background-color: @gray-lighter;
+	background-color: #000;
 	background-size: cover; 
 	background-attachment:fixed;
 	height: 100%;
     width: 100%;
-    
+
 }
 
 body.gracias {
@@ -41,13 +41,25 @@ img.icono-menu {
 	width: 12px;
 	height: 12px;
 }
-#home-ingreso, #home-ingreso-b, #home-ingreso-c {
+.supermargenbotom {
+	margin-bottom: 250px;
+}
+#home-ingreso-b {
 	display: table;
 	width: 100%;
 	height: 100%;
+}
+#home-ingreso-c {
+	background: none !important;
+	text-shadow: 5px 1px 5px rgba(0, 0, 0, 1);
+	font-size: 15px;
+
+}
+#home-ingreso, #home-ingreso-b, #home-ingreso-c {
+	
 	position: relative;
 	text-shadow: 5px 1px 5px rgba(0, 0, 0, 1);
-	background: rgba(0, 0, 0, 0.3);
+	background: url('../images/PIXEL_NEGRO.png');
 	color : @gray-lighter;
 	padding: 100px 0 30px;	
 	margin: 0;
@@ -67,12 +79,7 @@ img.icono-menu {
 		}
 	}
 }
-#home-ingreso-c {
-	background: none !important;
-	text-shadow: 5px 1px 5px rgba(0, 0, 0, 1);
-	font-size: 15px;
 
-}
 .link-help {
 	font-size: 20px;
 	float: right;
@@ -85,7 +92,7 @@ img.icono-menu {
 	}
 }
 .bdActive {
-	border: 2px solid @brand-success;
+	border: 4px solid @brand-success;
 }
  
 .form-horizontal .has-feedback .form-control-feedback {
@@ -119,7 +126,7 @@ header.head-interiores {
 
 	}
 	.bottom {
-		background: rgba(0, 0, 0, 0.7);
+		background: url('../images/PIXEL_NEGRO.png');
 		padding: 5px 0;
 
 	}
@@ -188,19 +195,31 @@ ul#pasos-prediccion {
 /*********************
 03. POSTS & CONTENT STYLES
 *********************/
-.greentxt {
+.greentxt { 
 	color: @brand-success;
 	text-transform: uppercase;
+	small {
+		text-transform: initial;
+		color: @gray-darker;
+	}
 }
 
 .bleuetxt {
 	color: #0097c6;
 	text-transform: uppercase;
+	small {
+		text-transform: initial;
+		color: @gray-darker;
+	}
 }
 
 .orangetxt {
 	color: @brand-warning;
 	text-transform: uppercase;
+	small {
+		text-transform: initial;
+		color: @gray-darker;
+	}
 }
 .partidos-dia {
 	padding: 10px 0px 45px;
@@ -208,7 +227,7 @@ ul#pasos-prediccion {
 #content {
 	padding: 20px 0 20px;
 	// background: @gray-lighter;
-	background: rgba(255, 255, 255, 0.8);
+	background: url('../images/PIXEL_BLANCO.png');
 	article.item-partido{
 		margin: 10px 0 10px;
 		h5 {
@@ -247,11 +266,25 @@ body.partido {
 		}
 	}
 }
+body.ranking-medallas {
+	.item-premio-med {
+		height: 195px;
+		overflow: hidden;
+		img.img-premio {
+			height: 100%;
+			width: auto;
+		}
+		.texto-premio {
+			word-wrap: break-word;
+		}
+	}
+}
 
 body.perfil-edit {
 	#content {
-		background: rgba(0, 0, 0, 0.9);
+		background: url('../images/PIXEL_NEGRO.png');
 		color : @gray-lighter;
+		padding-bottom: 200px;
 	}
 }
 
@@ -275,32 +308,40 @@ a.item-badgelink2 {
 body.singles {
 	#home-ingreso {
 		position: relative;
-		background: rgba(0, 0, 0, 0.6);
+		background: url('../images/PIXEL_NEGRO.png');
 		color : @gray-lighter;
 		padding: 100px 0 30px;	
 		margin: 0;
 	}
 }
-
+.partido-midle {
+	padding: 80px 0 0;
+}
 .item-bad {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
 .item-ranking,
-.item-premio  {
+.item-premio {
  height: 150px;
  margin-bottom: 40px;
 }
 
 .item-ranking {
 	position: relative;
-	img.item-micro{
+	word-wrap: break-word;
+	a.item-a {
 		display: block;
-	    position: absolute;
-	    right: -37px;
-	    z-index: 200;
-	    top: -10px;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		left: -53px;
+		z-index: 200;
+		top: -4px;
+		img.item-micro{
+			
+		}	
 	}
 	.texto-usuario {
 		position: absolute;
@@ -308,6 +349,7 @@ body.singles {
 		left: 0;
 		right: 0;
 		padding: 3px 4px;
+		word-wrap: break-word;
 		h4 {
 			font-size: 16px;
 			color: @gray-darker;
@@ -319,6 +361,19 @@ body.singles {
 		}	
 	}
 }
+.item-ranking {
+		height: 150px !important;
+	}
+.item-ranking-medalla {
+	height: 50px;
+ 	margin-bottom: 40px;
+
+ 	img {
+ 		position: absolute;
+		right: 0;
+		top: -30px;
+ 	}
+}
 .item-premio  {
 	position: relative;
 	width: 100%;
@@ -328,6 +383,33 @@ body.singles {
 	img.img-premio {
 		width: auto;
 		height: 100%;
+	}
+	.texto-premio {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 3px 4px;
+		background: url('../images/PIXEL_NEGRO.png');
+		color: @gray-lighter;
+		h4 {
+			color: @gray-lighter;
+			margin: 0;
+		}
+	}
+
+}
+
+
+.item-premio-med  {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+	font-size: 10px;
+	img.img-premio {
+		width: 100%;
+		height: auto;
 	}
 	.texto-premio {
 		position: absolute;

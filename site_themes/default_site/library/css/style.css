@@ -12,7 +12,7 @@ body {
 }
 body {
   background: url('../images/shutterstock_175577192_.jpg') no-repeat center top;
-  background-color: #eeeeee;
+  background-color: #000;
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
@@ -37,15 +37,25 @@ img.icono-menu {
   width: 12px;
   height: 12px;
 }
-#home-ingreso,
-#home-ingreso-b,
-#home-ingreso-c {
+.supermargenbotom {
+  margin-bottom: 250px;
+}
+#home-ingreso-b {
   display: table;
   width: 100%;
   height: 100%;
+}
+#home-ingreso-c {
+  background: none !important;
+  text-shadow: 5px 1px 5px #000000;
+  font-size: 15px;
+}
+#home-ingreso,
+#home-ingreso-b,
+#home-ingreso-c {
   position: relative;
   text-shadow: 5px 1px 5px #000000;
-  background: rgba(0, 0, 0, 0.3);
+  background: url('../images/PIXEL_NEGRO.png');
   padding: 100px 0 30px;
   margin: 0;
   color: #eeeeee;
@@ -66,11 +76,6 @@ img.icono-menu {
   font-size: 40px;
   color: #eeeeee;
 }
-#home-ingreso-c {
-  background: none !important;
-  text-shadow: 5px 1px 5px #000000;
-  font-size: 15px;
-}
 .link-help {
   font-size: 20px;
   float: right;
@@ -83,7 +88,7 @@ img.icono-menu {
   color: #5cb85c;
 }
 .bdActive {
-  border: 2px solid #5cb85c;
+  border: 4px solid #5cb85c;
 }
 .form-horizontal .has-feedback .form-control-feedback {
   right: 3px;
@@ -113,7 +118,7 @@ header.head-interiores .top p {
   font-size: 17px;
 }
 header.head-interiores .bottom {
-  background: rgba(0, 0, 0, 0.7);
+  background: url('../images/PIXEL_NEGRO.png');
   padding: 5px 0;
 }
 .head-title {
@@ -174,20 +179,32 @@ ul#pasos-prediccion li.activaa {
   color: #5cb85c;
   text-transform: uppercase;
 }
+.greentxt small {
+  text-transform: initial;
+  color: #222222;
+}
 .bleuetxt {
   color: #0097c6;
   text-transform: uppercase;
 }
+.bleuetxt small {
+  text-transform: initial;
+  color: #222222;
+}
 .orangetxt {
   color: #f0ad4e;
   text-transform: uppercase;
+}
+.orangetxt small {
+  text-transform: initial;
+  color: #222222;
 }
 .partidos-dia {
   padding: 10px 0px 45px;
 }
 #content {
   padding: 20px 0 20px;
-  background: rgba(255, 255, 255, 0.8);
+  background: url('../images/PIXEL_BLANCO.png');
 }
 #content article.item-partido {
   margin: 10px 0 10px;
@@ -215,9 +232,21 @@ body.partido #quien_anota_primero_cont fieldset label {
   width: 33.33%;
   float: left;
 }
+body.ranking-medallas .item-premio-med {
+  height: 195px;
+  overflow: hidden;
+}
+body.ranking-medallas .item-premio-med img.img-premio {
+  height: 100%;
+  width: auto;
+}
+body.ranking-medallas .item-premio-med .texto-premio {
+  word-wrap: break-word;
+}
 body.perfil-edit #content {
-  background: rgba(0, 0, 0, 0.9);
+  background: url('../images/PIXEL_NEGRO.png');
   color: #eeeeee;
+  padding-bottom: 200px;
 }
 a.item-badgelink {
   display: block;
@@ -227,10 +256,13 @@ a.item-badgelink2 {
 }
 body.singles #home-ingreso {
   position: relative;
-  background: rgba(0, 0, 0, 0.6);
+  background: url('../images/PIXEL_NEGRO.png');
   color: #eeeeee;
   padding: 100px 0 30px;
   margin: 0;
+}
+.partido-midle {
+  padding: 80px 0 0;
 }
 .item-bad {
   margin-top: 10px;
@@ -243,13 +275,16 @@ body.singles #home-ingreso {
 }
 .item-ranking {
   position: relative;
+  word-wrap: break-word;
 }
-.item-ranking img.item-micro {
+.item-ranking a.item-a {
   display: block;
   position: absolute;
-  right: -37px;
+  width: 50px;
+  height: 50px;
+  left: -53px;
   z-index: 200;
-  top: -10px;
+  top: -4px;
 }
 .item-ranking .texto-usuario {
   position: absolute;
@@ -257,6 +292,7 @@ body.singles #home-ingreso {
   left: 0;
   right: 0;
   padding: 3px 4px;
+  word-wrap: break-word;
 }
 .item-ranking .texto-usuario h4 {
   font-size: 16px;
@@ -266,6 +302,18 @@ body.singles #home-ingreso {
 .item-ranking .texto-usuario h4 small {
   font-size: 14px;
   color: #222222;
+}
+.item-ranking {
+  height: 150px !important;
+}
+.item-ranking-medalla {
+  height: 50px;
+  margin-bottom: 40px;
+}
+.item-ranking-medalla img {
+  position: absolute;
+  right: 0;
+  top: -30px;
 }
 .item-premio {
   position: relative;
@@ -284,10 +332,34 @@ body.singles #home-ingreso {
   left: 0;
   right: 0;
   padding: 3px 4px;
-  background: rgba(0, 0, 0, 0.8);
+  background: url('../images/PIXEL_NEGRO.png');
   color: #eeeeee;
 }
 .item-premio .texto-premio h4 {
+  color: #eeeeee;
+  margin: 0;
+}
+.item-premio-med {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  font-size: 10px;
+}
+.item-premio-med img.img-premio {
+  width: 100%;
+  height: auto;
+}
+.item-premio-med .texto-premio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3px 4px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #eeeeee;
+}
+.item-premio-med .texto-premio h4 {
   color: #eeeeee;
   margin: 0;
 }
@@ -334,6 +406,11 @@ SIDEBARS & ASIDES
 *********************/
   .profileInt {
     text-align: right !important;
+  }
+  .item-bad {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 175px;
   }
   .sidebar {
     margin-top: 2.2em;

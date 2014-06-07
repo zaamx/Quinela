@@ -133,9 +133,6 @@ jQuery(document).ready(function($) {
             required: true,
             equalTo: "#password"
           },
-          invitation : {
-            required: true
-          },
           accept_terms: {
             required: true
           },
@@ -164,9 +161,6 @@ jQuery(document).ready(function($) {
           },
           password_confirm: {
             required: '*No coincide tu contraseña, int&eacute;ntalo de nuevo'
-          },
-          invitation: {
-            required: '*Debes ingresar el código de invitación que se envio a tu correo'
           },
           accept_terms: {
             required: '*Debes aceptar términos y condiciones y avisos de privacidad'

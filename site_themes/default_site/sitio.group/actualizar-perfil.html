@@ -43,14 +43,14 @@
 						{if segment_3 == "exito"}
 							<div class="alert alert-success alert-dismissable">
 							  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-							  Haz actualizado tu perfil
+							  Has  actualizado tu perfil
 							</div>
 						{/if}
 
 						{if segment_3 == "exito-avatar"}
 							<div class="alert alert-success alert-dismissable">
 							  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								Haz actualizado tu imagen de perfil
+								Has  actualizado tu imagen de perfil
 							</div>
 							
 						{/if}
@@ -70,7 +70,7 @@
 								{exp:channel:form channel="activ_comentarios_perfil"  entry_id="{entry_id}" return="sitio/actualizar-perfil/{segment_3}" status="closed"}
 									<input type="hidden" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
 
-									<input type="submit" value="Desactivar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
+									<input type="submit" value="Desactivar comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
 								{/exp:channel:form}
 
 
@@ -93,7 +93,7 @@
 
 								<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-coment" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
 
-								<input type="submit" value="Activar Comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
+								<input type="submit" value="Activar comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
 								{/exp:channel:form}
 							{/if}
 						{/exp:channel:entries}

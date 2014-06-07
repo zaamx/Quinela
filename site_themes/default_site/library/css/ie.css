@@ -32,6 +32,11 @@ SIDEBARS & ASIDES
 .profileInt {
   text-align: right !important;
 }
+.item-bad {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 175px;
+}
 .sidebar {
   margin-top: 2.2em;
 }

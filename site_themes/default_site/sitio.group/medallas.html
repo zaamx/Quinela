@@ -13,74 +13,143 @@
 			</div>
 		</div>
 		<div id="inner-content" class="row">
-
-			<div class="col-sm-5">
+			<div class="col-sm-12">
 				<div class="row">
-					<h3 class="text-center">
+					<div class="col-sm-12">
+						<hr>
+						<h3 class="text-center">
 						Insignias de desempeño
 					</h3>
-				</div>
-				{exp:channel:entries channel="badges" category="24" dynamic="no" paginate="bottom"}							
-
-					<div class="item-bad row">	
-						<div class="imgBadge col-sm-4 text-center">
-							<img src="{imagen_badge}"  height="110" width="110" class="img-circle" alt="">
-						</div>
-						<div class="desBadge col-sm-8">
-							<h4>
-								{title} <br>
-								<!-- <small>
-									Definir la descripción y las reglas del badge.
-								</small> -->
-							</h4>
-							<p>
-								{descripcion_badge}
-							</p>
-							
-						</div>
+					<hr>	
 					</div>
-					<hr>
+				</div>
 
-				{if no_results}<span>El usuario aun no ha jugado.</span>{/if}				
+				<div class="row">	
+					{exp:channel:entries channel="badges" category="24" dynamic="no" paginate="bottom"}
 
-				{/exp:channel:entries}
+						{if count <= 20}
+							<div class="col-sm-6">
+								<div class="item-bad row" id="{entry_id}">	
+									<div class="imgBadge col-sm-4 text-center">
+										<img src="{imagen_badge}"  height="110" width="110" class="img-circle" alt="">
+									</div>
+									<div class="desBadge col-sm-8">
+										<h4>
+											{title} <br>
+											<!-- <small>
+												Definir la descripción y las reglas del badge.
+											</small> -->
+										</h4>
+										<p>
+											{descripcion_badge}
+										</p>
+										
+									</div>
+								</div>
+							</div>
+						{/if}
+						{if count >= 21}
+						<div class="col-sm-6">
+							<div class="item-bad row" id="{entry_id}">	
+								<div class="imgBadge col-sm-4 text-center">
+									<img src="{imagen_badge}"  height="110" width="110" class="img-circle" alt="">
+								</div>
+								<div class="desBadge col-sm-8">
+									<h4>
+										{title} <br>
+										<!-- <small>
+											Definir la descripción y las reglas del badge.
+										</small> -->
+									</h4>
+									<p>
+										{descripcion_badge}
+									</p>
+									
+								</div>
+							</div>
+						</div>
+						
+						{/if}				
 
-			</div>
+					
+					{if no_results}<span>El usuario aun no ha jugado.</span>{/if}				
 
-			
-			<div class="col-sm-1">
-			</div>
+					{/exp:channel:entries}
+				</div>
 
-			<div class="col-sm-5">
 				<div class="row">
+					<div class="col-sm-12">
+						<hr>
 					<h3 class="text-center">
 						Insignias sociales
 					</h3>
-				</div>
-				{exp:channel:entries channel="badges" category="23"  dynamic="no" paginate="bottom"}							
-
-					<div class="item-bad row">	
-						<div class="imgBadge col-sm-4 text-center">
-							<img src="{imagen_badge}"  height="110" width="110" class="img-circle" alt="">
-						</div>
-						<div class="desBadge col-sm-8">
-							<h4>
-								{title} <br>
-								<!-- <small>
-									Definir la descripción y las reglas del badge.
-								</small> -->
-							</h4>
-							<p>
-								{descripcion_badge}
-							</p>
-							
-						</div>
+<hr>
 					</div>
-					<hr>
+					
+				</div>
+
+				<div class="row">
+					{exp:channel:entries channel="badges" category="23"  dynamic="no" paginate="bottom"}
+
+						{if count <= 8}
+							<div class="col-sm-6">
+								<div class="item-bad row">	
+									<div class="imgBadge col-sm-4 text-center">
+										<img src="{imagen_badge}"  height="110" width="110" class="img-circle" alt="">
+									</div>
+									<div class="desBadge col-sm-8">
+										<h4>
+											{title} <br>
+											<!-- <small>
+												Definir la descripción y las reglas del badge.
+											</small> -->
+										</h4>
+										<p>
+											{descripcion_badge}
+										</p>
+										
+									</div>
+								</div>
+								
+							</div>
+						{/if}
+						{if count >= 7}
+							<div class="col-sm-6">
+								<div class="item-bad row" id="{entry_id}">	
+									<div class="imgBadge col-sm-4 text-center">
+										<img src="{imagen_badge}"  height="110" width="110" class="img-circle" alt="">
+									</div>
+									<div class="desBadge col-sm-8">
+										<h4>
+											{title} <br>
+											<!-- <small>
+												Definir la descripción y las reglas del badge.
+											</small> -->
+										</h4>
+										<p>
+											{descripcion_badge}
+										</p>
+										
+									</div>
+								</div>
+								
+							</div>
+						{/if}					
 
 				{if no_results}<span>El usuario aun no ha jugado.</span>{/if}				
 
 				{/exp:channel:entries}
+				</div>
+
+			</div>
+
+
+
+			<div class="col-sm-5">
+				<div class="row">
+					
+				</div>
+				
 
 			</div>
 			

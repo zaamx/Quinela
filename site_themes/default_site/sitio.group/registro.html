@@ -1,5 +1,5 @@
 {embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
-<div id="home-ingreso-b">
+<div id="home-ingreso">
 	<div class="container">
 
 		<div class="row">
@@ -11,16 +11,12 @@
               	</div>
             </div>
         </div>
-
-
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
 				<h1 class="text-center">¿Estás listo para vivir tu pasión?</h1>
 				<p class="text-center">
 					<b>Reg&iacute;strate y debuta en la Copa Aserta</b>  
 				</p>
-
-				
 			{exp:user:register return="sitio/gracias" override_return="sitio/gracias" error_page="sitio/error-perfil" form:class="register" }
 
 				<div class="form-group has-feedback">
@@ -29,7 +25,7 @@
 					<span class="glyphicon form-control-feedback" id="nombre1"></span>
 				</div>
 				<div class="form-group has-feedback">
-					<label for="screen_name">Nombre de usuario (con este nombre te identificaras en la plataforma.)</label>
+					<label for="screen_name">Nombre de usuario (con este nombre te identificaras en la plataforma)</label>
 					<input type="text" name="screen_name" id="screen_name" class="form-control" placeholder="Lupix"/>
 					<span class="glyphicon form-control-feedback" id="screen_name1"></span>
 				</div>
@@ -59,6 +55,12 @@
 					<input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Contraseña">
 					<span class="glyphicon form-control-feedback" id="password_confirm1"></span>
 				</div>
+				<div class="form-group has-feedback">
+					<label for="invitation">C&oacute;digo de invitaci&oacute;n</label>
+					<input class="form-control"  type="text" name="invitation"  id="invitation" value="" />
+					<span class="glyphicon form-control-feedback" id="invitation1"></span>
+				</div>
+
 				<div class="checkbox">
 					<label>
 						<input type="checkbox" name="accept_terms" value="y" /> He leído y acepto los 
@@ -74,7 +76,7 @@
 
 				{if captcha}
 				<div class="form-group has-feedback">
-					<label for="captcha">Escribe la palabras que ves abajo</label>
+					<label for="captcha">Escribe la palabra que ves abajo</label>
 					<input id="captcha" class="form-control"  type="text" name="captcha" />
 					<br>
 					{captcha}
