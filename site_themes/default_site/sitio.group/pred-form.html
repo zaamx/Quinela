@@ -186,16 +186,13 @@
 							// alert('You successfully added a new entry with entry_id '+data.entry_id);
 							if(alert('Gracias por hacer tu predicción')){}
 							else   window.location.href = '{embed:urlDestino}/{embed:nombrePost}/'+data.entry_id;
-
-
-
 						} else if (data.success == '0') {
-                    		$('#mensajes').append(data.field_errors.title);
-                    		$('#mensajes').append(data.field_errors.pre_marcador_local);
-                    		$('#mensajes').append(data.field_errors.pre_marcador_visitante);
-                    		$('#mensajes').append(data.field_errors.pre_resultado_de_partido);
-                    		$('#mensajes').append(data.field_errors.pre_minuto_de_primer_gol);
-                    		$('#mensajes').append(data.field_errors.quien_anota_primero);
+                    		$('#mensajes .alert').append(data.field_errors.title);
+                    		$('#mensajes .alert').append(data.field_errors.pre_marcador_local);
+                    		$('#mensajes .alert').append(data.field_errors.pre_marcador_visitante);
+                    		$('#mensajes .alert').append(data.field_errors.pre_resultado_de_partido);
+                    		$('#mensajes .alert').append(data.field_errors.pre_minuto_de_primer_gol);
+                    		$('#mensajes .alert').append(data.field_errors.quien_anota_primero);
 						}
 					}
 				});
@@ -261,6 +258,9 @@
 			<input type="submit" value="PREDECIR"  class="btn btn-success">
 		{/exp:channel:form}
 		<div id="mensajes">
+			<div class="alert">
+				
+			</div>
 		</div>
 	</div>
 </div>
