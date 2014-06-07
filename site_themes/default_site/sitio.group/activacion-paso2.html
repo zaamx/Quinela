@@ -65,8 +65,8 @@
 							<label for="BotBootInput">Por favor, ingresa la respuesta corrrecta a la suma mostrada a continuaci&oacute;n</label>
 							<div id="botty" class="form-group">
 							</div>
-							<input type="submit"  name="submit"  class="btn btn-success"  value="Actualizar" />
 
+							<input type="submit"  name="submit"  class="btn btn-success"  value="Actualizar" />
 						{/exp:user:edit}  
 			</div>
 		</div>
@@ -102,6 +102,8 @@
 		// jQuery.validator.addMethod("lettersonly", function(value, element) {
 		//     return this.optional(element) || /^[a-zA-Z\s]+$/i.test(value);
 		// }, "Only alphabetical characters"); 
+ 
+
 		function isValidEmailAddress(emailAddress) {
 		    var pattern = new RegExp(/^[a-zA-Záéíóú]+(\s*[a-zA-Záéíóú]*)*[a-zA-Záéíóú]+$/);
 		    return pattern.test(emailAddress);

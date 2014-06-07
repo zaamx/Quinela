@@ -1,0 +1,16 @@
+{exp:channel:entries channel="puntos_usuarios" search:id_usuario="{embed:id_usuario}" search:id_partido="{embed:id_partido}" dynamic="no" limit="1" }
+	
+	<td class="col-sm-3">{embed:nombre_usuario}</td><td class="col-sm-3">{embed:puntos_prediccion}</td><td class="col-sm-3"></td><td class="col-sm-3"></td>
+
+	{if no_results}		
+		<td class="col-sm-3"></td><td class="col-sm-3"></td><td class="col-sm-3">{embed:nombre_usuario}</td><td class="col-sm-3">{embed:puntos_prediccion}</td>
+		{exp:channel:form channel="puntos_usuarios" return="sitio/puntos" status="Open" id=""}
+				<input type="hidden" name="title" value="{embed:title}" size="50" maxlength="100" >
+				<input type="hidden" name="id_usuario" value="{embed:id_usuario}">
+				<input type="hidden" name="id_prediccion" value="{embed:id_prediccion}">
+				<input type="hidden" name="id_partido" value="{embed:id_partido}">
+				<input type="hidden" name="puntos_prediccion" value="{embed:puntos_prediccion}">
+		{/exp:channel:form}
+	{/if}
+
+{/exp:channel:entries}

@@ -1,3 +1,24 @@
+
+	<script>
+    //availableTags = new Array();
+    availableUsers = [
+    	{exp:user:users}
+    		'{screen_name}',
+    	{/exp:user:users}
+    ];
+    availableUsersEmails = new Array()
+    	{exp:user:users}
+    		availableUsersEmails['{screen_name}'] = '{email}';
+
+    	{/exp:user:users}
+  </script>
+
+  <?php $users_info = array(); ?>
+
+{exp:user:users}
+	<?php $users_info['{email}'] = '{screen_name}'; ?>
+{/exp:user:users}
+
 {exp:channel:entries channel="predicciones" author_id="CURRENT_USER" dynamic="no" limit="1" disable="categories|member_data|pagination|category_fields"  search:id_de_partido="{embed:id_partido}" }
 
 <div class="sr-only">
@@ -8,10 +29,134 @@
 </div>
 <div class="row">
 	<div class="col-sm-6 col-sm-offset-3">
-		<div class="alert alert-warning text-center" style="margin:75px 0 200px;">
+		<div class="alert alert-warning text-center" style="margin:75px 0 0px;">
 			<b>Gracias. Ya tenemos tu predicci&oacute;n para este partido.</b>
-		</div>		
+		</div>
 	</div>
+</div>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+<script>
+  $(function() {
+    /*$(".usersInput").autocomplete({
+      source: availableUsers
+    });*/
+    $(".clearUserInput").on('click',function(e){
+    	e.preventDefault();
+    	$(this).siblings('input.usersInput').val('');
+    });
+    $("#publishForm").submit(function(){
+    	if($(this).children('input[name=submit]').val() == 'no'){
+
+    		$("input[name=emails_amigos]").val('');
+    		var len = $("select.usersInput").length;
+
+    		$.each($("select.usersInput"),function(index,element){
+    			if( $(this).val() != '' ){
+          			$("input[name=emails_amigos]").val($("input[name=emails_amigos]").val() + $(this).val() + ',');
+          		}
+	    	});
+
+	    	var newStr = $("input[name=emails_amigos]").val().substring(0, $("input[name=emails_amigos]").val().length-1);
+			$("input[name=emails_amigos]").val(newStr);
+
+			if( $("input[name=emails_amigos]").val() != '' ){
+				$(this).children('input[name=submit]').val('yes');
+	    		$(this).submit();
+			}else{
+				console.log('VACIO!!!');
+				$('.error_invitacion').fadeIn('fast');
+				setTimeout(function(){
+					$('.error_invitacion').fadeOut('slow');
+				},3000);
+			}
+
+	    	return false;
+
+    	}
+
+    })
+  });
+
+  </script>
+  <div classs="row">
+  	<div class="col-sm-6 col-sm-offset-3 text-center">
+  		{exp:channel:form channel="retas" return="sitio/partidos" status="Open"}
+  		<h3>¿Quieres retar a alguien más?</h3>
+  		<p>Ok, ya tienes tu apuesta ¿quieres retar a tu amigo o compañero de trabajo? Escribe su nombre de usuario e invitalo.</p>
+  		<div class="alert alert-danger error_invitacion" style="display:none">
+  			<strong>Debes seleccionar mínimo uno de tus amigos</strong>
+  		</div>
+  		<div class="form-group has-warning has-feedback">
+			<select name="" id="" class="form-control usersInput">
+				<option value="">Aquí selecciona el nombre de usuario de tu amigo.</option>
+				<?php foreach ($users_info as $key => $value): ?>
+						<option value="<?php echo $key ?>"><?php echo $value ?></option>
+				<?php endforeach; ?>
+			</select>
+		  <!--<input type="text" class="form-control usersInput" id="inputWarning2" placeHolder="Aquí escribe el nombre de usuario de tu amigo." >
+		  <span class="clearUserInput glyphicon glyphicon-remove form-control-feedback"></span>-->
+		</div>
+  		<div class="form-group has-warning has-feedback">
+		  <select name="" id="" class="form-control usersInput">
+		  		<option value="">Aquí selecciona el nombre de usuario de tu amigo.</option>
+  				<?php foreach ($users_info as $key => $value): ?>
+  						<option value="<?php echo $key ?>"><?php echo $value ?></option>
+  				<?php endforeach; ?>
+  			</select>
+		</div>
+  		<div class="form-group has-warning has-feedback">
+		  	<select name="" id="" class="form-control usersInput">
+		  		<option value="">Aquí selecciona el nombre de usuario de tu amigo.</option>
+  				<?php foreach ($users_info as $key => $value): ?>
+  						<option value="<?php echo $key ?>"><?php echo $value ?></option>
+  				<?php endforeach; ?>
+  			</select>
+		</div>
+  		<div class="form-group has-warning has-feedback">
+		  	<select name="" id="" class="form-control usersInput">
+		  		<option value="">Aquí selecciona el nombre de usuario de tu amigo.</option>
+  				<?php foreach ($users_info as $key => $value): ?>
+  						<option value="<?php echo $key ?>"><?php echo $value ?></option>
+  				<?php endforeach; ?>
+  			</select>
+		</div>
+  		<div class="form-group has-warning has-feedback">
+		  	<select name="" id="" class="form-control usersInput">
+		  		<option value="">Aquí selecciona el nombre de usuario de tu amigo.</option>
+				<?php foreach ($users_info as $key => $value): ?>
+						<option value="<?php echo $key ?>"><?php echo $value ?></option>
+				<?php endforeach; ?>
+			</select>
+		</div>
+		<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-Reta-" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+		<input type="hidden" name="retador" id="retador" value="{logged_in_member_id}" size="10" maxlength="100" onkeyup="liveUrlTitle();">
+		<input type="hidden" name="emails_amigos" id="email_amigos" value="" size="500" maxlength="500" onkeyup="liveUrlTitle();">
+		<input name="submit" type="hidden" value="no" />
+		{custom_fields}
+		 {if relationships}
+
+	    {if allow_multiple}
+	    {if:else}
+	        <select id="partido" name="partido[data][]" style="display:none;">
+	        {options}
+	          <option value="{option_value}"{selected}>{option_name}</option>
+	        {/options}
+	        </select>
+
+			<script type="text/javascript">
+				$(function() {
+					$('select[name="partido[data][]"]').find('option[value="{embed:id_partido}"]').attr("selected",true);
+				});
+			</script>
+	    {/if}
+	  {/if}
+	  {/custom_fields}
+		<input type="submit" value="Retar" class="btn btn-success col-sm-4 col-sm-offset-4">
+		{/exp:channel:form}
+  	</div>
+  </div>
 </div>
 
 
@@ -44,7 +189,7 @@
 
 
 
-						} else if (data.success == '0') {					
+						} else if (data.success == '0') {
                     		$('#mensajes').append(data.field_errors.title);
                     		$('#mensajes').append(data.field_errors.pre_marcador_local);
                     		$('#mensajes').append(data.field_errors.pre_marcador_visitante);
@@ -54,28 +199,28 @@
 						}
 					}
 				});
-				
+
 			});
 		</script>
 		{exp:channel:form channel="predicciones" return="sitio/partidos" json="yes"}
 			<input type="hidden" name="id_de_partido" id="id_de_partido" value="{exp:url_title_to_entry_id url_title="{segment_3}"}">
 			<input type="hidden" name="id_de_partido_entry" id="id_de_partido_entry" value="{segment_3}">
 			<input type="hidden" name="pre_id_de_usuario" id="pre_id_de_usuario" value="{logged_in_member_id}">
-			<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-pred-{segment_3}-id-{exp:url_title_to_entry_id url_title="{segment_3}"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
+			<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-pred-{segment_3}-id-{exp:url_title_to_entry_id url_title="{segment_3}"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 
 			<div class="pasos">
 				{pred_resultado_partido}
-			</div>			
+			</div>
 
 			<div class="form-group" id="pre_resultado_de_partido_cont">
-				{field:pre_resultado_de_partido}	
+				{field:pre_resultado_de_partido}
 			</div>
 
 			<hr>
 
 			<div class="pasos">
 				{pre_marcadores}
-			</div>	
+			</div>
 
 			<div>
 				<div class="row">
@@ -98,20 +243,20 @@
 
 			<div class="pasos">
 				{pre_quien_anota}
-			</div>	
+			</div>
 
 			<div class="form-group" id="quien_anota_primero_cont">
-				{field:quien_anota_primero}	
+				{field:quien_anota_primero}
 			</div>
 			<hr>
 
 			<script type="text/javascript">
-				$(document).ready(function(){
+				$(function() {
 					$('select[name="partido_rel[data][]"]').find('option[value="{exp:url_title_to_entry_id url_title="{segment_3}"}"]').attr("selected",true);
 				});
 			</script>
 			<div class="sr-only">
-				{field:partido_rel}	
+				{field:partido_rel}
 			</div>
 			<input type="submit" value="PREDECIR"  class="btn btn-success">
 		{/exp:channel:form}

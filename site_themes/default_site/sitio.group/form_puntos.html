@@ -1,0 +1,39 @@
+
+
+	{exp:channel:entries channel="predicciones" entry_id="{embed:id}"}
+
+		<?php $valPartido = '{partido_rel:puntos_marcador}';?>
+		<?php
+			$prdp = strval('{pre_resultado_de_partido}');
+			$rdp  = strval('{partido_rel:resultado_de_partido}');
+			if (trim($prdp) == trim($rdp)) {
+				$valPartido = '{partido_rel:puntos_marcador}';
+			}else{
+				$valPartido = '0';
+			}
+		?>
+		<?php $valMarcador = '{partido_rel:puntos_quien_anota}';?>
+
+		<!--{if '{partido_rel:marcador_local}' == '{pre_marcador_local}' AND '{partido_rel:marcador_visitante}' == '{pre_marcador_visitante}'}
+		<?php $valMarcador = '{partido_rel:puntos_quien_anota}';?>
+		{if:else}
+		<?php //$valMarcador = 0;?>
+		{/if}-->
+		<?php
+			if ('{partido_rel:marcador_local}' == '{pre_marcador_local}' &&
+				'{partido_rel:marcador_visitante}' == '{pre_marcador_visitante}') {
+				$valMarcador = '{partido_rel:puntos_quien_anota}';
+			}else{
+				$valMarcador = 0;
+			}
+		?>
+		<?php $valPrimero = '{partido_rel:puntos_resultado}';?>
+		<?php
+			if ('{partido_rel:quien_mete_primer_gol}' == '{quien_anota_primero}') {
+				$valPrimero = '{partido_rel:puntos_resultado}';
+			}else{
+				$valPrimero = 0;
+			}
+		?>
+			{embed="sitio/check_post_puntos_usuarios nombre_usuario="{screen_name}" id_usuario="{author_id}" id_partido="{partido_rel:entry_id}" id_prediccion="{entry_id}" title="{username}-id-{logged_in_member_id}-Pred-" puntos_prediccion="<?php echo $valPrimero + $valMarcador + $valPartido; ?>" }
+	{/exp:channel:entries}

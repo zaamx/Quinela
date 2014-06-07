@@ -6,27 +6,11 @@
 		{if group_id == '1'}
 			<div class="row">
 	            <div class="col-sm-12">
-					<table class="col-sm-12 table table-bordered" style="color:white; font-weight:bold">						
-				      		<thead>
-				      			<tr>
-				      				<th colspan="2" class="text-center">Puntos ya asignados</th>
-				      				<th colspan="2" class="text-center">Puntos nuevos</th>
-				      			</tr>
-				      			<tr>
-				      				<th class="col-sm-3">Usuario</th>
-				      				<th class="col-sm-3">Puntos</th>
-				      				<th class="col-sm-3">Usuario</th>
-				      				<th class="col-sm-3">Puntos</th>
-				      			</tr>
-				      		</thead>
-				      		<tbody>
+
+
+	            	
 				      	{exp:channel:entries channel="partidos" entry_id="{segment_3}" search:partido_cerrado="cerrado" orderby="fecha_de_partido" sort="asc" limit="8" paginate="bottom"}
-				      	{parents field="partido_rel"}
-							<tr>
-								{embed="sitio/form_puntos id="{parents:entry_id}"}
-							</tr>
-						{/parents}
-				      	<!--<table class="table table-bordered">
+				      	<table class="table table-bordered">
 				      		<thead>
 				      			<tr>
 				      				<th>Local</th>
@@ -71,7 +55,7 @@
 				      		{if channel_short_name == "jobs-opps"}
 							{if:else}
 							{/if}
-
+				      	
 
 
 				      	<table class="table table-bordered">
@@ -114,7 +98,7 @@
 					      					</span>
 
 										{/if}
-				      				</td>
+				      				</td>	
 				      				<td>
 				      					{if parents:pre_marcador_local == marcador_local}
 
@@ -145,13 +129,13 @@
 					      					</span>
 
 										{/if}
-
+				      					
 				      				</td>
 				      				<td>
 
 				      				{if parents:pre_marcador_visitante == marcador_visitante AND parents:pre_marcador_local == marcador_local}
 				      					<span class="label label-info">
-					      					{clasificacion_partido:puntos_por_prediccion_de_marcado}
+					      					{clasificacion_partido:puntos_por_prediccion_de_marcado} 
 					      				</span>
 				      				{/if}
 				      				</td>
@@ -171,50 +155,30 @@
 					      						{parents:quien_anota_primero}
 					      					</span>
 										{/if}
-
-				      				</td>
+				      					
+				      				</td>	
 
 				      				<td>
 				      					<a href="{path='sitio/puntos-asignacion'}/{parents:entry_id}" class="btn btn-success">
 				      						Asignar puntos
-				      					</a>
+				      					</a>				      					
 				      				</td>
 				      			</tr>
 				      			{/parents}
 				      		</tbody>
-				      	</table>-->
+				      	</table>	
 						{/exp:channel:entries}
-						<tbody>
-					</table>
-					<a class="btn btn-success col-sm-4 col-sm-offset-4" href="{path=sitio/puntos}">Regresar
-	            </div></a>
+				      
+	            	
+	            </div>
 	        </div>
 		{if:else}
 			<div class="row">
 	            <div class="col-sm-12">
-	            	nada
+	            	nada 	       
 	            </div>
 	        </div>
-		{/if}
+		{/if}		
 	</div>
 </div>
 {embed="sitio/foot2"}
-
-<script>
-
-	$('form').each(function(){
-
-		var self = $(this);
-
-		var data = {
-			action : self.attr('action'),
-			data : self.serialize()
-		}
-
-		$.post(data.action,data.data,function(response){
-			console.log(response);
-		});
-
-	});
-
-</script>
