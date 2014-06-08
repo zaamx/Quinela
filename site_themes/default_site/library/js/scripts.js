@@ -107,17 +107,24 @@ jQuery(document).ready(function($) {
     jQuery(window).on("resize", heroInit);
     jQuery(document).on("ready", heroInit);
 
+
+isValidEmailAddress("dfsdfasd@dsfasdfas dfasdfsadf")
+
+$.validator.addMethod("accept", function(value, element, param) { 
+          var pattern = new RegExp(/^[a-zA-Záéíóú]+(\s*[a-zA-Záéíóú]*)*[a-zA-Záéíóú]+$/);
+            return pattern.test(value);
+           });
     
 
   $("#member_form").validate({
         rules: {
           nombre: {
             required: true,
-            accept: "[a-zA-Z]+"
+            accept: true
           },
           screen_name: {
             required: true,
-            accept: "[a-zA-Z]+"
+            accept: true
           },
           username: {
             required: true,

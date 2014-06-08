@@ -192,7 +192,7 @@
 							});
 						</script>
 
-						{exp:channel:form channel="badges_asignados" return="sitio/perfil2" status="open" json="yes"}
+						{exp:channel:form channel="badges_asignados" return="{path='sitio/partido'}/{segment_3}" status="open" json="yes"}
 							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{logged_in_member_id}">
 							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{exp:stash:get name="idBadgeAsocN"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 							<div class="sr-only">
@@ -211,7 +211,7 @@
 
 					{if:else}
 
-						<a href="{site_url}" class="btn btn-success col-sm-6 col-sm-offset-3">Sigue participando</a>
+						<a href="{path='sitio/partido'}/{segment_3}" class="btn btn-success col-sm-6 col-sm-offset-3">Sigue participando</a>
 					
 					{/if}
 					

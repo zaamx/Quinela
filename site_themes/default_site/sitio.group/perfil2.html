@@ -176,7 +176,7 @@
 							<br>
 							<script type="text/javascript">
 							$(document).ready(function(){
-								/*$('#publishForm').ajaxForm({
+								$('#publishForm').ajaxForm({
 									dataType: 'json',
 									success: function(data) {
 										if (data.success == '1') {
@@ -187,11 +187,11 @@
 										} else if (data.success == '0') {
 											$('#mensajes').show();			
 											$('#mensajes .alert').append(data.field_errors.title+'<br>');
-											$('#mensajes .alert').append('<span class="sr-only">'data.field_errors.lista_badges+'</span> Selecciona la insignia que quieres dar<br>');
+											$('#mensajes .alert').append('<span class="sr-only">'+data.field_errors.lista_badges+'</span> Selecciona la insignia que quieres dar<br>');
 												 // alert('Failed with the following errors: '+ data.errors.join(', '));
 												}
 											}
-										});*/
+										});
 
 								$('.item-badgelink2').click(function (event) {
 									event.preventDefault(); 
@@ -240,7 +240,7 @@
 								});
 							});
 							</script>
-							{exp:channel:form channel="badges_asignados" return="sitio/perfil2/{segment_3}" status="open" }
+							{exp:channel:form channel="badges_asignados" return="sitio/perfil2/{segment_3}" status="open"  json="yes" }
 							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}" />
 							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 							<div class="sr-only">
