@@ -108,7 +108,7 @@ jQuery(document).ready(function($) {
     jQuery(document).on("ready", heroInit);
 
 
-isValidEmailAddress("dfsdfasd@dsfasdfas dfasdfsadf")
+// isValidEmailAddress("dfsdfasd@dsfasdfas dfasdfsadf")
 
 $.validator.addMethod("accept", function(value, element, param) { 
           var pattern = new RegExp(/^[a-zA-Záéíóú]+(\s*[a-zA-Záéíóú]*)*[a-zA-Záéíóú]+$/);
@@ -170,7 +170,8 @@ $.validator.addMethod("accept", function(value, element, param) {
             required: '*Debes especificar tu contraseña'
           },
           password_confirm: {
-            required: '*No coincide tu contraseña, int&eacute;ntalo de nuevo'
+            required: '*No coincide tu contraseña, int&eacute;ntalo de nuevo',
+            equalTo:  '*No coincide tu contraseña, int&eacute;ntalo de nuevo'
           },
           invitation: {
             required: '*Debes ingresar el código de invitación que se envio a tu correo'

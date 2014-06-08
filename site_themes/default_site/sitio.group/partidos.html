@@ -72,7 +72,7 @@
 						<hr>
 					</div>
 					<div class="row">
-					{exp:channel:entries channel="partidos" search:partido_activo="=Inactivo" orderby="fecha_de_partido" sort="asc" limit="4" disable="pagination"}
+					{exp:channel:entries channel="partidos" search:partido_activo="=Inactivo" status="open" orderby="fecha_de_partido" sort="asc" limit="4" disable="pagination"}
 						{part-partido}
 					{/exp:channel:entries}
 					</div>

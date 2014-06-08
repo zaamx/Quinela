@@ -178,7 +178,7 @@
 							$(document).ready(function(){
 								$('#publishForm').ajaxForm({
 									dataType: 'json',
-									success: function(data) {
+									success: function(data) {	
 										if (data.success == '1') {
 											//alert('You successfully added a new entry with entry_id '+data.entry_id);
 											if(alert('Le has dado una insignia a tu amigo')){}
@@ -310,5 +310,16 @@
 		</div>
 	</div>
 </div>
+<?php
+
+if (mail('avila@zaa.mx', 'Quick email test', 'Is this on?'))
+{
+    echo 'Mail sent successfully.';
+}
+else
+{
+    echo 'Mail was not sent.';
+}
+?>
 <!-- Vinculos para registros y perfiles en footer -->
 {embed="sitio/foot2"}
