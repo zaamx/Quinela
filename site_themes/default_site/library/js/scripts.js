@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
 
 
   function heroInit() {
-        var hero        = jQuery('#home-ingreso'),
+        var hero        = jQuery('.fullpant'),
             winHeight   = jQuery(window).height(),
             heroHeight  = winHeight;
           

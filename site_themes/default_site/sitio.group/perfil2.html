@@ -34,7 +34,7 @@
 							<?php 
 							$lista_badges = array();
 							?>
-							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="{segment_3}"  dynamic="no" disable="pagination"}
+							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="={segment_3}"  dynamic="no" disable="pagination"}
 							
 								<li class="item-badge" id="{entry_id}-{lista_badges:entry_id}">
 									<?php $lista_badges[] = '{lista_badges:entry_id}'; ?>
@@ -95,24 +95,53 @@
 						</div>
 
 
-
+							{!-- Novato --}	
 							{if count == 1}
-								{if segment_3 == logged_in_member_id}	
+								{if segment_3 == logged_in_member_id}
+
 										<?php $id_insigniaDada = '96'; ?>
 										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
 											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
 										<?php } ?>
 								{/if}
 							{/if}
-
-							{if count == 2}
+							{!-- Caza goles --}	
+							{if count == 5}
 								{if segment_3 == logged_in_member_id}	
-										<?php $id_insigniaDada = '96'; ?>
+										<?php $id_insigniaDada = '118'; ?>
 										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
 											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
 										<?php } ?>
 								{/if}
 
+							{/if}
+							{!-- Pichichi --}	
+							{if count == 10}
+								{if segment_3 == logged_in_member_id}	
+										<?php $id_insigniaDada = '119'; ?>
+										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
+											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
+										<?php } ?>
+								{/if}
+
+							{/if}
+							{!-- Bendito --}	
+							{if count == 15}
+								{if segment_3 == logged_in_member_id}	
+										<?php $id_insigniaDada = '120'; ?>
+										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
+											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
+										<?php } ?>
+								{/if}
+							{/if}
+							{!-- Imparable --}	
+							{if count == 16}
+								{if segment_3 == logged_in_member_id}	
+										<?php $id_insigniaDada = '121'; ?>
+										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
+											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
+										<?php } ?>
+								{/if}
 							{/if}
 
 						{if no_results}<span>El usuario aún no ha jugado.</span>{/if}

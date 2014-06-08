@@ -1,8 +1,22 @@
-{if embed:id_insigniaDada == "96"}
+<div class="well well-sm" style="overflow: hidden;">
 	<div class="alert alert-success">
-		<b>Ganaste la insignia Novato por hacer tu primera predicci&oacute;n</b>
+
+	{if embed:id_insigniaDada == "96"}		
+			<b>Ganaste la insignia Novato por hacer tu primera predicci&oacute;n</b>	
+	{/if}
+	{if embed:id_insigniaDada == "118"}		
+			<b>Ganaste la insignia Caza Goles por hacer tu 5ta predicci&oacute;n</b>	
+	{/if}
+	{if embed:id_insigniaDada == "119"}		
+			<b>Ganaste la insignia Pichichi por hacer tu 10ma predicci&oacute;n</b>	
+	{/if}
+	{if embed:id_insigniaDada == "120"}		
+			<b>Ganaste la insignia Bendito por hacer tu 15ta predicci&oacute;n</b>	
+	{/if}
+	{if embed:id_insigniaDada == "121"}		
+			<b>Ganaste la insignia Imparable por hacer tu 16va predicci&oacute;n</b>	
+	{/if}
 	</div>
-{/if}
 
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -11,7 +25,7 @@
 			success: function(data) {
 				if (data.success == '1') {
 			//alert('You successfully added a new entry with entry_id '+data.entry_id);
-			if(alert('La insignia es ahora es tuya')){}
+			if(alert('La insignia ahora es tuya')){}
 				else    window.location.reload(); 
 
 		} else if (data.success == '0') {
@@ -40,3 +54,4 @@
 				
 			</div>
 		</div>
+</div>		
