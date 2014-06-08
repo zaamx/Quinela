@@ -34,7 +34,7 @@
 							<?php 
 							$lista_badges = array();
 							?>
-							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="={segment_3}"  dynamic="no" disable="pagination"}
+							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="{segment_3}"  dynamic="no" disable="pagination"}
 							
 								<li class="item-badge" id="{entry_id}-{lista_badges:entry_id}">
 									<?php $lista_badges[] = '{lista_badges:entry_id}'; ?>
@@ -95,53 +95,24 @@
 						</div>
 
 
-							{!-- Novato --}	
-							{if count == 1}
-								{if segment_3 == logged_in_member_id}
 
+							{if count == 1}
+								{if segment_3 == logged_in_member_id}	
 										<?php $id_insigniaDada = '96'; ?>
 										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
 											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
 										<?php } ?>
 								{/if}
 							{/if}
-							{!-- Caza goles --}	
-							{if count == 5}
+
+							{if count == 2}
 								{if segment_3 == logged_in_member_id}	
-										<?php $id_insigniaDada = '118'; ?>
+										<?php $id_insigniaDada = '96'; ?>
 										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
 											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
 										<?php } ?>
 								{/if}
 
-							{/if}
-							{!-- Pichichi --}	
-							{if count == 10}
-								{if segment_3 == logged_in_member_id}	
-										<?php $id_insigniaDada = '119'; ?>
-										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
-											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
-										<?php } ?>
-								{/if}
-
-							{/if}
-							{!-- Bendito --}	
-							{if count == 15}
-								{if segment_3 == logged_in_member_id}	
-										<?php $id_insigniaDada = '120'; ?>
-										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
-											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
-										<?php } ?>
-								{/if}
-							{/if}
-							{!-- Imparable --}	
-							{if count == 16}
-								{if segment_3 == logged_in_member_id}	
-										<?php $id_insigniaDada = '121'; ?>
-										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
-											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
-										<?php } ?>
-								{/if}
 							{/if}
 
 						{if no_results}<span>El usuario aún no ha jugado.</span>{/if}
@@ -176,9 +147,9 @@
 							<br>
 							<script type="text/javascript">
 							$(document).ready(function(){
-								$('#publishForm').ajaxForm({
+								/*$('#publishForm').ajaxForm({
 									dataType: 'json',
-									success: function(data) {	
+									success: function(data) {
 										if (data.success == '1') {
 											//alert('You successfully added a new entry with entry_id '+data.entry_id);
 											if(alert('Le has dado una insignia a tu amigo')){}
@@ -186,12 +157,12 @@
 
 										} else if (data.success == '0') {
 											$('#mensajes').show();			
-											// $('#mensajes .alert').html(data.field_errors.title+'<br>');
-											$('#mensajes .alert').html('<span class="sr-only">'+data.field_errors.lista_badges+'</span> Selecciona la insignia que quieres dar<br>');
+											$('#mensajes .alert').append(data.field_errors.title+'<br>');
+											$('#mensajes .alert').append('<span class="sr-only">'data.field_errors.lista_badges+'</span> Selecciona la insignia que quieres dar<br>');
 												 // alert('Failed with the following errors: '+ data.errors.join(', '));
 												}
 											}
-										});
+										});*/
 
 								$('.item-badgelink2').click(function (event) {
 									event.preventDefault(); 
@@ -240,7 +211,7 @@
 								});
 							});
 							</script>
-							{exp:channel:form channel="badges_asignados" return="sitio/perfil2/{segment_3}" status="open"  json="yes" }
+							{exp:channel:form channel="badges_asignados" return="sitio/perfil2/{segment_3}" status="open" }
 							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}" />
 							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 							<div class="sr-only">
@@ -248,9 +219,8 @@
 							</div>
 							<input type="submit" value="Dar insignia" class="btn btn-success col-sm-4 col-sm-offset-4">
 							{/exp:channel:form}
-							<div class="clearfix"></div>
-
 							<div id="mensajes" style="display:none;">
+								<hr>
 								<div class="alert alert-warning">
 									
 								</div>
