@@ -1,9 +1,9 @@
 
-Hola{if mbr_screen_name} {mbr_screen_name}{/if},
+Hola {if mbr_screen_name}{mbr_screen_name}{/if},
 
 {exp:channel:entries channel="predicciones" entry_id="{entry_id}"}
 
-Nuevamente jugaste como los grandes y te hemos mandado el resumen de tu predicción para el partido:
+Jugaste como los grandes y te hemos mandado el resumen de tu predicción para el partido:
 {partido_rel}
     {partido_rel:equipo_local}
             {partido_rel:equipo_local:nombre_de_pais}
@@ -19,7 +19,7 @@ Marcador Local:
 
 Marcador Visitante:
 {pre_marcador_visitante}
-La cual ha quedado registrada.
+
 Muchas gracias por tu predicción y sigue jugando en la Copa Aserta.
 
 {/exp:channel:entries}
