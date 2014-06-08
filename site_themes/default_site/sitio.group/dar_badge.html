@@ -1,0 +1,14 @@
+{exp:channel:form channel="badges_asignados" return="site/ENTRY_ID" status="open" }
+							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{embed:receptor}" />
+							<input type="hidden" name="title" id="title" value="{embed:title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+							<div class="sr-only">
+								{field:lista_badges}		
+							</div>
+							<input type="submit" value="Dar insignia" class="btn btn-success col-sm-4 col-sm-offset-4">
+							{/exp:channel:form}
+							<div id="mensajes" style="display:none;">
+								<hr>
+								<div class="alert alert-warning">
+									
+								</div>
+							</div>
