@@ -44,11 +44,11 @@
 							{/lista_badges}
 
 						{/exp:channel:entries}
-						<?php arsort($badgesbyusers); ?>
+						<?php arsort($badgesbyusers); print_r($badgesbyusers); ?>
 						<?php $count = 0; foreach($badgesbyusers as $user => $rank){ $count++; ?>
 							{embed="sitio/item-ranking-badges" mid="<?php echo $user; ?>" total="<?php echo $rank; ?>" countU="<?php echo $count;?>"}
 						<?php } ?>
-						{embed="sitio/ranking-resto-badges" limit="<?php echo (100 - count($ranking)); ?>" members_id_not ="<?php foreach($badgesbyusers as $user => $rank) { echo $user.'|'; } ?>" }
+						{embed="sitio/ranking-resto-badges" init="<?php echo $count - 1; ?>"imit="<?php echo (100 - count($ranking)); ?>" members_id_not ="<?php foreach($badgesbyusers as $user => $rank) { echo $user.'|'; } ?>" }
 
 						{!--
 						{exp:user:users orderby="screen_name" sort="asc" limit="100" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}

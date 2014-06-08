@@ -260,6 +260,7 @@ body.singles #home-ingreso {
   color: #eeeeee;
   padding: 100px 0 30px;
   margin: 0;
+  overflow: auto;
 }
 .partido-midle {
   padding: 80px 0 0;
