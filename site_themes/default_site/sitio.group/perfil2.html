@@ -82,12 +82,13 @@
 								</div>
 								<div class="row">
 									<div class="col-sm-3">
-										{pre_marcador_local}	
+										<b>{pre_marcador_local}	</b>
 									</div>
 									<div class="col-sm-3">
-										{pre_marcador_visitante}
+										<b>{pre_marcador_visitante}</b>
 									</div>
 								</div>
+								<hr>
 							</div>
 
 						</div>
@@ -156,7 +157,7 @@
 										} else if (data.success == '0') {
 											$('#mensajes').show();			
 											$('#mensajes .alert').append(data.field_errors.title+'<br>');
-											$('#mensajes .alert').append(data.field_errors.lista_badges+'<br>');
+											$('#mensajes .alert').append('<span class="sr-only">'data.field_errors.lista_badges+'</span> Selecciona la insignia que quieres dar<br>');
 												 // alert('Failed with the following errors: '+ data.errors.join(', '));
 												}
 											}

@@ -172,7 +172,7 @@ jQuery(document).ready(function($) {
             required: '*Debes aceptar términos y condiciones y avisos de privacidad'
           },
           captcha: {
-            required: '*Es obligatorio que escribas la palabras que ves abajo '
+            required: '*Ingresa correctamente los caracteres de la siguiente imagen'
           }
         },
         highlight: function(element) {
