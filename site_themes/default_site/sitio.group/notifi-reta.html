@@ -1,11 +1,11 @@
 Hola.
-
 {exp:channel:entries channel="retas" entry_id="{entry_id}"}
-
-{if mbr_screen_name}{mbr_screen_name}{/if} te ha retado a  que hagas una predicción en el partido:
-
 {partido}
-	<a href="{partido:title_permalink="sitio/partido"}">{title}</a>
+{partido:author} te ha retado a  que hagas una predicción en el partido:	
+{partido:title}
+
+{partido:title_permalink="sitio/partido"}
+
 {/partido}
 
 ¿Asumes el reto? 
