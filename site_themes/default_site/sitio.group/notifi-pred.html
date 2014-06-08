@@ -1,18 +1,21 @@
-
-Hola {if mbr_screen_name}{mbr_screen_name}{/if},
+Hola {if mbr_screen_name}{mbr_screen_name}{/if}.
 
 {exp:channel:entries channel="predicciones" entry_id="{entry_id}"}
 
-Jugaste como los grandes y te hemos mandado el res&uacute;men de tu predicci&oacute;n para el partido:
+Jugaste como los grandes y te hemos mandado el resúmen de tu predicción para el partido:
+
 {partido_rel}
     {partido_rel:equipo_local}
-            {partido_rel:equipo_local:nombre_de_pais}
+Local:            {partido_rel:equipo_local:nombre_de_pais}
     {/partido_rel:equipo_local}
  vs
     {partido_rel:equipo_visitante}
-            {partido_rel:equipo_visitante:nombre_de_pais}
+Visitante:            {partido_rel:equipo_visitante:nombre_de_pais}
     {/partido_rel:equipo_visitante}
 {/partido_rel}
+
+Resultado del partido:
+{pre_resultado_de_partido}
 
 Marcador Local:
 {pre_marcador_local}
@@ -20,10 +23,10 @@ Marcador Local:
 Marcador Visitante:
 {pre_marcador_visitante}
 
-Resultado del partido:
-{pre_resultado_de_partido}		
+Y anotará primero:
+{quien_anota_primero}	
 
 
-Muchas gracias por tu predicci&oacute;n y sigue jugando en la Copa Aserta.
+Muchas gracias por tu predicción y sigue jugando en la Copa Aserta.
 
 {/exp:channel:entries}

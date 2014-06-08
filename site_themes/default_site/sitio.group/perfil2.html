@@ -186,8 +186,8 @@
 
 										} else if (data.success == '0') {
 											$('#mensajes').show();			
-											$('#mensajes .alert').append(data.field_errors.title+'<br>');
-											$('#mensajes .alert').append('<span class="sr-only">'+data.field_errors.lista_badges+'</span> Selecciona la insignia que quieres dar<br>');
+											// $('#mensajes .alert').html(data.field_errors.title+'<br>');
+											$('#mensajes .alert').html('<span class="sr-only">'+data.field_errors.lista_badges+'</span> Selecciona la insignia que quieres dar<br>');
 												 // alert('Failed with the following errors: '+ data.errors.join(', '));
 												}
 											}
@@ -248,8 +248,9 @@
 							</div>
 							<input type="submit" value="Dar insignia" class="btn btn-success col-sm-4 col-sm-offset-4">
 							{/exp:channel:form}
+							<div class="clearfix"></div>
+
 							<div id="mensajes" style="display:none;">
-								<hr>
 								<div class="alert alert-warning">
 									
 								</div>
