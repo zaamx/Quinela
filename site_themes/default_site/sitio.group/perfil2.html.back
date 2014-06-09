@@ -1,0 +1,285 @@
+
+{embed="sitio/head" my_body_class="perfil" my_active_nav="perfil" my_page_title="Perfil"}
+<div id="content">
+	<div class="container">
+		<div class="row">
+			<h3>{if logged_in_member_id == "{segment_3}"}Mi  {/if}Perfil</h3>
+
+		</div>
+		<div class="row">
+
+			<!-- ///////////////////////////////  Sidebar ///////////////////////////////   -->
+			<div class="col-sm-3">
+				{if segment_3}
+					{embed="sitio/perfil-sidebar"}
+				{if:else}
+					<h4>Error!</h4><p>You must specify a member ID to view a profile.</p>
+				{/if}
+			</div>
+
+			<!-- ///////////////////////////////  Contenido ///////////////////////////////   -->
+
+
+
+			<div class="col-sm-8">
+
+				<!-- ///////////////////////////////  Badges ///////////////////////////////   -->
+
+
+				<div class="row">
+					<div class="col-sm-12">
+						<h3>Mis insignias</h3>
+
+						<ul class="list-inline">
+							<?php 
+							$lista_badges = array();
+							?>
+							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="{segment_3}"  dynamic="no" disable="pagination"}
+							
+								<li class="item-badge" id="{entry_id}-{lista_badges:entry_id}">
+									<?php $lista_badges[] = '{lista_badges:entry_id}'; ?>
+									<a class="item-badgelink" href="#"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="{lista_badges:descripcion_ganado}" data-title="{lista_badges:title}">
+										<img  height="90" width="90" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">	
+									</a>
+								</li>
+
+							{if no_results}<span>El usuario aún no ha jugado.</span>{/if}
+
+							{/exp:channel:entries}
+						</ul>
+					</div>
+				</div>
+
+				<!-- ///////////////////////////////  Apuestas ///////////////////////////////   -->
+				<div class="row">
+					<div class="col-sm-12">
+						<hr>
+						<h3>Predicciones jugadas</h3>
+
+
+
+						{exp:channel:entries channel="predicciones"  search:pre_id_de_usuario="={segment_3}"  dynamic="no" disable="pagination"}
+
+						<div class="row item-partido-perfil" id="{entry_id}">
+							<div class="col-sm-12 text-center">
+								<div class="row">
+									{partido_rel}
+										{partido_rel:equipo_local}
+											<div class="col-sm-3">
+												{partido_rel:equipo_local:nombre_de_pais}<br>
+												<img class="img-circle" src="{partido_rel:equipo_local:bandera_seleccion}" alt="{partido_rel:equipo_local:nombre_de_pais}"  height="72" width="72" >
+											</div>
+										{/partido_rel:equipo_local}
+										{partido_rel:equipo_visitante}
+											<div class="col-sm-3">
+												{partido_rel:equipo_visitante:nombre_de_pais}<br>
+												<img class="img-circle" src="{partido_rel:equipo_visitante:bandera_seleccion}" alt="{partido_rel:equipo_visitante:nombre_de_pais}" height="72" width="72" >	
+											</div>
+										{/partido_rel:equipo_visitante}
+										<div class="col-sm-4 text-center">
+											{embed="sitio/part-ptsPartido" id_usuario="{segment_3}" id_partido="{partido_rel:entry_id}"}
+										</div>
+									{/partido_rel}	
+								</div>
+								<div class="row">
+									<div class="col-sm-3">
+										<b>{pre_marcador_local}	</b>
+									</div>
+									<div class="col-sm-3">
+										<b>{pre_marcador_visitante}</b>
+									</div>
+								</div>
+								<hr>
+							</div>
+
+						</div>
+
+
+
+							{if count == 1}
+								{if segment_3 == logged_in_member_id}	
+										<?php $id_insigniaDada = '96'; ?>
+										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
+											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
+										<?php } ?>
+								{/if}
+							{/if}
+
+							{if count == 2}
+								{if segment_3 == logged_in_member_id}	
+										<?php $id_insigniaDada = '96'; ?>
+										<?php if(!in_array($id_insigniaDada, $lista_badges)){ ?>
+											{embed="sitio/_amateur" id_insigniaDada="<?php echo $id_insigniaDada; ?>"}
+										<?php } ?>
+								{/if}
+
+							{/if}
+
+						{if no_results}<span>El usuario aún no ha jugado.</span>{/if}
+
+						{/exp:channel:entries}
+
+
+
+					</div>
+				</div>
+
+				{if segment_3 == logged_in_member_id}					
+
+				{if:else}
+					<!-- ///////////////////////////////  Dar Badge ///////////////////////////////   -->
+					<div class="row">
+						<div class="col-sm-12">
+							<hr>
+							<h3>
+								¿Quieres darle una insignia a esta persona?
+							</h3>
+							<div id="slider-badges">
+								{exp:channel:entries channel="badges"   category="23"  dynamic="no" }
+									<div class="item" data-title="{title}" >
+										<a href="#" class="item-badgelink2" data-container="body" data-toggle="popover" data-placement="top" data-content="{descripcion_badge}" data-title="{title}">
+											<img alt="{entry_id}"  height="63" width="63" class="img-circle item-img" src="{imagen_badge}" alt="{title}">	
+										</a>
+									</div> 
+								{if no_results}<span>El usuario aún no ha jugado.</span>{/if}
+								{/exp:channel:entries}
+							</div>
+							<br>
+							<script type="text/javascript">
+							$(document).ready(function(){
+								/*$('#publishForm').ajaxForm({
+									dataType: 'json',
+									success: function(data) {
+										if (data.success == '1') {
+											//alert('You successfully added a new entry with entry_id '+data.entry_id);
+											if(alert('Le has dado una insignia a tu amigo')){}
+											else    window.location.reload(); 
+
+										} else if (data.success == '0') {
+											$('#mensajes').show();			
+											$('#mensajes .alert').append(data.field_errors.title+'<br>');
+											$('#mensajes .alert').append('<span class="sr-only">'data.field_errors.lista_badges+'</span> Selecciona la insignia que quieres dar<br>');
+												 // alert('Failed with the following errors: '+ data.errors.join(', '));
+												}
+											}
+										});*/
+
+								$('.item-badgelink2').click(function (event) {
+									event.preventDefault(); 
+									$('select[name="lista_badges[data][]"]').find('option[value="' + $(this).children('img.item-img').attr("alt") + '"]').attr("selected",true);
+
+
+									if (!$(this).children('img.item-img').hasClass('bdActive')) {
+								    // Remove the class from anything that is active
+								    $('.item-badgelink2 img.item-img.bdActive').removeClass('bdActive');
+								    // And make this active
+								    $(this).children('img.item-img').addClass('bdActive');
+
+								  }
+								});
+								$('#slider-badges').slick({
+								  dots: true,
+								  infinite: false,
+								  speed: 300,
+								  slidesToShow: 6,
+								  slidesToScroll: 6,
+								  responsive: [
+								    {
+								      breakpoint: 1024,
+								      settings: {
+								        slidesToShow: 5,
+								        slidesToScroll: 5,
+								        infinite: true,
+								        dots: true
+								      }
+								    },
+								    {
+								      breakpoint: 600,
+								      settings: {
+								        slidesToShow: 4,
+								        slidesToScroll: 4
+								      }
+								    },
+								    {
+								      breakpoint: 480,
+								      settings: {
+								        slidesToShow: 3,
+								        slidesToScroll: 3
+								      }
+								    }
+								  ]
+								});
+							});
+							</script>
+							{exp:channel:form channel="badges_asignados" return="sitio/perfil2/{segment_3}" status="open" }
+							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}" />
+							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+							<div class="sr-only">
+								{field:lista_badges}		
+							</div>
+							<input type="submit" value="Dar insignia" class="btn btn-success col-sm-4 col-sm-offset-4">
+							{/exp:channel:form}
+							<div id="mensajes" style="display:none;">
+								<hr>
+								<div class="alert alert-warning">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				{/if}
+				<div class="row">
+						<div class="col-md-12" id="tester">
+							<hr>
+							<h3>Zona de comentarios</h3>
+
+							{exp:channel:entries channel="activ_comentarios_perfil" author_id="{segment_3}" status="Open" dynamic="no" limit="1"}
+								<div class="sr-only">
+									{title}	
+								</div>
+
+								{exp:stash:set name="idComentario"}{entry_id}{/exp:stash:set}
+
+								{exp:stash:set name="titComentario"}{url_title}{/exp:stash:set}
+
+								<div id="comentarios">
+								
+								</div>
+
+								<script type="text/javascript">
+									$(document).ready(function(){
+										$("#comentarios").load("{path='site_index'}/sitio/comentariosajax/{exp:stash:get name="titComentario"}/{segment_3}");
+	    								return false;
+									});
+								</script>
+
+								<a  class="btn btn-success col-sm-6 col-sm-offset-3"
+								href="{url_title_path='sitio/perfil-comentarios'}/{segment_3}">
+										Comentar
+								</a>
+
+								<div class="sr-only">
+									<a  href="{url_title_path='sitio/comentariosajax'}/{segment_3}">
+										Comentar ajax
+									</a>	
+								</div>
+
+								
+							{if no_results}
+								<div class="alert alert-warning">
+									<b>Este usuario no tiene activados los comentarios. Recuerda que se activan en "<a href="{path=sitio/actualizar-perfil}/{member_id}/">Editar Perfil</a>"</b>
+								</div>
+							{/if}
+
+							{/exp:channel:entries}
+
+						</div>
+					</div>
+
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Vinculos para registros y perfiles en footer -->
+{embed="sitio/foot2"}

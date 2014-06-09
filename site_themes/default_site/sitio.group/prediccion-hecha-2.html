@@ -3,8 +3,7 @@
 	<div id="content">
 		<div class="container">
 			
-		{exp:channel:entries channel="partidos" limit="1" paginate="bottom"}
-
+		{exp:channel:entries channel="partidos" limit="1" url_title="{segment_3}" dynamic="no" }
 
 		{if fondo_partido != ""}
 			<style type="text/css">
@@ -78,9 +77,15 @@
 			<div class="row">
 				<?php $idBadgeAsoc = '0'; ?>
 				{parents field="partido_de_insignia"}
-					<?php $idBadgeAsoc = "{parents:entry_id}"; ?>
+					{exp:stash:set name="idBadgeAsocN" save="no" scope="site" parse_tags="yes" replace="yes"    refresh="0"
+    				output="yes"}
+    					{parents:entry_id}
+    				{/exp:stash:set}
 				{/parents}
 			</div>
+
+			{if no_results}
+			{/if}
 
 			{/exp:channel:entries}
 
@@ -101,7 +106,7 @@
 					<div class="row text-center">
 						<div class="col-md-4 col-md-offset-4">
 							<h3>
-								Resultado de partido
+								Resultado del partido
 							</h3>
 							<div class="well">
 								<h5>
@@ -159,14 +164,6 @@
 					</div>
 
 					{/exp:channel:entries}
-
-					
-
-					
-					{exp:stash:set_value name="idBadgeAsocN" value="<?php echo $idBadgeAsoc; ?>" parse="inward"}
-
-					
-
 					{if {exp:stash:get name="idBadgeAsocN"} > 0}
 						<script type="text/javascript">
 							$(document).ready(function(){
@@ -175,13 +172,15 @@
 									success: function(data) {
 									if (data.success == '1') {
 										//alert('You successfully added a new entry with entry_id '+data.entry_id);
-										if(alert('Tu predicción fue confirmada')){}
-										else   window.location.href = '{site_url}';
+										//if(alert('Tu predicción fue confirmada')){}
+										//else   
+										window.location.href = '{site_url}';
 										// else    window.location.reload(); 
 
 									} else if (data.success == '0') {					
-										$('#mensajes').append(data.field_errors.title);
-										$('#mensajes').append(data.field_errors.lista_badges);                 		
+										$('#mensajes').show();
+										$('#mensajes .alert').append(data.field_errors.title+'<br>');
+										$('#mensajes .alert').append(data.field_errors.lista_badges+'<br>');                 		
 											 // alert('Failed with the following errors: '+ data.errors.join(', '));
 											}
 										}
@@ -193,15 +192,17 @@
 						{exp:channel:form channel="badges_asignados" return="sitio/perfil2" status="open" json="yes"}
 							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{logged_in_member_id}">
 							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{exp:stash:get name="idBadgeAsocN"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
-							<div class="sr-only">
-								
+							<div class="sr-only">								
 								{field:lista_badges}		
 							</div>
 							<input type="submit" value="Sigue participando" class="btn btn-success col-sm-6 col-sm-offset-3">
 						{/exp:channel:form}
 
-						<div id="mensajes">
-							
+						<div id="mensajes" style="display:none;">
+							<hr>
+							<div class="alert alert-warning">
+								
+							</div>
 						</div>
 
 					{if:else}

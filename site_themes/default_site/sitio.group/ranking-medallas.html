@@ -44,7 +44,7 @@
 							{/lista_badges}
 
 						{/exp:channel:entries}
-						<?php arsort($badgesbyusers); print_r($badgesbyusers); ?>
+						<?php arsort($badgesbyusers); ?>
 						<?php $count = 0; foreach($badgesbyusers as $user => $rank){ $count++; ?>
 							{embed="sitio/item-ranking-badges" mid="<?php echo $user; ?>" total="<?php echo $rank; ?>" countU="<?php echo $count;?>"}
 						<?php } ?>
