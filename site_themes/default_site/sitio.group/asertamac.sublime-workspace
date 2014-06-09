@@ -4,16 +4,28 @@
 		"selected_items":
 		[
 			[
-				"brand",
-				"brand-danger"
+				"segment",
+				"segment_3"
+			],
+			[
+				"margin",
+				"margin-bottom"
 			],
 			[
 				"padd",
-				"padding-bottom"
+				"padding"
+			],
+			[
+				"text-",
+				"text-transform"
 			],
 			[
 				"font",
-				"font-weight"
+				"font-size"
+			],
+			[
+				"brand",
+				"brand-danger"
 			],
 			[
 				"entr",
@@ -22,10 +34,6 @@
 			[
 				"brand-",
 				"brand-warning"
-			],
-			[
-				"margin",
-				"margin"
 			],
 			[
 				"rb",
@@ -92,106 +100,10 @@
 	"buffers":
 	[
 		{
-			"file": "perfil2.html",
-			"settings":
-			{
-				"buffer_size": 8743,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "activacion-paso1.html",
-			"settings":
-			{
-				"buffer_size": 1871,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "activacion-paso2.html",
-			"settings":
-			{
-				"buffer_size": 2418,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "registro.html",
-			"settings":
-			{
-				"buffer_size": 3582,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "head.html",
-			"settings":
-			{
-				"buffer_size": 6010,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "partido.html",
-			"settings":
-			{
-				"buffer_size": 3004,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "pred-form.html",
-			"settings":
-			{
-				"buffer_size": 3805,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "recuperar.html",
-			"settings":
-			{
-				"buffer_size": 1771,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "entrar.html",
-			"settings":
-			{
-				"buffer_size": 2077,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 2544,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_base.less",
-			"settings":
-			{
-				"buffer_size": 5491,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "activacion-paso3.html",
-			"settings":
-			{
-				"buffer_size": 976,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "actualizar-perfil.html",
-			"settings":
-			{
-				"buffer_size": 6977,
+				"buffer_size": 2572,
 				"line_ending": "Unix"
 			}
 		}
@@ -199,9 +111,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 287.0,
+		"height": 167.0,
 		"selected_items":
 		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
 			[
 				"ht",
 				"Set Syntax: HTML"
@@ -219,10 +139,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"htm",
-				"Set Syntax: HTML"
-			],
-			[
 				"css",
 				"Set Syntax: CSS"
 			],
@@ -231,15 +147,11 @@
 				"Package Control: Install Package"
 			],
 			[
-				"html",
-				"Set Syntax: HTML"
-			],
-			[
 				"pack",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 575.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -256,70 +168,92 @@
 	},
 	"file_history":
 	[
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head-interiores.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_base.less",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head-partido.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/registro.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partido.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/prediccion-hecha.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/pred-form.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil2.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/miembros.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partidos.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/error-perfil.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/pred-form.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso2.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/index.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partido.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/notifi-pred.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/notifi-reta.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/prediccion-hecha-3.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/prediccion-hecha.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/ranking.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/ranking-banca.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/item-ranking.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/item-banca.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/sitio-banca.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/puntos.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/puntos_RESPALDO.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/ranking-medallas.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/comentariosajax.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil-comentarios.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/js/scripts.js",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partidos.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-partido.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/ranking.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/actualizar-perfil.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/asertamac.sublime-workspace",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/medallas.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/ranking-medallas.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/miembros.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil-sidebar.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/actualizar-perfil.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/actualizar-cuenta.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/registro.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-insigniasSB.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_totalMedallasSB.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-puntosSB.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head-interiores.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head-partido.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_amateur.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/reglas.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/contacto.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/recuperar.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_base.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/js/scripts.js",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_totalSB.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-puntos.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-insignias.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil-sidebar.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-puntosSB.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-insigniasSB.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/gracias.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/libs/bootstrap-3.1.1/variables.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/reta.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_total.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_totalMedallas.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_totalMedallasSB.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/entrar.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/libs/bootstrap-3.1.1/mixins.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/libs/bootstrap-3.1.1/normalize.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_768up.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/hora.php",
+		"/Users/pedrocerilla/Downloads/CONTACTOS FALSOS PARA ASERTA.csv",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/libs/bootstrap-3.1.1/badges.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso1.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso3.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/rank.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/style.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_2x.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/puntos-asignacion.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_rank.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/ranking-resto.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/eventos.group/registros.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/libs/bootstrap-3.1.1/media.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/css/ie.css",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/ie.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/foot.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/foot2.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/404.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-partido.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-ptsPartido.html",
 		"/Users/pedrocerilla/Library/Application Support/Sublime Text 2/Packages/User/stash.sublime-snippet",
 		"/Users/pedrocerilla/Library/Application Support/Sublime Text 2/Packages/User/acento.sublime-snippet",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/premios.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/puntos-asignacion.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/puntos-predicciones.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/puntos.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/que-es.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/recuperar.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/reglas.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/terminos.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_amateur.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/politicas.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/asertamac.sublime-workspace",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/foot2.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/index.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso1.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso2.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso3.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/actualizar-avatar.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/actualizar-cuenta.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/contacto.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/entrar.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/error-perfil.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/gracias.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_768up.less",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_992up.less",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/libs/bootstrap-3.1.1/variables.less",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/libs/bootstrap-3.1.1/forms.less",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/foot.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-puntos.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-insignias.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/rank.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/libs/bootstrap-3.1.1/pager.less",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_totalMedallas.html",
 		"/Users/pedrocerilla/Library/Caches/Cleanup At Startup/Transmit/A7807065-8ABE-4BBE-A131-4C6FC6FB0959/config.php",
 		"/Users/pedrocerilla/Repos/pepblog/wp-content/themes/ok/front-page.php",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/notifi-pred.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_total.html",
 		"/Volumes/Seagate Expansion Drive/Clicker/Repos/miseleccion2014WP/wp-content/themes/miseleccionMX2014/page-json.php",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_481up.less",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/datosmail.html",
@@ -361,21 +295,7 @@
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_inc.group/header.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/head-interiores.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/config.prod.php",
-		"/home/alonso/public_html/quinela/system/expressionengine/config/config.php",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/partido-int.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3.1.1/variables.less",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/miembros.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/style.less",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/index.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/paso1.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/library/less/libs/bootstrap-3.1.1/.gitattributes",
-		"/home/alonso/public_html/quinela/system/expressionengine/plugins/pi.url_title_to_entry_id.php",
-		"/run/media/alonso/W7_TODO_EN_UNO/leeme.txt",
-		"/run/media/alonso/W7_TODO_EN_UNO/activador/leeme.txt",
-		"/run/media/alonso/W7_TODO_EN_UNO/darkreloaded",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/index.html~",
-		"/C/Users/zaana_000/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
-		"/C/Users/zaana_000/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+		"/home/alonso/public_html/quinela/system/expressionengine/config/config.php"
 	],
 	"find":
 	{
@@ -383,9 +303,12 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
+			"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group",
+			"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less",
+			"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/",
 			"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library",
 			"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group",
 			""
@@ -396,6 +319,53 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"item-ranking",
+			"{path",
+			"prediccion-hecha",
+			"partido_rel",
+			"{path",
+			"channel:f",
+			"idBadgeAsocN",
+			"identificaras",
+			"registro",
+			" aun",
+			"aun",
+			"valida",
+			"accion",
+			"insignia",
+			"prediccion",
+			"id=\"mensajes\"",
+			"#mensajes",
+			"foto",
+			"pre_marcador_visitante",
+			"'#mensajes'",
+			"<div id=\"mensajes\">",
+			"rgba",
+			"background: rgba(0, 0, 0, 0.3);",
+			"box-sizing",
+			"users",
+			"item-img",
+			"badgelink2",
+			"menu",
+			"b",
+			"Haz",
+			"green",
+			"micro",
+			"alert",
+			"partido",
+			"{pre_texto_central}",
+			"<div class=\"form-group\">",
+			"br",
+			"?>\n",
+			".item-ranking-medalla",
+			"{embed",
+			"navbar",
+			" haz ",
+			"predicción",
+			"prediccion",
+			" haz ",
+			"navbar",
+			"idBadgeAsoc",
 			"orange",
 			"no coi",
 			"{/exp:channel:entries}",
@@ -476,25 +446,7 @@
 			"id=\"wrapper\"",
 			"{member_id}",
 			"pre_id_de_usuario",
-			"gana",
-			"/home/user/example.com/",
-			"http://example.com/",
-			"{equipo_visitante}",
-			"\"{equipo_visitante}\"",
-			" \"{equipo_visitante}\"",
-			"<div class=\"col-md-3\">\n							<article class=\"text-center item-partido\">\n								<div class=\"row\">\n									<div class=\"col-sm-6 col-sm-offset-3 text-center\">\n										<img src=\"http://placehold.it/50x50\" class=\"img-circle\"alt=\"\">\n									</div>\n								</div>\n								<header >\n									<div class=\"row\">\n										<div class=\"col-sm-6 text-center\">\n											{equipo_local} <br>\n											<img src=\"http://placehold.it/100x100\" class=\"img-circle img-responsive\"alt=\"\">\n										</div>\n										<div class=\"col-sm-6 text-center\">\n											{equipo_visitante} <br>\n											<img src=\"http://placehold.it/100x100\" class=\"img-circle img-responsive\"alt=\"\">\n										</div>\n									</div>\n									<div class=\"row\">\n										<b>Grupo A</b>\n										<p>\n											Arena Sao Paoulo\n										</p>\n										<p>\n											{fecha_de_partido format=\"%Y %m %d\"}\n										</p>\n									</div>\n									<div class=\"row\">\n										<div class=\"col-sm-12\">\n											<h3><i class=\"fa fa-star-o\"></i>  8, 000 puntos</h3>\n										</div>\n									</div>\n								</header>\n								<footer>\n									<a class=\"btn btn-success\" href=\"{url_title_path='sitio/partido'}\">PREDECIR</a>\n								</footer>\n							</article>\n						</div>",
-			"		  						\n",
-			"<div class=\"col-sm-4\">",
-			"<img src=\"http://placehold.it/350x250\" class=\"img-responsive\" alt=\"\">",
-			"h3",
-			"  ",
-			";\n",
-			"script",
-			"<article class=\"text-center\">",
-			"modal",
-			"@border-radius-base",
-			"modal",
-			"7"
+			"gana"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -502,6 +454,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"partido",
+			" a&uacute;n ",
+			"background: url('../images/PIXEL_NEGRO.png');",
+			"Has ",
+			"<div class=\"form-group has-feedback\">",
+			" has",
 			"bootstrap-3",
 			"{embed=\"sitio/foot2\"}",
 			"{path=sitio/perfil2}",
@@ -511,7 +469,7 @@
 			"Actualmente no tienes una imagen de perfil.",
 			"Tu foto: ",
 			"Llena o edita los campos abajo, para actualizar tu perfil:",
-			"<span>El usuario a&uacute;n  no ha jugado.</span>",
+			"<span>El usuario aun no ha jugado.</span>",
 			"<b>0 </b><span>Insignias</span>",
 			"<b>0 </b><span>Puntos</span>",
 			"<b>15 </b><span>Insignias</span> ",
@@ -539,7 +497,7 @@
 			"h4",
 			"<article class=\"text-center item-partido\">"
 		],
-		"reverse": false,
+		"reverse": true,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -553,260 +511,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "perfil2.html",
-					"settings":
-					{
-						"buffer_size": 8743,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								626,
-								626
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "activacion-paso1.html",
-					"settings":
-					{
-						"buffer_size": 1871,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								453,
-								453
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "activacion-paso2.html",
-					"settings":
-					{
-						"buffer_size": 2418,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1110,
-								1110
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "registro.html",
-					"settings":
-					{
-						"buffer_size": 3582,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								967,
-								967
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 142.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "head.html",
-					"settings":
-					{
-						"buffer_size": 6010,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 429.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "partido.html",
-					"settings":
-					{
-						"buffer_size": 3004,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1108.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "pred-form.html",
-					"settings":
-					{
-						"buffer_size": 3805,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2793,
-								2793
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 983.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "recuperar.html",
-					"settings":
-					{
-						"buffer_size": 1771,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1020,
-								1020
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 118.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "entrar.html",
-					"settings":
-					{
-						"buffer_size": 2077,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 213.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 2544,
+						"buffer_size": 2572,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								905,
-								905
+								318,
+								318
 							]
 						],
 						"settings":
@@ -817,87 +533,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_base.less",
-					"settings":
-					{
-						"buffer_size": 5491,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								803,
-								803
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 376.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "activacion-paso3.html",
-					"settings":
-					{
-						"buffer_size": 976,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								736,
-								736
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "actualizar-perfil.html",
-					"settings":
-					{
-						"buffer_size": 6977,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								474,
-								474
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 76.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -947,12 +582,420 @@
 		"selected_items":
 		[
 			[
+				"index",
+				"sitio.group/index.html"
+			],
+			[
+				"not",
+				"sitio.group/notifi-pred.html"
+			],
+			[
+				"rank",
+				"sitio.group/ranking.html"
+			],
+			[
+				"notifi",
+				"sitio.group/notifi-reta.html"
+			],
+			[
+				"part",
+				"sitio.group/partido.html"
+			],
+			[
+				"item-",
+				"sitio.group/item-ranking.html"
+			],
+			[
+				"ranki",
+				"sitio.group/ranking-banca.html"
+			],
+			[
+				"ra",
+				"sitio.group/ranking.html"
+			],
+			[
+				"pre",
+				"sitio.group/prediccion-hecha-3.html"
+			],
+			[
+				"pred",
+				"sitio.group/prediccion-hecha.html"
+			],
+			[
 				"perf",
 				"sitio.group/perfil2.html"
 			],
 			[
+				"noti",
+				"sitio.group/notifi-pred.html"
+			],
+			[
+				"parti",
+				"sitio.group/partido.html"
+			],
+			[
+				"inde",
+				"sitio.group/index.html"
+			],
+			[
+				"error",
+				"sitio.group/error-perfil.html"
+			],
+			[
+				"miem",
+				"sitio.group/miembros.html"
+			],
+			[
+				"perfil",
+				"sitio.group/perfil2.html"
+			],
+			[
+				"form",
+				"sitio.group/pred-form.html"
+			],
+			[
+				"pref",
+				"sitio.group/pred-form.html"
+			],
+			[
+				"partid",
+				"sitio.group/partido.html"
+			],
+			[
+				"act",
+				"sitio.group/actualizar-perfil.html"
+			],
+			[
+				"hec",
+				"sitio.group/prediccion-hecha.html"
+			],
+			[
+				"he",
+				"sitio.group/head-partido.html"
+			],
+			[
+				"var",
+				"library/less/libs/bootstrap-3.1.1/variables.less"
+			],
+			[
+				"js",
+				"library/js/scripts.js"
+			],
+			[
+				"grac",
+				"sitio.group/gracias.html"
+			],
+			[
+				"scr",
+				"library/js/scripts.js"
+			],
+			[
+				"partido",
+				"sitio.group/partido.html"
+			],
+			[
+				"hecha",
+				"sitio.group/prediccion-hecha.html"
+			],
+			[
+				"",
+				"sitio.group/perfil2.html"
+			],
+			[
+				"sb",
+				"sitio.group/part-insigniasSB.html"
+			],
+			[
+				"side",
+				"sitio.group/perfil-sidebar.html"
+			],
+			[
+				"part-",
+				"sitio.group/part-insignias.html"
+			],
+			[
+				"part-p",
+				"sitio.group/part-puntos.html"
+			],
+			[
+				"_",
+				"sitio.group/_totalSB.html"
+			],
+			[
+				"recu",
+				"sitio.group/recuperar.html"
+			],
+			[
+				"conta",
+				"sitio.group/contacto.html"
+			],
+			[
+				"base",
+				"library/less/_base.less"
+			],
+			[
+				"reg",
+				"sitio.group/reglas.html"
+			],
+			[
+				"per",
+				"sitio.group/perfil2.html"
+			],
+			[
+				"ama",
+				"sitio.group/_amateur.html"
+			],
+			[
+				"_am",
+				"sitio.group/_amateur.html"
+			],
+			[
+				"_ama",
+				"sitio.group/_amateur.html"
+			],
+			[
+				"head",
+				"sitio.group/head-partido.html"
+			],
+			[
+				"hea",
+				"sitio.group/head.html"
+			],
+			[
+				"regis",
+				"sitio.group/registro.html"
+			],
+			[
+				"eror",
+				"sitio.group/error-perfil.html"
+			],
+			[
+				"no",
+				"sitio.group/notifi-pred.html"
+			],
+			[
+				"ac",
+				"sitio.group/actualizar-cuenta.html"
+			],
+			[
+				"actua",
+				"sitio.group/actualizar-perfil.html"
+			],
+			[
+				"acut",
+				"sitio.group/actualizar-perfil.html"
+			],
+			[
+				"coment",
+				"sitio.group/perfil-comentarios.html"
+			],
+			[
+				"come",
+				"sitio.group/perfil-comentarios.html"
+			],
+			[
+				"banc",
+				"sitio.group/sitio-banca.html"
+			],
+			[
+				"pred-",
+				"sitio.group/pred-form.html"
+			],
+			[
+				"cont",
+				"sitio.group/contacto.html"
+			],
+			[
+				"pred-f",
+				"sitio.group/pred-form.html"
+			],
+			[
+				"registr",
+				"sitio.group/registro.html"
+			],
+			[
+				"ran",
+				"sitio.group/ranking.html"
+			],
+			[
+				"com",
+				"sitio.group/perfil-comentarios.html"
+			],
+			[
+				"_ame",
+				"sitio.group/_amateur.html"
+			],
+			[
+				"tot",
+				"sitio.group/_totalMedallas.html"
+			],
+			[
+				"part-ins",
+				"sitio.group/part-insignias.html"
+			],
+			[
+				"_tot",
+				"sitio.group/_total.html"
+			],
+			[
+				"part-pun",
+				"sitio.group/part-puntos.html"
+			],
+			[
+				"medall",
+				"sitio.group/medallas.html"
+			],
+			[
+				"en",
+				"sitio.group/entrar.html"
+			],
+			[
+				"head-",
+				"sitio.group/head-interiores.html"
+			],
+			[
+				"ret",
+				"sitio.group/reta.html"
+			],
+			[
+				"meda",
+				"sitio.group/medallas.html"
+			],
+			[
+				"rana",
+				"sitio.group/ranking-medallas.html"
+			],
+			[
+				"rankin",
+				"sitio.group/ranking-medallas.html"
+			],
+			[
+				"mie",
+				"sitio.group/miembros.html"
+			],
+			[
+				"bas",
+				"library/less/_base.less"
+			],
+			[
+				"base.",
+				"library/less/_base.less"
+			],
+			[
+				"item-r",
+				"sitio.group/item-ranking.html"
+			],
+			[
+				"hech",
+				"sitio.group/prediccion-hecha.html"
+			],
+			[
+				"reta",
+				"sitio.group/reta.html"
+			],
+			[
 				"rec",
 				"sitio.group/recuperar.html"
+			],
+			[
+				"entr",
+				"sitio.group/entrar.html"
+			],
+			[
+				"pre-f",
+				"sitio.group/pred-form.html"
+			],
+			[
+				"76",
+				"library/less/_768up.less"
+			],
+			[
+				"foot",
+				"sitio.group/foot2.html"
+			],
+			[
+				"con",
+				"sitio.group/contacto.html"
+			],
+			[
+				"mi",
+				"sitio.group/miembros.html"
+			],
+			[
+				"item-ran",
+				"sitio.group/item-ranking.html"
+			],
+			[
+				"ie",
+				"library/less/ie.less"
+			],
+			[
+				"st",
+				"library/less/style.less"
+			],
+			[
+				"mei",
+				"library/less/libs/bootstrap-3.1.1/media.less"
+			],
+			[
+				"heca",
+				"sitio.group/prediccion-hecha.html"
+			],
+			[
+				"recuper",
+				"sitio.group/recuperar.html"
+			],
+			[
+				"item-ra",
+				"sitio.group/item-ranking.html"
+			],
+			[
+				"re",
+				"eventos.group/registros.html"
+			],
+			[
+				"rest",
+				"sitio.group/ranking-resto.html"
+			],
+			[
+				"item",
+				"sitio.group/item-ranking.html"
+			],
+			[
+				"item.",
+				"sitio.group/item-ranking.html"
+			],
+			[
+				"ranks",
+				"sitio.group/ranking-medallas.html"
+			],
+			[
+				"puntos",
+				"sitio.group/puntos.html"
+			],
+			[
+				"regi",
+				"sitio.group/registro.html"
+			],
+			[
+				"_2",
+				"library/less/_2x.less"
+			],
+			[
+				"s",
+				"library/less/style.less"
+			],
+			[
+				"par",
+				"sitio.group/partido.html"
+			],
+			[
+				"partd",
+				"sitio.group/partido.html"
+			],
+			[
+				"pred-fom",
+				"sitio.group/pred-form.html"
 			],
 			[
 				"actu",
@@ -963,140 +1006,24 @@
 				"sitio.group/activacion-paso3.html"
 			],
 			[
-				"bas",
-				"library/less/_base.less"
-			],
-			[
-				"inde",
-				"sitio.group/index.html"
-			],
-			[
-				"entr",
-				"sitio.group/entrar.html"
-			],
-			[
-				"recuper",
-				"sitio.group/recuperar.html"
-			],
-			[
-				"pred-",
-				"sitio.group/pred-form.html"
-			],
-			[
-				"part",
-				"sitio.group/partido.html"
-			],
-			[
-				"regis",
-				"sitio.group/registro.html"
-			],
-			[
-				"he",
-				"sitio.group/head.html"
-			],
-			[
-				"act",
-				"sitio.group/activacion-paso1.html"
-			],
-			[
-				"per",
-				"sitio.group/perfil2.html"
-			],
-			[
-				"ran",
-				"sitio.group/ranking.html"
-			],
-			[
-				"side",
-				"sitio.group/perfil-sidebar.html"
-			],
-			[
-				"partid",
-				"sitio.group/partido.html"
-			],
-			[
-				"meda",
-				"sitio.group/medallas.html"
-			],
-			[
-				"rankin",
-				"sitio.group/ranking-medallas.html"
-			],
-			[
-				"form",
-				"sitio.group/pred-form.html"
-			],
-			[
-				"hec",
-				"sitio.group/prediccion-hecha.html"
-			],
-			[
-				"tot",
-				"sitio.group/_total.html"
-			],
-			[
-				"part-p",
-				"sitio.group/part-puntos.html"
-			],
-			[
-				"head",
-				"sitio.group/head.html"
-			],
-			[
 				"total",
 				"sitio.group/_totalMedallas.html"
-			],
-			[
-				"part-",
-				"sitio.group/part-insignias.html"
-			],
-			[
-				"mie",
-				"sitio.group/miembros.html"
 			],
 			[
 				"ram",
 				"sitio.group/ranking.html"
 			],
 			[
-				"actua",
-				"sitio.group/actualizar-perfil.html"
-			],
-			[
 				"perfi",
 				"sitio.group/perfil2.html"
-			],
-			[
-				"",
-				"sitio.group/partidos.html"
-			],
-			[
-				"scr",
-				"library/js/scripts.js"
 			],
 			[
 				"comen",
 				"sitio.group/perfil-comentarios.html"
 			],
 			[
-				"pred-f",
-				"sitio.group/pred-form.html"
-			],
-			[
 				"predi",
 				"sitio.group/prediccion-hecha.html"
-			],
-			[
-				"base",
-				"library/less/_base.less"
-			],
-			[
-				"hea",
-				"sitio.group/head-partido.html"
-			],
-			[
-				"var",
-				"library/less/libs/bootstrap-3.1.1/variables.less"
 			],
 			[
 				"v",
@@ -1107,16 +1034,8 @@
 				"sitio.group/foot2.html"
 			],
 			[
-				"foot",
-				"sitio.group/foot.html"
-			],
-			[
 				"9",
 				"library/less/_992up.less"
-			],
-			[
-				"76",
-				"library/less/_768up.less"
 			],
 			[
 				"ind",
@@ -1127,36 +1046,8 @@
 				"sitio.group/perfil2.html"
 			],
 			[
-				"_",
-				"sitio.group/_amateur.html"
-			],
-			[
-				"hech",
-				"sitio.group/prediccion-hecha.html"
-			],
-			[
-				"not",
-				"sitio.group/notifi-pred.html"
-			],
-			[
-				"partido",
-				"sitio.group/partidos.html"
-			],
-			[
-				"pre",
-				"sitio.group/notifi-pred.html"
-			],
-			[
-				"rank",
-				"sitio.group/ranking-medallas.html"
-			],
-			[
 				"p",
 				"sitio.group/perfil.html"
-			],
-			[
-				"hecha",
-				"sitio.group/prediccion-hecha.html"
 			],
 			[
 				"entrar",
@@ -1167,24 +1058,8 @@
 				"sitio.group/ranking.html"
 			],
 			[
-				"perfil",
-				"sitio.group/perfil.html"
-			],
-			[
-				"pred",
-				"sitio.group/notifi-pred.html"
-			],
-			[
 				"_to",
 				"sitio.group/_total.html"
-			],
-			[
-				"puntos",
-				"sitio.group/puntos-predicciones.html"
-			],
-			[
-				"par",
-				"sitio.group/partidos.html"
 			],
 			[
 				"punt",
@@ -1193,10 +1068,6 @@
 			[
 				"pun",
 				"sitio.group/puntos-asignacion.html"
-			],
-			[
-				"ra",
-				"sitio.group/ranking.html"
 			],
 			[
 				"rn",
@@ -1211,10 +1082,6 @@
 				"sitio.group/puntos-predicciones.html"
 			],
 			[
-				"miem",
-				"sitio.group/miembros.html"
-			],
-			[
 				"untos",
 				"sitio.group/puntos-asignacion.html"
 			],
@@ -1225,234 +1092,6 @@
 			[
 				"punts",
 				"sitio.group/puntos.html"
-			],
-			[
-				"med",
-				"sitio.group/ranking-medallas.html"
-			],
-			[
-				"head-",
-				"sitio.group/head-partido.html"
-			],
-			[
-				"gr",
-				"sitio.group/gracias.html"
-			],
-			[
-				"partd",
-				"sitio.group/partidos.html"
-			],
-			[
-				"puntos-as",
-				"sitio.group/puntos-asignacion.html"
-			],
-			[
-				"partidos",
-				"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/puntos-predicciones.html"
-			],
-			[
-				"puntos-",
-				"sitio.group/puntos-predicciones.html"
-			],
-			[
-				"part-par",
-				"sitio.group/part-partido.html"
-			],
-			[
-				"re",
-				"sitio.group/recuperar.html"
-			],
-			[
-				"punto",
-				"sitio.group/puntos-predicciones.html"
-			],
-			[
-				"asig",
-				"sitio.group/puntos-asignacion.html"
-			],
-			[
-				"cont",
-				"sitio.group/contacto.html"
-			],
-			[
-				"ac",
-				"sitio.group/actualizar-cuenta.html"
-			],
-			[
-				"noti",
-				"sitio.group/notifi-pred.html"
-			],
-			[
-				"unto",
-				"sitio.group/puntos.html"
-			],
-			[
-				"con",
-				"sitio.group/contacto.html"
-			],
-			[
-				"pard",
-				"sitio.group/partido.html"
-			],
-			[
-				"4",
-				"library/less/_481up.less"
-			],
-			[
-				"come",
-				"sitio.group/comentariosajax.html"
-			],
-			[
-				"reg",
-				"sitio.group/registro.html"
-			],
-			[
-				"ter",
-				"sitio.group/terminos.html"
-			],
-			[
-				"que",
-				"sitio.group/que-es.html"
-			],
-			[
-				"js",
-				"library/js/scripts.js"
-			],
-			[
-				"en",
-				"sitio.group/entrar.html"
-			],
-			[
-				"pol",
-				"sitio.group/politicas.html"
-			],
-			[
-				"j",
-				"library/js/scripts.js"
-			],
-			[
-				"polit",
-				"sitio.group/politicas.html"
-			],
-			[
-				"registr",
-				"sitio.group/registro.html"
-			],
-			[
-				"gracas",
-				"sitio.group/gracias.html"
-			],
-			[
-				"b",
-				"library/less/_base.less"
-			],
-			[
-				"gra",
-				"sitio.group/gracias.html"
-			],
-			[
-				"va",
-				"library/less/libs/bootstrap-3.1.1/variables.less"
-			],
-			[
-				"cuent",
-				"sitio.group/actualizar-cuenta.html"
-			],
-			[
-				"regi",
-				"sitio.group/registro.html"
-			],
-			[
-				"recu",
-				"sitio.group/recuperar.html"
-			],
-			[
-				"termi",
-				"sitio.group/terminos.html"
-			],
-			[
-				"reglas",
-				"sitio.group/reglas.html"
-			],
-			[
-				"gracias",
-				"sitio.group/gracias.html"
-			],
-			[
-				"theme",
-				"library/less/libs/bootstrap-3.1.1/theme.less"
-			],
-			[
-				"predic",
-				"sitio.group/prediccion-hecha.html"
-			],
-			[
-				"styl",
-				"library/css/style.css"
-			],
-			[
-				"pred-fo",
-				"sitio.group/pred-form.html"
-			],
-			[
-				"index.ht",
-				"index.html"
-			],
-			[
-				"termin",
-				"sitio.group/terminos.html"
-			],
-			[
-				"poli",
-				"sitio.group/politicas.html"
-			],
-			[
-				"err",
-				"sitio.group/error-perfil.html"
-			],
-			[
-				"grac",
-				"sitio.group/gracias.html"
-			],
-			[
-				"in",
-				"sitio.group/index.html"
-			],
-			[
-				"7",
-				"library/less/_768up.less"
-			],
-			[
-				"768",
-				"library/less/_768up.less"
-			],
-			[
-				"sty",
-				"library/css/style.css"
-			],
-			[
-				"rana",
-				"sitio.group/ranking-medallas.html"
-			],
-			[
-				"meme",
-				"user_main.group/members.html"
-			],
-			[
-				"inter",
-				"sitio.group/head-interiores.html"
-			],
-			[
-				"graca",
-				"sitio.group/gracias.html"
-			],
-			[
-				"index",
-				"sitio.group/index.html"
-			],
-			[
-				"conf",
-				"sitio.group/config.prod.php"
 			]
 		],
 		"width": 0.0
@@ -1468,7 +1107,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 223.0,
+	"side_bar_visible": true,
+	"side_bar_width": 254.0,
 	"status_bar_visible": true
 }
