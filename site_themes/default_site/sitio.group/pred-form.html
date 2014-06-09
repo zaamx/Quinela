@@ -168,14 +168,13 @@
 		<hr>
 		<script type="text/javascript">
 			$(document).ready(function(){
+
 				 $("#publishForm").submit(function( event ){
-
                     if ($(this).valid()){
-                        $("input:text,select").each(function(){
-                            $(this).prop('readonly', true);
-                        });
-
-                        $("button:submit").prop('disabled', true);
+                        // $("input:text,select").each(function(){
+                        //     $(this).prop('readonly', true);
+                        // });
+                        $("button#sendform").prop('disabled', true);
                     }else{
                         event.preventDefault();
                     }
@@ -188,13 +187,17 @@
 							if(alert('Gracias por hacer tu predicción')){}
 							else   window.location.href = '{embed:urlDestino}/{embed:nombrePost}/'+data.entry_id;
 						} else if (data.success == '0') {
+							$("button#sendform").prop('disabled', false);
 							 $('#mensajes').show();
                     		// $('#mensajes .alert').append(data.field_errors.title+'<br>');
-                    		$('#mensajes .alert').append(data.field_errors.pre_marcador_local+'<br>');
-                    		$('#mensajes .alert').append(data.field_errors.pre_marcador_visitante+'<br>');
-                    		$('#mensajes .alert').append(data.field_errors.pre_resultado_de_partido+'<br>');
+                    		
+                    		
+
+                    		$('#mensajes .alert').html('<span class="sr-only">'+data.field_errors.pre_marcador_local+'</span> Marcador local es requerido<br>');
+                    		$('#mensajes .alert').html('<span class="sr-only">'+data.field_errors.pre_marcador_visitante+'</span>  Marcador visitante es requerido<br>');
+                    		$('#mensajes .alert').html('<span class="sr-only">'+data.field_errors.pre_resultado_de_partido+'</span> Resultado de partido es requerido<br>');
                     		// $('#mensajes .alert').append(data.field_errors.pre_minuto_de_primer_gol+'<br>');
-                    		$('#mensajes .alert').append(data.field_errors.quien_anota_primero+'<br>');
+                    		$('#mensajes .alert').html('<span class="sr-only">'+data.field_errors.quien_anota_primero+'</span> ¿Quien anota primero? es requerido<br>');
 						}
 					}
 				});
@@ -283,7 +286,7 @@
 			<div class="sr-only">
 				{field:partido_rel}
 			</div>
-			<input type="submit" value="Confirmar"  class="btn btn-success">
+			<button type="submit" id="sendform" class="btn btn-success">Confirmar</button>
 		{/exp:channel:form}
 		<div id="mensajes" style="display:none;">
 			<hr>
