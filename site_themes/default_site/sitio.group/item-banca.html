@@ -1,0 +1,23 @@
+{exp:user:users member_id="{embed:mid}" dynamic="yes" limit="1" log_views="off"}	
+<div class="item-banca">
+	<div class="row">
+		<div class="col-sm-3">
+			<a href="{path=sitio/perfil2}/{member_id}/">
+				<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
+			</a>	
+		</div>
+		<div class="col-sm-9">
+			<h4>
+				<a href="{path=sitio/perfil2}/{member_id}/">
+	                <b>{screen_name}</b>
+	             </a> 
+				<small>
+					<div class='element' title='{embed:total}'>
+						<i class="fa fa-star-o"></i> <b>{embed:total}</b> <span>Puntos</span>
+					</div>
+				</small>
+			</h4>	
+		</div>
+	</div>
+</div>
+{/exp:user:users}
