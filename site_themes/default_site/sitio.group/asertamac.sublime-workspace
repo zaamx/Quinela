@@ -106,6 +106,40 @@
 				"buffer_size": 2572,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "ranking.html",
+			"settings":
+			{
+				"buffer_size": 3354,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "head.html",
+			"settings":
+			{
+				"buffer_size": 6352,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 80 files for \"<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\"\n\n/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head-partido.html:\n  103  									</li> -->\n  104  									<li class=\"dropdown\">\n  105: 										<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  106  											<i class=\"fa fa-cog\"></i>\n  107  											<b class=\"caret\"></b>\n\n/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head.html:\n  110  									</li> -->\n  111  									<li class=\"dropdown\">\n  112: 										<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  113  											<i class=\"fa fa-cog\"></i>\n  114  											<b class=\"caret\"></b>\n\n2 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 735,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "head-partido.html",
+			"settings":
+			{
+				"buffer_size": 6281,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -168,6 +202,8 @@
 	},
 	"file_history":
 	[
+		"/Users/pedrocerilla/Repos/ttt/system/expressionengine/config/database.php",
+		"/Users/pedrocerilla/Repos/ttt/system/expressionengine/config/config.php",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil2.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/miembros.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partidos.html",
@@ -293,9 +329,7 @@
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/gracias.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_main.group/index.html",
 		"/home/alonso/public_html/quinela/themes/site_themes/default_site/user_inc.group/header.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/head-interiores.html",
-		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/config.prod.php",
-		"/home/alonso/public_html/quinela/system/expressionengine/config/config.php"
+		"/home/alonso/public_html/quinela/themes/site_themes/default_site/sitio.group/head-interiores.html"
 	],
 	"find":
 	{
@@ -303,7 +337,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group",
@@ -319,6 +353,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">",
+			"http://www.dev.zaa.mx/quinela/",
+			"http://www.dev.zaa.mx/",
 			"item-ranking",
 			"{path",
 			"prediccion-hecha",
@@ -443,10 +480,7 @@
 			"green",
 			"headings",
 			"user_inc/error_template",
-			"id=\"wrapper\"",
-			"{member_id}",
-			"pre_id_de_usuario",
-			"gana"
+			"id=\"wrapper\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -454,6 +488,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" style=\"color: red;\">",
+			"http://www.quinieala.ms/",
 			"partido",
 			" a&uacute;n ",
 			"background: url('../images/PIXEL_NEGRO.png');",
@@ -506,7 +542,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -521,8 +557,8 @@
 						"selection":
 						[
 							[
-								318,
-								318
+								649,
+								649
 							]
 						],
 						"settings":
@@ -530,6 +566,134 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ranking.html",
+					"settings":
+					{
+						"buffer_size": 3354,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								534,
+								534
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "head.html",
+					"settings":
+					{
+						"buffer_size": 6352,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4444,
+								4444
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1505.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 735,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										257,
+										316
+									],
+									[
+										565,
+										624
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "head-partido.html",
+					"settings":
+					{
+						"buffer_size": 6281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								405,
+								405
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -582,6 +746,14 @@
 		"selected_items":
 		[
 			[
+				"head",
+				"sitio.group/head.html"
+			],
+			[
+				"ra",
+				"sitio.group/ranking.html"
+			],
+			[
 				"index",
 				"sitio.group/index.html"
 			],
@@ -608,10 +780,6 @@
 			[
 				"ranki",
 				"sitio.group/ranking-banca.html"
-			],
-			[
-				"ra",
-				"sitio.group/ranking.html"
 			],
 			[
 				"pre",
@@ -752,10 +920,6 @@
 			[
 				"_ama",
 				"sitio.group/_amateur.html"
-			],
-			[
-				"head",
-				"sitio.group/head-partido.html"
 			],
 			[
 				"hea",
