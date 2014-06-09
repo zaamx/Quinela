@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
 
 
   function heroInit() {
-        var hero        = jQuery('#home-ingreso'),
+        var hero        = jQuery('.fullpant'),
             winHeight   = jQuery(window).height(),
             heroHeight  = winHeight;
           
@@ -107,17 +107,24 @@ jQuery(document).ready(function($) {
     jQuery(window).on("resize", heroInit);
     jQuery(document).on("ready", heroInit);
 
+
+// isValidEmailAddress("dfsdfasd@dsfasdfas dfasdfsadf")
+
+$.validator.addMethod("accept", function(value, element, param) { 
+          var pattern = new RegExp(/^[a-zA-Záéíóú]+(\s*[a-zA-Záéíóú]*)*[a-zA-Záéíóú]+$/);
+            return pattern.test(value);
+           });
     
 
   $("#member_form").validate({
         rules: {
           nombre: {
             required: true,
-            accept: "[a-zA-Z]+"
+            accept: true
           },
           screen_name: {
             required: true,
-            accept: "[a-zA-Z]+"
+            accept: true
           },
           username: {
             required: true,
@@ -163,7 +170,8 @@ jQuery(document).ready(function($) {
             required: '*Debes especificar tu contraseña'
           },
           password_confirm: {
-            required: '*No coincide tu contraseña, int&eacute;ntalo de nuevo'
+            required: '*No coincide tu contraseña, int&eacute;ntalo de nuevo',
+            equalTo:  '*No coincide tu contraseña, int&eacute;ntalo de nuevo'
           },
           invitation: {
             required: '*Debes ingresar el código de invitación que se envio a tu correo'

@@ -43,7 +43,7 @@
 						{if segment_3 == "exito"}
 							<div class="alert alert-success alert-dismissable">
 							  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-							  Haz actualizado tu perfil
+							  Has actualizado tu perfil
 							</div>
 						{/if}
 
@@ -67,11 +67,13 @@
 									<b>Tienes activados los comentarios en tu perfil</b>
 								</div>
 
+								{!--
 								{exp:channel:form channel="activ_comentarios_perfil"  entry_id="{entry_id}" return="sitio/actualizar-perfil/{segment_3}" status="closed"}
 									<input type="hidden" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">	
 
 									<input type="submit" value="Desactivar comentarios" class="btn btn-success col-sm-6 col-sm-offset-3">
 								{/exp:channel:form}
+								--}
 
 
 							{if:elseif status == "closed"}
