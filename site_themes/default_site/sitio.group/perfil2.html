@@ -29,13 +29,13 @@
 					<div class="col-sm-12">
 						<h3>Mis insignias</h3>
 
-						<ul class="list-inline">
+						<ul id="list-origin" style="display:none;" class="list-inline">
 							<?php 
 							$lista_badges = array();
 							?>
-							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="={segment_3}"  dynamic="no" disable="pagination"}
+							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="={segment_3}"  limit="999999" dynamic="no" disable="pagination"}
 							
-								<li class="item-badge" id="{entry_id}-{lista_badges:entry_id}">
+								<li class="item-badge" id="{entry_id}-{lista_badges:entry_id}" data-category="{lista_badges:entry_id}">
 									<?php $lista_badges[] = '{lista_badges:entry_id}'; ?>
 									<a class="item-badgelink" href="#"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="{lista_badges:descripcion_ganado}" data-title="{lista_badges:title}">
 										<img  height="90" width="90" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">	
@@ -46,8 +46,35 @@
 
 							{/exp:channel:entries}
 						</ul>
+						<ul id="list-detino" class="list-inline">
+						</ul>
+
 					</div>
 				</div>
+	
+				<script>
+
+				var categories = {},
+				    category;
+				$('#list-origin li[data-category]').each(function(i, el){
+				    category = $(el).html();
+				    if (categories.hasOwnProperty(category)) {
+				        categories[category] += 1;
+				    }
+				    else {
+				        categories[category] = 1;
+				    }
+				});
+
+				// print results
+
+				for(var key in categories){
+				    $('#list-detino').append('<li class="item-badge"><span class="label label-success pull-right">' + categories[key] + '</span>' + key + '</li>');
+				}
+				</script>
+				
+					
+				
 
 				<!-- ///////////////////////////////  Apuestas ///////////////////////////////   -->
 				<div class="row">

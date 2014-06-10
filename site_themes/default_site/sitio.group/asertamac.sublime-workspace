@@ -119,25 +119,103 @@
 			"file": "head.html",
 			"settings":
 			{
-				"buffer_size": 6352,
+				"buffer_size": 6484,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 80 files for \"<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\"\n\n/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head-partido.html:\n  103  									</li> -->\n  104  									<li class=\"dropdown\">\n  105: 										<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  106  											<i class=\"fa fa-cog\"></i>\n  107  											<b class=\"caret\"></b>\n\n/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head.html:\n  110  									</li> -->\n  111  									<li class=\"dropdown\">\n  112: 										<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  113  											<i class=\"fa fa-cog\"></i>\n  114  											<b class=\"caret\"></b>\n\n2 matches across 2 files\n",
-			"settings":
-			{
-				"buffer_size": 735,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
 			}
 		},
 		{
 			"file": "head-partido.html",
 			"settings":
 			{
-				"buffer_size": 6281,
+				"buffer_size": 6569,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "partido.html",
+			"settings":
+			{
+				"buffer_size": 3015,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "foot2.html",
+			"settings":
+			{
+				"buffer_size": 1986,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "head-interiores.html",
+			"settings":
+			{
+				"buffer_size": 1582,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ranking-medallas.html",
+			"settings":
+			{
+				"buffer_size": 4451,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perfil-sidebar.html",
+			"settings":
+			{
+				"buffer_size": 974,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "part-puntosSB.html",
+			"settings":
+			{
+				"buffer_size": 307,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "part-insigniasSB.html",
+			"settings":
+			{
+				"buffer_size": 348,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "part-insignias.html",
+			"settings":
+			{
+				"buffer_size": 344,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "part-puntos.html",
+			"settings":
+			{
+				"buffer_size": 303,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "notifi-reta.html",
+			"settings":
+			{
+				"buffer_size": 379,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "perfil2.html",
+			"settings":
+			{
+				"buffer_size": 11341,
 				"line_ending": "Unix"
 			}
 		}
@@ -202,13 +280,13 @@
 	},
 	"file_history":
 	[
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/pred-form.html",
 		"/Users/pedrocerilla/Repos/ttt/system/expressionengine/config/database.php",
 		"/Users/pedrocerilla/Repos/ttt/system/expressionengine/config/config.php",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil2.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/miembros.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partidos.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/error-perfil.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/pred-form.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso2.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/index.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partido.html",
@@ -337,7 +415,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group",
@@ -353,6 +431,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<<<<<<< HEAD",
 			"<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">",
 			"http://www.dev.zaa.mx/quinela/",
 			"http://www.dev.zaa.mx/",
@@ -479,8 +558,7 @@
 			"{exp:user:theme_folder_url}code_pack/images/icon_profile.gif",
 			"green",
 			"headings",
-			"user_inc/error_template",
-			"id=\"wrapper\""
+			"user_inc/error_template"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -542,7 +620,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 14,
 			"sheets":
 			[
 				{
@@ -557,8 +635,8 @@
 						"selection":
 						[
 							[
-								649,
-								649
+								293,
+								293
 							]
 						],
 						"settings":
@@ -585,8 +663,8 @@
 						"selection":
 						[
 							[
-								534,
-								534
+								458,
+								458
 							]
 						],
 						"settings":
@@ -605,15 +683,15 @@
 					"file": "head.html",
 					"settings":
 					{
-						"buffer_size": 6352,
+						"buffer_size": 6484,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4444,
-								4444
+								913,
+								913
 							]
 						],
 						"settings":
@@ -622,34 +700,46 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1505.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "head-partido.html",
 					"settings":
 					{
-						"buffer_size": 735,
+						"buffer_size": 6569,
 						"regions":
 						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										257,
-										316
-									],
-									[
-										565,
-										624
-									]
-								],
-								"scope": ""
-							}
+						},
+						"selection":
+						[
+							[
+								1068,
+								1068
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "partido.html",
+					"settings":
+					{
+						"buffer_size": 3015,
+						"regions":
+						{
 						},
 						"selection":
 						[
@@ -660,13 +750,8 @@
 						],
 						"settings":
 						{
-							"detect_indentation": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -675,19 +760,47 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "head-partido.html",
+					"buffer": 5,
+					"file": "foot2.html",
 					"settings":
 					{
-						"buffer_size": 6281,
+						"buffer_size": 1986,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								405,
-								405
+								1245,
+								1146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 189.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "head-interiores.html",
+					"settings":
+					{
+						"buffer_size": 1582,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								954,
+								954
 							]
 						],
 						"settings":
@@ -697,6 +810,217 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "ranking-medallas.html",
+					"settings":
+					{
+						"buffer_size": 4451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								588,
+								588
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "perfil-sidebar.html",
+					"settings":
+					{
+						"buffer_size": 974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								541,
+								541
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "part-puntosSB.html",
+					"settings":
+					{
+						"buffer_size": 307,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								307,
+								307
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "part-insigniasSB.html",
+					"settings":
+					{
+						"buffer_size": 348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								348,
+								348
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "part-insignias.html",
+					"settings":
+					{
+						"buffer_size": 344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								344,
+								344
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "part-puntos.html",
+					"settings":
+					{
+						"buffer_size": 303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "notifi-reta.html",
+					"settings":
+					{
+						"buffer_size": 379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								356,
+								356
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "perfil2.html",
+					"settings":
+					{
+						"buffer_size": 11341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1106,
+								1106
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 435.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -746,8 +1070,48 @@
 		"selected_items":
 		[
 			[
+				"perf",
+				"sitio.group/perfil2.html"
+			],
+			[
+				"rank",
+				"sitio.group/ranking-medallas.html"
+			],
+			[
+				"noti",
+				"sitio.group/notifi-reta.html"
+			],
+			[
+				"part-",
+				"sitio.group/part-puntos.html"
+			],
+			[
+				"sb",
+				"sitio.group/part-insigniasSB.html"
+			],
+			[
+				"per",
+				"sitio.group/perfil-sidebar.html"
+			],
+			[
+				"meda",
+				"sitio.group/ranking-medallas.html"
+			],
+			[
 				"head",
-				"sitio.group/head.html"
+				"sitio.group/head-interiores.html"
+			],
+			[
+				"foot",
+				"sitio.group/foot2.html"
+			],
+			[
+				"pred-f",
+				"sitio.group/pred-form.html"
+			],
+			[
+				"part",
+				"sitio.group/partido.html"
 			],
 			[
 				"ra",
@@ -762,16 +1126,8 @@
 				"sitio.group/notifi-pred.html"
 			],
 			[
-				"rank",
-				"sitio.group/ranking.html"
-			],
-			[
 				"notifi",
 				"sitio.group/notifi-reta.html"
-			],
-			[
-				"part",
-				"sitio.group/partido.html"
 			],
 			[
 				"item-",
@@ -788,14 +1144,6 @@
 			[
 				"pred",
 				"sitio.group/prediccion-hecha.html"
-			],
-			[
-				"perf",
-				"sitio.group/perfil2.html"
-			],
-			[
-				"noti",
-				"sitio.group/notifi-pred.html"
 			],
 			[
 				"parti",
@@ -870,16 +1218,8 @@
 				"sitio.group/perfil2.html"
 			],
 			[
-				"sb",
-				"sitio.group/part-insigniasSB.html"
-			],
-			[
 				"side",
 				"sitio.group/perfil-sidebar.html"
-			],
-			[
-				"part-",
-				"sitio.group/part-insignias.html"
 			],
 			[
 				"part-p",
@@ -904,10 +1244,6 @@
 			[
 				"reg",
 				"sitio.group/reglas.html"
-			],
-			[
-				"per",
-				"sitio.group/perfil2.html"
 			],
 			[
 				"ama",
@@ -970,10 +1306,6 @@
 				"sitio.group/contacto.html"
 			],
 			[
-				"pred-f",
-				"sitio.group/pred-form.html"
-			],
-			[
 				"registr",
 				"sitio.group/registro.html"
 			],
@@ -1022,10 +1354,6 @@
 				"sitio.group/reta.html"
 			],
 			[
-				"meda",
-				"sitio.group/medallas.html"
-			],
-			[
 				"rana",
 				"sitio.group/ranking-medallas.html"
 			],
@@ -1072,10 +1400,6 @@
 			[
 				"76",
 				"library/less/_768up.less"
-			],
-			[
-				"foot",
-				"sitio.group/foot2.html"
 			],
 			[
 				"con",
@@ -1271,7 +1595,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 254.0,
 	"status_bar_visible": true
 }

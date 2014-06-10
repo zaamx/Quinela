@@ -38,7 +38,7 @@
 						<?php $badgesbyusers = array(); ?>
 
 
-						{exp:channel:entries channel="badges_asignados" dynamic="no" disable="pagination"}
+						{exp:channel:entries channel="badges_asignados" limite="99999" dynamic="no" disable="pagination"}
 							{lista_badges}
 								<?php $badgesbyusers['{usuario_receptor_badge}'] = (isset($badgesbyusers['{usuario_receptor_badge}'])) ? $badgesbyusers['{usuario_receptor_badge}'] + '{lista_badges:valor_medalla}' : '{lista_badges:valor_medalla}' ; ?>
 							{/lista_badges}
@@ -113,7 +113,7 @@
 
 
 						<?php foreach($badgesbyusers as $k => $b){ ?>
-							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="<?php echo $k; ?>"  dynamic="no" disable="pagination"}
+							{exp:channel:entries channel="badges_asignados"  limite="99999"   search:usuario_receptor_badge="<?php echo $k; ?>"  dynamic="no" disable="pagination"}
 								{title}<br>
 							{/exp:channel:entries}
 

@@ -1,4 +1,4 @@
-{exp:channel:entries channel="badges_asignados" dynamic="no" search:usuario_receptor_badge="={embed:id_usuario}"  disable="categories|member_data|pagination|category_fields"}
+{exp:channel:entries channel="badges_asignados" dynamic="no" limit="999999" search:usuario_receptor_badge="={embed:id_usuario}"  disable="categories|member_data|pagination|category_fields"}
 		{exp:tally:add collection="puntosMedallasSB" value="{lista_badges:valor_medalla}" count="{count}"}
 {/exp:channel:entries}
 {embed="sitio/_totalMedallasSB"}  
