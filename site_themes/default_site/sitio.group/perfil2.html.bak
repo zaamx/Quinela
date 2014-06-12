@@ -29,13 +29,13 @@
 					<div class="col-sm-12">
 						<h3>Mis insignias</h3>
 
-						<ul id="list-origin" style="display:none;" class="list-inline">
+						<ul class="list-inline">
 							<?php 
 							$lista_badges = array();
 							?>
-							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="={segment_3}"  limit="999999" dynamic="no" disable="pagination"}
+							{exp:channel:entries channel="badges_asignados"  search:usuario_receptor_badge="={segment_3}"  dynamic="no" disable="pagination"}
 							
-								<li class="item-badge" id="{entry_id}-{lista_badges:entry_id}" data-category="{lista_badges:entry_id}">
+								<li class="item-badge" id="{entry_id}-{lista_badges:entry_id}">
 									<?php $lista_badges[] = '{lista_badges:entry_id}'; ?>
 									<a class="item-badgelink" href="#"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="{lista_badges:descripcion_ganado}" data-title="{lista_badges:title}">
 										<img  height="90" width="90" class="img-circle item-img" src="{lista_badges:imagen_badge}" alt="">	
@@ -46,35 +46,8 @@
 
 							{/exp:channel:entries}
 						</ul>
-						<ul id="list-detino" class="list-inline">
-						</ul>
-
 					</div>
 				</div>
-	
-				<script>
-
-				var categories = {},
-				    category;
-				$('#list-origin li[data-category]').each(function(i, el){
-				    category = $(el).html();
-				    if (categories.hasOwnProperty(category)) {
-				        categories[category] += 1;
-				    }
-				    else {
-				        categories[category] = 1;
-				    }
-				});
-
-				// print results
-
-				for(var key in categories){
-				    $('#list-detino').append('<li class="item-badge"><span class="label label-success pull-right">' + categories[key] + '</span>' + key + '</li>');
-				}
-				</script>
-				
-					
-				
 
 				<!-- ///////////////////////////////  Apuestas ///////////////////////////////   -->
 				<div class="row">
@@ -192,7 +165,7 @@
 							<div id="slider-badges">
 								{exp:channel:entries channel="badges"   category="23"  dynamic="no" }
 									<div class="item" data-title="{title}" >
-										<a href="#" class="item-badgelink2" data-container="body" data-toggle="popover" data-placement="top" data-content="{descripcion_badge}" data-title="{title}" data-p="<?php echo base64_encode('{valor_medalla}'); ?>" >
+										<a href="#" class="item-badgelink2" data-container="body" data-toggle="popover" data-placement="top" data-content="{descripcion_badge}" data-title="{title}">
 											<img alt="{entry_id}"  height="63" width="63" class="img-circle item-img" src="{imagen_badge}" alt="{title}">	
 										</a>
 									</div> 
@@ -222,7 +195,6 @@
 								$('.item-badgelink2').click(function (event) {
 									event.preventDefault(); 
 									$('select[name="lista_badges[data][]"]').find('option[value="' + $(this).children('img.item-img').attr("alt") + '"]').attr("selected",true);
-									$("#puntos_badge").val($(this).attr('data-p'));
 
 
 									if (!$(this).children('img.item-img').hasClass('bdActive')) {
@@ -269,7 +241,6 @@
 							</script>
 							{exp:channel:form channel="badges_asignados" return="sitio/perfil2/{segment_3}" status="open"  json="yes" }
 							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}" />
-							<input type="hidden" name="puntos_badge" id="puntos_badge" value="" />
 							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 							<div class="sr-only">
 								{field:lista_badges}		

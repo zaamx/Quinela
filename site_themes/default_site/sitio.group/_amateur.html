@@ -1,6 +1,10 @@
 <div class="well well-sm" style="overflow: hidden;">
 	<div class="alert alert-success">
 
+	{exp:channel:entries channel="badges" entry_id="{embed:id_insigniaDada}"}
+		<?php $valorM = '{valor_medalla}' ?>
+	{/exp:channel:entries}
+
 	{if embed:id_insigniaDada == "96"}		
 			<b>Ganaste la insignia Novato por hacer tu primera predicci&oacute;n</b>	
 	{/if}
@@ -17,6 +21,8 @@
 			<b>Ganaste la insignia Imparable por hacer tu 16va predicci&oacute;n</b>	
 	{/if}
 	</div>
+
+
 
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -41,8 +47,9 @@
 </script>
 
 {exp:channel:form channel="badges_asignados" return="site/ENTRY_ID" status="open" json="yes"}
-<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}">
 <input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+<input type="hidden" name="puntos_badge" id="puntos_badge" value="<?php echo $valorM; ?>">
+	<?php echo $valorM; ?>
 <div class="sr-only">
 	{field:lista_badges}		
 </div>

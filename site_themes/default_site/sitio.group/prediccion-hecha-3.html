@@ -78,6 +78,7 @@
 				<?php $idBadgeAsoc = '0'; ?>
 				{parents field="partido_de_insignia"}
 					<?php $idBadgeAsoc = "{parents:entry_id}"; ?>
+					<?php $idBadgeAsocVal = "{parents:valor_medalla}"; ?>
 				{/parents}
 			</div>
 
@@ -166,6 +167,7 @@
 
 					
 					{exp:stash:set_value name="idBadgeAsocN" value="<?php echo $idBadgeAsoc; ?>" parse="inward"}
+					{exp:stash:set_value name="idBadgeAsocNVal" value="<?php echo $idBadgeAsocVal; ?>" parse="inward"}
 
 					
 
@@ -193,10 +195,10 @@
 								$('select[name="lista_badges[data][]"]').find('option[value="{exp:stash:get name="idBadgeAsocN"}"]').attr("selected",true);
 							});
 						</script>
-
 						{exp:channel:form channel="badges_asignados" return="sitio/perfil2" status="open" json="yes"}
 							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{logged_in_member_id}">
 							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{exp:stash:get name="idBadgeAsocN"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+							<input type="hidden" name="puntos_badge" id="puntos_badge" value="<?php echo base64_encode($idBadgeAsocVal); ?>" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 							<div class="sr-only">
 								
 								{field:lista_badges}		

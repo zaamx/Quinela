@@ -1,4 +1,11 @@
+
+<?php $totalPuntos = 0; ?>
 {exp:channel:entries channel="badges_asignados" dynamic="no" limit="999999" search:usuario_receptor_badge="={embed:id_usuario}"  disable="categories|member_data|pagination|category_fields"}
-		{exp:tally:add collection="puntosMedallasSB" value="{lista_badges:valor_medalla}" count="{count}"}
+		<?php $totalPuntos = $totalPuntos + base64_decode('{puntos_badge}'); ?>
+		{!-- {exp:tally:add collection="puntosMedallasSB" value="{puntos_badge}" count="{count}"} --}
 {/exp:channel:entries}
-{embed="sitio/_totalMedallasSB"}  
+{!-- {embed="sitio/_totalMedallasSB"}  --}
+
+<div class='element' title='{exp:tally:total collection="puntosMedallasSB" thousands="" decimals="0"}'>
+	<b><?php echo $totalPuntos; ?></b> <span>Puntos  de insignias</span> <br>	
+</div>

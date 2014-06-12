@@ -1,0 +1,43 @@
+<?php $badgesbyusers = array(); ?>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<!--<a href="" id="actualizar">Actualizar</a>-->
+
+<div id="return"></div>
+
+<br><br><br>
+{exp:channel:entries channel="badges_asignados" dynamic="no" limit="50" search:puntos_badge="IS_EMPTY" disable="pagination"}
+	{entry_id} - 
+			 {lista_badges}
+			 	{lista_badges:valor_medalla}<br>
+		<?php $badgepuntos = '{lista_badges:valor_medalla}'; ?>
+		{/lista_badges} 
+	{exp:channel:form channel="badges_asignados" return="sitio/perfil2/" entry_id="{entry_id}" id="form_{entry_id}" status="open"  json="yes" }
+							<input type="text" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{usuario_receptor_badge}" />
+							<input type="text" name="puntos_badge" id="puntos_badge" value="<?php echo base64_encode($badgepuntos); ?>" />
+							<input type="text" name="puntos_badge_back" id="puntos_badge" value="{puntos_badge}" />
+							<div class="">
+								{field:lista_badges}		
+							</div>
+							<input type="submit" value="Dar insignia" class="btn btn-success col-sm-4 col-sm-offset-4">
+							{/exp:channel:form}
+{/exp:channel:entries}
+
+<script type="text/javascript">
+	$(document).ready(function(){		
+			count = 0;
+			$.each($("form"),function(){
+				$.post($(this).attr('action'), $(this).serialize() , function(response){
+					count++;
+					$("#return").prepend(count + ": " + response.success + "<br>");
+				});
+			});			
+
+		/*$("#actualizar").on('click',function(e){
+			e.preventDefault();
+		});*/
+	})
+
+</script>

@@ -11,6 +11,14 @@
 						</small>
 					</h2>
 
+					<div class="alert alert-info">
+						<b>
+							¡WOW! En pocos días ya llenamos el Estadio Azteca con más de 120,000 insignias asignadas. ¡Podrás consultar la actualización cada tres horas para ver en qué posición vas!
+						</b><br>
+						* En esos plazos no podrás ver reflejados los movimientos en tu puntaje de insignias.
+
+					</div>
+
 				</div>
 			</div>
 			<div id="inner-content" class="row">
@@ -38,17 +46,15 @@
 						<?php $badgesbyusers = array(); ?>
 
 
-						{exp:channel:entries channel="badges_asignados" limite="99999" dynamic="no" disable="pagination"}
-							{lista_badges}
-								<?php $badgesbyusers['{usuario_receptor_badge}'] = (isset($badgesbyusers['{usuario_receptor_badge}'])) ? $badgesbyusers['{usuario_receptor_badge}'] + '{lista_badges:valor_medalla}' : '{lista_badges:valor_medalla}' ; ?>
-							{/lista_badges}
+						{exp:channel:entries channel="badges_asignados" display_by="usuario_receptor_badge" dynamic="no" disable="pagination"}
+								<?php $badgesbyusers['{usuario_receptor_badge}'] = (isset($badgesbyusers['{usuario_receptor_badge}'])) ? $badgesbyusers['{usuario_receptor_badge}'] + base64_decode('{puntos_badge}') : base64_decode('{puntos_badge}') ; ?>
 
 						{/exp:channel:entries}
 						<?php arsort($badgesbyusers); ?>
-						<?php $count = 0; foreach($badgesbyusers as $user => $rank){ $count++; ?>
-							{embed="sitio/item-ranking-badges" mid="<?php echo $user; ?>" total="<?php echo $rank; ?>" countU="<?php echo $count;?>"}
-						<?php } ?>
-						{embed="sitio/ranking-resto-badges" init="<?php echo $count - 1; ?>"imit="<?php echo (100 - count($ranking)); ?>" members_id_not ="<?php foreach($badgesbyusers as $user => $rank) { echo $user.'|'; } ?>" }
+						<?php $count = 0; foreach($badgesbyusers as $user => $rank){ if($count < 100) { $count++;  ?>
+								{embed="sitio/item-ranking-badges" mid="<?php echo $user; ?>" total="<?php echo $rank; ?>" countU="<?php echo $count;?>"}
+						<?php } } ?>
+						{!-- {embed="sitio/ranking-resto-badges" init="<?php echo $count; ?>" limit="<?php echo (100 - $count); ?>" members_id_not ="<?php foreach($badgesbyusers as $user => $rank) { echo $user.'|'; } ?>" } --}
 
 						{!--
 						{exp:user:users orderby="screen_name" sort="asc" limit="100" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}

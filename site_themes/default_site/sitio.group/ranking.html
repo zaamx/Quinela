@@ -41,10 +41,13 @@
 								?>
 						{/exp:channel:entries} 
 						<?php arsort($ranking); ?>	
-						<?php foreach($ranking as $user => $rank){ ?>
+						<?php $countG = 0; ?>
+						<?php foreach($ranking as $user => $rank){  if($countG < 50){ $countG++; ?>
 							{embed="sitio/item-ranking" mid="<?php echo $user; ?>" total="<?php echo $rank; ?>"}		
-						<?php } ?>
-						{embed="sitio/ranking-resto" limit="<?php echo (50 - count($ranking)); ?>" members_id_not ="<?php foreach($ranking as $user => $rank) { echo $user.'|'; } ?>" }
+						<?php } } ?>
+						<?php if($countG < 50){ ?>
+						{embed="sitio/ranking-resto" limit="<?php echo (50 - $countG); ?>" members_id_not ="<?php foreach($ranking as $user => $rank) { echo $user.'|'; } ?>" }
+	<?php } ?>
 					</div>
 				</div>
 			</div>
@@ -57,7 +60,7 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-8 col-sm-offset-2" >
-					{embed="sitio/ranking-banca" limit="50" offset="<?php echo (50 - count($ranking)); ?>" members_id_not ="<?php foreach($ranking as $user => $rank) { echo $user.'|'; } ?>" }
+					{embed="sitio/ranking-banca" limit="50" offset="<?php echo (50 - $countG); ?>" members_id_not ="<?php foreach($ranking as $user => $rank) { echo $user.'|'; } ?>" }
 						
 						{exp:user:users orderby="screen_name" sort="asc" disable="pagination" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%						
 
