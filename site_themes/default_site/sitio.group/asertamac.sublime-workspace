@@ -119,7 +119,7 @@
 			"file": "head.html",
 			"settings":
 			{
-				"buffer_size": 6484,
+				"buffer_size": 6483,
 				"line_ending": "Unix"
 			}
 		},
@@ -216,6 +216,14 @@
 			"settings":
 			{
 				"buffer_size": 11341,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "notifi-pred.html",
+			"settings":
+			{
+				"buffer_size": 775,
 				"line_ending": "Unix"
 			}
 		}
@@ -620,7 +628,7 @@
 	"groups":
 	[
 		{
-			"selected": 14,
+			"selected": 15,
 			"sheets":
 			[
 				{
@@ -683,15 +691,15 @@
 					"file": "head.html",
 					"settings":
 					{
-						"buffer_size": 6484,
+						"buffer_size": 6483,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								913,
-								913
+								1249,
+								1249
 							]
 						],
 						"settings":
@@ -700,7 +708,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 9.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -771,8 +779,8 @@
 						"selection":
 						[
 							[
-								1245,
-								1146
+								779,
+								779
 							]
 						],
 						"settings":
@@ -782,7 +790,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 189.0,
+						"translation.y": 129.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1010,8 +1018,8 @@
 						"selection":
 						[
 							[
-								1106,
-								1106
+								4614,
+								4600
 							]
 						],
 						"settings":
@@ -1020,7 +1028,33 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 435.0,
+						"translation.y": 4599.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "notifi-pred.html",
+					"settings":
+					{
+						"buffer_size": 775,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								775,
+								775
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1070,16 +1104,24 @@
 		"selected_items":
 		[
 			[
+				"noti",
+				"sitio.group/notifi-pred.html"
+			],
+			[
+				"foot",
+				"sitio.group/foot2.html"
+			],
+			[
+				"head",
+				"sitio.group/head.html"
+			],
+			[
 				"perf",
 				"sitio.group/perfil2.html"
 			],
 			[
 				"rank",
 				"sitio.group/ranking-medallas.html"
-			],
-			[
-				"noti",
-				"sitio.group/notifi-reta.html"
 			],
 			[
 				"part-",
@@ -1096,14 +1138,6 @@
 			[
 				"meda",
 				"sitio.group/ranking-medallas.html"
-			],
-			[
-				"head",
-				"sitio.group/head-interiores.html"
-			],
-			[
-				"foot",
-				"sitio.group/foot2.html"
 			],
 			[
 				"pred-f",
