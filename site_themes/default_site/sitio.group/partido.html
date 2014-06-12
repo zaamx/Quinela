@@ -37,40 +37,34 @@
 				<div class="col-md-12">
 					<article class="text-center item-partido">
 						<header>
+							
 							<div class="row">
-								<div class="col-sm-4 col-md-offset-1 text-center">
+								<div class="col-sm-4 col-sm-offset-2  col-xs-6 text-center">
 									<h2>
 										{equipo_local:nombre_de_pais}
 										<?php $partido_local = '{equipo_local:nombre_de_pais}'; ?>
 									</h2>
-									<img src="{equipo_local:bandera_seleccion}"  height="300" width="300"  class="img-responsive" alt="">
+									<img src="{equipo_local:bandera_seleccion}" style="max-width:100%" alt="">
 								</div>
-								<div class="col-sm-2 text-center">
-									<div class="partido-midle">
-										<h3>VS</h3>
-										<h4>{exp:math formula="[1] + [2] + [3]" params="{clasificacion_partido:puntos_por_prediccion_de_resulta}|{clasificacion_partido:puntos_por_prediccion_de_marcado}|{clasificacion_partido:puntos_por_prediccion_de_quien_a}"}
-										
-										<br>puntos <br>disputados</h4>
-
-										<b>
-										{categories limit="1" show_group="1"}
-											{category_name}
-										{/categories}
-										</b>
-
-										<p>									
-										{categories limit="1" show_group="2"}
-											{category_name}
-										{/categories}
-										</p>
-									</div>
-								</div>
-								<div class="col-sm-4 text-center">
+								<div class="col-sm-4 col-xs-6  text-center">
 									<h2>
 										{equipo_visitante:nombre_de_pais}
 										<?php $partido_visitante = '{equipo_visitante:nombre_de_pais}'; ?>
 									</h2>
-									<img src="{equipo_visitante:bandera_seleccion}"  height="300" width="300"  class="img-responsive" alt="">
+									<img src="{equipo_visitante:bandera_seleccion}" style="max-width:100%"  alt="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 col-sm-offset-3">
+									<h3>VS</h3>
+									<h4>{exp:math formula="[1] + [2] + [3]" params="{clasificacion_partido:puntos_por_prediccion_de_resulta}|{clasificacion_partido:puntos_por_prediccion_de_marcado}|{clasificacion_partido:puntos_por_prediccion_de_quien_a}"} puntos disputados || 
+									{categories limit="1" show_group="1"}
+											{category_name}
+										{/categories}  ||  Sede
+									{categories limit="1" show_group="2"}
+										{category_name}
+									{/categories}
+									</h4>
 								</div>
 							</div>
 						</header>
