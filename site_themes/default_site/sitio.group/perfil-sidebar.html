@@ -9,8 +9,10 @@
 		<p>
 			
 			{embed="sitio/part-puntosSB" id_usuario="{segment_3}"}
-			
-			{embed="sitio/part-insigniasSB" id_usuario="{segment_3}"}
+			<div class='element' title=''>
+	<b>{puntos_insignias}</b> <span>Puntos  de insignias</span> <br>	
+</div>
+			{!--{embed="sitio/part-insigniasSB" id_usuario="{segment_3}"}--}
 
 		</p>
 		<hr>
@@ -23,7 +25,6 @@
 						<small>Editar perfil</small>
 					</a>
 				</li>
-
 				<li>
 					<a href="{path=sitio/actualizar-cuenta}/{member_id}/">
 						<small>Editar usuario y contraseña</small>

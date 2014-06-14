@@ -91,6 +91,110 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "perfil2.html",
+			"settings":
+			{
+				"buffer_size": 8743,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "activacion-paso1.html",
+			"settings":
+			{
+				"buffer_size": 1871,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "activacion-paso2.html",
+			"settings":
+			{
+				"buffer_size": 2418,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "registro.html",
+			"settings":
+			{
+				"buffer_size": 3582,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "head.html",
+			"settings":
+			{
+				"buffer_size": 6010,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "partido.html",
+			"settings":
+			{
+				"buffer_size": 3004,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pred-form.html",
+			"settings":
+			{
+				"buffer_size": 3805,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "recuperar.html",
+			"settings":
+			{
+				"buffer_size": 1771,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "entrar.html",
+			"settings":
+			{
+				"buffer_size": 2077,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2544,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_base.less",
+			"settings":
+			{
+				"buffer_size": 5491,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "activacion-paso3.html",
+			"settings":
+			{
+				"buffer_size": 976,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "actualizar-perfil.html",
+			"settings":
+			{
+				"buffer_size": 6977,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -152,38 +256,27 @@
 	},
 	"file_history":
 	[
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partidos.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/notifi-pred.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/pred-form.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso3.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_base.less",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/index.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/entrar.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/recuperar.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/registro.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso2.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso1.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil2.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partido.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/politicas.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/terminos.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head-partido.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head-interiores.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/miembros.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/actualizar-perfil.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/actualizar-cuenta.html",
-		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/notifi-reta.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_base.less",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head-partido.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/registro.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partido.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/prediccion-hecha.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/pred-form.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil2.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/comentariosajax.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil-comentarios.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/js/scripts.js",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/partidos.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-partido.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/ranking.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/actualizar-perfil.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/medallas.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/ranking-medallas.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/miembros.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/perfil-sidebar.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/head.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-insigniasSB.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_totalMedallasSB.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/part-puntosSB.html",
@@ -196,12 +289,21 @@
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/puntos-predicciones.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/puntos.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/que-es.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/recuperar.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/reglas.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/terminos.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_amateur.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/politicas.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/asertamac.sublime-workspace",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/foot2.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/index.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso1.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso2.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/activacion-paso3.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/actualizar-avatar.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/actualizar-cuenta.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/contacto.html",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/entrar.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/error-perfil.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/gracias.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_768up.less",
@@ -216,6 +318,7 @@
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_totalMedallas.html",
 		"/Users/pedrocerilla/Library/Caches/Cleanup At Startup/Transmit/A7807065-8ABE-4BBE-A131-4C6FC6FB0959/config.php",
 		"/Users/pedrocerilla/Repos/pepblog/wp-content/themes/ok/front-page.php",
+		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/notifi-pred.html",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/sitio.group/_total.html",
 		"/Volumes/Seagate Expansion Drive/Clicker/Repos/miseleccion2014WP/wp-content/themes/miseleccionMX2014/page-json.php",
 		"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_481up.less",
@@ -280,7 +383,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library",
@@ -293,7 +396,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			":",
 			"orange",
 			"no coi",
 			"{/exp:channel:entries}",
@@ -446,8 +548,360 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "perfil2.html",
+					"settings":
+					{
+						"buffer_size": 8743,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								626,
+								626
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "activacion-paso1.html",
+					"settings":
+					{
+						"buffer_size": 1871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								453,
+								453
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "activacion-paso2.html",
+					"settings":
+					{
+						"buffer_size": 2418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1110,
+								1110
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "registro.html",
+					"settings":
+					{
+						"buffer_size": 3582,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								967,
+								967
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 142.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "head.html",
+					"settings":
+					{
+						"buffer_size": 6010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 429.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "partido.html",
+					"settings":
+					{
+						"buffer_size": 3004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1108.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "pred-form.html",
+					"settings":
+					{
+						"buffer_size": 3805,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2793,
+								2793
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 983.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "recuperar.html",
+					"settings":
+					{
+						"buffer_size": 1771,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1020,
+								1020
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 118.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "entrar.html",
+					"settings":
+					{
+						"buffer_size": 2077,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 213.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 2544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								905,
+								905
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/pedrocerilla/Repos/Quinela/site_themes/default_site/library/less/_base.less",
+					"settings":
+					{
+						"buffer_size": 5491,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								803,
+								803
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 376.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "activacion-paso3.html",
+					"settings":
+					{
+						"buffer_size": 976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								736,
+								736
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "actualizar-perfil.html",
+					"settings":
+					{
+						"buffer_size": 6977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								474,
+								474
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 76.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -493,58 +947,6 @@
 		"selected_items":
 		[
 			[
-				"pred",
-				"sitio.group/pred-form.html"
-			],
-			[
-				"noti",
-				"sitio.group/notifi-pred.html"
-			],
-			[
-				"parti",
-				"sitio.group/partidos.html"
-			],
-			[
-				"partido",
-				"sitio.group/partido.html"
-			],
-			[
-				"pred-",
-				"sitio.group/pred-form.html"
-			],
-			[
-				"actua",
-				"sitio.group/actualizar-cuenta.html"
-			],
-			[
-				"act",
-				"sitio.group/actualizar-perfil.html"
-			],
-			[
-				"miembros",
-				"sitio.group/miembros.html"
-			],
-			[
-				"head",
-				"sitio.group/head-interiores.html"
-			],
-			[
-				"part",
-				"sitio.group/partido.html"
-			],
-			[
-				"poli",
-				"sitio.group/politicas.html"
-			],
-			[
-				"termino",
-				"sitio.group/terminos.html"
-			],
-			[
-				"partdo",
-				"sitio.group/partidos.html"
-			],
-			[
 				"perf",
 				"sitio.group/perfil2.html"
 			],
@@ -577,12 +979,24 @@
 				"sitio.group/recuperar.html"
 			],
 			[
+				"pred-",
+				"sitio.group/pred-form.html"
+			],
+			[
+				"part",
+				"sitio.group/partido.html"
+			],
+			[
 				"regis",
 				"sitio.group/registro.html"
 			],
 			[
 				"he",
 				"sitio.group/head.html"
+			],
+			[
+				"act",
+				"sitio.group/activacion-paso1.html"
 			],
 			[
 				"per",
@@ -625,6 +1039,10 @@
 				"sitio.group/part-puntos.html"
 			],
 			[
+				"head",
+				"sitio.group/head.html"
+			],
+			[
 				"total",
 				"sitio.group/_totalMedallas.html"
 			],
@@ -639,6 +1057,10 @@
 			[
 				"ram",
 				"sitio.group/ranking.html"
+			],
+			[
+				"actua",
+				"sitio.group/actualizar-perfil.html"
 			],
 			[
 				"perfi",
@@ -717,6 +1139,10 @@
 				"sitio.group/notifi-pred.html"
 			],
 			[
+				"partido",
+				"sitio.group/partidos.html"
+			],
+			[
 				"pre",
 				"sitio.group/notifi-pred.html"
 			],
@@ -743,6 +1169,10 @@
 			[
 				"perfil",
 				"sitio.group/perfil.html"
+			],
+			[
+				"pred",
+				"sitio.group/notifi-pred.html"
 			],
 			[
 				"_to",
@@ -847,6 +1277,10 @@
 			[
 				"ac",
 				"sitio.group/actualizar-cuenta.html"
+			],
+			[
+				"noti",
+				"sitio.group/notifi-pred.html"
 			],
 			[
 				"unto",
@@ -969,6 +1403,10 @@
 				"sitio.group/terminos.html"
 			],
 			[
+				"poli",
+				"sitio.group/politicas.html"
+			],
+			[
 				"err",
 				"sitio.group/error-perfil.html"
 			],
@@ -1003,6 +1441,18 @@
 			[
 				"inter",
 				"sitio.group/head-interiores.html"
+			],
+			[
+				"graca",
+				"sitio.group/gracias.html"
+			],
+			[
+				"index",
+				"sitio.group/index.html"
+			],
+			[
+				"conf",
+				"sitio.group/config.prod.php"
 			]
 		],
 		"width": 0.0

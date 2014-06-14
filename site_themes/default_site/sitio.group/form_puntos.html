@@ -1,18 +1,17 @@
 
-
 	{exp:channel:entries channel="predicciones" entry_id="{embed:id}"}
 
-		<?php $valPartido = '{partido_rel:puntos_marcador}';?>
+		<?php $valPartido = '{partido_rel:puntos_resultado}';?>
 		<?php
 			$prdp = strval('{pre_resultado_de_partido}');
 			$rdp  = strval('{partido_rel:resultado_de_partido}');
 			if (trim($prdp) == trim($rdp)) {
-				$valPartido = '{partido_rel:puntos_marcador}';
+				$valPartido = '{partido_rel:puntos_resultado}';
 			}else{
 				$valPartido = '0';
 			}
 		?>
-		<?php $valMarcador = '{partido_rel:puntos_quien_anota}';?>
+		<?php $valMarcador = '{partido_rel:puntos_marcador}';?>
 
 		<!--{if '{partido_rel:marcador_local}' == '{pre_marcador_local}' AND '{partido_rel:marcador_visitante}' == '{pre_marcador_visitante}'}
 		<?php $valMarcador = '{partido_rel:puntos_quien_anota}';?>
@@ -22,15 +21,15 @@
 		<?php
 			if ('{partido_rel:marcador_local}' == '{pre_marcador_local}' &&
 				'{partido_rel:marcador_visitante}' == '{pre_marcador_visitante}') {
-				$valMarcador = '{partido_rel:puntos_quien_anota}';
+				$valMarcador = '{partido_rel:puntos_marcador}';
 			}else{
 				$valMarcador = 0;
 			}
 		?>
-		<?php $valPrimero = '{partido_rel:puntos_resultado}';?>
+		<?php $valPrimero = '{partido_rel:puntos_quien_anota}';?>
 		<?php
 			if ('{partido_rel:quien_mete_primer_gol}' == '{quien_anota_primero}') {
-				$valPrimero = '{partido_rel:puntos_resultado}';
+				$valPrimero = '{partido_rel:puntos_quien_anota}';
 			}else{
 				$valPrimero = 0;
 			}

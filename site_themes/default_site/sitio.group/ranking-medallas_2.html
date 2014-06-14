@@ -1,0 +1,110 @@
+{embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
+<div id="home-ingreso-b">
+	<div class="container">
+
+
+		{if group_id == '1'}
+			<div class="row">
+	            <div class="col-sm-12">
+	            	<table class="col-sm-12 table table-bordered" style="color:white; font-weight:bold">
+	            	<thead>
+				      			<tr>
+				      				<th class="col-sm-3">Id</th>
+				      				<th class="col-sm-3">Usuario</th>
+				      				<th class="col-sm-3">Puntos actuales</th>
+				      				<th class="col-sm-3">Puntos nuevos</th>
+				      			</tr>
+				      		</thead>
+				      		<tbody>
+	            	{exp:user:users limit="100" paginate="bottom" orderby="member_id" sort="asc" }
+	            		<tr>
+	            			<td>{member_id}</td>
+	            			<td>{screen_name}</td>
+	            			<td>{puntos_insignias}</td>
+		            		<td>{embed="sitio/form_insignias id="{member_id}"}</td>
+	            		</tr>
+	            		{user_paginate}
+	                                        	<div class="clearfix"></div>
+	                                        	<div class="col-md-12">
+												  {user_pagination_links}
+												    <ul class="pagination">
+												      {previous_page}
+												        <li><a href="{pagination_url}" class="page-previous">&laquo;</a></li>
+												      {/previous_page}
+
+												      {page}
+												        <li><a href='{pagination_url}' class="page-{pagination_page_number} {if current_page}active{/if}">{pagination_page_number}</a></li>
+												      {/page}
+
+												      {next_page}
+												        <li><a href="{pagination_url}" class="page-next">&raquo;</a></li>
+												      {/next_page}
+												    </ul>
+												  {/user_pagination_links}
+					                	        </div>
+											{/user_paginate}
+	            	{/exp:user:users}
+						<tbody>
+					</table>
+	            </div>
+	        </div>
+	        <div class="row">
+	        	<div class="col-sm-12">
+	        		
+	        	</div>
+	        </div>
+		{if:else}
+			<div class="row">
+	            <div class="col-sm-12">
+	            	nada 	       
+	            </div>
+	        </div>
+		{/if}		
+	</div>
+</div>
+<div id="backCargador" style=" position:fixed; top:0; left: 0; width: 100%; height: 100%; background-color:#000000; z-index: 9998; opacity:0.5;" ></div>
+<div id='cargador' style="position:fixed; top: 30%; z-index: 9999; color: #ffffff; font-size: 26px; " class="col-sm-12 text-center">Cargando... </div> 
+<style>
+	.pagination > li > a, .pagination > li > span{
+	 background: none !important;
+	 color: #ffffff !important;		
+	}
+	.pagination > li > a.active{
+		background-color: blue !important;
+	}
+</style>
+{embed="sitio/foot2"}
+
+<script>
+	$(document).ready(function(){
+		if($("form").length){
+			$('form').each(function(key , i){
+
+				var self = $(this);
+
+				var data = {
+					action : self.attr('action'),
+					data : self.serialize()
+				}
+				var k = key;					
+				var total = $("form").length;		
+				$.post(data.action,data.data,function(response){
+				$("#cargador").html( k + " de "+ total );	
+					if((k+1) == $("form").length){
+						$("#cargador").html('listo');	
+						setTimeout(function(){
+							$("#backCargador , #cargador").hide();	
+							$("#Regresar").show();	
+				
+						},2000);
+					}
+				});
+
+			});
+		}else{
+			$("#backCargador , #cargador").hide();	
+			$("#Regresar").show();	
+		}
+	});
+
+</script>

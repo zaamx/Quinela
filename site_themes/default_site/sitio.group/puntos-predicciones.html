@@ -19,174 +19,80 @@
 				      				<th class="col-sm-3">Puntos</th>
 				      			</tr>
 				      		</thead>
-				      		<tbody>
-				      	{exp:channel:entries channel="partidos" entry_id="{segment_3}" search:partido_cerrado="cerrado" orderby="fecha_de_partido" sort="asc" limit="8" paginate="bottom"}
-				      	{parents field="partido_rel"}
-							<tr>
+				      		<tbody>	
+						{exp:channel:entries channel="predicciones" search:id_de_partido="={segment_3}" dynamic="no" limit="100" paginate="bottom" }
+						<tr>
+							<?php $valPartido = '{partido_rel:puntos_resultado}';?>
+							<?php
+								$prdp = strval('{pre_resultado_de_partido}');
+								$rdp  = strval('{partido_rel:resultado_de_partido}');
+								if (trim($prdp) == trim($rdp)) {
+									$valPartido = '{partido_rel:puntos_resultado}';
+								}else{
+									$valPartido = '0';
+								}
+							?>
+							<?php $valMarcador = '{partido_rel:puntos_marcador}';?>
+
+							<!--{if '{partido_rel:marcador_local}' == '{pre_marcador_local}' AND '{partido_rel:marcador_visitante}' == '{pre_marcador_visitante}'}
+							<?php $valMarcador = '{partido_rel:puntos_quien_anota}';?>
+							{if:else}
+							<?php //$valMarcador = 0;?>
+							{/if}-->
+							<?php
+								if ('{partido_rel:marcador_local}' == '{pre_marcador_local}' &&
+									'{partido_rel:marcador_visitante}' == '{pre_marcador_visitante}') {
+									$valMarcador = '{partido_rel:puntos_marcador}';
+								}else{
+									$valMarcador = 0;
+								}
+							?>
+							<?php $valPrimero = '{partido_rel:puntos_quien_anota}';?>
+							<?php
+								if ('{partido_rel:quien_mete_primer_gol}' == '{quien_anota_primero}') {
+									$valPrimero = '{partido_rel:puntos_quien_anota}';
+								}else{
+									$valPrimero = 0;
+								}
+							?>
+								{embed="sitio/check_post_puntos_usuarios nombre_usuario="{screen_name}" id_usuario="{author_id}" id_partido="{partido_rel:entry_id}" id_prediccion="{entry_id}" title="{username}-id-{logged_in_member_id}-Pred-" puntos_prediccion="<?php echo $valPrimero + $valMarcador + $valPartido; ?>" }
+
+
+						</tr>
+						{paginate}
+	                                        	<div class="clearfix"></div>
+	                                        	<div class="col-md-12">
+												  {pagination_links}
+												    <ul class="pagination">
+												      {previous_page}
+												        <li><a href="{pagination_url}" class="page-previous">&laquo;</a></li>
+												      {/previous_page}
+
+												      {page}
+												        <li><a href='{pagination_url}' class="page-{pagination_page_number} {if current_page}active{/if}">{pagination_page_number}</a></li>
+												      {/page}
+
+												      {next_page}
+												        <li><a href="{pagination_url}" class="page-next">&raquo;</a></li>
+												      {/next_page}
+												    </ul>
+												  {/pagination_links}
+					                	        </div>
+											{/paginate}
+						{/exp:channel:entries}
+					{!-- {exp:stash:set name="offset" save="no" scope="site" parse_tags="yes" replace="yes"    refresh="0"
+    output="no"}
+	<?php echo (isset($_GET['o'])) ?  $_GET['o'] : '0'; ?>
+				      	{exp:channel:entries channel="partidos" entry_id="{segment_3}" search:partido_cerrado="cerrado" dynamic="no"} 
+				      	{parents field="partido_rel" limit="10"  offset="{exp:stash:get name="offset"}{/exp:stash:get}" order_by="entry_id" sort="asc" }
+							<tr>{parents:entry_id}
 								{embed="sitio/form_puntos id="{parents:entry_id}"}
 							</tr>
-						{/parents}
-				      	<!--<table class="table table-bordered">
-				      		<thead>
-				      			<tr>
-				      				<th>Local</th>
-				      				<th>Visitante</th>
-				      				<th>Resultado</th>
-				      				<th>Marcador local</th>
-				      				<th>Marcador visitante</th>
-				      				<th>Quien Anoto Primero</th>
-				      			</tr>
-				      		</thead>
-				      		<tbody>
-				      			<tr>
-				      				<td>
-				      					{equipo_local:nombre_de_pais}
-				      				</td>
-				      				<td>
-				      					{equipo_visitante:nombre_de_pais}
-				      				</td>
-				      				<td>
-				      					{resultado_de_partido}
-				      				</td>
-				      				<td>
-				      					{marcador_local}
-				      				</td>
-				      				<td>
-				      					{marcador_visitante}
-				      				</td>
-				      				<td>
-				      					{quien_mete_primer_gol}
-				      				</td>
-				      			</tr>
-
-				      		</tbody>
-				      	</table>
-
-				      		{clasificacion_partido:title} <br>
-				      		{clasificacion_partido:puntos_por_prediccion_de_resulta} <br>
-				      		{clasificacion_partido:puntos_por_prediccion_de_marcado} <br>
-				      		{clasificacion_partido:puntos_por_prediccion_de_quien_a}
-
-
-				      		{if channel_short_name == "jobs-opps"}
-							{if:else}
-							{/if}
-
-
-
-				      	<table class="table table-bordered">
-				      		<thead>
-				      			<tr>
-				      				<th>ID</th>
-				      				<th>Autor</th>
-				      				<th>Resultado</th>
-				      				<th>Marcador local</th>
-				      				<th>Marcador visitante</th>
-				      				<th>Puntos de Marcador</th>
-				      				<th>Quien Anoto Primero</th>
-				      				<th>Total</th>
-				      			</tr>
-				      		</thead>
-				      		<tbody>
-				      			{parents field="partido_rel"}
-				      			<tr>
-				      				<td >
-				      					{parents:entry_id}
-				      				</td>
-				      				<td >
-				      					{parents:author}
-				      				</td>
-				      				<td>
-				      					{if parents:pre_resultado_de_partido == resultado_de_partido}
-
-					      					<span class="label label-success">
-					      						{parents:pre_resultado_de_partido}
-					      					</span>
-
-					      					<span class="label label-info">
-					      						{clasificacion_partido:puntos_por_prediccion_de_resulta}
-					      					</span>
-
-					      					{if:else}
-
-					      					<span class="label label-warning">
-					      						{parents:pre_resultado_de_partido}
-					      					</span>
-
-										{/if}
-				      				</td>
-				      				<td>
-				      					{if parents:pre_marcador_local == marcador_local}
-
-					      					<span class="label label-success">
-					      						{parents:pre_marcador_local}
-					      					</span>
-
-
-					      					{if:else}
-
-					      					<span class="label label-warning">
-					      						{parents:pre_marcador_local}
-					      					</span>
-
-										{/if}
-				      				</td>
-				      				<td>
-				      					{if parents:pre_marcador_visitante == marcador_visitante}
-
-					      					<span class="label label-success">
-					      						{parents:pre_marcador_visitante}
-					      					</span>
-
-					      					{if:else}
-
-					      					<span class="label label-warning">
-					      						{parents:pre_marcador_visitante}
-					      					</span>
-
-										{/if}
-
-				      				</td>
-				      				<td>
-
-				      				{if parents:pre_marcador_visitante == marcador_visitante AND parents:pre_marcador_local == marcador_local}
-				      					<span class="label label-info">
-					      					{clasificacion_partido:puntos_por_prediccion_de_marcado}
-					      				</span>
-				      				{/if}
-				      				</td>
-
-				      				<td>
-				      					{if parents:quien_anota_primero == quien_mete_primer_gol}
-					      					<span class="label label-success">
-					      						{parents:quien_anota_primero}
-					      					</span>
-					      					<span class="label label-info">
-					      						{clasificacion_partido:puntos_por_prediccion_de_quien_a}
-					      					</span>
-
-					      					{if:else}
-
-					      					<span class="label label-warning">
-					      						{parents:quien_anota_primero}
-					      					</span>
-										{/if}
-
-				      				</td>
-
-				      				<td>
-				      					<a href="{path='sitio/puntos-asignacion'}/{parents:entry_id}" class="btn btn-success">
-				      						Asignar puntos
-				      					</a>
-				      				</td>
-				      			</tr>
-				      			{/parents}
-				      		</tbody>
-				      	</table>-->
-						{/exp:channel:entries}
+								{/parents}
+						{/exp:channel:entries} --}
 						<tbody>
 					</table>
-					<a class="btn btn-success col-sm-4 col-sm-offset-4" href="{path=sitio/puntos}">Regresar
+					<a class="btn btn-success col-sm-4 col-sm-offset-4" href="{path=sitio/puntos}" id="Regresar" style="">Regresar
 	            </div></a>
 	        </div>
 		{if:else}
@@ -198,23 +104,49 @@
 		{/if}
 	</div>
 </div>
+<div id="backCargador" style=" position:fixed; top:0; left: 0; width: 100%; height: 100%; background-color:#000000; z-index: 9998; opacity:0.5;" ></div>
+<div id='cargador' style="position:fixed; top: 30%; z-index: 9999; color: #ffffff; font-size: 26px; " class="col-sm-12 text-center">Cargando... </div> 
+<style>
+	.pagination > li > a, .pagination > li > span{
+	 background: none !important;
+	 color: #ffffff !important;		
+	}
+	.pagination > li > a.active{
+		background-color: blue !important;
+	}
+</style>
 {embed="sitio/foot2"}
 
 <script>
+	$(document).ready(function(){
+		if($("form").length){
+			$('form').each(function(key , i){
 
-	$('form').each(function(){
+				var self = $(this);
 
-		var self = $(this);
+				var data = {
+					action : self.attr('action'),
+					data : self.serialize()
+				}
+				var k = key;					
+				var total = $("form").length;		
+				$.post(data.action,data.data,function(response){
+				$("#cargador").html( k + " de "+ total );	
+					if((k+1) == $("form").length){
+						$("#cargador").html('listo');	
+						setTimeout(function(){
+							$("#backCargador , #cargador").hide();	
+							$("#Regresar").show();	
+				
+						},2000);
+					}
+				});
 
-		var data = {
-			action : self.attr('action'),
-			data : self.serialize()
+			});
+		}else{
+			$("#backCargador , #cargador").hide();	
+			$("#Regresar").show();	
 		}
-
-		$.post(data.action,data.data,function(response){
-			console.log(response);
-		});
-
 	});
 
 </script>

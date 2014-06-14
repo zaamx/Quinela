@@ -1,3 +1,4 @@
+
 	<script>
     //availableTags = new Array();
     availableUsers = [
@@ -14,7 +15,7 @@
 
   <?php $users_info = array(); ?>
 
-{exp:user:users orderby="screen_name" sort="asc"  limit="500"}
+{exp:user:users orderby="screen_name" sort="asc"  limit="5000"}
 	<?php $users_info['{email}'] = '{screen_name}'; ?>
 {/exp:user:users}
 
@@ -33,6 +34,14 @@
 		</div>
 	</div>
 </div>
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3">
+		<a href="{path='site_index'}" class="btn btn-info">
+			Regresar
+		</a>
+	</div>
+</div>
+
 
 <script>
   $(function() {

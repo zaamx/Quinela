@@ -41,87 +41,25 @@
 						--}
 					</div>
 
-					<div class="row" id="lista-ranking-pluses">
+					<div class="row" id="lista-ranking-pluses">						
 
 						<?php $badgesbyusers = array(); ?>
-
-
-						{exp:channel:entries channel="badges_asignados" display_by="usuario_receptor_badge" dynamic="no" disable="pagination"}
-								<?php $badgesbyusers['{usuario_receptor_badge}'] = (isset($badgesbyusers['{usuario_receptor_badge}'])) ? $badgesbyusers['{usuario_receptor_badge}'] + base64_decode('{puntos_badge}') : base64_decode('{puntos_badge}') ; ?>
-
-						{/exp:channel:entries}
+						{exp:user:users orderby="puntos_insignias" sort="asc" limit="999999" }
+							<?php $badgesbyusers['{member_id}'] = ('{puntos_insignias}') ? '{puntos_insignias}': '0';  ?>
+						{/exp:user:users}
 						<?php arsort($badgesbyusers); ?>
 						<?php $count = 0; foreach($badgesbyusers as $user => $rank){ if($count < 100) { $count++;  ?>
 								{embed="sitio/item-ranking-badges" mid="<?php echo $user; ?>" total="<?php echo $rank; ?>" countU="<?php echo $count;?>"}
 						<?php } } ?>
 						{!-- {embed="sitio/ranking-resto-badges" init="<?php echo $count; ?>" limit="<?php echo (100 - $count); ?>" members_id_not ="<?php foreach($badgesbyusers as $user => $rank) { echo $user.'|'; } ?>" } --}
-
-						{!--
-						{exp:user:users orderby="screen_name" sort="asc" limit="100" disable="paginate" {if segment_3 == "screen_name"}search:screen_name="{segment_4}%"{/if}}
-						{if count <= 3}
-
-						<div class="col-sm-4">
-							<div class="item-premio-med">
-								<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-premio" />
-								<div class="texto-premio">
-									<h4>
-										<a href="{path=sitio/perfil2}/{member_id}/">
-							                <b>{screen_name}</b>
-							             </a>
-									</h4>
-								</div>
-							</div>
-						</div>
-						{/if}
-
-					    {if count >= 4}
-
-					    <div class="col-sm-12">
-					    	<div class="row">
-					    		<div class="col-sm-6 col-sm-offset-3">
-					    			<div class="row">
-					    				<div class="col-md-12">
-					    					<hr>
-					    				</div>
-					    			</div>
-					    			<div class="row">
-					    				<div class="col-sm-4">
-					    					<img src="{if avatar_filename}{avatar_url}{avatar_filename}{if:else}{site_url}/themes/site_themes/default_site/library/images/default-user.jpg{/if}" height="50" width="50" alt="{screen_name}'s photo" class="img-circle item-micro" />
-					    				</div>
-					    				<div class="col-sm-8">
-					    					<div class="texto-usuario">
-						    					<h4>
-						    						<a href="{path=sitio/perfil2}/{member_id}/">
-						    							<b>{screen_name}</b>
-						    						</a> <br>
-						    						<!-- <small><i class="fa fa-star-o"></i> <b>89000</b><br> puntos</small> -->
-						    					</h4>
-						    				</div>
-
-					    				</div>
-					    			</div>
-					    		</div>
-					    	</div>
-
-					    </div>
-
-					    {/if}
-
-
-
-						{if user_no_results}<div>No members found.</div>{/if}
-						{/exp:user:users} --}
 					</div>
 
 				</div>
 			</div>
-
-
-
-						<?php foreach($badgesbyusers as $k => $b){ ?>
-							{exp:channel:entries channel="badges_asignados"  limite="99999"   search:usuario_receptor_badge="<?php echo $k; ?>"  dynamic="no" disable="pagination"}
+			<?php foreach($badgesbyusers as $k => $b){ ?>
+							{!--{exp:channel:entries channel="badges_asignados"  limite="99999"   search:usuario_receptor_badge="<?php echo $k; ?>"  dynamic="no" disable="pagination"}
 								{title}<br>
-							{/exp:channel:entries}
+							{/exp:channel:entries}--}
 
 						<?php } ?>
 			</div>

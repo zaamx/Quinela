@@ -1,0 +1,15 @@
+	<?php $puntos = 0; ?>
+
+	{exp:channel:entries channel="badges_asignados" search:usuario_receptor_badge="={embed:id}" limit="999999"}
+			<?php $puntos += base64_decode('{puntos_badge}'); ?>
+
+			{!--{embed="sitio/check_post_puntos_usuarios nombre_usuario="{screen_name}" id_usuario="{author_id}" id_partido="{partido_rel:entry_id}" id_prediccion="{entry_id}" title="{username}-id-{logged_in_member_id}-Pred-" puntos_prediccion="<?php echo $valPrimero + $valMarcador + $valPartido; ?>" } --}
+	{/exp:channel:entries}
+	<?php echo $puntos; ?><br>
+
+	{exp:user:edit member_id="{embed:id}"}
+		<div style="display:none;">
+		<input type="text" name="puntos_insignias" id="puntos_insignias" value="<?php echo $puntos; ?>" />
+		</div>
+
+	{/exp:user:edit} 

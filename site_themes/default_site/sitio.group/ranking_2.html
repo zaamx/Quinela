@@ -35,7 +35,7 @@
 						$ranking = array();
 						$rankingIds = array();
 						?>
-						{exp:channel:entries channel="puntos_usuarios" limit="999999" }
+						{exp:channel:entries channel="puntos_usuarios" limit="999999"}
 							<?php 
 							$ranking['{id_usuario}'] =(isset($ranking['{id_usuario}'])) ? $ranking['{id_usuario}'] + '{puntos_prediccion}' : '{puntos_prediccion}'; 
 								?>
