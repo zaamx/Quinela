@@ -1,4 +1,4 @@
-{embed="sitio/head" my_body_class="perfil" my_active_nav="perfil" my_page_title="Perfil"}
+{embed="sitio/head2" my_body_class="perfil" my_active_nav="perfil" my_page_title="Perfil"}
 <div id="content">
 	<div class="container">
 		<div class="row">
