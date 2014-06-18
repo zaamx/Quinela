@@ -1,0 +1,125 @@
+{embed="sitio/head-interiores" my_body_class="singles" my_active_nav="home" my_page_title="Home"}
+<div id="home-ingreso-b">
+	<div class="container">
+
+
+		{if group_id == '1'}
+			<div class="row">
+	            <div class="col-sm-12">
+	            	<table class="col-sm-12 table table-bordered" style="color:white; font-weight:bold">
+	            	<thead>
+				      			<tr>
+				      				<th class="col-sm-3">Id</th>
+				      				<th class="col-sm-3">Fecha</th>
+				      				<th class="col-sm-3">Usuario</th>
+				      				<th class="col-sm-3">Badge relacionado</th>
+				      				<th class="col-sm-3">Id badge</th>
+				      				<th class="col-sm-3">Form</th>
+				      			</tr>
+				      		</thead>
+				      		<tbody>
+	            	{exp:channel:entries channel="badges_asignados" limit="100" search:id_badge="IS_EMPTY" paginate="bottom" orderby="entry_id" sort="asc" }{absolute_results}
+	            		<tr>
+	            			<td>{entry_id}</td>
+	            			<td>{entry_date format="%Y}</td>
+	            			<td>{usuario_receptor_badge}</td>
+	            			<td>{lista_badges:entry_id}</td>
+	            			<td>{id_badge}</td>
+		            		<td>
+		            			{exp:channel:form channel="badges_asignados" entry_id="{entry_id}" }
+										<input type="text" name="id_badge" value="{if {lista_badges:entry_id} > 0 }{lista_badges:entry_id}{if:else}0{/if}" size="50" maxlength="100" style="color:black !important; ">
+								{/exp:channel:form}
+		            		</td>
+	            		</tr>
+	            		{paginate}
+	                                        	<div class="clearfix"></div>
+	                                        	<div class="col-md-12">
+												  {pagination_links}
+												    <ul class="pagination">	
+												       {first_page}
+												        <li><a href="{pagination_url}" class="page-first">Primera</a></li>
+												      {/first_page}
+												      {previous_page}
+												        <li><a href="{pagination_url}" class="page-previous">&laquo;</a></li>
+												      {/previous_page}
+
+												      {page}
+												        <li><a href='{pagination_url}' class="page-{pagination_page_number} {if current_page}active{/if}">{pagination_page_number}</a></li>
+												      {/page}
+
+												      {next_page}
+												        <li><a href="{pagination_url}" class="page-next">&raquo;</a></li>
+												      {/next_page}
+												       {last_page}
+												        <li><a href="{pagination_url}" class="page-last">Ultima</a></li>
+												      {/last_page}
+												    </ul>
+												  {/pagination_links}
+					                	        </div>
+											{/paginate}
+	            	{/exp:channel:entries}
+						<tbody>
+					</table>
+	            </div>
+	        </div>
+	        <div class="row">
+	        	<div class="col-sm-12">
+	        		
+	        	</div>
+	        </div>
+		{if:else}
+			<div class="row">
+	            <div class="col-sm-12">
+	            	nada 	       
+	            </div>
+	        </div>
+		{/if}		
+	</div>
+</div>
+<div id="backCargador" style=" position:fixed; top:0; left: 0; width: 100%; height: 100%; background-color:#000000; z-index: 9998; opacity:0.5;" ></div>
+<div id='cargador' style="position:fixed; top: 30%; z-index: 9999; color: #ffffff; font-size: 26px; " class="col-sm-12 text-center">Cargando... </div> 
+<style>
+	.pagination > li > a, .pagination > li > span{
+	 background: none !important;
+	 color: #ffffff !important;		
+	}
+	.pagination > li > a.active{
+		background-color: blue !important;
+	}
+</style>
+{embed="sitio/foot2"}
+
+<script>
+	$(document).ready(function(){
+		if($("form").length){
+			$('form').each(function(key , i){
+
+				var self = $(this);
+
+				var data = {
+					action : self.attr('action'),
+					data : self.serialize()
+				}
+				var k = key;					
+				var total = $("form").length;		
+				$.post(data.action,data.data,function(response){
+				$("#cargador").html( k + " de "+ total );	
+					if((k+1) == $("form").length){
+						$("#cargador").html('listo');	
+						setTimeout(function(){
+							location.reload();
+							//$("#backCargador , #cargador").hide();	
+							//$("#Regresar").show();	
+				
+						},500);
+					}
+				});
+
+			});
+		}else{
+			$("#backCargador , #cargador").hide();	
+			$("#Regresar").show();	
+		}
+	});
+
+</script>

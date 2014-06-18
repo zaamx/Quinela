@@ -226,7 +226,7 @@
 									event.preventDefault(); 
 									$('select[name="lista_badges[data][]"]').find('option[value="' + $(this).children('img.item-img').attr("alt") + '"]').attr("selected",true);
 									$("#puntos_badge").val($(this).attr('data-p'));
-									$("#id_badge").val($(this).children('img.item-img').attr("alt"));
+
 
 									if (!$(this).children('img.item-img').hasClass('bdActive')) {
 								    // Remove the class from anything that is active
@@ -273,7 +273,6 @@
 							{exp:channel:form channel="badges_asignados" return="sitio/perfil2/{segment_3}" status="open"  json="yes" }
 							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{segment_3}" />
 							<input type="hidden" name="puntos_badge" id="puntos_badge" value="" />
-							<input type="hidden" name="id_badge" id="id_badge" value="" />
 							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{segment_3}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 							<div class="sr-only">
 								{field:lista_badges}		

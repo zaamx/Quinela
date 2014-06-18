@@ -173,6 +173,9 @@
 
 					{if {exp:stash:get name="idBadgeAsocN"} > 0}
 						<script type="text/javascript">
+							function showC(){
+								$(".cargando").show();
+							}
 							$(document).ready(function(){
 								$('#publishForm').ajaxForm({
 									dataType: 'json',
@@ -195,15 +198,21 @@
 								$('select[name="lista_badges[data][]"]').find('option[value="{exp:stash:get name="idBadgeAsocN"}"]').attr("selected",true);
 							});
 						</script>
+						<div class="cargando" style=" display: none; position:fixed; width:100%; height: 100%; background-color:#000000; top: 0; left: 0; z-index: 9998; opacity: 0.5;" ></div>
+	<div class="cargando" style="display: none; position:fixed; width:100%; height: 100%; top: 0; left: 0; z-index: 9999;">
+	<div class="col-sm-12 text-center" style="height: 100%; ">
+		<img style="width:100px; height:100px; top:50%; position:absolute;" src="http://skin.interflora.es/frontend/default/perfectum/images/onepagecheckout/loader-big.gif" />
+	</div>
+</div> 
 						{exp:channel:form channel="badges_asignados" return="sitio/perfil2" status="open" json="yes"}
 							<input type="hidden" name="usuario_receptor_badge" id="usuario_receptor_badge" value="{logged_in_member_id}">
 							<input type="hidden" name="title" id="title" value="{username}-id-{logged_in_member_id}-bad-{exp:stash:get name="idBadgeAsocN"}-{entry_date}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 							<input type="hidden" name="puntos_badge" id="puntos_badge" value="<?php echo base64_encode($idBadgeAsocVal); ?>" size="50" maxlength="100" onkeyup="liveUrlTitle();">
-							<div class="sr-only">
-								
+							<input type="hidden" name="id_badge" id="id_badge" value="<?php echo $idBadgeAsoc; ?>" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+							<div class="sr-only">								
 								{field:lista_badges}		
 							</div>
-							<input type="submit" value="Sigue participando" class="btn btn-success col-sm-6 col-sm-offset-3">
+							<input type="submit" value="Sigue participando" class="btn btn-success col-sm-6 col-sm-offset-3" onclick="showC();">
 						{/exp:channel:form}
 
 						<div id="mensajes" style="display:none;">

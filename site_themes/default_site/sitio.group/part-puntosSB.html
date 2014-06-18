@@ -1,4 +1,17 @@
+<?php
+$rankingUserByMatch = array();
+$puntos = 0;
+?>
+
+
 {exp:channel:entries channel="puntos_usuarios" dynamic="no" limit="999999" search:id_usuario="={embed:id_usuario}" disable="categories|member_data|pagination|category_fields"}
-		{exp:tally:add collection="puntosSB" value="{puntos_prediccion}" count="{count}"}
+<?php 
+if(!isset($rankingUserByMatch['{id_partido}'])){ $rankingUserByMatch['{id_partido}'] = 1; 
+	$puntos = $puntos + '{puntos_prediccion}';
+}
+?>
 {/exp:channel:entries}
-{embed="sitio/_totalSB"}
+
+<div class='element' title='{exp:tally:total collection="puntos" thousands="" decimals="0"}'>
+	<b><?php echo $puntos; ?></b> <span>Puntos</span> <br>	
+</div>
